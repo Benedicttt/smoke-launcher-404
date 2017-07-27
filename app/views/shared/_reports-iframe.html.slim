@@ -1,0 +1,8 @@
+.form-part
+  .fields
+    =button_tag "start", class: 'page-frame start submit_btn'
+    =button_tag "stop", class: 'page-frame stop submit_btn'
+    =link_to 'Link reports', "#{path_reports}", target: "_blank"
+
+  br
+    iframe id="report" src=path_reports width="100%" height="600px"

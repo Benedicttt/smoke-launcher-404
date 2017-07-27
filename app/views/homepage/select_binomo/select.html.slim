@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Select platform test
+      body
+
+.homepage
+  .container
+    .row
+      .row
+        .col-xs-12
+          =link_to "smoke test binomo", :binomo_smoke_binomo , class: "platform smoke-binomo btn-primary btn-lg btn-block"
+          =link_to "landings redirect", :binomo_smoke_prod , class: "platform smoke-binomo btn-primary btn-lg btn-block"
+          =link_to "recovery password", :binomo_recovery_password , class: "platform smoke-binomo btn-primary btn-lg btn-block"
+          =link_to "push notifications", :binomo_push_notify , class: "platform smoke-binomo btn-primary btn-lg btn-block"
+          =link_to "email marketing", :binomo_email_marketing , class: "platform smoke-binomo btn-primary btn-lg btn-block"
+          =link_to "tournaments", :binomo_tournaments, class: "platform tournaments btn-primary btn-lg btn-block"
+          =link_to "assets", :binomo_assets, class: "platform assets btn-primary btn-lg btn-block"
+          =link_to "screen shots binomo", :binomo_screen_shots, class: "platform screen-shots btn-primary btn-lg btn-block"
+
+          br
+          .panel.panel-top
+            = render "shared/buttons"

@@ -1,0 +1,78 @@
+body.users-table.col-xs-4
+
+  .btn.btn-warning
+    = link_to 'Edit', edit_user_path(@stat)
+    = link_to 'Back', users_path
+
+  p id="notice"
+    = notice
+  p
+    strong ID:
+    a href = "https://#{@stat.stage_number}-crm.binomo.com/users/#{@stat.id}" target='_blank'
+      = @stat.id
+    - if @stat.status == 'vip'
+      strong.vip Status:
+
+    - if @stat.status == 'gold'
+      strong.gold Status:
+
+    - if @stat.status == 'standard'
+      strong.standard Status:
+
+    - if @stat.status == 'free'
+      strong.free Status:
+  p
+    strong Branch:
+    = @stat.branch
+  p
+    = label_tag  "Email:"
+    = text_field(:user, "email", value: @stat.email, class: "form-control user", readonly: true)
+    = button_tag "Copy", class: "btn btn-s btn-primary", "data-clipboard-action" => "copy", "data-clipboard-target" => "user_email", id: "email_copy"
+
+  p
+   = label_tag "Password:"
+   = text_field(:user, "pass", value: @stat.password, class: "form-control user", readonly: true)
+   = button_tag "Copy", class: "btn btn-s btn-primary", "data-clipboard-action" => "copy", "data-clipboard-target" => "user_pass", id: "pass_copy"
+
+  p
+    strong Locale:
+    = @stat.locale
+  p
+    strong Geo:
+    = @stat.geo_locale
+  p
+    strong Email verified:
+    = @stat.email_confirmed
+  p
+    strong Phone verified:
+    = @stat.phone_verifed
+  p
+    strong Docs verified:
+    = @stat.document_verifed
+  p
+    strong Wire Capital:
+    = @stat.wire_capital
+  p
+    strong Card Pay:
+    = @stat.card_pay
+  p
+    strong Credit card:
+    = @stat.ecommpay
+  p
+    strong Stage:
+    = @stat.stage_number
+  p
+    strong Currency:
+    = @stat.currency
+  p
+    strong First name:
+    = @stat.first_name
+  p
+    strong Last Name:
+    = @stat.last_name
+  p
+    strong Platform:
+    = @stat.platform
+  p
+    strong Driver:
+    = @stat.driver

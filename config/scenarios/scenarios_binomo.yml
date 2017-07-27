@@ -1,0 +1,291 @@
+social google: "
+  \tGiven Visit homepage and click soc-reg google(not ref)\n
+  \tWhen Click my email google\n
+  \tThen Assert page welcome\n
+  \tThen Auth soc reg google\n
+  \tThen Assert page welcome\n
+  \tThen Delete all providers stage and rename email account\n
+"
+social vk: "
+  \tGiven Visit homepage and click soc-reg vk(not ref)\n
+  \tWhen Click my email vk\n
+  \tThen Assert page welcome\n
+  \tThen Auth soc reg vk\n
+  \tThen Assert page welcome\n
+  \tThen Delete all providers stage and rename email account\n
+"
+social facebook: "
+  \tGiven Visit homepage and click soc-reg facebook(not ref)\n
+  \tWhen Click my email facebook\n
+  \tThen Assert page welcome\n
+  \tThen Auth soc reg facebook\n
+  \tThen Assert page welcome\n
+  \tThen Delete all providers stage and rename email account\n
+"
+payout_credit_card: "
+  \tWhen The creation of an application for withdrawal for CreditCard\n
+  \tThen Applications created CreditCard\n
+"
+
+payout_card_pay: "
+  \tWhen The creation of an application for withdrawal for CardPay\n
+  \tThen Applications created CardPay\n
+"
+
+payout_wire_capital: "
+  \tWhen The creation of an application for withdrawal for WireCapital\n
+  \tThen Applications created WireCapital\n
+"
+
+payouts: "
+    Given Visit payouts\n
+"
+registration: "
+  Given Preparation of static data and visit homepage\n
+  \tWhen Registration traider\n
+  \tThen Email, locale, id, currency\n
+"
+welcome: "
+  Given Visit page Welcome\n
+  \tWhen Fill /welcome\n
+  \tThen Redirect pages tutorial and agree risk\n
+  \tThen Profile last and first name\n
+"
+authorization_crm: "
+  \tGiven Visit page CRM\n
+  \tWhen Authorization crm\n
+  \tThen Success\n
+"
+manager_crm:  "
+  Given Visit page profile User\n
+  \tWhen Select manager\n
+  \tThen Manager selected\n
+"
+comment_crm: "
+  When Enter a comments on your profile page\n
+  \tThen Comments inserted\n
+"
+ticket_crm: "
+  Given Visit page tickets\n
+  \tWhen Enter a comment on your tickets\n
+  \tThen Response to a request issued\n
+"
+payments_approve_crm: "
+  Given Visit the page for payments confirmation\n
+  \tWhen At the request of the payments and Payment committed\n
+"
+payments_reject_crm: "
+  Given Visit the page for payments application rejection\n
+  \tWhen Rejection of an application and Application is rejected\n
+
+"
+ticket: "
+  Given Created ticket\n
+  \tWhen Data ticket\n
+  \tThen Ticket created\n
+"
+
+recovery_password: "
+  Given Visit paltform and registration new trader\n
+  \tWhen Steps recovery password\n
+  \tThen Password recovery\n
+
+  Given Popup recovery password page\n
+  \tWhen Input new password\n
+  \tThen Password input\n
+
+  Given Visit platform\n
+  \tWhen User authentication with the recovered password\n
+  \tThen User of trade page\n
+"
+
+temp-mail: "
+  Given Mailer temp\n
+  \tWhen Input email and find link temp\n
+  \tThen Visit to link temp\n
+    "
+yopmail: "
+  Given Mailers yopmail\n
+  \tWhen Input email and find link yopmail \n
+  \tThen Visit to link yopmail\n
+  "
+crm verified: "
+  Given Verified email crm /binomo\n
+  \tWhen Input email and find link
+"
+authorization: "
+  Given Visit page auth_platform\n
+"
+
+create_group_push_notify: "
+  Given Visit page CRM\n
+  \tWhen Authorization crm\n
+  \tThen Success\n
+
+  Given Visit page Push notify filter\n
+  \tWhen Data filter\n
+  \tWhen Create filter or push notify\n
+  \tThen Push create\n
+  "
+send_push: "
+  Given Authorization and send push\n
+  \tWhen Visit page Push notify\n
+"
+deals: "Given Visit page trading\n"
+lose: "
+  \tWhen Make a deals asset GOL/OTC and lose bet\n
+  \tThen Transactions committed\n
+"
+win:  "
+  \tWhen Make a deals asset GOL/OTC and win bet\n
+  \tThen Transactions committed\n
+"
+send_grid: "
+  \nGiven Visit page common setting send grid\n
+  \tWhen Select Send grid\n
+  \tThen Send grid selected\n
+  \tWhen Run delivery\n
+"
+smtp: "
+  Given Visit page common setting smtp\n
+  \tWhen Select smtp\n
+  \tThen Smtp selected\n
+  \tWhen Run delivery\n
+"
+send_letter_em: "
+  \nGiven Create and send letter by email marketing\n
+  \tWhen Group EM\n
+  \tWhen Letter EM\n
+  \tWhen Mailers EM\n
+  \tWhen Delivery EM\n
+"
+turbo: ""
+binary: ""
+
+delete_data_em: "
+  \nGiven Delete data em\n
+  \tWhen groups\n
+  \tWhen letter\n
+  \tWhen mailers\n
+  \tWhen delivery\n
+"
+
+cashier: "
+  \tGiven Find status treder\n
+  \tThen Status treder\n
+"
+Bank transfer YapiKard: "
+  \tWhen Visit cashier Tukish\n
+  \tWhen Make 2 deposits YapiKard billing\n
+  \tThen Deposit YapiKard created\n
+  \tWhen success first ticket\n
+  \tWhen success last ticket\n
+  \tThen Check status two tickets\n
+  \tThen Check two letter in email users\n
+  \tThen Check one letter in email admin\n
+"
+Bank cepbank Garanti: "
+  \tWhen Visit cashier Tukish\n
+  \tWhen Make 2 deposits Garanti billing\n
+  \tThen Deposit Garanti created\n
+  \tWhen success first ticket\n
+  \tWhen success last ticket\n
+  \tThen Check status two tickets\n
+  \tThen Check two letter in email users\n
+  \tThen Check one letter in email admin\n
+"
+
+credit card success: "
+  Given Connect to the CRM provider \"Credit card\"\n
+  \tWhen Visit cashier CreditCard\n
+  \tWhen Make deposit CreditCard\n
+  \tThen Deposit CreditCard created\n
+"
+card pay success: "
+  Given Connect to the CRM provider \"Card Pay\"\n
+  When Visit cashier CardPay\n
+  \tWhen Make deposit CardPay\n
+  \tThen Deposit CardPay created\n
+"
+wire capital success: "
+  Given Connect to the CRM provider \"WireCapital\"\n
+  When Visit cashier WireCapital\n
+  \tWhen Make deposit WireCapital\n
+  \tThen Deposit WireCapital created\n
+"
+
+credit card decline: "
+  \tWhen Visit cashier CreditCard\n
+  \tWhen Make deposit CreditCard decline\n
+  \tThen Before balance\n
+  \tWhen Check status 'Reject' in payment Credit Card\n
+  \tThen After balance\n
+"
+card pay decline: "
+  When Visit cashier CardPay\n
+  \tWhen Make deposit CardPay decline\n
+  \tWhen Check status 'Reject' in payment CardPay\n
+  \tThen Before balance\n
+  \tThen Deposit CardPay decline\n
+  \tThen After balance\n
+"
+wire capital decline: "
+  When Visit cashier WireCapital\n
+  \tWhen Make deposit WireCapital decline\n
+  \tThen Before balance\n
+  \tWhen Check status 'Reject' in payment Wire Capital\n
+  \tThen After balance\n
+
+"
+
+deposit: "
+  When Select type tournament deposit\n
+"
+on_demand: "
+  When Select type tournament on demand\n
+"
+sum_deals: "
+  When Created Tournament 'sum deals'\n
+"
+sum_win_deals: "
+  When Created Tournament 'sum win deals'\n
+"
+max_demo_balance: "
+  When Created Tournament 'max demo balance'\n
+"
+created_tournament: "
+  \tGiven Tournament\n
+    When Add data\n
+"
+created_a_tournament?: "
+  Then Result\n
+"
+delete_all_tournaments: "
+  Given Delete all tournaments\n
+"
+participate: "
+  When Participate
+"
+use_demo: "
+  When Use demo type\n
+"
+use_real: "
+  When Use real type\n
+"
+smoke_prod: ""
+doc protected to: "
+  \tGiven Doc protected to\n
+\t\tThen Protected set done\n
+"
+status treder: "
+  \tGiven Find status treder\n
+  \tThen Status treder\n
+"
+phone confirmed: "
+  \tGiven Phone verified find \n
+\t\tThen Phone verifed\n
+"
+
+add widget cashier: "
+  \tGiven Add widget\n
+"

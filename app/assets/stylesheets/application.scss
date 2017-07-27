@@ -1,0 +1,22 @@
+$icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "placeholders";
+@import "grid";
+@import "global";
+@import "binomo";
+@import "binpartner";
+@import "homepage";
+@import "api_request";
+@import "need_link";
+@import "select";
+@import "smoke_binomo";
+@import "users_table";
+@import "pagination";
+@import "buttons";
+@import "clickboard";
+@import "status";
+@import "timer";
+@import "branch";
+
+@debug '________ applciation compiled______';

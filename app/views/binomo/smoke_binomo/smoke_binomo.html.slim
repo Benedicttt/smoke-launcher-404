@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    title Cucumber smoke test launcher
+
+  .container.page_stage_ui
+    =simple_form_for :generator, method: :post  do |f|
+      br
+      .panel.panel-top
+        = render "shared/buttons"
+
+        .content_prod.fields.actions-btns
+          = render "shared/controls_buttons", id: "smoke-binomo"
+        = f.input :global_link, label:" Smoke test binomo", input_html: { class: 'global_link' }, required: false
+
+        .ws
+          = f.label "Connecting WS ...", required: false
+      = render 'shared/headers', f: f
+      = render "shared/clickboard", f: f
+
+      .form-part.text-form.binomo-page
+        = f.input :global_ckeckbox , label: false , collection: ["check"], as: :check_boxes, required: false
+
+        .row
+          = render "shared/binpartner/soc_reg", f: f
+          = render "shared/binomo/registration", f: f
+          .row
+            = render "shared/binomo/authorize", f: f
+          .row
+            = render "shared/crm.binomo/doc_protected_to", f: f
+            = render "shared/crm.binomo/phone_confirmed", f: f
+
+        .row
+          = render "shared/binomo/welcome", f: f
+        .mailers
+          = render "shared/binomo/confirmed", f: f
+        .row
+          = render "shared/binomo/cashier", f: f
+        .row
+          = render "shared/binomo/ticket", f: f
+        .row
+          = render "shared/binomo/payouts", f: f
+        .row
+          = render "shared/binomo/status_treder", f: f
+          = render "shared/binomo/deals", f: f
+
+        = render "shared/crm.binomo/authorize", f: f
+        = render "shared/crm.binomo/reject", f: f
+        = render "shared/crm.binomo/manager", f: f
+        = render "shared/crm.binomo/comments", f: f
+        = render "shared/crm.binomo/ticket", f: f
+        = render "shared/crm.binomo/approve", f: f
+        = render 'shared/crm.binomo/coupons', f: f
+        br
+      br
+      = render "shared/reports-iframe", path_reports: "/reports/binomo/smoke-binomo.html"

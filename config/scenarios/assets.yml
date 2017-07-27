@@ -1,0 +1,30 @@
+authorization: "
+  Given Visit page auth_platform
+"
+find elements right sidebar: "
+  \tWhen Find all element right sidebar\n
+  \tThen The elements in the right sidebar found"
+
+find elements left sidebar: "
+  \tWhen Find all element left sidebar\n
+  \tThen The elements in the left sidebar found"
+
+find elements in the panel tabs: "
+  \tWhen Find all element in the panel tabs\n
+  \tThen The elements in the panel tabs found"
+
+find elements in the panel footer: "
+  \tWhen Find all element in the panel footer\n
+  \tThen The elements in the panel footer found"
+
+value coincidence demo: "
+  Given Choose active For/Height and Demo type\n
+  \tThen Value percent tabs and left sibebar are\n
+  \tWhen Create deal\n
+  \tThen The percentage in the tab, in the left sidebar, in history and in the same complex transaction block"
+
+value coincidence real: "
+  Given Choose active For/Height and Real type\n
+  \tThen Value percent tabs and right sibebar are\n
+  \tWhen Create deal\n
+  \tThen The percentage in the tab, in the left sidebar, in history and in the same complex transaction block"

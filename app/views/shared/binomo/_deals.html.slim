@@ -1,0 +1,22 @@
+br
+p
+
+.row
+  .col-xs-12
+    = f.input :scenario, label:false , as: :check_boxes, collection: ['deals'], required: false
+    .col-xs-2
+      = f.input :scenario, label:false , as: :check_boxes, collection: ['use_real'], required: false
+      = f.input :scenario, label:false , as: :check_boxes, collection: ['use_demo'], required: false, input_html: { checked: true}
+    .col-xs-1
+      = f.input :scenario, label:false , as: :check_boxes, collection: ['lose'], required: false, input_html: { checked: true}
+      = f.input :scenario, label:false , as: :check_boxes, collection: ['win'], required: false
+    .col-xs-1
+      = f.input :scenario, label:false , as: :check_boxes, collection: ['binary'], required: false, input_html: { checked: true}
+      = f.input :scenario, label:false , as: :check_boxes, collection: ['turbo'], required: false
+
+    .col-xs-2
+      = f.input "Count deals",  input_html: { class: 'count_deals params-count-page', value: "10" }, required: false
+    .col-xs-2
+      = f.input "Sum deals",  input_html: { class: 'count_deals_sum params-count-page', value: "10" }, required: false
+    .col-xs-2
+      = f.input "Delay between deals",  input_html: { class: 'count_between params-count-page', value: "2.5" }, required: false

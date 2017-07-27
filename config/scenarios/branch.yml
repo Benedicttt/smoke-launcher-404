@@ -1,0 +1,14 @@
+stage_select:
+  s1: "staging"
+  s2: "staging2"
+  s3: "staging3"
+  s4: "staging4"
+  s5: "staging5"
+
+project:
+  binomo: "binomo"
+  binpartner: "binpartner"
+
+frame_work:
+  cucumber: "cucumber"
+  rspec: "rspec"

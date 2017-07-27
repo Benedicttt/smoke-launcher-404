@@ -1,0 +1,26 @@
+template individual coupon:
+  bonus: "\tGiven Template Bonus"
+  bonus deposit: "\tGiven Template Bonus Deposit"
+  free: " \tGiven Template Free Deals"
+
+template auto coupon:
+  welcome bonus deposit: "\tGiven Template Welcome Bonus Deposit"
+  first deposit free deals: "\tGiven Template First Deposit Free Deals "
+  deposit free deals: "\tGiven Template Deposit Free Deals"
+
+template common:
+  common: "\tGiven Template common - bonus deposit"
+
+coupons:
+  user filter for coupons: "\tGiven User filters coupons "
+  user coupons:
+    free deals: "\tGiven Testing free deals"
+    balance: "\tGiven Testing balance"
+    bonuses: "\tGiven Testing bonuses"
+    deposit bonus: "\tGiven Testing bonus deposit"
+    common coupons: "\n
+      \t\tAnd Visit users coupons adds\n
+      \t When Add coupons for users\n
+      \t Then Visit to user from cahsier\n
+      \t Then Activate coupons?
+     "

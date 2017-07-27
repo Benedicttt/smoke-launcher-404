@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    body.users-table
+      title "stats"
+
+  = render "shared/buttons"
+
+h1 Creating a partners autotests
+br
+p
+  .col-xs-12.users-thead
+    table
+      thead
+        tr
+          th Data
+          th Driver
+          th ID
+          th Email
+          th Stage number
+          th Platform
+          th Locale
+          th Refcode
+          th Phone
+          th Nickname
+          th Card
+          th Skype
+          th Tariff first
+          th Tariff last
+          th Cpa first
+          th Cpa last
+          th Referall
+      tbody
+
+        - @stat_part.each do |post|
+          tr
+            th = post.created_at.to_s.gsub(/UTC/, "")
+            th = post.driver
+            th
+              a href = "https://#{post.stage_number}-adm.binpartner.com/customers/#{post.id}" target='_blank'
+                = post.id
+            th = post.email
+            th = post.stage_number
+            th = post.platform
+            th = post.locale
+            th = post.refcode
+            th = post.phone
+            th = post.nickname
+            th = post.card
+            th = post.skype
+            th = post.tariff_first
+            th = post.tariff_last
+            th = post.cpa_first
+            th = post.cpa_last
+            th = post.referall
+              = link_to "Edit", edit_partner_path(post)
+              = link_to 'Show', post
+              = link_to 'Destroy', post, method: :delete
+
+  .digg_pagination
+    = will_paginate @stat_part , :page_links => true
+
+  .paginates
+    = page_entries_info @stat_part

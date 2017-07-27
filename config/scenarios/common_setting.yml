@@ -1,0 +1,151 @@
+geo:
+  RU: "RU"
+  EN: "EN"
+  ID: "ID"
+  MS: "MS"
+  ES: "ES"
+  TH: "TH"
+  VN: "VN"
+  CN: "CN"
+  PT: "PT"
+  ZW: "ZW"
+  PL: "PL"
+  MD: "MD"
+  ME: "ME"
+  KR: "KR"
+
+locale:
+  RU: "ru"
+  EN: "en"
+  ID: "id"
+  MS: "ms"
+  ES: "es"
+  TH: "th"
+  VN: "vn"
+  CN: "cn"
+  PT: "pt"
+  MD: "md"
+  ME: "me"
+  KR: "kr"
+
+
+currency:
+  RUB: ["$('input.ng-pristine.ng-untouched.ng-valid.ng-not-empty')[2].click()", "RUB"]
+  EUR: ["$('input.ng-pristine.ng-untouched.ng-valid.ng-not-empty')[1].click()", "EUR"]
+  USD: ["$('input.ng-pristine.ng-untouched.ng-valid.ng-not-empty')[0].click()", "USD"]
+
+email:
+  prod: ""
+  s4: ""
+  s3: ""
+  s2: ""
+  s1: ""
+  s5: ""
+
+email_name:
+  prod: "Prod."
+  s4: "Stage4."
+  s3: "Stage3."
+  s2: "Stage2."
+  s1: "Stage1."
+  s5: "Stage5."
+
+email_partner:
+  prod: "Part_prod.{0}"
+  s4: "Part_s4.{0}"
+  s3: "Part_s3.{0}"
+  s2: "Part_s2.{0}"
+  s1: "Part_s1.{0}"
+  s5: "Part_s5.{0}"
+
+user_crm:
+  login: "s.borisov@binpartner.com"
+  password: "uu$50hYLBrg5}j#grHLb"
+
+user_test:
+  first_name: "Тестостеровщик Мужской"
+  last_name: "Офисный гормон"
+  pass_platform: "Jemetr!@#()11Capybara123"
+  pass_partner: "Solomondoon123"
+  pass_recovery: "12345q"
+
+page:
+  mailer: "https://temp-mail.ru"
+  whatisit: "/whatisit"
+  account: "/acoount"
+  trading: "/trading"
+  tutorial: "/tutorial"
+  tickets: "/tickets"
+  payouts: "/payouts"
+  welcome: "/welcome"
+  cashier: "/cashier"
+  sign_out: "/api_request/sign_out"
+  fd_cancel: "/free_deals/cancel"
+  postback: "/ru/postbacks/new"
+
+app_host:
+  prod: "https://binomo.com/"
+  s5: "https://s5.binomo.com/"
+  s4: "https://s4.binomo.com/"
+  s3: "https://s3.binomo.com/"
+  s2: "https://s2.binomo.com/"
+  s1: "https://s1.binomo.com/"
+
+url_partner:
+  prod: "https://binpartner.com/"
+  s5: "https://s5.binpartner.com/"
+  s4: "https://s4.binpartner.com/"
+  s3: "https://s3.binpartner.com/"
+  s2: "https://s2.binpartner.com/"
+  s1: "https://s1.binpartner.com/"
+
+url_adm_partner:
+  prod: "https://adm.binpartner.com/"
+  s5: "https://s5-adm.binpartner.com/"
+  s4: "https://s4-adm.binpartner.com/"
+  s3: "https://s3-adm.binpartner.com/"
+  s2: "https://s2-adm.binpartner.com/"
+  s1: "https://s1-adm.binpartner.com/"
+
+url_page_crm:
+  prod: "https://crm.binomo.com/"
+  s5: "https://s5-crm.binomo.com/"
+  s4: "https://s4-crm.binomo.com/"
+  s3: "https://s3-crm.binomo.com/"
+  s2: "https://s2-crm.binomo.com/"
+  s1: "https://s1-crm.binomo.com/"
+
+url_user_crm:
+  prod: "https://crm.binomo.com/users"
+  s5: "https://s5-crm.binomo.com/users"
+  s4: "https://s4-crm.binomo.com/users"
+  s3: "https://s3-crm.binomo.com/users"
+  s2: "https://s2-crm.binomo.com/users"
+  s1: "https://s1-crm.binomo.com/users"
+
+drivers:
+  chrome: "chrome"
+  webkit: "webkit"
+  firefox: 'firefox'
+  safari: "safari"
+
+
+stage_select:
+  s1: "Stage1"
+  s2: "Stage2"
+  s3: "Stage3"
+  s4: "Stage4"
+  s5: "Stage5"
+  prod: "Production"
+
+frame_work:
+  cucumber: "cucumber"
+  rspec: "rspec"
+
+tariff:
+  FTD 1: "0"
+  FTD 2: "1"
+  CPA: "2"
+  CPA %: "3"
+  CPL SOI: "4"
+  CPL DOI: "5"

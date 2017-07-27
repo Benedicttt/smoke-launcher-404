@@ -1,0 +1,128 @@
+doctype html
+html
+  head
+    body.users-table
+      title "stats"
+
+  = render "shared/buttons"
+
+h1 Creating a partners autotests
+br
+p
+
+.col-xs-12.users-thead
+  table
+    thead
+      tr
+        th Data
+        th Branch
+        th Driver
+        th ID
+        th Email
+        th Stage
+        th Refcode
+        th Phone
+        th Nickname
+        th Card
+        th Tariff first
+        th Tariff last
+        th Cpa first
+        th Cpa last
+        th CPL SOI
+        th CPL DOI
+        th Referall
+        th IDS traiders
+    tbody
+
+      - @stat_part.each do |post|
+        tr
+          th = post.created_at.to_s.gsub(/UTC/, "")
+          th = post.branch
+          th
+            - if post.driver == "chrome"
+              .chrome-icon
+                a href = post.driver
+            - if post.driver == "firefox"
+              .firefox
+                a href = post.driver
+            - if post.driver == "safari"
+              .safari
+                a href = post.driver
+          th
+            .btn.btn-xs.btn-primary
+              a href = "https://#{post.stage_number}-adm.binpartner.com/customers/#{post.id}" target='_blank'
+                = post.id
+          th
+            div.btn.btn-success.btn-xs.clipboard-btn id="email-#{post.id}" data-clipboard-target="email-#{post.id}" data-clipboard-action="copy"
+              =post.email
+            javascript:
+              $(document).ready(function(){
+                  var clip = new ZeroClipboard($("#email-#{post.id}"))
+              });
+
+          th
+            .btn.btn-danger.btn-xs
+              a href = "https://#{post.stage_number}.binpartner.com" target='_blank'
+                = post.stage_number
+
+          th
+            div id="refcode-#{post.id}"  data-clipboard-target="refcode-#{post.id}" class="btn btn-success btn-xs clipboard-btn" data-clipboard-action="copy"
+              =post.refcode
+            javascript:
+              $(function(){
+                  var clip = new ZeroClipboard($("#refcode-#{post.id}"))
+              });
+
+          th = post.phone
+          th = post.nickname
+          th = post.card
+
+          th
+            - if post.tariff_first == true
+              .checking
+                a href = post.tariff_first
+          th
+            - if post.tariff_last == true
+              .checking
+                a href = post.tariff_last
+          th
+            - if post.cpa_first == true
+              .checking
+                a href = post.cpa_first
+          th
+            - if post.cpa_last == true
+              .checking
+                a href = post.cpa_last
+          th
+            - if post.cpl_soi == true
+              .checking
+                a href = post.cpl_soi
+          th
+            - if post.cpl_doi == true
+              .checking
+                a href = post.cpl_doi
+
+
+          th = post.referall
+          th
+            - if (@users = User.where(refcode: post.refcode).reverse).length > 0
+              div.dropdown
+                button.btn.btn-xs.btn-sm.btn-primary type="button" data-toggle="dropdown"
+                  | Users
+                ul.dropdown-menu
+                  - @users.each do |i|
+                    li
+                      a href = 'https://#{post.stage_number}-crm.binomo.com/users/#{i.id}' target='_blank'
+                        = [i.id, "t=#{i.tariff}"].reverse.join(' ')
+            th
+              = link_to "Edit", edit_partner_path(post), class: "btn btn-info btn-xs"
+            th
+              = link_to 'Show', post, class: "btn btn-success btn-xs"
+            th
+              = link_to 'Destroy', post, method: :delete, class: "btn btn-danger btn-xs"
+
+  .digg_pagination
+    = will_paginate @stat_part , :page_links => true
+
+  .paginates
+    = page_entries_info @stat_part

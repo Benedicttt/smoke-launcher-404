@@ -1,0 +1,226 @@
+
+social google: "
+  \tGiven Visit homepage and click soc-reg google\n
+  \tWhen Click my email google\n
+  \tThen Assert page welcome\n
+  \tThen Auth soc reg google\n
+  \tThen Assert page welcome\n
+  \tThen Delete all providers stage and rename email account\n
+"
+social vk: "
+  \tGiven Visit homepage and click soc-reg vk\n
+  \tWhen Click my email vk\n
+  \tThen Assert page welcome\n
+  \tThen Auth soc reg vk\n
+  \tThen Assert page welcome\n
+  \tThen Delete all providers stage and rename email account\n
+"
+social facebook: "
+  \tGiven Visit homepage and click soc-reg facebook\n
+  \tWhen Click my email facebook\n
+  \tThen Assert page welcome\n
+  \tThen Auth soc reg facebook\n
+  \tThen Assert page welcome\n
+  \tThen Delete all providers stage and rename email account\n
+"
+status treder: "
+  \tGiven Find status treder\n
+  \tThen Status treder\n
+"
+registration_partner: "
+    Given Visit to page partner.com\n
+    \tWhen Partner registration\n
+    \tThen Registered partner\n
+"
+create_postback: "
+    Given Created postback\n
+    \tWhen  Enter data\n
+    \tThen Data is entered\n
+    \tWhen Activate postback\n
+"
+
+reg_treder_refcode: "
+    Given Visit with partner refcode\n
+    \tWhen Registration traider refcode\n
+    \tThen Email, locale, id, currency - partner\n
+"
+
+confirmed: "
+"
+
+temp-mail: "
+    Given Mailer temp\n
+    \tWhen Input email and find link temp \n
+    \tThen Visit to link temp\n
+    "
+yopmail: "
+    Given Mailers yopmail\n
+    \tWhen Input email and find link yopmail \n
+    \tThen Visit to link yopmail\n
+  "
+crm verified: "
+    Given Verified email crm /binomo\n
+    \tWhen Input email and find link
+  "
+welcome: "
+  Given Visit page Welcome\n
+  \tWhen Fill /welcome\n
+  \tThen Redirect pages tutorial and agree risk\n
+  \tThen Profile last and first name\n
+"
+
+cashier:  ""
+payouts: "
+    Given Visit payouts\n
+"
+deals: "Given Visit page trading\n"
+
+lose: "
+  \tWhen Make a deals asset GOL/OTC and lose bet\n
+  \tThen Transactions committed\n
+"
+
+win:  "
+  \tWhen Make a deals asset GOL/OTC and win bet\n
+  \tThen Transactions committed\n
+"
+
+authorization_crm: "
+    Given Visit page CRM\n
+    \tWhen Authorization crm\n
+    \tThen Success\n
+"
+
+payments_approve_crm: "
+   Given Visit the page for payments confirmation\n
+    \tWhen At the request of the payments and Payment committed\n
+"
+
+authorization: "
+  Given Visit page auth_platform\n
+"
+
+CPA: "
+  Given Select only tarrif CPA
+"
+CPL SOI: "
+  Given Select only tarrif CPL SOI
+"
+CPL DOI: "
+  Given Select only tarrif CPL DOI
+"
+
+receive_promo_code: "
+  Given Receive a ref-code
+"
+
+FTD 1: "
+  Given Select only tarrif first
+"
+
+FTD 2: "
+  Given Select only tarrif percent
+"
+
+CPA %: "
+  Given Select only tarrif CPA %
+"
+
+edit profile adm:  "
+  Given Visit to page profile partner\n
+  \tWhen Total information\n
+  \tWhen Security\n
+  \tWhen Administration\n
+  \tWhen Notes\n
+  \tThen The figures are not reset when you save\n
+"
+turbo: ""
+binary: ""
+
+credit card success: "
+  Given Connect to the CRM provider \"Credit card\"\n
+  \tWhen Visit cashier CreditCard\n
+  \tWhen Make deposit CreditCard\n
+  \tThen Deposit CreditCard created\n
+"
+card pay success: "
+  Given Connect to the CRM provider \"Card Pay\"\n
+  When Visit cashier CardPay\n
+  \tWhen Make deposit CardPay\n
+  \tThen Deposit CardPay created\n
+"
+wire capital success: "
+  Given Connect to the CRM provider \"WireCapital\"\n
+  When Visit cashier WireCapital\n
+  \tWhen Make deposit WireCapital\n
+  \tThen Deposit WireCapital created\n
+"
+
+credit card decline: "
+  \tWhen Visit cashier CreditCard\n
+  \tWhen Make deposit CreditCard decline\n
+  \tThen Before balance\n
+  \tWhen Check status 'Reject' in payment Credit Card\n
+  \tThen After balance\n
+"
+card pay decline: "
+  When Visit cashier CardPay\n
+  \tWhen Make deposit CardPay decline\n
+  \tWhen Check status 'Reject' in payment CardPay\n
+  \tThen Before balance\n
+  \tThen Deposit CardPay decline\n
+  \tThen After balance\n
+"
+wire capital decline: "
+  When Visit cashier WireCapital\n
+  \tWhen Make deposit WireCapital decline\n
+  \tThen Before balance\n
+  \tWhen Check status 'Reject' in payment Wire Capital\n
+  \tThen After balance\n
+
+"
+
+payout_credit_card: "
+  \tWhen The creation of an application for withdrawal for CreditCard\n
+  \tThen Applications created CreditCard\n
+"
+
+payout_card_pay: "
+  \tWhen The creation of an application for withdrawal for CardPay\n
+  \tThen Applications created CardPay\n
+"
+
+delete_all_postbacks: "
+  \tGiven Visit to page profile partner\n
+  \tWhen Delete postbacks\n
+"
+delete_all_promo_code: "
+  Given Delete all promo-code\n
+"
+use_demo: "
+  When Use demo type\n
+"
+use_real: "
+  When Use real type\n
+"
+doc protected to: "
+\tGiven Doc protected to\n
+\t\tThen Protected set done\n
+"
+
+add_promo_landings: "
+  \tGiven Add landings
+"
+add_promo_video: "
+  \tGiven Add video
+"
+add_promo_banners: "
+  \tGiven Add banners
+"
+add_promo_logos: "
+  \tGiven Add logos
+"
+phone confirmed: "
+  \tGiven Phone verified find \n
+\t\tThen Phone verifed\n
+"

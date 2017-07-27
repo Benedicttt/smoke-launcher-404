@@ -1,0 +1,205 @@
+authorized : "
+\tGiven Visit homepage stage and authorization\n
+\t\tWhen Screen modal: Authorized
+"
+home page form reg empty (scenario) : "
+  \t\nScenario: Screen forms registartions and widget\n
+"
+Demo-game : "
+  \t\tWhen Screen create modal: Demo-game-won, Demo-game-fail, Demo-game-waiting, Demo-reg-form\n
+"
+/faq no auth : "
+  \t\tWhen Screen create modal: Faq no auth
+"
+agreement : "
+  \t\tThen Screen create modal: Agreement
+"
+reg filled: "
+  \t\tThen Screen create modal: Registrations form
+"
+
+page welcome : "
+  \tGiven Screen create: page /welcome\n
+  \t\tWhen Data form page /welcome\n
+"
+pages tutorial : "
+  \tGiven Screen create:page /tutorial\n
+  \t\tWhen Screen create: all page /tutorial\n
+"
+agree risk: "
+  \t\tThen Screen create modal: agree risk
+ "
+
+page_trading : "
+  \tGiven Visit page /trading
+"
+asset daily: "
+  \t\tWhen Screen create modal: Asset daily
+"
+welcome deposit : "
+  \t\tWhen Screen create modal: Welcome deposit
+"
+first action : "
+  \t\tWhen Screen create modal: First actions
+"
+hotkeys : "
+  \t\tWhen Screen create modal: Hotkeys page 1\n
+  \t\tWhen Screen create modal: Hotkeys page 2\n
+"
+pricing , bonus-detail, faq auth: "
+  \t\tWhen Screenshot modal: Pricing, Bonus-detail, Faq-auth
+"
+
+sidebar_left (scenario) : "
+  \t\nScenario: Screen Left sidebar\n
+  \tGiven Visit page /trading\n
+"
+need confirmed : "
+  \t\tWhen Screen create: Left-sidebar 'Need confirmation email'
+"
+histoty empty: "
+  \t\tWhen Screen create: Left-sidebar 'History' empty
+"
+
+sidebar_right (scenario)  : "
+  \t\nScenario: Screen Right sidebar\n
+  \tGiven Visit page /trading\n
+"
+Sum dropdown : "
+  \t\tWhen Screen create: Right-sidebar dropdown sum
+"
+time  dropdown : "
+  \t\tWhen Screen create: Right-sidebar dropdown time
+"
+asset dropdown : "
+  \t\tWhen Screen create: Right-sidebar dropdown assets
+"
+profile dropdown : "
+  \t\tWhen Screen create: Right-sidebar dropdown profile
+"
+indicator footer : "
+  \t\tWhen Screen create: Footer dropdown indicators
+"
+instrument paint footer : "
+  \t\tWhen Screen create: Footer dropdown instruments
+"
+style white footer : "
+  \t\tWhen Screen create: Footer style
+"
+graph type footer : "
+  \t\tWhen Screen create: Footer type graph
+"
+
+type_trading (scenario) : "
+  \t\nScenario: Screen Demo, Real, Confirmed need email\n
+  \tGiven Visit page /trading\n
+"
+real and demo type selcted: "
+  \t\tWhen Screen create modal : selected real and demo types
+"
+confirmed please email : "
+  \t\tWhen Screen create modal: confirmed please email
+"
+low balance : "
+  \t\nScenario: Low balance\n
+  \tGiven Visit page /trading\n
+ \t\tWhen Screen create modal : Low balance
+"
+
+error, history, tickets(scenario) : "
+  \t\nScenario: Screen Error modal, history filled, tickets in and out\n
+  \tGiven Visit page /trading\n
+  \t\tWhen Screen create modal : Error\n
+"
+history filled: "
+  \t\tWhen Screen create: Left-sidebar 'History' filled
+"
+
+tickets : "
+  \t\tWhen Screen create modal : Tickets in\n
+  \t\tWhen Screen create modal : Tickets outs
+"
+
+phone_and_email : "
+  \tGiven Visit page /account\n
+  \t\tWhen Screen create modal: Email conf\n
+  \t\tWhen Screen create modal: Phone need
+"
+
+email redirect to link and unsubcribe : "
+\t\tWhen Screen create modal : Email confirmation
+"
+free deals : "
+  \t\nScenario: Screen freed deals and bonus\n
+  \tGiven Visit page /trading\n
+  \tGiven Visit page CRM\n
+  \t\tWhen Authorization crm\n
+  \t\tThen Success\n
+  \t\tWhen Overcharging free deals\n
+"
+bonus modal : "
+  \tGiven Visit page CRM\n
+  \t\tWhen Authorization crm\n
+  \t\tThen Success\n
+  \t\tWhen Overcharging bonus\n
+"
+no aurthorize : "
+  \t\nScenario: Screen page no authorization\n
+  \tGiven Visit homepage for screen\n
+  \t\tWhen Visit page /whatisit\n
+  \t\tWhen Visit page /tutorial-help\n
+  \t\tWhen Visit page /faq\n
+  \t\tWhen Visit page /offers\n
+  \t\tWhen Visit page /about\n
+  \t\tWhen Visit page /contacts\n
+  \t\tWhen Visit page /agreement\n
+  \t\tWhen Visit page /privacy\n
+  \t\tWhen Visit page /pricing/help\n
+  \t\tWhen Visit page /video\n
+  \t\tWhen Visit page /news\n
+  \t\tWhen Visit page /tournaments\n
+  \t\tWhen Visit page /strategies\n
+  \t\tWhen Visit page /analysis\n
+  \t\tWhen Visit page /press\n
+  \t\tWhen Visit page /knowledge\n
+  \t\tWhen Visit page /book\n
+  \t\tWhen Visit page /invest_ideas\n
+  \t\tWhen Visit page /step_by_step\n
+  \t\tWhen Visit page /crof\n
+  \t\tWhen Visit page /binomo_book\n
+  \t\tWhen Visit page /javascript\n
+"
+
+aurthorize : "
+  \t\nScenario: Screen page authorized treder\n
+  \tGiven Visit page /trading\n
+  \t\tWhen Visit page /whatisit authorized\n
+  \t\tWhen Visit page /tutorial-help authorized\n
+  \t\tWhen Visit page /faq authorized\n
+  \t\tWhen Visit page /offers authorized\n
+  \t\tWhen Visit page /about authorized\n
+  \t\tWhen Visit page /contacts authorized\n
+  \t\tWhen Visit page /agreement authorized\n
+  \t\tWhen Visit page /privacy authorized\n
+  \t\tWhen Visit page /pricing/help authorized\n
+  \t\tWhen Visit page /video authorized\n
+  \t\tWhen Visit page /news authorized\n
+  \t\tWhen Visit page /tournaments authorized\n
+  \t\tWhen Visit page /strategies authorized\n
+  \t\tWhen Visit page /analysis authorized\n
+  \t\tWhen Visit page /press authorized\n
+  \t\tWhen Visit page /knowledge authorized\n
+  \t\tWhen Visit page /book authorized\n
+  \t\tWhen Visit page /invest_ideas authorized\n
+  \t\tWhen Visit page /step_by_step authorized\n
+  \t\tWhen Visit page /crof authorized\n
+  \t\tWhen Visit page /binomo_book authorized\n
+  \t\tWhen Visit page /cashier authorized\n
+  \t\tWhen Visit page /tickets authorized\n
+  \t\tWhen Visit page /account authorized\n
+  \t\tWhen Visit page /payouts authorized\n
+  \t\tWhen Visit page /history authorized\n
+  \t\tWhen Visit page /javascript authorized\n
+"
+
+test : "Given Proxy test"

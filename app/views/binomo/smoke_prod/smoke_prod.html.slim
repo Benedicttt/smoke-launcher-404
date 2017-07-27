@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Cucumber smoke test launcher
+
+  .container.page_stage_ui
+    =simple_form_for :generator, method: :post  do |f|
+      br
+      .panel.panel-top
+        = render "shared/buttons"
+
+        .content_prod.fields.actions-btns
+            = render "shared/controls_buttons", id: "landings"
+        = f.input :global_link, label:" Smoke test landings", input_html: { class: 'global_link' }, required: false
+
+        .ws
+          = f.label "Connecting WS ...", required: false
+      = render "shared/headers", f: f
+
+      .form-part.text-form.binomo-page
+        = f.input :scenario, label: "The smoke test only production" , as: :check_boxes, collection: ['smoke_prod'], required: false
+
+        = render "shared/reports-iframe", path_reports: "/reports/prod/production.html"

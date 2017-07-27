@@ -1,0 +1,125 @@
+doctype html
+html
+  head
+    body.users-table
+      title "stats"
+
+  = render "shared/buttons"
+
+h1 Creating a user autotests
+br
+p
+  .col-xs-12.users-thead
+    table
+      thead
+        tr
+          th Data
+          th.col-xs-1 Branch
+          th Driver
+          th ID
+          th Stage
+          th For platform
+          th Refcode
+          th Tariff
+          th Locale
+          th Currency
+          th Geo
+          th Firstname
+          th Last name
+          th Email confirmed
+          th Document verifed
+          th Phone verifed
+          th Wire capital
+          th Ecommpay
+          th Card pay
+          th Status
+      tbody
+        - @stat.each do |post|
+          tr
+            th = post.created_at.strftime("%F %T")
+
+            th.col-xs-1 = post.branch
+            th
+              - if post.driver == "chrome"
+                .chrome-icon
+                  a href = post
+              - if post.driver == "firefox"
+                .firefox
+                  a href = post
+              - if post.driver == "safari"
+                .safari
+                  a href = post
+
+            th
+              - if (@id = post.id)
+                .btn.btn-warning.btn-xs
+                  a href = "https://#{post.stage_number}-crm.binomo.com/users/#{post.id}" target='_blank'
+                    = post.id
+            th = post.stage_number
+            th = post.platform.upcase
+            th
+              - if (@ref = Partner.where(refcode: User.find(post.id).refcode).last&.email)
+                .btn.btn-warning.btn-xs
+                  a href = "https://#{post.stage_number}-adm.binpartner.com/stats?email=
+                    #{Partner.where(refcode: User.find(post.id).refcode).last&.email}" target="_blank"
+                    = post.refcode
+
+            th = post.tariff        
+            th = post.locale
+            th = post.currency
+            th = post.geo_locale
+            th = post.first_name
+            th = post.last_name
+            th
+              - if post.email_confirmed == true
+                .checking
+                  a href = post.email_confirmed
+            th
+              - if post.document_verifed == true
+                .checking
+                  a href = post.document_verifed
+            th
+              - if post.phone_verifed == true
+                .checking
+                  a href = post.phone_verifed
+            th
+              - if post.wire_capital == "1"
+                .balance
+                  a href = "https://#{post.stage_number}-crm.binomo.com/users/#{post.id}/orders" target='_blank'
+            th
+              - if post.ecommpay == "1"
+                .balance
+                  a href = "https://#{post.stage_number}-crm.binomo.com/users/#{post.id}/orders" target='_blank'
+            th
+              - if post.card_pay == "1"
+                .balance
+                  a href = "https://#{post.stage_number}-crm.binomo.com/users/#{post.id}/orders" target='_blank'
+            th
+              - if post.status == 'vip'
+                .vip
+                  = post.status
+              - if post.status == 'gold'
+                .gold
+                  = post.status
+              - if post.status == 'standard'
+                .standard
+                  = post.status
+              - if post.status == 'free'
+                .free
+                  = post.status
+
+            th
+              = link_to "E", edit_user_path(post), class: "btn btn-info btn-xs"
+            th
+              = link_to 'S', post, class: "btn btn-success btn-xs"
+            th
+              = link_to 'D', post, method: :delete, class: "btn btn-danger btn-xs"
+
+
+.digg_pagination
+  = will_paginate @stat , :page_links => true
+
+.paginates
+  = page_entries_info @stat
+
+/  = link_to 'New Post', new_user_path

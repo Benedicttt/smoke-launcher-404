@@ -1,0 +1,55 @@
+%icon-status {
+  background-size: cover;
+  color: transparent;
+  padding: 5px;
+}
+
+div.vip, strong.vip {
+  background-image:url("vip.jpg");
+  @extend %icon-status;
+}
+
+div.gold, strong.gold {
+  background-image:url("gold.jpg");
+  @extend %icon-status;
+}
+
+div.standard, strong.standard {
+  background-image:url("standard.jpg");
+  @extend %icon-status;
+}
+
+div.free, strong.free {
+  background-image:url("free.jpg");
+  @extend %icon-status;
+}
+
+div.balance, strong.balance  {
+  background-image:url("balance.png");
+  display: inline-table;
+  @extend %icon-status;
+}
+
+div.checking, strong.checking  {
+  background-image:url("balance.png");
+  display: inline-table;
+  @extend %icon-status;
+}
+
+div.chrome-icon, strong.chrome-icon  {
+  background-image:url("chrome.png");
+  display: inline-table;
+  @extend %icon-status;
+}
+
+div.firefox, strong.firefox  {
+  background-image:url("firefox.png");
+  display: inline-table;
+  @extend %icon-status;
+}
+
+div.safari, strong.safari  {
+  background-image:url("safari.png");
+  display: inline-table;
+  @extend %icon-status;
+}

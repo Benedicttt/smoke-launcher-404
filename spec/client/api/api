@@ -1,0 +1,103 @@
+check_api_coupons GET    /api/coupons/check(.:format)                  api/coupons#check
+      api_coupons GET    /api/coupons(.:format)                        api/coupons#index
+       api_coupon GET    /api/coupons/:id(.:format)                    api/coupons#show
+                  PATCH  /api/coupons/:id(.:format)                    api/coupons#update
+                  PUT    /api/coupons/:id(.:format)                    api/coupons#update
+                  DELETE /api/coupons/:id(.:format)                    api/coupons#destroy
+
+
+
+api_profile_tournaments GET    /api/profile/tournaments(.:format)            api/user#user_tournaments
+verify_api_v2_email GET    /api/v2/email/verify(.:format)                api/v2/email#verify
+verify_by_token_api_v2_email GET    /api/v2/email/verify_by_token(.:format)       api/v2/email#verify_by_token
+resend_api_v2_email GET    /api/v2/email/resend(.:format)                api/v2/email#resend
+unsubscribe_api_v2_email GET    /api/v2/email/unsubscribe(.:format)           api/v2/email#unsubscribe
+subscribe_api_v2_email GET    /api/v2/email/subscribe(.:format)             api/v2/email#subscribe
+       api_v2_email PATCH  /api/v2/email(.:format)                       api/v2/email#update
+                    PUT    /api/v2/email(.:format)                       api/v2/email#update
+                    api_email_send GET    /api/email/send(.:format)                     api/user#send_activation_email
+                 api_email_activate GET    /api/email/activate(.:format)                 api/user#activate
+
+                                POST   /wire_capital/deposit(.:format)               gamepay#wire_capital_deposit
+                    partner_api GET    /partner_api/bets/:date(.:format)             partner_api/stats#bets
+                                GET    /partner_api/registrations/:from_id(.:format) partner_api/stats#registrations
+                                GET    /partner_api/money/:date(.:format)            partner_api/stats#money
+               partner_api_ftds GET    /partner_api/ftds(.:format)                   partner_api/stats#ftds
+              partner_api_rates GET    /partner_api/rates(.:format)                  partner_api/stats#rates
+                        api_faq GET    /api/faq(.:format)                            api/home#faq
+                api_oauth_icons GET    /api/oauth/icons(.:format)                    api/sessions/oauth#icons
+                            api GET    /api/oauth/:provider(.:format)                api/sessions/oauth#create_mobile
+                                GET    /api/oauth/:provider(.:format)                api/sessions/oauth#create {:locale=>"en", :device=>"web"}
+              api_quotes_values GET    /api/quotes/values(.:format)                  api/quotes#values
+             api_quotes_quarter GET    /api/quotes/quarter(.:format)                 api/quotes#quarter
+           api_profile_tutorial GET    /api/profile/tutorial(.:format)               api/user#tutorial
+         api_profile_agree_risk GET    /api/profile/agree_risk(.:format)             api/user#agree_risk
+             api_profile_avatar POST   /api/profile/avatar(.:format)                 api/user#avatar
+              api_activate_real GET    /api/activate_real(.:format)                  api/user#activate_real
+              api_activate_demo GET    /api/activate_demo(.:format)                  api/user#activate_demo
+             api_toggle_hotkeys GET    /api/toggle_hotkeys(.:format)                 api/user#toggle_hotkeys
+         api_reset_demo_balance GET    /api/reset_demo_balance(.:format)             api/user#reset_demo_balance
+              api_profile_bonus GET    /api/profile/bonus(.:format)                  api/user#bonus
+         api_profile_free_deals GET    /api/profile/free_deals(.:format)             api/user#free_deals
+                       api_page GET    /api/page(.:format)                           api/page#index
+                                GET    /api/page/:page(.:format)                     api/page#show
+            api_password_remind GET    /api/password/remind(.:format)                api/password#remind
+            api_password_change GET    /api/password/change(.:format)                api/password#change
+                                POST   /api/password/change(.:format)                api/password#change
+
+             api_cashier_payout GET    /api/cashier/payout(.:format)                 api/cashier#payout
+            api_cashier_payment GET    /api/cashier/payment(.:format)                api/cashier#payment
+  api_cashier_recurrable_purses GET    /api/cashier/recurrable_purses(.:format)      api/cashier#recurrable_purses
+                      api_deals GET    /api/deals(.:format)                          api/deals#index
+               api_deals_create GET    /api/deals/create(.:format)                   api/deals#create
+                 api_deals_list GET    /api/deals/list(.:format)                     api/deals#list
+                                GET    /api/deals/confirm/:id(.:format)              api/deals#confirm
+        api_deals_check_captcha GET    /api/deals/check_captcha(.:format)            api/deals#check_captcha
+              api_deals_results GET    /api/deals/results(.:format)                  api/deals#results
+                    api_tickets GET    /api/tickets(.:format)                        api/tickets#index
+             api_tickets_create POST   /api/tickets/create(.:format)                 api/tickets#create
+            api_tickets_message POST   /api/tickets/message(.:format)                api/tickets#message
+               api_tickets_show GET    /api/tickets/show(.:format)                   api/tickets#show
+              api_tickets_close GET    /api/tickets/close(.:format)                  api/tickets#close
+         api_tickets_categories GET    /api/tickets/categories(.:format)             api/tickets#categories
+           api_tickets_statuses GET    /api/tickets/statuses(.:format)               api/tickets#statuses
+                   api_feedback POST   /api/feedback(.:format)                       api/feedback#create
+                   api_payments POST   /api/payments(.:format)                       api/payments#create
+          api_recurring_payment POST   /api/recurring_payment(.:format)              api/payments#create_recurring_payment
+            api_payments_cancel POST   /api/payments/cancel(.:format)                api/payments#cancel
+           api_payments_history POST   /api/payments/history(.:format)               api/payments#history
+                                POST   /api/tournaments/:id/participate(.:format)    api/tournaments#participate
+               api_translations GET    /api/translations(.:format)                   api/home#translations
+                        api_sms POST   /api/sms(.:format)                            api/sms#status
+             api_payouts_purses GET    /api/payouts/purses(.:format)                 api/payouts#purses
+            api_payouts_history GET    /api/payouts/history(.:format)                api/payouts#history
+           list_api_tournaments GET    /api/tournaments/list(.:format)               api/tournaments#list
+                api_tournaments GET    /api/tournaments(.:format)                    api/tournaments#index
+                 api_tournament GET    /api/tournaments/:id(.:format)                api/tournaments#show
+                list_api_offers GET    /api/offers/list(.:format)                    api/offers#list
+                     api_offers GET    /api/offers(.:format)                         api/offers#index
+                      api_offer GET    /api/offers/:id(.:format)                     api/offers#show
+                    api_payouts POST   /api/payouts(.:format)                        api/payouts#create
+                     api_payout DELETE /api/payouts/:id(.:format)                    api/payouts#destroy
+            events_api_webinars GET    /api/webinars/events(.:format)                api/webinars#events
+                   api_webinars POST   /api/webinars(.:format)                       api/webinars#create
+                    api_webinar DELETE /api/webinars/:id(.:format)                   api/webinars#destroy
+              check_api_coupons GET    /api/coupons/check(.:format)                  api/coupons#check
+                    api_coupons GET    /api/coupons(.:format)                        api/coupons#index
+                     api_coupon GET    /api/coupons/:id(.:format)                    api/coupons#show
+                                PATCH  /api/coupons/:id(.:format)                    api/coupons#update
+                                PUT    /api/coupons/:id(.:format)                    api/coupons#update
+                                DELETE /api/coupons/:id(.:format)                    api/coupons#destroy
+              api_notifications GET    /api/notifications(.:format)                  api/notifications#index
+               api_notification DELETE /api/notifications/:id(.:format)              api/notifications#destroy
+subscribe_api_push_subscriptions POST   /api/push_subscriptions/subscribe(.:format)   api/push_subscriptions#create
+unsubscribe_api_push_subscriptions POST   /api/push_subscriptions/unsubscribe(.:format) api/push_subscriptions#unsubscribe
+         api_push_subscriptions POST   /api/push_subscriptions(.:format)             api/push_subscriptions#create
+           api_v2_app_installed POST   /api/v2/app/installed(.:format)               api/v2/app#installed
+  participate_api_v2_tournament POST   /api/v2/tournaments/:id/participate(.:format) api/v2/tournaments#participate
+             api_v2_tournaments GET    /api/v2/tournaments(.:format)                 api/v2/tournaments#index
+              api_v2_tournament GET    /api/v2/tournaments/:id(.:format)             api/v2/tournaments#show
+            verify_api_v2_phone GET    /api/v2/phone/verify(.:format)                api/v2/phone#verify
+            resend_api_v2_phone GET    /api/v2/phone/resend(.:format)                api/v2/phone#resend
+                   api_v2_phone PATCH  /api/v2/phone(.:format)                       api/v2/phone#update
+                                PUT    /api/v2/phone(.:format)                       api/v2/phone#update

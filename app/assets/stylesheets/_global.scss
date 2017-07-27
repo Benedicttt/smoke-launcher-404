@@ -1,0 +1,106 @@
+body {
+ user-select: none;
+}
+.panel-top {
+  border-radius: 0;
+  position: fixed;
+  top:0;
+  width: 100%;
+  left: 0;
+  z-index: 50;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2de257+0,7e87ea+100 */
+
+  // background: #2de257; /* Old browsers */
+  // background: -moz-linear-gradient(-45deg,  #2de257 0%, #7e87ea 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(-45deg,  #2de257 0%,#7e87ea 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(135deg,  #2de257 0%,#7e87ea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2de257', endColorstr='#7e87ea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  background-color: black;
+  background-size: cover;
+
+  color: white;
+
+  .control-label {
+    font-size: 20px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding: 10px 0;
+  }
+  .global_link,  .deploy  {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #082a60;
+    box-shadow: none;
+    text-shadow: 0px 0px 1px  #082a60;
+    &:focus {
+      box-shadow: none;
+
+    }
+  }
+}
+
+  .ws {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #082a60;
+    opacity: 1;
+    box-shadow: none;
+    text-shadow: 1px 0px 0px #082a60;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  a , a:hover{
+    color: white;
+  }
+
+  .page-frame {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #082a60;
+    opacity: 1;
+    box-shadow: none;
+    text-shadow: 1px 0px 0px #082a60;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  a , a:hover{
+    color: white;
+  }
+
+
+.select {
+  text-transform: capitalize;
+}
+
+option {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.text-form {
+  font-size: 14px;
+}
+
+input[name="generator[text]"] {
+  margin-left: 80px;
+}

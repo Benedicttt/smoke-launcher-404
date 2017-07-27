@@ -1,0 +1,2 @@
+module SmokeTraderForPartnerHelper
+end

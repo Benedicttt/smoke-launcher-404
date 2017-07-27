@@ -1,0 +1,101 @@
+doctype html
+html
+  head
+    title Cucumber smoke test launcher
+
+.container.page_stage_ui
+  =simple_form_for :generator, method: :post  do |f|
+
+    br
+    .panel.panel-top
+      = render "shared/buttons"
+
+
+      .content_prod.fields.actions-btns
+        = button_tag "kill process", class: "pid_process submit_btn"
+        = button_tag "run ", class: "ws_sender submit_btn", id: "screen-shots"
+        = button_tag "generate ", class: "step_cucumber  submit_btn"
+
+        .row
+          = button_tag "kill ws server", class: "pid_process_ws submit_btn"
+
+      = f.input :global_link, label:" Screenshots page and modal", input_html: { class: 'global_link' }, required: false
+
+      .ws
+        = f.label "Connecting WS ...", required: false
+
+    .row.form-part
+      br
+      .col-xs-2
+        .chk.fields
+          = f.input :stage, label:"Select staging" , collection: @stage_select.keys, selected: @stage_select.keys[1], required: false
+
+      .col-xs-2
+        .drv.fields
+          = f.input :driver, label:"Select driver" , collection: @drv, selected: @drv[0], required: false
+
+      .col-xs-2
+        .currency.fields
+          = f.input :currency, label:"Select currency" , collection: @currency, selected: @currency[2], required: false
+
+      .col-xs-2
+        .locale.fields
+          = f.input :chk_locale, label:"Select locale" , collection: @locale, selected: @locale[1], required: false
+
+      .col-xs-2
+        .framework.fields
+          = f.input :work, label:"Select framework" , collection: @framework, selected: @framework[0],  required: false
+
+      .col-xs-2
+        .sleep_retried.fields
+          = f.input :sleep_retried, label:"Select sleep retried ", collection: [5,10,15,20,25,30,60], selected: "10",  required: false
+
+      .col-xs-2
+        .sleep_retried.fields
+          = f.input :thread, label:"Thread ", as: :select, collection: [1, 2, 3, 4], required: false, default: ""
+
+    .form-part
+      .row
+        .col-xs-12
+          .row
+            = f.input :global_ckeckbox , label: false , collection: ["authorized emty and filled modal"], as: :check_boxes, required: false, input_html: { class: 'check-1' }
+          = f.input :scenario, label:false , as: :check_boxes, collection: @config.keys[0..0], required: false, input_html: { class: 'part-screen-1' }
+          br
+          br
+
+        .col-xs-3
+          .row
+            = f.input :global_ckeckbox , label: false , collection: ["homepage all"], as: :check_boxes, required: false, input_html: { class: 'check-2' }
+          br
+          = f.input :scenario, label:false , as: :check_boxes, collection: @config.keys[1..13], required: false, input_html: { class: 'part-screen-2' }
+
+        .col-xs-3
+          .row
+            = f.input :global_ckeckbox , label: false , collection: ["empty sidebar"], as: :check_boxes, required: false, input_html: { class: 'check-3' }
+          br
+          = f.input :scenario, label:false , as: :check_boxes, collection: @config.keys[14..16], required: false, input_html: { class: 'part-screen-3' }
+
+        .col-xs-3
+          .row
+            = f.input :global_ckeckbox , label: false , collection: ["Dropdowns"], as: :check_boxes, required: false, input_html: { class: 'check-4' }
+          br
+          = f.input :scenario, label:false , as: :check_boxes, collection: @config.keys[17..25], required: false, input_html: { class: 'part-screen-4' }
+
+        .col-xs-3
+          .row
+            = f.input :global_ckeckbox , label: false , collection: ["type, and last modals"], as: :check_boxes, required: false, input_html: { class: 'check-5' }
+          br
+          = f.input :scenario, label:false , as: :check_boxes, collection: @config.keys[26..35], required: false, input_html: { class: 'part-screen-5' }
+          br
+
+        .col-xs-10
+          .row
+            = f.input :global_ckeckbox , label: false , collection: ["modal bonus free-deals and bonus balance"], as: :check_boxes, required: false, input_html: { class: 'check-6' }
+          = f.input :scenario, label:false , as: :check_boxes, collection: @config.keys[36..37], required: false, input_html: { class: 'part-screen-6' }
+
+        .col-xs-2
+          .row
+            = f.input :global_ckeckbox , label: false , collection: ["Screens all pages"], as: :check_boxes, required: false, input_html: { class: 'check-7' }
+          = f.input :scenario, label:false , as: :check_boxes, collection: @config.keys[38..60], required: false, input_html: { class: 'part-screen-7' }
+
+      = render "shared/reports-iframe", path_reports: "/reports/binomo/screen-shots.html"

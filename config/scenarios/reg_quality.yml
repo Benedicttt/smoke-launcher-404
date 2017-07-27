@@ -1,0 +1,6 @@
+reg_web_api: "
+  Given Reg web api count
+"
+confirmed_quality: "
+  When Verifications api regs
+"

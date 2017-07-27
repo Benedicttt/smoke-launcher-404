@@ -1,0 +1,1064 @@
+  INFO [8a3dbbfa] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.49
+  INFO [e88c438d] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.105
+  INFO [e88c438d] Finished in 1.158 seconds with exit status 0 (successful).
+  INFO [8a3dbbfa] Finished in 1.188 seconds with exit status 0 (successful).
+  INFO [33f7377e] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.105
+  INFO [84115aea] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.49
+  INFO [84115aea] Finished in 0.812 seconds with exit status 0 (successful).
+  INFO [33f7377e] Finished in 0.837 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-binomo-staging2-benedict.sh 100.0%
+  INFO Uploading /tmp/git-ssh-binomo-staging2-benedict.sh 100.0%
+  INFO [75fe8bf5] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging2-benedict.sh as binomo@188.42.243.49
+  INFO [51e522b7] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging2-benedict.sh as binomo@188.42.243.105
+  INFO [75fe8bf5] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [51e522b7] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [fdfa0c18] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.105
+  INFO [1da6788e] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.49
+  INFO [fdfa0c18] Finished in 1.286 seconds with exit status 0 (successful).
+  INFO [1da6788e] Finished in 1.288 seconds with exit status 0 (successful).
+  INFO [d0651adf] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared /home/binomo/binomo.com/releases as binomo@188.42.243.105
+  INFO [3e425a15] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared /home/binomo/binomo.com/releases as binomo@188.42.243.49
+  INFO [3e425a15] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [d0651adf] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [bc15a917] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/shared/tmp/pids as binomo@188.42.243.105
+  INFO [3c1ab058] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/shared/tmp/pids as binomo@188.42.243.49
+  INFO [bc15a917] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [3c1ab058] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [d22ebff8] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config /home/binomo/binomo.com/shared as binomo@188.42.243.49
+  INFO [c3aabf1f] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config /home/binomo/binomo.com/shared as binomo@188.42.243.105
+  INFO [d22ebff8] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [c3aabf1f] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO Uploading /home/binomo/binomo.com/shared/.env 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/.env 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/unicorn.rb 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/unicorn.rb 100.0%
+  INFO [f2d3b1cf] Running mkdir -p /home/binomo/binomo.com/shared/config as binomo@188.42.243.105
+  INFO [033b07f0] Running mkdir -p /home/binomo/binomo.com/shared/config as binomo@188.42.243.49
+  INFO [f2d3b1cf] Finished in 0.163 seconds with exit status 0 (successful).
+  INFO [033b07f0] Finished in 0.163 seconds with exit status 0 (successful).
+  INFO Uploading /home/binomo/binomo.com/shared/config/database.yml 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/database.yml 100.0%
+  INFO The repository mirror is at /home/binomo/binomo.com/repo
+  INFO The repository mirror is at /home/binomo/binomo.com/repo
+  INFO [725ba569] Running /usr/bin/env git remote update --prune as binomo@188.42.243.49
+  INFO [f2f1b308] Running /usr/bin/env git remote update --prune as binomo@188.42.243.105
+  INFO [725ba569] Finished in 1.370 seconds with exit status 0 (successful).
+  INFO [f2f1b308] Finished in 1.399 seconds with exit status 0 (successful).
+  INFO [9c7487f7] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220 as binomo@188.42.243.49
+  INFO [91e21523] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220 as binomo@188.42.243.105
+  INFO [91e21523] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [9c7487f7] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [752efb32] Running /usr/bin/env git archive 7249-feature/alert-and-form-info | tar -x -f - -C /home/binomo/binomo.com/releases/20170606074220 as binomo@188.42.243.49
+  INFO [ad983217] Running /usr/bin/env git archive 7249-feature/alert-and-form-info | tar -x -f - -C /home/binomo/binomo.com/releases/20170606074220 as binomo@188.42.243.105
+  INFO [ad983217] Finished in 3.969 seconds with exit status 0 (successful).
+  INFO [752efb32] Finished in 4.028 seconds with exit status 0 (successful).
+  INFO [b0c80b20] Running /usr/bin/env echo "e9e6e315d5171f5d75c8b464912fb4da3592c6a2" >> REVISION as binomo@188.42.243.49
+  INFO [833a43e2] Running /usr/bin/env echo "e9e6e315d5171f5d75c8b464912fb4da3592c6a2" >> REVISION as binomo@188.42.243.105
+  INFO [833a43e2] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [b0c80b20] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO [fae85593] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/config /home/binomo/binomo.com/releases/20170606074220 as binomo@188.42.243.49
+  INFO [4f7218c7] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/config /home/binomo/binomo.com/releases/20170606074220 as binomo@188.42.243.105
+  INFO [fae85593] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [4f7218c7] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [400a3452] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/database.yml /home/binomo/binomo.com/releases/20170606074220/binomo.com/config/database.yml as binomo@188.42.243.49
+  INFO [18b8a445] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/database.yml /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/config/database.yml as binomo@188.42.243.105
+  INFO [400a3452] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [18b8a445] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [10877d0d] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/.env /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/.env as binomo@188.42.243.105
+  INFO [53d3f154] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/.env /home/binomo/binomo.com/releases/20170606074220/binomo.com/.env as binomo@188.42.243.49
+  INFO [10877d0d] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [53d3f154] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [7ed5c569] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/unicorn.rb /home/binomo/binomo.com/releases/20170606074220/binomo.com/config/unicorn.rb as binomo@188.42.243.49
+  INFO [aca43ecc] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/unicorn.rb /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/config/unicorn.rb as binomo@188.42.243.105
+  INFO [7ed5c569] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [aca43ecc] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [7a1ed2ad] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/risk_management_config.yml /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/config/risk_management_config.yml as binomo@188.42.243.105
+  INFO [fa338843] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/risk_management_config.yml /home/binomo/binomo.com/releases/20170606074220/binomo.com/config/risk_management_config.yml as binomo@188.42.243.49
+  INFO [fa338843] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [7a1ed2ad] Finished in 0.132 seconds with exit status 0 (successful).
+(Backtrace restricted to imported tasks)
+cap aborted!
+SSHKit::Runner::ExecuteError: Exception while executing as binomo@188.42.243.49: rake exit status: 1
+rake stdout: DEPRECATION WARNING: Sprockets method `register_engine` is deprecated.
+Please register a mime type using `register_mime_type` then
+use `register_compressor` or `register_transformer`.
+https://github.com/rails/sprockets/blob/master/guides/extending_sprockets.md#supporting-all-versions-of-sprockets-in-processors
+ (called from <module:Sprockets> at /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-traceur-0.0.1/lib/sprockets/traceur.rb:43)
+DEPRECATION WARNING: Sprockets method `register_engine` is deprecated.
+Please register a mime type using `register_mime_type` then
+use `register_compressor` or `register_transformer`.
+https://github.com/rails/sprockets/blob/master/guides/extending_sprockets.md#supporting-all-versions-of-sprockets-in-processors
+ (called from <module:Sprockets> at /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-traceur-0.0.1/lib/sprockets/traceur.rb:44)
+I, [2017-06-06T07:43:27.193721 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modernizr-2dfaf52d5c133ef1017c5232ccfa64d505ac05069a7b069fc5de2edb639707eb.js
+I, [2017-06-06T07:43:27.195792 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modernizr-2dfaf52d5c133ef1017c5232ccfa64d505ac05069a7b069fc5de2edb639707eb.js.gz
+I, [2017-06-06T07:43:27.554046 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application-27aa8c8444371b555e9e14f4d631f19be7e1e105a9818dc7b3205a149c418679.css
+I, [2017-06-06T07:43:27.554427 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application-27aa8c8444371b555e9e14f4d631f19be7e1e105a9818dc7b3205a149c418679.css.gz
+I, [2017-06-06T07:43:27.555815 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-20e0b76c2729f9c5d692e021ca60b67187fd8a6753e21cf47973fdb6262b6f70.eot
+I, [2017-06-06T07:43:27.556483 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-20e0b76c2729f9c5d692e021ca60b67187fd8a6753e21cf47973fdb6262b6f70.eot.gz
+I, [2017-06-06T07:43:27.557448 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-a77ce573d226bc5ed027d05fee8522b4918aa395781a6218eaef03c7c7c59796.woff2
+I, [2017-06-06T07:43:27.559127 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-dc18db9cce5cfa1eb30fb4d8ee19795a0c4e2438b1e56b00a92881e58e7b49d8.woff
+I, [2017-06-06T07:43:27.564484 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-c3d475718ed820887e34bfd55b2ca0ba0dc92283914610ffce65eb4f40470597.ttf
+I, [2017-06-06T07:43:27.571177 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-c3d475718ed820887e34bfd55b2ca0ba0dc92283914610ffce65eb4f40470597.ttf.gz
+I, [2017-06-06T07:43:27.606162 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-ef8ffd914bbb18af378f396af0a499c65728e501ac89bf91349f08dbb710a22d.woff2
+I, [2017-06-06T07:43:27.608591 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-d1b211a99e41535518790435539615d9ff62932fe5904183e1bc6c40910937e2.woff
+I, [2017-06-06T07:43:27.610053 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-8ff04c6e5b13ebba574539918813c46d0fec170849a47e68c1d72aae469fa5ff.ttf
+I, [2017-06-06T07:43:27.610884 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-8ff04c6e5b13ebba574539918813c46d0fec170849a47e68c1d72aae469fa5ff.ttf.gz
+I, [2017-06-06T07:43:27.611798 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-c98ef07b70591ce1e0ed2b0e8992c9ce3402b9a9f6bfe5b4909c66d6e6122a3c.woff2
+I, [2017-06-06T07:43:27.613444 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-4d308e172d3be06dfce8e992209f4014eaa3a15aa6637a81fd1bc2ae5991f197.woff
+I, [2017-06-06T07:43:27.615472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-9be6d400da270f2c104d40539f3f30338e21ee7bcc1012953706551c10415686.ttf
+I, [2017-06-06T07:43:27.615931 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-9be6d400da270f2c104d40539f3f30338e21ee7bcc1012953706551c10415686.ttf.gz
+I, [2017-06-06T07:43:27.616917 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-761c95dd192a81733d024d9f644d9b531c358f0f0ea83e9fd6211b6bd424873d.woff2
+I, [2017-06-06T07:43:27.617718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-da4929f143ad03e5465455bb1cf1333bf060ae7641f0fcf115ea65a30793e180.woff
+I, [2017-06-06T07:43:27.619423 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1.ttf
+I, [2017-06-06T07:43:27.620725 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1.ttf.gz
+I, [2017-06-06T07:43:27.621695 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-e42e4855367a3f7ed9e1b31f79faa25e00709229af0f276814eac906351b121d.woff2
+I, [2017-06-06T07:43:27.623228 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-65255d69ed4080d857df5a66ae24b04fc5b1a3c8ad2c67e37ccac925e2e6071d.woff
+I, [2017-06-06T07:43:27.624573 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-3157773ff81c4eb0883936e27054c05ed342beeef83a430a1d998213822d3da1.ttf
+I, [2017-06-06T07:43:27.625867 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-3157773ff81c4eb0883936e27054c05ed342beeef83a430a1d998213822d3da1.ttf.gz
+I, [2017-06-06T07:43:27.626972 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-e46d0f770fe49fddc1572dd48866a8bcb9dc819796b46802f98b600580b68eb0.woff2
+I, [2017-06-06T07:43:27.628927 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-f9497d00152e64fc27bf4c6e06823e0c2a5ef60badcf17a4d3416fc2361d5e6a.woff
+I, [2017-06-06T07:43:27.630359 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-044d2e3e3a17da487da46fc38cbd0a729deb9af044e563f66f8cdbc57421277e.ttf
+I, [2017-06-06T07:43:27.636751 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-044d2e3e3a17da487da46fc38cbd0a729deb9af044e563f66f8cdbc57421277e.ttf.gz
+I, [2017-06-06T07:43:27.637590 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-d9127eac0266ef71965ba3e4fae751664feb3dab4f6a85553a2e5e6dead203db.woff2
+I, [2017-06-06T07:43:27.639905 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-af5a9bea37f2aa5f6c442d8ef86135e2fa11e0f0371e9ca17494bb0bf93a68f0.woff
+I, [2017-06-06T07:43:27.641098 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4.ttf
+I, [2017-06-06T07:43:27.642343 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4.ttf.gz
+I, [2017-06-06T07:43:27.643632 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-69ccb8f8ce75298efce2123c67fe292a9545ce4008afb12fd1005ad819391b1f.woff2
+I, [2017-06-06T07:43:27.645376 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-52244c503f97696355716556dd1ed57d2265f2ee433939523202cb8e5b20ddfb.woff
+I, [2017-06-06T07:43:27.647043 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-57577a8ab5086295d1026b1d53972fa0a2f7d1770a286d38be62bad4c7cdfbcd.ttf
+I, [2017-06-06T07:43:27.648731 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-57577a8ab5086295d1026b1d53972fa0a2f7d1770a286d38be62bad4c7cdfbcd.ttf.gz
+I, [2017-06-06T07:43:27.654057 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-5efafd26d85f9d6c3340aa7b81aff0a4d9fe27d8f9ec9885565afb9fa2097d91.woff2
+I, [2017-06-06T07:43:27.655620 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-a8968be35c05d541ccd4eb1c4af41cb3b27f470986c85cb23062ace8938828a9.woff
+I, [2017-06-06T07:43:27.656873 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8.ttf
+I, [2017-06-06T07:43:27.657559 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8.ttf.gz
+I, [2017-06-06T07:43:27.658636 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-54e0b90c9150984d4818cafd62e761acc10938ccb15adc0ad4eacb9d08cf9724.woff2
+I, [2017-06-06T07:43:27.661490 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-3d8c92cae462dad667ed19265fe0163d8fd69b743e1a2e520dd8c443b8bc8795.woff
+I, [2017-06-06T07:43:27.663343 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-91a1c11660929e8cfb726d7924a51b4042c0e77ec4c5b90b92fe5e45d26de759.ttf
+I, [2017-06-06T07:43:27.664080 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-91a1c11660929e8cfb726d7924a51b4042c0e77ec4c5b90b92fe5e45d26de759.ttf.gz
+I, [2017-06-06T07:43:27.670431 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-cc7b26ac53700f78f8a452be6d14f14943e88dceb14edf64cddceba6e66f3f5e.woff2
+I, [2017-06-06T07:43:27.672649 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-ba3627978bd7d98b4294876d73a52f2e74cc4201cdbdaf043cb647042fba699d.woff
+I, [2017-06-06T07:43:27.675086 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54.ttf
+I, [2017-06-06T07:43:27.676113 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54.ttf.gz
+I, [2017-06-06T07:43:27.677411 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-cb6e4d4eb7d88e8112e5dda0a7569b2215db6153d3328ccef36986637e717330.woff2
+I, [2017-06-06T07:43:27.679526 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-382143d8ff983d0836837cd0e524ca68c6249221e6b08b24055190fd4d039b7a.woff
+I, [2017-06-06T07:43:27.681198 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e.ttf
+I, [2017-06-06T07:43:27.681769 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e.ttf.gz
+I, [2017-06-06T07:43:27.683179 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-668c6b09e84a230310c372f6de1f95b80d5dfe6e980a8f2570db3e8c0c52cdb2.woff2
+I, [2017-06-06T07:43:27.685017 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-10461e4630ac2ada61a27453f149cd13717729c468359414d1ba3c00cffdc802.woff
+I, [2017-06-06T07:43:27.686602 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-52079e4f67635c5a9bfc65873ceb6d75c773b25ab4ebdcb423f6e70aa036fd99.ttf
+I, [2017-06-06T07:43:27.687465 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-52079e4f67635c5a9bfc65873ceb6d75c773b25ab4ebdcb423f6e70aa036fd99.ttf.gz
+I, [2017-06-06T07:43:27.688413 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-1389ecb83dd37fda29b408aa2640b64a6486bd136c4f2ddd60f5b88a9c3c42b8.png
+I, [2017-06-06T07:43:27.690342 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-black-bc9d589f107d8ef06112e13581e9af92db88ed057b02b22ea7aaa28ac6a3b518.png
+I, [2017-06-06T07:43:27.692322 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-7d2188d3236b42ddba2dc1e0d922a9d423548d1d45cce9ee17977b17fd6dc7d1.png
+I, [2017-06-06T07:43:27.693267 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-ru-a55702cc22f8436f582852af560c14f8bef7edcd4eba20b805238beb8f329845.png
+I, [2017-06-06T07:43:27.694408 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-id-af932bcb4c8612918fd44207f9fac92868bd8ba5081fc54e33c80c57cac70cad.png
+I, [2017-06-06T07:43:27.695520 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/form-questionary-sidebar-e4b920c48e3785ce5d9e94e8c3dd6ab5a5115682c7ae18ddbec81900d6e4b744.jpg
+I, [2017-06-06T07:43:27.697005 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/services-sprite-white-hor-158604e29d166c330f57e13f570de28919e5a5fc6d97df7674130e32410ece63.png
+I, [2017-06-06T07:43:27.697767 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/help-section-book-5d800df34935573d19db4b0feed37140fdcd2baeac7a8b005b414af25246a296.png
+I, [2017-06-06T07:43:27.700079 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/systems-bg-c24d15bb56f5d777ff26789d028e0f2a0affe41aaad9cb351ffbe853195ffcb9.jpg
+I, [2017-06-06T07:43:27.701755 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/demo-bg-8a072bb9f1b4ad4974fe5ddff7af60db7921dc574659150ff09132ca3f391110.jpg
+I, [2017-06-06T07:43:27.703363 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/easy-bg-a2c4f16e538c5d54ce510f9e8d586032b67ae893c5a33d2dddd69431a043d905.jpg
+I, [2017-06-06T07:43:27.705281 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-2ff73eaaffc71abc60f7dce4ecb249dbf20176f7beb5b673e8c8f7788d98e961.png
+I, [2017-06-06T07:43:27.706431 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/review-bg-703214daab2f9cc5a3bbe798334e6625f03c402552c6382cb1983d30eea3eb40.jpg
+I, [2017-06-06T07:43:27.707814 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modals/hotkeys-trading-ad4a8a0e5f656b092f34c08553e32d43eaa59ec5b4ba4a2b05d2d8ba0bda1509.png
+I, [2017-06-06T07:43:27.708928 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modals/hotkeys-assets-1b190e393fc1c32c77ecd71416bbd554e8b99a385cf5145160275589381680b5.png
+I, [2017-06-06T07:43:27.710233 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/svg_filter/blur-f1174d0b330b9288993d498c12ad2b95ad333ec505f7599aab6b26adc2d69729.svg
+I, [2017-06-06T07:43:27.710535 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/svg_filter/blur-f1174d0b330b9288993d498c12ad2b95ad333ec505f7599aab6b26adc2d69729.svg.gz
+I, [2017-06-06T07:43:27.711348 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/i-checked-7dc71bafad6ec01571885a1fb51c619cf4c7bd0b089a1d03ccb47152709c5403.png
+I, [2017-06-06T07:43:27.713012 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/s_logo-671005aa77cb2c51f342a4cbae2ab98d50309fbbb121aea3c897d18a2428b695.png
+I, [2017-06-06T07:43:27.714185 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-197x50-2c55aed30f7f3205badbda9f21895ccb655f69a0ec218e98a8be73827061b2dd.png
+I, [2017-06-06T07:43:27.715472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/i-spr-deails-pics-2afec568813abcb34270a001ee31a5ad222fec865a30fd7dbfd1730668fb7452.png
+I, [2017-06-06T07:43:27.716616 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-bg-db8bcaa4fdcccc0d1d0b81382b99336ded9f75f9bf182516b3b33fb8c5af1ec6.png
+I, [2017-06-06T07:43:27.717929 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-bg-white-df9292b1339fd16c0ad56f53d669eeab0d7d28ecb940b34e3049273cc20f8a12.png
+I, [2017-06-06T07:43:27.718960 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/avatar-default-7d3736b79ed5a4e512d7c98ef8a387d2f74d241f0e857df2588369ee5876d4d8.png
+I, [2017-06-06T07:43:27.720278 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/main-bg-cc422c1da4743864d63eeaf65012d34adbfc0c106df8ecad90a3ab21838dd3cd.png
+I, [2017-06-06T07:43:27.721564 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/people-332e1c15e21dfea30bea3159724477eb7375da80c52253fb79134a990836df72.png
+I, [2017-06-06T07:43:27.723074 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/main-mid-bg-68c2de6b8d9bc4e8469c1272253779f9dcffd09806074b14f88cf170a0ed4c37.png
+I, [2017-06-06T07:43:27.724098 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-e3ffa1152ded2d597f586d08634178ad066f4dff38b78b11727097ad9ac342f2.png
+I, [2017-06-06T07:43:27.725397 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-en-12289857af985bf78a0760faf274d7d392509a0a3c22f68203f84d9176c8d040.png
+I, [2017-06-06T07:43:27.726927 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-th-167e6b0917c035e259b3aa6084241e824af1356b71d1f451880d4da400f5ce71.png
+I, [2017-06-06T07:43:27.728557 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-vn-8759a7cc5dfb89ca6ea065b491957ed69a35ede8298191399178ab48edfc37b4.png
+I, [2017-06-06T07:43:27.729575 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/graph-gag-034fd1b5ef5c7937e48edd8904ab0923fbaecbd406c52a49cea2725cee2d2b58.png
+I, [2017-06-06T07:43:27.730918 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ipad-909f28eedf254880a7d6ae2615fb0825124a3addf786e82e5d41574f3388650c.png
+I, [2017-06-06T07:43:27.732419 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-red-0d66878f8f471c8b80b12cfd7c27f5f02f24240028bbf4d889034331aab89fbb.png
+I, [2017-06-06T07:43:27.733568 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-white-3359c1e5ce3ce2c6c789f9accc6d52e331f3c2518bbe00833d4eb8b11cbbc744.png
+I, [2017-06-06T07:43:27.734716 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-black-b9ab4bc29d12752b151271075da881cd0412a9e73abaca336839c7e8860dc6f6.png
+I, [2017-06-06T07:43:27.735554 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/safe-guards-cashier-21a2e625ff1d7f76606befcc3c57e48ab0758acbd775dcc0bba697e412896f54.png
+I, [2017-06-06T07:43:27.737001 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sprite-advantages-306beb66571760660a3cf159d17a80da4152f2d85ac69bedc2e754cb765b4b1f.png
+I, [2017-06-06T07:43:27.738216 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/pay-systems-4f3d844c39774b7cf4a2693f622dc9b6005c28bbbbbc5363ddd9973324a5245c.png
+I, [2017-06-06T07:43:27.739303 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/pay-systems-en-6250e0f47628abe178fc247fb57a5d6d678a65a3c267c3e336b23af8899920e6.png
+I, [2017-06-06T07:43:27.740510 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-red-c0dc8a23e038df2880e6bfb827c7f32416848de265717ca6a335ab0dc69d4f88.png
+I, [2017-06-06T07:43:27.741668 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-green-f9d17f891275dfb660cf9c1cbddaa7d6a3e8c46290b328e623045b51bc27037c.png
+I, [2017-06-06T07:43:27.742611 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-gray-6fdcd4d2560faa9d7495a77e158e0342f655242d2be85331d05db538e4aa4f94.png
+I, [2017-06-06T07:43:27.743593 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/tagline-safeguards-364ef63762b44aa4e9d88dac17078d8cde25e1a9c5f60185341cce8c77016bbf.png
+I, [2017-06-06T07:43:27.744721 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/candles-14e89f52f960afd39bea1332b712e5304c85dc5c809e5363fe6329563dea562d.png
+I, [2017-06-06T07:43:27.745667 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-robo-hand-494938d35c3dd492174dc4f7ea6586bc96fbd5126efbe4677b4f0d1753cbcb66.png
+I, [2017-06-06T07:43:27.747145 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/twentyboom-e4c89f36aa0ffeca07026243fd02ece4a97b520a8ad753bd4456d954d682b6ea.png
+I, [2017-06-06T07:43:27.748125 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-ipad-ab64db814e04f26b87b9c1024aea07fd3f4c983c4adacfc47ccd443b3d2e82c7.png
+I, [2017-06-06T07:43:27.749134 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide2-bg-350cd8e0e2a7f159103ff4e80b7a4989364862f57da344e13ee725279b39a1f2.png
+I, [2017-06-06T07:43:27.750778 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide3-bg-3c700fb20e55e23c4388021376d27aced5cdfb60c6a39e85a1b4eead31c5cfb7.png
+I, [2017-06-06T07:43:27.753477 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide4-bg-0da59968fde4c1b368ce663cb23aec856008c1fef238d50b6da6185b3b6f4b68.png
+I, [2017-06-06T07:43:27.755661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide5-bg-c5718281172acfb350200bf6635d81b8e0f7d72eefa4388c7d6259c28ef96e55.jpg
+I, [2017-06-06T07:43:27.756999 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide6-bg-1c5b7e77d8ad8a23dc2edc9d0cddc2f37c75544b67aed2db9842e3b832ebafe6.jpg
+I, [2017-06-06T07:43:27.758531 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide7-bg-94203c5615505fe2bf4f5bdeef19e09e614bdcba6b41a3cdcece6f3583fc8ac5.jpg
+I, [2017-06-06T07:43:27.769961 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/offer-demo-bg-95e4bc8a7da795671b2d3e2a2280da89f9adf2db73994365a3097a30a419d04c.jpg
+I, [2017-06-06T07:43:27.772038 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/500t-486b0180df6d5a7ff33259f953130ed8599d43f4543294fcd30dbc85c3412c7f.png
+I, [2017-06-06T07:43:27.772961 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/first-depo-slider.ru-3bf53e04632caf35f5eedd03bf626d1b653746667d0db2bbfc044c6e97e5c118.jpg
+I, [2017-06-06T07:43:27.774926 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/first-depo-slider.en-268fc1b09d84892e62f3651ee400538a3da48ace31321b46106cecf895710b7c.jpg
+I, [2017-06-06T07:43:27.777136 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide8-bg-0f64f3fd2f9bb16ff18633c192a3540149b466ecfaf88fb5c177ad4c609b9c55.jpg
+I, [2017-06-06T07:43:27.778377 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/bg-mega-offer-banner-54bc124aaf7cc7a73c8b2ca843c5a54fe362e3bb8e334ec6b5447066a72ef654.png
+I, [2017-06-06T07:43:27.779766 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/bg-mega-offer-slider-30-28a2df4d263bab1bf87c995b2693c5e82a25a8a04fff75216cd407b58b3d1cf0.png
+I, [2017-06-06T07:43:27.800321 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-content-bb51420f905d7bfa6cdac70db665aaf94d683759156e92112aa332a72eff571a.png
+I, [2017-06-06T07:43:27.801599 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-content-en-a3f83bb9fe252fa135b01020f60d73f660a895aa01acdb02ce50eded4ebcbe3e.png
+I, [2017-06-06T07:43:27.802798 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-bg-abcead45d6f3027848d25ee2e02d6cbd2e4054b8d3026cf0a265862fdf32da35.jpg
+I, [2017-06-06T07:43:27.803912 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/madam-1217c40bab94fbf60651bb6a9b84e9040263f9f03c74ee56b08814d7b6866146.png
+I, [2017-06-06T07:43:27.805437 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/madam-step-2-023f68e2d77e6ddfe711557f7ec6ee6772f753a490a1d0bac44857dbd0b33016.png
+I, [2017-06-06T07:43:27.806929 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/girl-expired-1fe8da7d9995af4a7b0aaba1ccbd2deedcedea2e2efffd9b4dcdac31854fdeec.png
+I, [2017-06-06T07:43:27.808154 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/girl_verification-a8fb8d40d1529c2cca3d086d189c89ea4383cc21cd90661120c878c44de6f4a6.png
+I, [2017-06-06T07:43:27.809372 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free-trading-bg-36ee532703be9f2e7b042ea41084d29cbb01604cb15fbba406ba7d4cda60596b.jpg
+I, [2017-06-06T07:43:27.810661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free-20-e8a208226348a510a031b9b7a4f32a7a91e9734c14964d8038ba759304088442.png
+I, [2017-06-06T07:43:27.811976 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sad-girl-bac86690a3054bff6282bfc67687ffd685a3f7ac4b4b21d652fd649751d417b9.png
+I, [2017-06-06T07:43:27.813084 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free_deals_finished_girl-34d8a4e2ec2b37cb31c4f9ab5b9cb9f98f9fab41eb7cc807415da6f133b538b2.png
+I, [2017-06-06T07:43:27.814490 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/404-8a980ce7a5bb4ac6de9dd77b19dcf5e05e09c86724074305b6ce445cfe712684.png
+I, [2017-06-06T07:43:27.815894 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/500-e25793f43b44209e5aa35493cd6441de4aab9b4124d0203fbefea091903509d5.png
+I, [2017-06-06T07:43:27.817627 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/javascript-8ba6b06b8f21ba6306ddc2a0a18265cf4a7e0e1960d8b12966e630a989b2c182.png
+I, [2017-06-06T07:43:27.818838 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-btn-sprite-44e0c0ab29f74655826fdd4a484758c4dc4b6ee7c51623b2d57bfe51eb12e460.png
+I, [2017-06-06T07:43:27.820212 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-up-btn-84816966f15df61568c07c06fc1f4864dd5d309b22a696088c8ab2dec2649f8d.png
+I, [2017-06-06T07:43:27.821294 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-up-btn-panel-a04b77d9d96f6d401854120f2df3fe8384ef6ae777a9d1e6206b954e65eb8326.png
+I, [2017-06-06T07:43:27.822618 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-down-btn-3bcf51924b49d553defb2986116c9ec590568220c48d6e73a43f324cc9ea5370.png
+I, [2017-06-06T07:43:27.823831 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-down-btn-panel-df2cfabc7cf1e96002c2644b788eebc42c73413a72efc43f1f0fe16d65c536b1.png
+I, [2017-06-06T07:43:27.824793 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/chart-logo-701f4fb34801ed9886b3f9ba5b2e94ad7184f007baac1a352673b708f8c696bb.png
+I, [2017-06-06T07:43:27.825908 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-count-977c7c281b8a2a850029c51080d3ce1585f9ce24fd172890ca22a67ae5211a09.png
+I, [2017-06-06T07:43:27.826992 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/best-choice-996a190fd1dbd83c215d1bf6104821326e4805fe63c774117d163214a1597a9b.png
+I, [2017-06-06T07:43:27.828191 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sprite-help-section-44f3dffc01cb7ee6b08b99aed345059a722a0d6d0a6abfede6d82a5c25c38ab5.png
+I, [2017-06-06T07:43:27.829614 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/tutorial-7aa251c1b006b551d5598c8a99083bcdeb8cbb6b02345a9c32108f92caf3eb66.png
+I, [2017-06-06T07:43:27.835609 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-805235e9ee165c1cfca700b7b1305197dfc2864b9dd6af3b897000b8b2f095f9.png
+I, [2017-06-06T07:43:27.837870 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-girl-24ee38aebacdce6d2c9a8762506e1f00549979b1949dd679a6e531d36f58ef79.png
+I, [2017-06-06T07:43:27.839828 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-tail-7376d7e5d8fcad47b68acda7d960750bac91dcef545fbfc3c299e7dc19a2ef3b.png
+I, [2017-06-06T07:43:27.840976 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/webinar-bg-4a45d6680afe43def2716863d565b5380e31ff0296f2860a8a353e288448cdce.jpg
+I, [2017-06-06T07:43:27.843063 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/apps-btns-sprite-28c467cc880763bd50d194eb564b6533b15bd796fe5e1f58d0599260ecb80261.png
+I, [2017-06-06T07:43:27.844335 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sidebar-sprite-5570559992e75911729b9c060382e7bba60b8f24f1d633f621053ff64f386d1c.png
+I, [2017-06-06T07:43:27.845472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-sidebar-0fdfb0367a9dd0e1a90f05956e5937c39bc34a5bc7390db3d79eb5166e55356a.png
+I, [2017-06-06T07:43:27.846695 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/search-icon-744a7b89cfc93a91f2db4976513f4695bb2738f635956910f135398814ef4866.png
+I, [2017-06-06T07:43:27.847978 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-white-e161a4305beade36a393ddeabbc814266fc618b6ea9e0792cb89e1a6d96845b6.svg
+I, [2017-06-06T07:43:27.848749 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-white-e161a4305beade36a393ddeabbc814266fc618b6ea9e0792cb89e1a6d96845b6.svg.gz
+I, [2017-06-06T07:43:27.849724 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-black-e1baaac8d67b34e42c0296118e8498360bd11c8d4a30a77a2e768e21f9ccd134.svg
+I, [2017-06-06T07:43:27.850155 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-black-e1baaac8d67b34e42c0296118e8498360bd11c8d4a30a77a2e768e21f9ccd134.svg.gz
+I, [2017-06-06T07:43:27.851291 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/sprite-top-player-5358f75dea6f9c33b19bdb67b411fd48204bcef97004f98275ed9586bd93516b.png
+I, [2017-06-06T07:43:27.852913 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-449b62a7a25f4161257192f0dfcd38a10e666e33ccd8b0426d738bdf00ab0016.png
+I, [2017-06-06T07:43:27.854193 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/modal-bg-1594bd3ae48ba07ee4bbe008e66bc79d3e46cdc94d3904cc4ea2282773f55951.jpg
+I, [2017-06-06T07:43:27.855864 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/n_icons/icon-red-gift-2adfd146e51172601ac0fe57c816428082e712f40724d5688e529dcca82387a8.png
+I, [2017-06-06T07:43:27.856921 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/n_icons/icon-accelerated-withdrawals-6d4751a72627229eba44d5798037e8bdcccc0ccf566b9d2a5ab2b896d1ac6a24.png
+I, [2017-06-06T07:43:27.858147 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-519d322d1409b784cab52d2f45d2c051cc1a2196deaeb206aca8f766a08bb4c7.eot
+I, [2017-06-06T07:43:27.858584 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-519d322d1409b784cab52d2f45d2c051cc1a2196deaeb206aca8f766a08bb4c7.eot.gz
+I, [2017-06-06T07:43:27.859324 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-2b91eaf0c80d8a12e5eda04a99a09b61a008ffd84f3c8d82f68690e3155ef7ed.woff
+I, [2017-06-06T07:43:27.860505 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-44c46d366e3cf814be62fcb7fc34aa650d38ab393fa4bc168b36b3db0d8b1f5a.woff2
+I, [2017-06-06T07:43:27.862055 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-85ea92cd145b5f9558c6d9521b4c57984de451fe3e982b9c20a2e0ee8d233b22.ttf
+I, [2017-06-06T07:43:27.862502 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-85ea92cd145b5f9558c6d9521b4c57984de451fe3e982b9c20a2e0ee8d233b22.ttf.gz
+I, [2017-06-06T07:43:27.863446 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-96377f9578c6d07ddcbba9fb5fee834acea757ed51e6e438157c1815f8248647.svg
+I, [2017-06-06T07:43:27.864158 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-96377f9578c6d07ddcbba9fb5fee834acea757ed51e6e438157c1815f8248647.svg.gz
+I, [2017-06-06T07:43:27.865232 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/preloader-8c4e69d638a52034eb80e39e7b75856b837928d5b1c62b86e41b7f7740e8ddcf.svg
+I, [2017-06-06T07:43:27.867273 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/preloader-8c4e69d638a52034eb80e39e7b75856b837928d5b1c62b86e41b7f7740e8ddcf.svg.gz
+I, [2017-06-06T07:43:28.067087 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application_th-183947371dc72b91e1a8be4186ca33b9500e527c20729023021f93a526a278c0.css
+I, [2017-06-06T07:43:28.067344 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application_th-183947371dc72b91e1a8be4186ca33b9500e527c20729023021f93a526a278c0.css.gz
+I, [2017-06-06T07:43:28.434523 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize-393f385764b8f6f16f5e632dbd9e8fda3c5eae207e5921367286be785e45e2ca.css
+I, [2017-06-06T07:43:28.434775 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize-393f385764b8f6f16f5e632dbd9e8fda3c5eae207e5921367286be785e45e2ca.css.gz
+I, [2017-06-06T07:43:28.435644 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_flat_75_ffffff_40x100-39ab7ccd9f4e82579da78a9241265df288d8eb65dbbd7cf48aed2d0129887df5.png
+I, [2017-06-06T07:43:28.438378 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100-54270656df079c4da5182629a080fc633b6f84b87985eb016d25a560e2c38d4a.png
+I, [2017-06-06T07:43:28.439108 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400-ddf5dd4e0ef2b185e8bb0af7b6e90ebe74a84384cb4700658e76e754c8bfe550.png
+I, [2017-06-06T07:43:28.441936 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_75_dadada_1x400-c108f5cbf2dd9ec07a26530695ddd95e1664597ce6c056ae44c162cc2e28cec4.png
+I, [2017-06-06T07:43:28.442718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_65_ffffff_1x400-f0e6cd91b837d5c5644d026e5ffeccd907953317cd5c0f689901733afda260b2.png
+I, [2017-06-06T07:43:28.445476 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_55_fbf9ee_1x400-691597e8a40a891ea94d3589976ecfc33e6145c49422443b00ac2b5a0022964c.png
+I, [2017-06-06T07:43:28.450297 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_95_fef1ec_1x400-f6f1c1bedf1a0f37cfef81d12f5f012869d1ee7c984775a569827a1784d34f5c.png
+I, [2017-06-06T07:43:28.453420 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_222222_256x240-57adb0d65f4e91dacfee975d9574422bee7486c8a182d60133728c672f2cdbbc.png
+I, [2017-06-06T07:43:28.454377 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_888888_256x240-ea2e29625de3463465e93b002b065f5833e05b97f7a052b1c141e754d62e1a8b.png
+I, [2017-06-06T07:43:28.457718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_454545_256x240-07460e843c3e59aaadbb34231e699e856a2980753c7a47b66447da5d9f93fb7f.png
+I, [2017-06-06T07:43:28.459202 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_2e83ff_256x240-20f8c6667afc48aa433ee9eb6d8a0584bdbd6b4a4a9091ff1e6b3adb31e63bd9.png
+I, [2017-06-06T07:43:28.461797 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_cd0a0a_256x240-1e32c6dbf5d3fd342f27a78aa881550d6412aa207f48468724a6a15402b6041b.png
+I, [2017-06-06T07:43:28.462663 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_flat_0_aaaaaa_40x100-9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab.png
+I, [2017-06-06T07:43:28.679138 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize_th-01b731c24e7dc39ebadc1c3d73f3cdb9ac72d68916e6a3dc13be09418ac1cff4.css
+I, [2017-06-06T07:43:28.679387 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize_th-01b731c24e7dc39ebadc1c3d73f3cdb9ac72d68916e6a3dc13be09418ac1cff4.css.gz
+I, [2017-06-06T07:43:29.042379 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank-0e48ad180c744a40157cbeb0c9fe9f0d6f50f6aa26c87ff8a2a0ebb4619f94c7.css
+I, [2017-06-06T07:43:29.042621 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank-0e48ad180c744a40157cbeb0c9fe9f0d6f50f6aa26c87ff8a2a0ebb4619f94c7.css.gz
+I, [2017-06-06T07:43:29.105829 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/3-da753e319748e538fce77a4ef559a3add5d50c696ef9dd507b9cc4b7ccb67650.svg
+I, [2017-06-06T07:43:29.106457 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/3-da753e319748e538fce77a4ef559a3add5d50c696ef9dd507b9cc4b7ccb67650.svg.gz
+I, [2017-06-06T07:43:29.107538 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/1-0d0ae657bbb7bf46788bf3f1b30cfdfdce16dd1868498e6e838f8fe636505cb8.svg
+I, [2017-06-06T07:43:29.108072 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/1-0d0ae657bbb7bf46788bf3f1b30cfdfdce16dd1868498e6e838f8fe636505cb8.svg.gz
+I, [2017-06-06T07:43:29.109146 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/2-039e35500436341370e5af5150e3ad75e4fa27b6b02432d005764270cf66ee77.svg
+I, [2017-06-06T07:43:29.109775 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/2-039e35500436341370e5af5150e3ad75e4fa27b6b02432d005764270cf66ee77.svg.gz
+I, [2017-06-06T07:43:29.110711 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/5-c37bb9ec9bc13e838e38fd02e7e29731e8abf8ed8ef9f46175ca901aec68eb32.svg
+I, [2017-06-06T07:43:29.111155 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/5-c37bb9ec9bc13e838e38fd02e7e29731e8abf8ed8ef9f46175ca901aec68eb32.svg.gz
+I, [2017-06-06T07:43:29.165827 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank_th-452dfa5ad31ddcf4df3d5e410202ac27b8d02b2af21f572fd5d048b74391cc4e.css
+I, [2017-06-06T07:43:29.166113 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank_th-452dfa5ad31ddcf4df3d5e410202ac27b8d02b2af21f572fd5d048b74391cc4e.css.gz
+I, [2017-06-06T07:43:29.268895 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue-43be81d21a3d40829617fc55f9c2acaba533f55909fd1a400b227fda57169513.css
+I, [2017-06-06T07:43:29.269194 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue-43be81d21a3d40829617fc55f9c2acaba533f55909fd1a400b227fda57169513.css.gz
+I, [2017-06-06T07:43:29.390916 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue_th-4c8aed41f194d15c01a2f4cb9de3e4312454adc0da42048e72ad455db93e1b2f.css
+I, [2017-06-06T07:43:29.391192 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue_th-4c8aed41f194d15c01a2f4cb9de3e4312454adc0da42048e72ad455db93e1b2f.css.gz
+I, [2017-06-06T07:43:29.521728 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-bd43f332b2946d6126287e15574ff761036831e989588135ee7b3288bcbbeb41.css
+I, [2017-06-06T07:43:29.522074 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-bd43f332b2946d6126287e15574ff761036831e989588135ee7b3288bcbbeb41.css.gz
+I, [2017-06-06T07:43:29.710478 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile_th-bf870cdac647be5369a216122c4ce3f108cd7b7074d15871c56296f2c62fe829.css
+I, [2017-06-06T07:43:29.710718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile_th-bf870cdac647be5369a216122c4ce3f108cd7b7074d15871c56296f2c62fe829.css.gz
+I, [2017-06-06T07:43:29.934436 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/new_forms-b35103ca764b636f3d912782ccf054febbaa1af8c8885b49d9ec81deb35c9872.css
+I, [2017-06-06T07:43:29.934661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/new_forms-b35103ca764b636f3d912782ccf054febbaa1af8c8885b49d9ec81deb35c9872.css.gz
+I, [2017-06-06T07:43:30.111336 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/promo-9611bb4beb7a519ce12af2f1f2a265cc32f40b5fad64a954dfa9705d79678348.js
+I, [2017-06-06T07:43:30.111633 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/promo-9611bb4beb7a519ce12af2f1f2a265cc32f40b5fad64a954dfa9705d79678348.js.gz
+I, [2017-06-06T07:43:30.112625 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/arrow_call-ce3c05f6a34e431e9f77d8bd57d109d7677c73f650a2576fc9aab72e35b23a77.png
+I, [2017-06-06T07:43:30.113584 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/arrow_put-3b0034e46af5b62bf044d7c0da448d90c454df5b610d344c8324d580b06eaf9b.png
+I, [2017-06-06T07:43:30.114537 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/timer-1f199caffaeedd0ca179028e001c2e40e6b55f96c0b834387c0beb09fc98bef1.png
+I, [2017-06-06T07:43:30.115572 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/finish-def27799e777c02cf06eca07baae5e7407fa3b7e627d3ed6642d7abf7c37f5de.png
+I, [2017-06-06T07:43:30.120295 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/loading-482426ac5d50c96e1e841a533cd8728808ad00fd3f4a70d8c74582e5eedec76b.png
+I, [2017-06-06T07:43:30.121179 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/wallet-bd516b62adce568ab010a3f6faa52fc941c9f2667756bff19cc70ed3d2c8daa2.png
+I, [2017-06-06T07:43:30.125444 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/old_browser-e1ef58b9fbd9eeea6ef94986b906e7f65fb51b4dc78d0c7ffca707f1c9102547.js
+I, [2017-06-06T07:43:30.125597 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/old_browser-e1ef58b9fbd9eeea6ef94986b906e7f65fb51b4dc78d0c7ffca707f1c9102547.js.gz
+I, [2017-06-06T07:43:30.129837 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/sign_up-92982954a13a3fefe7135eb12e96ea2d2ab9967bcbf316967f15953a6dd552c8.js
+I, [2017-06-06T07:43:30.130009 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/sign_up-92982954a13a3fefe7135eb12e96ea2d2ab9967bcbf316967f15953a6dd552c8.js.gz
+I, [2017-06-06T07:43:30.132727 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/vendor/bootstrap2/bootstrap-tab-3352fb4ef8a5c866a122896836c8a1c8aef48c94f0325b7dffacb1f3f9289380.js
+I, [2017-06-06T07:43:30.132875 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/vendor/bootstrap2/bootstrap-tab-3352fb4ef8a5c866a122896836c8a1c8aef48c94f0325b7dffacb1f3f9289380.js.gz
+rake aborted!
+SassC::SyntaxError: Error: media query expression must begin with '('
+        on line 7 of app/assets/stylesheets/promo/vars/_m_vars.scss
+>> @import 'font-config/v_font_config',
+   ^
+/home/binomo/binomo.com/releases/20170606074220/binomo.com/app/assets/stylesheets/promo/vars/_m_vars.scss:7
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-1.11.2/lib/sassc/engine.rb:47:in `render'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-rails-1.3.0/lib/sassc/rails/template.rb:34:in `block in call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/utils.rb:171:in `module_include'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-rails-1.3.0/lib/sassc/rails/template.rb:33:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/sass_processor.rb:30:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:75:in `call_processor'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:60:in `block in load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:44:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:47:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/bundle.rb:23:in `block in call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/utils.rb:200:in `dfs'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/bundle.rb:24:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:75:in `call_processor'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:60:in `block in load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:44:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:47:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/base.rb:66:in `find_asset'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/base.rb:73:in `find_all_linked_assets'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:134:in `block in find'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:133:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:133:in `find'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:185:in `compile'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:68:in `block (3 levels) in define'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/rake/sprocketstask.rb:147:in `with_logger'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:67:in `block (2 levels) in define'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:332:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:20:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:11:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/exe/bundle:34:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/exe/bundle:26:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:22:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:22:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => assets:precompile
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+
+SSHKit::Command::Failed: rake exit status: 1
+rake stdout: DEPRECATION WARNING: Sprockets method `register_engine` is deprecated.
+Please register a mime type using `register_mime_type` then
+use `register_compressor` or `register_transformer`.
+https://github.com/rails/sprockets/blob/master/guides/extending_sprockets.md#supporting-all-versions-of-sprockets-in-processors
+ (called from <module:Sprockets> at /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-traceur-0.0.1/lib/sprockets/traceur.rb:43)
+DEPRECATION WARNING: Sprockets method `register_engine` is deprecated.
+Please register a mime type using `register_mime_type` then
+use `register_compressor` or `register_transformer`.
+https://github.com/rails/sprockets/blob/master/guides/extending_sprockets.md#supporting-all-versions-of-sprockets-in-processors
+ (called from <module:Sprockets> at /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-traceur-0.0.1/lib/sprockets/traceur.rb:44)
+I, [2017-06-06T07:43:27.193721 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modernizr-2dfaf52d5c133ef1017c5232ccfa64d505ac05069a7b069fc5de2edb639707eb.js
+I, [2017-06-06T07:43:27.195792 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modernizr-2dfaf52d5c133ef1017c5232ccfa64d505ac05069a7b069fc5de2edb639707eb.js.gz
+I, [2017-06-06T07:43:27.554046 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application-27aa8c8444371b555e9e14f4d631f19be7e1e105a9818dc7b3205a149c418679.css
+I, [2017-06-06T07:43:27.554427 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application-27aa8c8444371b555e9e14f4d631f19be7e1e105a9818dc7b3205a149c418679.css.gz
+I, [2017-06-06T07:43:27.555815 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-20e0b76c2729f9c5d692e021ca60b67187fd8a6753e21cf47973fdb6262b6f70.eot
+I, [2017-06-06T07:43:27.556483 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-20e0b76c2729f9c5d692e021ca60b67187fd8a6753e21cf47973fdb6262b6f70.eot.gz
+I, [2017-06-06T07:43:27.557448 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-a77ce573d226bc5ed027d05fee8522b4918aa395781a6218eaef03c7c7c59796.woff2
+I, [2017-06-06T07:43:27.559127 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-dc18db9cce5cfa1eb30fb4d8ee19795a0c4e2438b1e56b00a92881e58e7b49d8.woff
+I, [2017-06-06T07:43:27.564484 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-c3d475718ed820887e34bfd55b2ca0ba0dc92283914610ffce65eb4f40470597.ttf
+I, [2017-06-06T07:43:27.571177 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-c3d475718ed820887e34bfd55b2ca0ba0dc92283914610ffce65eb4f40470597.ttf.gz
+I, [2017-06-06T07:43:27.606162 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-ef8ffd914bbb18af378f396af0a499c65728e501ac89bf91349f08dbb710a22d.woff2
+I, [2017-06-06T07:43:27.608591 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-d1b211a99e41535518790435539615d9ff62932fe5904183e1bc6c40910937e2.woff
+I, [2017-06-06T07:43:27.610053 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-8ff04c6e5b13ebba574539918813c46d0fec170849a47e68c1d72aae469fa5ff.ttf
+I, [2017-06-06T07:43:27.610884 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-8ff04c6e5b13ebba574539918813c46d0fec170849a47e68c1d72aae469fa5ff.ttf.gz
+I, [2017-06-06T07:43:27.611798 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-c98ef07b70591ce1e0ed2b0e8992c9ce3402b9a9f6bfe5b4909c66d6e6122a3c.woff2
+I, [2017-06-06T07:43:27.613444 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-4d308e172d3be06dfce8e992209f4014eaa3a15aa6637a81fd1bc2ae5991f197.woff
+I, [2017-06-06T07:43:27.615472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-9be6d400da270f2c104d40539f3f30338e21ee7bcc1012953706551c10415686.ttf
+I, [2017-06-06T07:43:27.615931 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-9be6d400da270f2c104d40539f3f30338e21ee7bcc1012953706551c10415686.ttf.gz
+I, [2017-06-06T07:43:27.616917 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-761c95dd192a81733d024d9f644d9b531c358f0f0ea83e9fd6211b6bd424873d.woff2
+I, [2017-06-06T07:43:27.617718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-da4929f143ad03e5465455bb1cf1333bf060ae7641f0fcf115ea65a30793e180.woff
+I, [2017-06-06T07:43:27.619423 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1.ttf
+I, [2017-06-06T07:43:27.620725 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1.ttf.gz
+I, [2017-06-06T07:43:27.621695 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-e42e4855367a3f7ed9e1b31f79faa25e00709229af0f276814eac906351b121d.woff2
+I, [2017-06-06T07:43:27.623228 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-65255d69ed4080d857df5a66ae24b04fc5b1a3c8ad2c67e37ccac925e2e6071d.woff
+I, [2017-06-06T07:43:27.624573 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-3157773ff81c4eb0883936e27054c05ed342beeef83a430a1d998213822d3da1.ttf
+I, [2017-06-06T07:43:27.625867 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-3157773ff81c4eb0883936e27054c05ed342beeef83a430a1d998213822d3da1.ttf.gz
+I, [2017-06-06T07:43:27.626972 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-e46d0f770fe49fddc1572dd48866a8bcb9dc819796b46802f98b600580b68eb0.woff2
+I, [2017-06-06T07:43:27.628927 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-f9497d00152e64fc27bf4c6e06823e0c2a5ef60badcf17a4d3416fc2361d5e6a.woff
+I, [2017-06-06T07:43:27.630359 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-044d2e3e3a17da487da46fc38cbd0a729deb9af044e563f66f8cdbc57421277e.ttf
+I, [2017-06-06T07:43:27.636751 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-044d2e3e3a17da487da46fc38cbd0a729deb9af044e563f66f8cdbc57421277e.ttf.gz
+I, [2017-06-06T07:43:27.637590 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-d9127eac0266ef71965ba3e4fae751664feb3dab4f6a85553a2e5e6dead203db.woff2
+I, [2017-06-06T07:43:27.639905 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-af5a9bea37f2aa5f6c442d8ef86135e2fa11e0f0371e9ca17494bb0bf93a68f0.woff
+I, [2017-06-06T07:43:27.641098 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4.ttf
+I, [2017-06-06T07:43:27.642343 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4.ttf.gz
+I, [2017-06-06T07:43:27.643632 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-69ccb8f8ce75298efce2123c67fe292a9545ce4008afb12fd1005ad819391b1f.woff2
+I, [2017-06-06T07:43:27.645376 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-52244c503f97696355716556dd1ed57d2265f2ee433939523202cb8e5b20ddfb.woff
+I, [2017-06-06T07:43:27.647043 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-57577a8ab5086295d1026b1d53972fa0a2f7d1770a286d38be62bad4c7cdfbcd.ttf
+I, [2017-06-06T07:43:27.648731 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-57577a8ab5086295d1026b1d53972fa0a2f7d1770a286d38be62bad4c7cdfbcd.ttf.gz
+I, [2017-06-06T07:43:27.654057 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-5efafd26d85f9d6c3340aa7b81aff0a4d9fe27d8f9ec9885565afb9fa2097d91.woff2
+I, [2017-06-06T07:43:27.655620 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-a8968be35c05d541ccd4eb1c4af41cb3b27f470986c85cb23062ace8938828a9.woff
+I, [2017-06-06T07:43:27.656873 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8.ttf
+I, [2017-06-06T07:43:27.657559 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8.ttf.gz
+I, [2017-06-06T07:43:27.658636 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-54e0b90c9150984d4818cafd62e761acc10938ccb15adc0ad4eacb9d08cf9724.woff2
+I, [2017-06-06T07:43:27.661490 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-3d8c92cae462dad667ed19265fe0163d8fd69b743e1a2e520dd8c443b8bc8795.woff
+I, [2017-06-06T07:43:27.663343 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-91a1c11660929e8cfb726d7924a51b4042c0e77ec4c5b90b92fe5e45d26de759.ttf
+I, [2017-06-06T07:43:27.664080 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-91a1c11660929e8cfb726d7924a51b4042c0e77ec4c5b90b92fe5e45d26de759.ttf.gz
+I, [2017-06-06T07:43:27.670431 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-cc7b26ac53700f78f8a452be6d14f14943e88dceb14edf64cddceba6e66f3f5e.woff2
+I, [2017-06-06T07:43:27.672649 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-ba3627978bd7d98b4294876d73a52f2e74cc4201cdbdaf043cb647042fba699d.woff
+I, [2017-06-06T07:43:27.675086 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54.ttf
+I, [2017-06-06T07:43:27.676113 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54.ttf.gz
+I, [2017-06-06T07:43:27.677411 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-cb6e4d4eb7d88e8112e5dda0a7569b2215db6153d3328ccef36986637e717330.woff2
+I, [2017-06-06T07:43:27.679526 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-382143d8ff983d0836837cd0e524ca68c6249221e6b08b24055190fd4d039b7a.woff
+I, [2017-06-06T07:43:27.681198 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e.ttf
+I, [2017-06-06T07:43:27.681769 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e.ttf.gz
+I, [2017-06-06T07:43:27.683179 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-668c6b09e84a230310c372f6de1f95b80d5dfe6e980a8f2570db3e8c0c52cdb2.woff2
+I, [2017-06-06T07:43:27.685017 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-10461e4630ac2ada61a27453f149cd13717729c468359414d1ba3c00cffdc802.woff
+I, [2017-06-06T07:43:27.686602 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-52079e4f67635c5a9bfc65873ceb6d75c773b25ab4ebdcb423f6e70aa036fd99.ttf
+I, [2017-06-06T07:43:27.687465 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-52079e4f67635c5a9bfc65873ceb6d75c773b25ab4ebdcb423f6e70aa036fd99.ttf.gz
+I, [2017-06-06T07:43:27.688413 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-1389ecb83dd37fda29b408aa2640b64a6486bd136c4f2ddd60f5b88a9c3c42b8.png
+I, [2017-06-06T07:43:27.690342 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-black-bc9d589f107d8ef06112e13581e9af92db88ed057b02b22ea7aaa28ac6a3b518.png
+I, [2017-06-06T07:43:27.692322 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-7d2188d3236b42ddba2dc1e0d922a9d423548d1d45cce9ee17977b17fd6dc7d1.png
+I, [2017-06-06T07:43:27.693267 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-ru-a55702cc22f8436f582852af560c14f8bef7edcd4eba20b805238beb8f329845.png
+I, [2017-06-06T07:43:27.694408 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-id-af932bcb4c8612918fd44207f9fac92868bd8ba5081fc54e33c80c57cac70cad.png
+I, [2017-06-06T07:43:27.695520 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/form-questionary-sidebar-e4b920c48e3785ce5d9e94e8c3dd6ab5a5115682c7ae18ddbec81900d6e4b744.jpg
+I, [2017-06-06T07:43:27.697005 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/services-sprite-white-hor-158604e29d166c330f57e13f570de28919e5a5fc6d97df7674130e32410ece63.png
+I, [2017-06-06T07:43:27.697767 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/help-section-book-5d800df34935573d19db4b0feed37140fdcd2baeac7a8b005b414af25246a296.png
+I, [2017-06-06T07:43:27.700079 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/systems-bg-c24d15bb56f5d777ff26789d028e0f2a0affe41aaad9cb351ffbe853195ffcb9.jpg
+I, [2017-06-06T07:43:27.701755 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/demo-bg-8a072bb9f1b4ad4974fe5ddff7af60db7921dc574659150ff09132ca3f391110.jpg
+I, [2017-06-06T07:43:27.703363 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/easy-bg-a2c4f16e538c5d54ce510f9e8d586032b67ae893c5a33d2dddd69431a043d905.jpg
+I, [2017-06-06T07:43:27.705281 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-2ff73eaaffc71abc60f7dce4ecb249dbf20176f7beb5b673e8c8f7788d98e961.png
+I, [2017-06-06T07:43:27.706431 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/review-bg-703214daab2f9cc5a3bbe798334e6625f03c402552c6382cb1983d30eea3eb40.jpg
+I, [2017-06-06T07:43:27.707814 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modals/hotkeys-trading-ad4a8a0e5f656b092f34c08553e32d43eaa59ec5b4ba4a2b05d2d8ba0bda1509.png
+I, [2017-06-06T07:43:27.708928 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modals/hotkeys-assets-1b190e393fc1c32c77ecd71416bbd554e8b99a385cf5145160275589381680b5.png
+I, [2017-06-06T07:43:27.710233 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/svg_filter/blur-f1174d0b330b9288993d498c12ad2b95ad333ec505f7599aab6b26adc2d69729.svg
+I, [2017-06-06T07:43:27.710535 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/svg_filter/blur-f1174d0b330b9288993d498c12ad2b95ad333ec505f7599aab6b26adc2d69729.svg.gz
+I, [2017-06-06T07:43:27.711348 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/i-checked-7dc71bafad6ec01571885a1fb51c619cf4c7bd0b089a1d03ccb47152709c5403.png
+I, [2017-06-06T07:43:27.713012 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/s_logo-671005aa77cb2c51f342a4cbae2ab98d50309fbbb121aea3c897d18a2428b695.png
+I, [2017-06-06T07:43:27.714185 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-197x50-2c55aed30f7f3205badbda9f21895ccb655f69a0ec218e98a8be73827061b2dd.png
+I, [2017-06-06T07:43:27.715472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/i-spr-deails-pics-2afec568813abcb34270a001ee31a5ad222fec865a30fd7dbfd1730668fb7452.png
+I, [2017-06-06T07:43:27.716616 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-bg-db8bcaa4fdcccc0d1d0b81382b99336ded9f75f9bf182516b3b33fb8c5af1ec6.png
+I, [2017-06-06T07:43:27.717929 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-bg-white-df9292b1339fd16c0ad56f53d669eeab0d7d28ecb940b34e3049273cc20f8a12.png
+I, [2017-06-06T07:43:27.718960 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/avatar-default-7d3736b79ed5a4e512d7c98ef8a387d2f74d241f0e857df2588369ee5876d4d8.png
+I, [2017-06-06T07:43:27.720278 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/main-bg-cc422c1da4743864d63eeaf65012d34adbfc0c106df8ecad90a3ab21838dd3cd.png
+I, [2017-06-06T07:43:27.721564 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/people-332e1c15e21dfea30bea3159724477eb7375da80c52253fb79134a990836df72.png
+I, [2017-06-06T07:43:27.723074 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/main-mid-bg-68c2de6b8d9bc4e8469c1272253779f9dcffd09806074b14f88cf170a0ed4c37.png
+I, [2017-06-06T07:43:27.724098 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-e3ffa1152ded2d597f586d08634178ad066f4dff38b78b11727097ad9ac342f2.png
+I, [2017-06-06T07:43:27.725397 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-en-12289857af985bf78a0760faf274d7d392509a0a3c22f68203f84d9176c8d040.png
+I, [2017-06-06T07:43:27.726927 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-th-167e6b0917c035e259b3aa6084241e824af1356b71d1f451880d4da400f5ce71.png
+I, [2017-06-06T07:43:27.728557 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-vn-8759a7cc5dfb89ca6ea065b491957ed69a35ede8298191399178ab48edfc37b4.png
+I, [2017-06-06T07:43:27.729575 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/graph-gag-034fd1b5ef5c7937e48edd8904ab0923fbaecbd406c52a49cea2725cee2d2b58.png
+I, [2017-06-06T07:43:27.730918 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ipad-909f28eedf254880a7d6ae2615fb0825124a3addf786e82e5d41574f3388650c.png
+I, [2017-06-06T07:43:27.732419 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-red-0d66878f8f471c8b80b12cfd7c27f5f02f24240028bbf4d889034331aab89fbb.png
+I, [2017-06-06T07:43:27.733568 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-white-3359c1e5ce3ce2c6c789f9accc6d52e331f3c2518bbe00833d4eb8b11cbbc744.png
+I, [2017-06-06T07:43:27.734716 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-black-b9ab4bc29d12752b151271075da881cd0412a9e73abaca336839c7e8860dc6f6.png
+I, [2017-06-06T07:43:27.735554 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/safe-guards-cashier-21a2e625ff1d7f76606befcc3c57e48ab0758acbd775dcc0bba697e412896f54.png
+I, [2017-06-06T07:43:27.737001 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sprite-advantages-306beb66571760660a3cf159d17a80da4152f2d85ac69bedc2e754cb765b4b1f.png
+I, [2017-06-06T07:43:27.738216 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/pay-systems-4f3d844c39774b7cf4a2693f622dc9b6005c28bbbbbc5363ddd9973324a5245c.png
+I, [2017-06-06T07:43:27.739303 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/pay-systems-en-6250e0f47628abe178fc247fb57a5d6d678a65a3c267c3e336b23af8899920e6.png
+I, [2017-06-06T07:43:27.740510 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-red-c0dc8a23e038df2880e6bfb827c7f32416848de265717ca6a335ab0dc69d4f88.png
+I, [2017-06-06T07:43:27.741668 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-green-f9d17f891275dfb660cf9c1cbddaa7d6a3e8c46290b328e623045b51bc27037c.png
+I, [2017-06-06T07:43:27.742611 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-gray-6fdcd4d2560faa9d7495a77e158e0342f655242d2be85331d05db538e4aa4f94.png
+I, [2017-06-06T07:43:27.743593 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/tagline-safeguards-364ef63762b44aa4e9d88dac17078d8cde25e1a9c5f60185341cce8c77016bbf.png
+I, [2017-06-06T07:43:27.744721 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/candles-14e89f52f960afd39bea1332b712e5304c85dc5c809e5363fe6329563dea562d.png
+I, [2017-06-06T07:43:27.745667 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-robo-hand-494938d35c3dd492174dc4f7ea6586bc96fbd5126efbe4677b4f0d1753cbcb66.png
+I, [2017-06-06T07:43:27.747145 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/twentyboom-e4c89f36aa0ffeca07026243fd02ece4a97b520a8ad753bd4456d954d682b6ea.png
+I, [2017-06-06T07:43:27.748125 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-ipad-ab64db814e04f26b87b9c1024aea07fd3f4c983c4adacfc47ccd443b3d2e82c7.png
+I, [2017-06-06T07:43:27.749134 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide2-bg-350cd8e0e2a7f159103ff4e80b7a4989364862f57da344e13ee725279b39a1f2.png
+I, [2017-06-06T07:43:27.750778 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide3-bg-3c700fb20e55e23c4388021376d27aced5cdfb60c6a39e85a1b4eead31c5cfb7.png
+I, [2017-06-06T07:43:27.753477 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide4-bg-0da59968fde4c1b368ce663cb23aec856008c1fef238d50b6da6185b3b6f4b68.png
+I, [2017-06-06T07:43:27.755661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide5-bg-c5718281172acfb350200bf6635d81b8e0f7d72eefa4388c7d6259c28ef96e55.jpg
+I, [2017-06-06T07:43:27.756999 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide6-bg-1c5b7e77d8ad8a23dc2edc9d0cddc2f37c75544b67aed2db9842e3b832ebafe6.jpg
+I, [2017-06-06T07:43:27.758531 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide7-bg-94203c5615505fe2bf4f5bdeef19e09e614bdcba6b41a3cdcece6f3583fc8ac5.jpg
+I, [2017-06-06T07:43:27.769961 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/offer-demo-bg-95e4bc8a7da795671b2d3e2a2280da89f9adf2db73994365a3097a30a419d04c.jpg
+I, [2017-06-06T07:43:27.772038 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/500t-486b0180df6d5a7ff33259f953130ed8599d43f4543294fcd30dbc85c3412c7f.png
+I, [2017-06-06T07:43:27.772961 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/first-depo-slider.ru-3bf53e04632caf35f5eedd03bf626d1b653746667d0db2bbfc044c6e97e5c118.jpg
+I, [2017-06-06T07:43:27.774926 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/first-depo-slider.en-268fc1b09d84892e62f3651ee400538a3da48ace31321b46106cecf895710b7c.jpg
+I, [2017-06-06T07:43:27.777136 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide8-bg-0f64f3fd2f9bb16ff18633c192a3540149b466ecfaf88fb5c177ad4c609b9c55.jpg
+I, [2017-06-06T07:43:27.778377 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/bg-mega-offer-banner-54bc124aaf7cc7a73c8b2ca843c5a54fe362e3bb8e334ec6b5447066a72ef654.png
+I, [2017-06-06T07:43:27.779766 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/bg-mega-offer-slider-30-28a2df4d263bab1bf87c995b2693c5e82a25a8a04fff75216cd407b58b3d1cf0.png
+I, [2017-06-06T07:43:27.800321 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-content-bb51420f905d7bfa6cdac70db665aaf94d683759156e92112aa332a72eff571a.png
+I, [2017-06-06T07:43:27.801599 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-content-en-a3f83bb9fe252fa135b01020f60d73f660a895aa01acdb02ce50eded4ebcbe3e.png
+I, [2017-06-06T07:43:27.802798 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-bg-abcead45d6f3027848d25ee2e02d6cbd2e4054b8d3026cf0a265862fdf32da35.jpg
+I, [2017-06-06T07:43:27.803912 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/madam-1217c40bab94fbf60651bb6a9b84e9040263f9f03c74ee56b08814d7b6866146.png
+I, [2017-06-06T07:43:27.805437 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/madam-step-2-023f68e2d77e6ddfe711557f7ec6ee6772f753a490a1d0bac44857dbd0b33016.png
+I, [2017-06-06T07:43:27.806929 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/girl-expired-1fe8da7d9995af4a7b0aaba1ccbd2deedcedea2e2efffd9b4dcdac31854fdeec.png
+I, [2017-06-06T07:43:27.808154 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/girl_verification-a8fb8d40d1529c2cca3d086d189c89ea4383cc21cd90661120c878c44de6f4a6.png
+I, [2017-06-06T07:43:27.809372 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free-trading-bg-36ee532703be9f2e7b042ea41084d29cbb01604cb15fbba406ba7d4cda60596b.jpg
+I, [2017-06-06T07:43:27.810661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free-20-e8a208226348a510a031b9b7a4f32a7a91e9734c14964d8038ba759304088442.png
+I, [2017-06-06T07:43:27.811976 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sad-girl-bac86690a3054bff6282bfc67687ffd685a3f7ac4b4b21d652fd649751d417b9.png
+I, [2017-06-06T07:43:27.813084 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free_deals_finished_girl-34d8a4e2ec2b37cb31c4f9ab5b9cb9f98f9fab41eb7cc807415da6f133b538b2.png
+I, [2017-06-06T07:43:27.814490 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/404-8a980ce7a5bb4ac6de9dd77b19dcf5e05e09c86724074305b6ce445cfe712684.png
+I, [2017-06-06T07:43:27.815894 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/500-e25793f43b44209e5aa35493cd6441de4aab9b4124d0203fbefea091903509d5.png
+I, [2017-06-06T07:43:27.817627 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/javascript-8ba6b06b8f21ba6306ddc2a0a18265cf4a7e0e1960d8b12966e630a989b2c182.png
+I, [2017-06-06T07:43:27.818838 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-btn-sprite-44e0c0ab29f74655826fdd4a484758c4dc4b6ee7c51623b2d57bfe51eb12e460.png
+I, [2017-06-06T07:43:27.820212 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-up-btn-84816966f15df61568c07c06fc1f4864dd5d309b22a696088c8ab2dec2649f8d.png
+I, [2017-06-06T07:43:27.821294 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-up-btn-panel-a04b77d9d96f6d401854120f2df3fe8384ef6ae777a9d1e6206b954e65eb8326.png
+I, [2017-06-06T07:43:27.822618 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-down-btn-3bcf51924b49d553defb2986116c9ec590568220c48d6e73a43f324cc9ea5370.png
+I, [2017-06-06T07:43:27.823831 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-down-btn-panel-df2cfabc7cf1e96002c2644b788eebc42c73413a72efc43f1f0fe16d65c536b1.png
+I, [2017-06-06T07:43:27.824793 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/chart-logo-701f4fb34801ed9886b3f9ba5b2e94ad7184f007baac1a352673b708f8c696bb.png
+I, [2017-06-06T07:43:27.825908 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-count-977c7c281b8a2a850029c51080d3ce1585f9ce24fd172890ca22a67ae5211a09.png
+I, [2017-06-06T07:43:27.826992 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/best-choice-996a190fd1dbd83c215d1bf6104821326e4805fe63c774117d163214a1597a9b.png
+I, [2017-06-06T07:43:27.828191 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sprite-help-section-44f3dffc01cb7ee6b08b99aed345059a722a0d6d0a6abfede6d82a5c25c38ab5.png
+I, [2017-06-06T07:43:27.829614 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/tutorial-7aa251c1b006b551d5598c8a99083bcdeb8cbb6b02345a9c32108f92caf3eb66.png
+I, [2017-06-06T07:43:27.835609 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-805235e9ee165c1cfca700b7b1305197dfc2864b9dd6af3b897000b8b2f095f9.png
+I, [2017-06-06T07:43:27.837870 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-girl-24ee38aebacdce6d2c9a8762506e1f00549979b1949dd679a6e531d36f58ef79.png
+I, [2017-06-06T07:43:27.839828 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-tail-7376d7e5d8fcad47b68acda7d960750bac91dcef545fbfc3c299e7dc19a2ef3b.png
+I, [2017-06-06T07:43:27.840976 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/webinar-bg-4a45d6680afe43def2716863d565b5380e31ff0296f2860a8a353e288448cdce.jpg
+I, [2017-06-06T07:43:27.843063 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/apps-btns-sprite-28c467cc880763bd50d194eb564b6533b15bd796fe5e1f58d0599260ecb80261.png
+I, [2017-06-06T07:43:27.844335 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sidebar-sprite-5570559992e75911729b9c060382e7bba60b8f24f1d633f621053ff64f386d1c.png
+I, [2017-06-06T07:43:27.845472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-sidebar-0fdfb0367a9dd0e1a90f05956e5937c39bc34a5bc7390db3d79eb5166e55356a.png
+I, [2017-06-06T07:43:27.846695 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/search-icon-744a7b89cfc93a91f2db4976513f4695bb2738f635956910f135398814ef4866.png
+I, [2017-06-06T07:43:27.847978 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-white-e161a4305beade36a393ddeabbc814266fc618b6ea9e0792cb89e1a6d96845b6.svg
+I, [2017-06-06T07:43:27.848749 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-white-e161a4305beade36a393ddeabbc814266fc618b6ea9e0792cb89e1a6d96845b6.svg.gz
+I, [2017-06-06T07:43:27.849724 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-black-e1baaac8d67b34e42c0296118e8498360bd11c8d4a30a77a2e768e21f9ccd134.svg
+I, [2017-06-06T07:43:27.850155 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-black-e1baaac8d67b34e42c0296118e8498360bd11c8d4a30a77a2e768e21f9ccd134.svg.gz
+I, [2017-06-06T07:43:27.851291 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/sprite-top-player-5358f75dea6f9c33b19bdb67b411fd48204bcef97004f98275ed9586bd93516b.png
+I, [2017-06-06T07:43:27.852913 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-449b62a7a25f4161257192f0dfcd38a10e666e33ccd8b0426d738bdf00ab0016.png
+I, [2017-06-06T07:43:27.854193 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/modal-bg-1594bd3ae48ba07ee4bbe008e66bc79d3e46cdc94d3904cc4ea2282773f55951.jpg
+I, [2017-06-06T07:43:27.855864 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/n_icons/icon-red-gift-2adfd146e51172601ac0fe57c816428082e712f40724d5688e529dcca82387a8.png
+I, [2017-06-06T07:43:27.856921 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/n_icons/icon-accelerated-withdrawals-6d4751a72627229eba44d5798037e8bdcccc0ccf566b9d2a5ab2b896d1ac6a24.png
+I, [2017-06-06T07:43:27.858147 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-519d322d1409b784cab52d2f45d2c051cc1a2196deaeb206aca8f766a08bb4c7.eot
+I, [2017-06-06T07:43:27.858584 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-519d322d1409b784cab52d2f45d2c051cc1a2196deaeb206aca8f766a08bb4c7.eot.gz
+I, [2017-06-06T07:43:27.859324 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-2b91eaf0c80d8a12e5eda04a99a09b61a008ffd84f3c8d82f68690e3155ef7ed.woff
+I, [2017-06-06T07:43:27.860505 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-44c46d366e3cf814be62fcb7fc34aa650d38ab393fa4bc168b36b3db0d8b1f5a.woff2
+I, [2017-06-06T07:43:27.862055 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-85ea92cd145b5f9558c6d9521b4c57984de451fe3e982b9c20a2e0ee8d233b22.ttf
+I, [2017-06-06T07:43:27.862502 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-85ea92cd145b5f9558c6d9521b4c57984de451fe3e982b9c20a2e0ee8d233b22.ttf.gz
+I, [2017-06-06T07:43:27.863446 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-96377f9578c6d07ddcbba9fb5fee834acea757ed51e6e438157c1815f8248647.svg
+I, [2017-06-06T07:43:27.864158 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-96377f9578c6d07ddcbba9fb5fee834acea757ed51e6e438157c1815f8248647.svg.gz
+I, [2017-06-06T07:43:27.865232 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/preloader-8c4e69d638a52034eb80e39e7b75856b837928d5b1c62b86e41b7f7740e8ddcf.svg
+I, [2017-06-06T07:43:27.867273 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/preloader-8c4e69d638a52034eb80e39e7b75856b837928d5b1c62b86e41b7f7740e8ddcf.svg.gz
+I, [2017-06-06T07:43:28.067087 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application_th-183947371dc72b91e1a8be4186ca33b9500e527c20729023021f93a526a278c0.css
+I, [2017-06-06T07:43:28.067344 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application_th-183947371dc72b91e1a8be4186ca33b9500e527c20729023021f93a526a278c0.css.gz
+I, [2017-06-06T07:43:28.434523 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize-393f385764b8f6f16f5e632dbd9e8fda3c5eae207e5921367286be785e45e2ca.css
+I, [2017-06-06T07:43:28.434775 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize-393f385764b8f6f16f5e632dbd9e8fda3c5eae207e5921367286be785e45e2ca.css.gz
+I, [2017-06-06T07:43:28.435644 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_flat_75_ffffff_40x100-39ab7ccd9f4e82579da78a9241265df288d8eb65dbbd7cf48aed2d0129887df5.png
+I, [2017-06-06T07:43:28.438378 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100-54270656df079c4da5182629a080fc633b6f84b87985eb016d25a560e2c38d4a.png
+I, [2017-06-06T07:43:28.439108 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400-ddf5dd4e0ef2b185e8bb0af7b6e90ebe74a84384cb4700658e76e754c8bfe550.png
+I, [2017-06-06T07:43:28.441936 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_75_dadada_1x400-c108f5cbf2dd9ec07a26530695ddd95e1664597ce6c056ae44c162cc2e28cec4.png
+I, [2017-06-06T07:43:28.442718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_65_ffffff_1x400-f0e6cd91b837d5c5644d026e5ffeccd907953317cd5c0f689901733afda260b2.png
+I, [2017-06-06T07:43:28.445476 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_55_fbf9ee_1x400-691597e8a40a891ea94d3589976ecfc33e6145c49422443b00ac2b5a0022964c.png
+I, [2017-06-06T07:43:28.450297 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_95_fef1ec_1x400-f6f1c1bedf1a0f37cfef81d12f5f012869d1ee7c984775a569827a1784d34f5c.png
+I, [2017-06-06T07:43:28.453420 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_222222_256x240-57adb0d65f4e91dacfee975d9574422bee7486c8a182d60133728c672f2cdbbc.png
+I, [2017-06-06T07:43:28.454377 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_888888_256x240-ea2e29625de3463465e93b002b065f5833e05b97f7a052b1c141e754d62e1a8b.png
+I, [2017-06-06T07:43:28.457718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_454545_256x240-07460e843c3e59aaadbb34231e699e856a2980753c7a47b66447da5d9f93fb7f.png
+I, [2017-06-06T07:43:28.459202 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_2e83ff_256x240-20f8c6667afc48aa433ee9eb6d8a0584bdbd6b4a4a9091ff1e6b3adb31e63bd9.png
+I, [2017-06-06T07:43:28.461797 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_cd0a0a_256x240-1e32c6dbf5d3fd342f27a78aa881550d6412aa207f48468724a6a15402b6041b.png
+I, [2017-06-06T07:43:28.462663 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_flat_0_aaaaaa_40x100-9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab.png
+I, [2017-06-06T07:43:28.679138 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize_th-01b731c24e7dc39ebadc1c3d73f3cdb9ac72d68916e6a3dc13be09418ac1cff4.css
+I, [2017-06-06T07:43:28.679387 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize_th-01b731c24e7dc39ebadc1c3d73f3cdb9ac72d68916e6a3dc13be09418ac1cff4.css.gz
+I, [2017-06-06T07:43:29.042379 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank-0e48ad180c744a40157cbeb0c9fe9f0d6f50f6aa26c87ff8a2a0ebb4619f94c7.css
+I, [2017-06-06T07:43:29.042621 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank-0e48ad180c744a40157cbeb0c9fe9f0d6f50f6aa26c87ff8a2a0ebb4619f94c7.css.gz
+I, [2017-06-06T07:43:29.105829 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/3-da753e319748e538fce77a4ef559a3add5d50c696ef9dd507b9cc4b7ccb67650.svg
+I, [2017-06-06T07:43:29.106457 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/3-da753e319748e538fce77a4ef559a3add5d50c696ef9dd507b9cc4b7ccb67650.svg.gz
+I, [2017-06-06T07:43:29.107538 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/1-0d0ae657bbb7bf46788bf3f1b30cfdfdce16dd1868498e6e838f8fe636505cb8.svg
+I, [2017-06-06T07:43:29.108072 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/1-0d0ae657bbb7bf46788bf3f1b30cfdfdce16dd1868498e6e838f8fe636505cb8.svg.gz
+I, [2017-06-06T07:43:29.109146 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/2-039e35500436341370e5af5150e3ad75e4fa27b6b02432d005764270cf66ee77.svg
+I, [2017-06-06T07:43:29.109775 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/2-039e35500436341370e5af5150e3ad75e4fa27b6b02432d005764270cf66ee77.svg.gz
+I, [2017-06-06T07:43:29.110711 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/5-c37bb9ec9bc13e838e38fd02e7e29731e8abf8ed8ef9f46175ca901aec68eb32.svg
+I, [2017-06-06T07:43:29.111155 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/5-c37bb9ec9bc13e838e38fd02e7e29731e8abf8ed8ef9f46175ca901aec68eb32.svg.gz
+I, [2017-06-06T07:43:29.165827 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank_th-452dfa5ad31ddcf4df3d5e410202ac27b8d02b2af21f572fd5d048b74391cc4e.css
+I, [2017-06-06T07:43:29.166113 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank_th-452dfa5ad31ddcf4df3d5e410202ac27b8d02b2af21f572fd5d048b74391cc4e.css.gz
+I, [2017-06-06T07:43:29.268895 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue-43be81d21a3d40829617fc55f9c2acaba533f55909fd1a400b227fda57169513.css
+I, [2017-06-06T07:43:29.269194 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue-43be81d21a3d40829617fc55f9c2acaba533f55909fd1a400b227fda57169513.css.gz
+I, [2017-06-06T07:43:29.390916 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue_th-4c8aed41f194d15c01a2f4cb9de3e4312454adc0da42048e72ad455db93e1b2f.css
+I, [2017-06-06T07:43:29.391192 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue_th-4c8aed41f194d15c01a2f4cb9de3e4312454adc0da42048e72ad455db93e1b2f.css.gz
+I, [2017-06-06T07:43:29.521728 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-bd43f332b2946d6126287e15574ff761036831e989588135ee7b3288bcbbeb41.css
+I, [2017-06-06T07:43:29.522074 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-bd43f332b2946d6126287e15574ff761036831e989588135ee7b3288bcbbeb41.css.gz
+I, [2017-06-06T07:43:29.710478 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile_th-bf870cdac647be5369a216122c4ce3f108cd7b7074d15871c56296f2c62fe829.css
+I, [2017-06-06T07:43:29.710718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile_th-bf870cdac647be5369a216122c4ce3f108cd7b7074d15871c56296f2c62fe829.css.gz
+I, [2017-06-06T07:43:29.934436 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/new_forms-b35103ca764b636f3d912782ccf054febbaa1af8c8885b49d9ec81deb35c9872.css
+I, [2017-06-06T07:43:29.934661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/new_forms-b35103ca764b636f3d912782ccf054febbaa1af8c8885b49d9ec81deb35c9872.css.gz
+I, [2017-06-06T07:43:30.111336 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/promo-9611bb4beb7a519ce12af2f1f2a265cc32f40b5fad64a954dfa9705d79678348.js
+I, [2017-06-06T07:43:30.111633 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/promo-9611bb4beb7a519ce12af2f1f2a265cc32f40b5fad64a954dfa9705d79678348.js.gz
+I, [2017-06-06T07:43:30.112625 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/arrow_call-ce3c05f6a34e431e9f77d8bd57d109d7677c73f650a2576fc9aab72e35b23a77.png
+I, [2017-06-06T07:43:30.113584 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/arrow_put-3b0034e46af5b62bf044d7c0da448d90c454df5b610d344c8324d580b06eaf9b.png
+I, [2017-06-06T07:43:30.114537 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/timer-1f199caffaeedd0ca179028e001c2e40e6b55f96c0b834387c0beb09fc98bef1.png
+I, [2017-06-06T07:43:30.115572 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/finish-def27799e777c02cf06eca07baae5e7407fa3b7e627d3ed6642d7abf7c37f5de.png
+I, [2017-06-06T07:43:30.120295 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/loading-482426ac5d50c96e1e841a533cd8728808ad00fd3f4a70d8c74582e5eedec76b.png
+I, [2017-06-06T07:43:30.121179 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/wallet-bd516b62adce568ab010a3f6faa52fc941c9f2667756bff19cc70ed3d2c8daa2.png
+I, [2017-06-06T07:43:30.125444 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/old_browser-e1ef58b9fbd9eeea6ef94986b906e7f65fb51b4dc78d0c7ffca707f1c9102547.js
+I, [2017-06-06T07:43:30.125597 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/old_browser-e1ef58b9fbd9eeea6ef94986b906e7f65fb51b4dc78d0c7ffca707f1c9102547.js.gz
+I, [2017-06-06T07:43:30.129837 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/sign_up-92982954a13a3fefe7135eb12e96ea2d2ab9967bcbf316967f15953a6dd552c8.js
+I, [2017-06-06T07:43:30.130009 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/sign_up-92982954a13a3fefe7135eb12e96ea2d2ab9967bcbf316967f15953a6dd552c8.js.gz
+I, [2017-06-06T07:43:30.132727 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/vendor/bootstrap2/bootstrap-tab-3352fb4ef8a5c866a122896836c8a1c8aef48c94f0325b7dffacb1f3f9289380.js
+I, [2017-06-06T07:43:30.132875 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/vendor/bootstrap2/bootstrap-tab-3352fb4ef8a5c866a122896836c8a1c8aef48c94f0325b7dffacb1f3f9289380.js.gz
+rake aborted!
+SassC::SyntaxError: Error: media query expression must begin with '('
+        on line 7 of app/assets/stylesheets/promo/vars/_m_vars.scss
+>> @import 'font-config/v_font_config',
+   ^
+/home/binomo/binomo.com/releases/20170606074220/binomo.com/app/assets/stylesheets/promo/vars/_m_vars.scss:7
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-1.11.2/lib/sassc/engine.rb:47:in `render'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-rails-1.3.0/lib/sassc/rails/template.rb:34:in `block in call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/utils.rb:171:in `module_include'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-rails-1.3.0/lib/sassc/rails/template.rb:33:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/sass_processor.rb:30:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:75:in `call_processor'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:60:in `block in load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:44:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:47:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/bundle.rb:23:in `block in call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/utils.rb:200:in `dfs'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/bundle.rb:24:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:75:in `call_processor'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:60:in `block in load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:44:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:47:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/base.rb:66:in `find_asset'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/base.rb:73:in `find_all_linked_assets'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:134:in `block in find'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:133:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:133:in `find'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:185:in `compile'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:68:in `block (3 levels) in define'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/rake/sprocketstask.rb:147:in `with_logger'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:67:in `block (2 levels) in define'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:332:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:20:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:11:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/exe/bundle:34:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/exe/bundle:26:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:22:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:22:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => assets:precompile
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:73:in `rescue in block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:35:in `block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:34:in `block (5 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:33:in `block (4 levels) in <top (required)>'
+Capistrano::PrecompileRequired: Capistrano::PrecompileRequired
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:45:in `rescue in block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:45:in `block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:34:in `block (5 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:33:in `block (4 levels) in <top (required)>'
+SSHKit::Command::Failed: ls exit status: 2
+ls stdout: ls: cannot access /home/binomo/binomo.com/releases/20170606065339/binomo.com/assets_manifest_backup: No such file or directory
+ls stderr: Nothing written
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:45:in `block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:34:in `block (5 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:33:in `block (4 levels) in <top (required)>'
+Tasks: TOP => deploy:assets:precompile
+(See full trace by running task with --trace)
+The deploy has failed with an error: Exception while executing as binomo@188.42.243.49: rake exit status: 1
+rake stdout: DEPRECATION WARNING: Sprockets method `register_engine` is deprecated.
+Please register a mime type using `register_mime_type` then
+use `register_compressor` or `register_transformer`.
+https://github.com/rails/sprockets/blob/master/guides/extending_sprockets.md#supporting-all-versions-of-sprockets-in-processors
+ (called from <module:Sprockets> at /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-traceur-0.0.1/lib/sprockets/traceur.rb:43)
+DEPRECATION WARNING: Sprockets method `register_engine` is deprecated.
+Please register a mime type using `register_mime_type` then
+use `register_compressor` or `register_transformer`.
+https://github.com/rails/sprockets/blob/master/guides/extending_sprockets.md#supporting-all-versions-of-sprockets-in-processors
+ (called from <module:Sprockets> at /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-traceur-0.0.1/lib/sprockets/traceur.rb:44)
+I, [2017-06-06T07:43:27.193721 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modernizr-2dfaf52d5c133ef1017c5232ccfa64d505ac05069a7b069fc5de2edb639707eb.js
+I, [2017-06-06T07:43:27.195792 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modernizr-2dfaf52d5c133ef1017c5232ccfa64d505ac05069a7b069fc5de2edb639707eb.js.gz
+I, [2017-06-06T07:43:27.554046 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application-27aa8c8444371b555e9e14f4d631f19be7e1e105a9818dc7b3205a149c418679.css
+I, [2017-06-06T07:43:27.554427 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application-27aa8c8444371b555e9e14f4d631f19be7e1e105a9818dc7b3205a149c418679.css.gz
+I, [2017-06-06T07:43:27.555815 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-20e0b76c2729f9c5d692e021ca60b67187fd8a6753e21cf47973fdb6262b6f70.eot
+I, [2017-06-06T07:43:27.556483 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-20e0b76c2729f9c5d692e021ca60b67187fd8a6753e21cf47973fdb6262b6f70.eot.gz
+I, [2017-06-06T07:43:27.557448 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-a77ce573d226bc5ed027d05fee8522b4918aa395781a6218eaef03c7c7c59796.woff2
+I, [2017-06-06T07:43:27.559127 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-dc18db9cce5cfa1eb30fb4d8ee19795a0c4e2438b1e56b00a92881e58e7b49d8.woff
+I, [2017-06-06T07:43:27.564484 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-c3d475718ed820887e34bfd55b2ca0ba0dc92283914610ffce65eb4f40470597.ttf
+I, [2017-06-06T07:43:27.571177 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/rouble/rouble-webfont-c3d475718ed820887e34bfd55b2ca0ba0dc92283914610ffce65eb4f40470597.ttf.gz
+I, [2017-06-06T07:43:27.606162 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-ef8ffd914bbb18af378f396af0a499c65728e501ac89bf91349f08dbb710a22d.woff2
+I, [2017-06-06T07:43:27.608591 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-d1b211a99e41535518790435539615d9ff62932fe5904183e1bc6c40910937e2.woff
+I, [2017-06-06T07:43:27.610053 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-8ff04c6e5b13ebba574539918813c46d0fec170849a47e68c1d72aae469fa5ff.ttf
+I, [2017-06-06T07:43:27.610884 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black/roboto-black-8ff04c6e5b13ebba574539918813c46d0fec170849a47e68c1d72aae469fa5ff.ttf.gz
+I, [2017-06-06T07:43:27.611798 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-c98ef07b70591ce1e0ed2b0e8992c9ce3402b9a9f6bfe5b4909c66d6e6122a3c.woff2
+I, [2017-06-06T07:43:27.613444 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-4d308e172d3be06dfce8e992209f4014eaa3a15aa6637a81fd1bc2ae5991f197.woff
+I, [2017-06-06T07:43:27.615472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-9be6d400da270f2c104d40539f3f30338e21ee7bcc1012953706551c10415686.ttf
+I, [2017-06-06T07:43:27.615931 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/black-italic/roboto-black-italic-9be6d400da270f2c104d40539f3f30338e21ee7bcc1012953706551c10415686.ttf.gz
+I, [2017-06-06T07:43:27.616917 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-761c95dd192a81733d024d9f644d9b531c358f0f0ea83e9fd6211b6bd424873d.woff2
+I, [2017-06-06T07:43:27.617718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-da4929f143ad03e5465455bb1cf1333bf060ae7641f0fcf115ea65a30793e180.woff
+I, [2017-06-06T07:43:27.619423 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1.ttf
+I, [2017-06-06T07:43:27.620725 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold/roboto-bold-ef2ab0e402d5cb9de893e263a2c44e57f57fec3974b0d981bfe84dec3dae83a1.ttf.gz
+I, [2017-06-06T07:43:27.621695 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-e42e4855367a3f7ed9e1b31f79faa25e00709229af0f276814eac906351b121d.woff2
+I, [2017-06-06T07:43:27.623228 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-65255d69ed4080d857df5a66ae24b04fc5b1a3c8ad2c67e37ccac925e2e6071d.woff
+I, [2017-06-06T07:43:27.624573 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-3157773ff81c4eb0883936e27054c05ed342beeef83a430a1d998213822d3da1.ttf
+I, [2017-06-06T07:43:27.625867 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/bold-italic/roboto-bold-italic-3157773ff81c4eb0883936e27054c05ed342beeef83a430a1d998213822d3da1.ttf.gz
+I, [2017-06-06T07:43:27.626972 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-e46d0f770fe49fddc1572dd48866a8bcb9dc819796b46802f98b600580b68eb0.woff2
+I, [2017-06-06T07:43:27.628927 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-f9497d00152e64fc27bf4c6e06823e0c2a5ef60badcf17a4d3416fc2361d5e6a.woff
+I, [2017-06-06T07:43:27.630359 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-044d2e3e3a17da487da46fc38cbd0a729deb9af044e563f66f8cdbc57421277e.ttf
+I, [2017-06-06T07:43:27.636751 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/italic/roboto-italic-044d2e3e3a17da487da46fc38cbd0a729deb9af044e563f66f8cdbc57421277e.ttf.gz
+I, [2017-06-06T07:43:27.637590 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-d9127eac0266ef71965ba3e4fae751664feb3dab4f6a85553a2e5e6dead203db.woff2
+I, [2017-06-06T07:43:27.639905 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-af5a9bea37f2aa5f6c442d8ef86135e2fa11e0f0371e9ca17494bb0bf93a68f0.woff
+I, [2017-06-06T07:43:27.641098 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4.ttf
+I, [2017-06-06T07:43:27.642343 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light/roboto-light-e7ea653ddec2d2a74d0dcbff099c009cc7469ec323a50c89a2915ce44ca4c0b4.ttf.gz
+I, [2017-06-06T07:43:27.643632 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-69ccb8f8ce75298efce2123c67fe292a9545ce4008afb12fd1005ad819391b1f.woff2
+I, [2017-06-06T07:43:27.645376 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-52244c503f97696355716556dd1ed57d2265f2ee433939523202cb8e5b20ddfb.woff
+I, [2017-06-06T07:43:27.647043 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-57577a8ab5086295d1026b1d53972fa0a2f7d1770a286d38be62bad4c7cdfbcd.ttf
+I, [2017-06-06T07:43:27.648731 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/light-italic/roboto-light-italic-57577a8ab5086295d1026b1d53972fa0a2f7d1770a286d38be62bad4c7cdfbcd.ttf.gz
+I, [2017-06-06T07:43:27.654057 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-5efafd26d85f9d6c3340aa7b81aff0a4d9fe27d8f9ec9885565afb9fa2097d91.woff2
+I, [2017-06-06T07:43:27.655620 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-a8968be35c05d541ccd4eb1c4af41cb3b27f470986c85cb23062ace8938828a9.woff
+I, [2017-06-06T07:43:27.656873 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8.ttf
+I, [2017-06-06T07:43:27.657559 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium/roboto-medium-8559132c89ad51d8a2ba5b171887a44a7ba93776e205f553573de228e64b45f8.ttf.gz
+I, [2017-06-06T07:43:27.658636 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-54e0b90c9150984d4818cafd62e761acc10938ccb15adc0ad4eacb9d08cf9724.woff2
+I, [2017-06-06T07:43:27.661490 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-3d8c92cae462dad667ed19265fe0163d8fd69b743e1a2e520dd8c443b8bc8795.woff
+I, [2017-06-06T07:43:27.663343 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-91a1c11660929e8cfb726d7924a51b4042c0e77ec4c5b90b92fe5e45d26de759.ttf
+I, [2017-06-06T07:43:27.664080 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/medium-italic/roboto-medium-italic-91a1c11660929e8cfb726d7924a51b4042c0e77ec4c5b90b92fe5e45d26de759.ttf.gz
+I, [2017-06-06T07:43:27.670431 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-cc7b26ac53700f78f8a452be6d14f14943e88dceb14edf64cddceba6e66f3f5e.woff2
+I, [2017-06-06T07:43:27.672649 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-ba3627978bd7d98b4294876d73a52f2e74cc4201cdbdaf043cb647042fba699d.woff
+I, [2017-06-06T07:43:27.675086 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54.ttf
+I, [2017-06-06T07:43:27.676113 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/regular/roboto-regular-f0e5a21bf5c95e4c1bce2be98a3656ebcc6d42a21f41c4e3ebf69dd815702e54.ttf.gz
+I, [2017-06-06T07:43:27.677411 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-cb6e4d4eb7d88e8112e5dda0a7569b2215db6153d3328ccef36986637e717330.woff2
+I, [2017-06-06T07:43:27.679526 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-382143d8ff983d0836837cd0e524ca68c6249221e6b08b24055190fd4d039b7a.woff
+I, [2017-06-06T07:43:27.681198 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e.ttf
+I, [2017-06-06T07:43:27.681769 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin/roboto-thin-3b7a6691d978e81adfc92913cdfae58973151985b072df2a1b119ea937ba917e.ttf.gz
+I, [2017-06-06T07:43:27.683179 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-668c6b09e84a230310c372f6de1f95b80d5dfe6e980a8f2570db3e8c0c52cdb2.woff2
+I, [2017-06-06T07:43:27.685017 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-10461e4630ac2ada61a27453f149cd13717729c468359414d1ba3c00cffdc802.woff
+I, [2017-06-06T07:43:27.686602 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-52079e4f67635c5a9bfc65873ceb6d75c773b25ab4ebdcb423f6e70aa036fd99.ttf
+I, [2017-06-06T07:43:27.687465 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/roboto/thin-italic/roboto-thin-italic-52079e4f67635c5a9bfc65873ceb6d75c773b25ab4ebdcb423f6e70aa036fd99.ttf.gz
+I, [2017-06-06T07:43:27.688413 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-1389ecb83dd37fda29b408aa2640b64a6486bd136c4f2ddd60f5b88a9c3c42b8.png
+I, [2017-06-06T07:43:27.690342 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-black-bc9d589f107d8ef06112e13581e9af92db88ed057b02b22ea7aaa28ac6a3b518.png
+I, [2017-06-06T07:43:27.692322 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-7d2188d3236b42ddba2dc1e0d922a9d423548d1d45cce9ee17977b17fd6dc7d1.png
+I, [2017-06-06T07:43:27.693267 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-ru-a55702cc22f8436f582852af560c14f8bef7edcd4eba20b805238beb8f329845.png
+I, [2017-06-06T07:43:27.694408 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/payments-ways-color-id-af932bcb4c8612918fd44207f9fac92868bd8ba5081fc54e33c80c57cac70cad.png
+I, [2017-06-06T07:43:27.695520 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/form-questionary-sidebar-e4b920c48e3785ce5d9e94e8c3dd6ab5a5115682c7ae18ddbec81900d6e4b744.jpg
+I, [2017-06-06T07:43:27.697005 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/services-sprite-white-hor-158604e29d166c330f57e13f570de28919e5a5fc6d97df7674130e32410ece63.png
+I, [2017-06-06T07:43:27.697767 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/help-section-book-5d800df34935573d19db4b0feed37140fdcd2baeac7a8b005b414af25246a296.png
+I, [2017-06-06T07:43:27.700079 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/systems-bg-c24d15bb56f5d777ff26789d028e0f2a0affe41aaad9cb351ffbe853195ffcb9.jpg
+I, [2017-06-06T07:43:27.701755 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/demo-bg-8a072bb9f1b4ad4974fe5ddff7af60db7921dc574659150ff09132ca3f391110.jpg
+I, [2017-06-06T07:43:27.703363 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/easy-bg-a2c4f16e538c5d54ce510f9e8d586032b67ae893c5a33d2dddd69431a043d905.jpg
+I, [2017-06-06T07:43:27.705281 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-2ff73eaaffc71abc60f7dce4ecb249dbf20176f7beb5b673e8c8f7788d98e961.png
+I, [2017-06-06T07:43:27.706431 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/review-bg-703214daab2f9cc5a3bbe798334e6625f03c402552c6382cb1983d30eea3eb40.jpg
+I, [2017-06-06T07:43:27.707814 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modals/hotkeys-trading-ad4a8a0e5f656b092f34c08553e32d43eaa59ec5b4ba4a2b05d2d8ba0bda1509.png
+I, [2017-06-06T07:43:27.708928 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/modals/hotkeys-assets-1b190e393fc1c32c77ecd71416bbd554e8b99a385cf5145160275589381680b5.png
+I, [2017-06-06T07:43:27.710233 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/svg_filter/blur-f1174d0b330b9288993d498c12ad2b95ad333ec505f7599aab6b26adc2d69729.svg
+I, [2017-06-06T07:43:27.710535 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/svg_filter/blur-f1174d0b330b9288993d498c12ad2b95ad333ec505f7599aab6b26adc2d69729.svg.gz
+I, [2017-06-06T07:43:27.711348 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/i-checked-7dc71bafad6ec01571885a1fb51c619cf4c7bd0b089a1d03ccb47152709c5403.png
+I, [2017-06-06T07:43:27.713012 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/s_logo-671005aa77cb2c51f342a4cbae2ab98d50309fbbb121aea3c897d18a2428b695.png
+I, [2017-06-06T07:43:27.714185 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-197x50-2c55aed30f7f3205badbda9f21895ccb655f69a0ec218e98a8be73827061b2dd.png
+I, [2017-06-06T07:43:27.715472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/i-spr-deails-pics-2afec568813abcb34270a001ee31a5ad222fec865a30fd7dbfd1730668fb7452.png
+I, [2017-06-06T07:43:27.716616 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-bg-db8bcaa4fdcccc0d1d0b81382b99336ded9f75f9bf182516b3b33fb8c5af1ec6.png
+I, [2017-06-06T07:43:27.717929 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-bg-white-df9292b1339fd16c0ad56f53d669eeab0d7d28ecb940b34e3049273cc20f8a12.png
+I, [2017-06-06T07:43:27.718960 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/avatar-default-7d3736b79ed5a4e512d7c98ef8a387d2f74d241f0e857df2588369ee5876d4d8.png
+I, [2017-06-06T07:43:27.720278 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/main-bg-cc422c1da4743864d63eeaf65012d34adbfc0c106df8ecad90a3ab21838dd3cd.png
+I, [2017-06-06T07:43:27.721564 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/people-332e1c15e21dfea30bea3159724477eb7375da80c52253fb79134a990836df72.png
+I, [2017-06-06T07:43:27.723074 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/main-mid-bg-68c2de6b8d9bc4e8469c1272253779f9dcffd09806074b14f88cf170a0ed4c37.png
+I, [2017-06-06T07:43:27.724098 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-e3ffa1152ded2d597f586d08634178ad066f4dff38b78b11727097ad9ac342f2.png
+I, [2017-06-06T07:43:27.725397 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-en-12289857af985bf78a0760faf274d7d392509a0a3c22f68203f84d9176c8d040.png
+I, [2017-06-06T07:43:27.726927 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-th-167e6b0917c035e259b3aa6084241e824af1356b71d1f451880d4da400f5ce71.png
+I, [2017-06-06T07:43:27.728557 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/support-vn-8759a7cc5dfb89ca6ea065b491957ed69a35ede8298191399178ab48edfc37b4.png
+I, [2017-06-06T07:43:27.729575 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/graph-gag-034fd1b5ef5c7937e48edd8904ab0923fbaecbd406c52a49cea2725cee2d2b58.png
+I, [2017-06-06T07:43:27.730918 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ipad-909f28eedf254880a7d6ae2615fb0825124a3addf786e82e5d41574f3388650c.png
+I, [2017-06-06T07:43:27.732419 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-red-0d66878f8f471c8b80b12cfd7c27f5f02f24240028bbf4d889034331aab89fbb.png
+I, [2017-06-06T07:43:27.733568 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-white-3359c1e5ce3ce2c6c789f9accc6d52e331f3c2518bbe00833d4eb8b11cbbc744.png
+I, [2017-06-06T07:43:27.734716 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/services-sprite-black-b9ab4bc29d12752b151271075da881cd0412a9e73abaca336839c7e8860dc6f6.png
+I, [2017-06-06T07:43:27.735554 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/safe-guards-cashier-21a2e625ff1d7f76606befcc3c57e48ab0758acbd775dcc0bba697e412896f54.png
+I, [2017-06-06T07:43:27.737001 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sprite-advantages-306beb66571760660a3cf159d17a80da4152f2d85ac69bedc2e754cb765b4b1f.png
+I, [2017-06-06T07:43:27.738216 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/pay-systems-4f3d844c39774b7cf4a2693f622dc9b6005c28bbbbbc5363ddd9973324a5245c.png
+I, [2017-06-06T07:43:27.739303 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/pay-systems-en-6250e0f47628abe178fc247fb57a5d6d678a65a3c267c3e336b23af8899920e6.png
+I, [2017-06-06T07:43:27.740510 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-red-c0dc8a23e038df2880e6bfb827c7f32416848de265717ca6a335ab0dc69d4f88.png
+I, [2017-06-06T07:43:27.741668 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-green-f9d17f891275dfb660cf9c1cbddaa7d6a3e8c46290b328e623045b51bc27037c.png
+I, [2017-06-06T07:43:27.742611 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/ribber-gray-6fdcd4d2560faa9d7495a77e158e0342f655242d2be85331d05db538e4aa4f94.png
+I, [2017-06-06T07:43:27.743593 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/tagline-safeguards-364ef63762b44aa4e9d88dac17078d8cde25e1a9c5f60185341cce8c77016bbf.png
+I, [2017-06-06T07:43:27.744721 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/candles-14e89f52f960afd39bea1332b712e5304c85dc5c809e5363fe6329563dea562d.png
+I, [2017-06-06T07:43:27.745667 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-robo-hand-494938d35c3dd492174dc4f7ea6586bc96fbd5126efbe4677b4f0d1753cbcb66.png
+I, [2017-06-06T07:43:27.747145 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/twentyboom-e4c89f36aa0ffeca07026243fd02ece4a97b520a8ad753bd4456d954d682b6ea.png
+I, [2017-06-06T07:43:27.748125 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-ipad-ab64db814e04f26b87b9c1024aea07fd3f4c983c4adacfc47ccd443b3d2e82c7.png
+I, [2017-06-06T07:43:27.749134 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide2-bg-350cd8e0e2a7f159103ff4e80b7a4989364862f57da344e13ee725279b39a1f2.png
+I, [2017-06-06T07:43:27.750778 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide3-bg-3c700fb20e55e23c4388021376d27aced5cdfb60c6a39e85a1b4eead31c5cfb7.png
+I, [2017-06-06T07:43:27.753477 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide4-bg-0da59968fde4c1b368ce663cb23aec856008c1fef238d50b6da6185b3b6f4b68.png
+I, [2017-06-06T07:43:27.755661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/welcome-slide5-bg-c5718281172acfb350200bf6635d81b8e0f7d72eefa4388c7d6259c28ef96e55.jpg
+I, [2017-06-06T07:43:27.756999 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide6-bg-1c5b7e77d8ad8a23dc2edc9d0cddc2f37c75544b67aed2db9842e3b832ebafe6.jpg
+I, [2017-06-06T07:43:27.758531 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide7-bg-94203c5615505fe2bf4f5bdeef19e09e614bdcba6b41a3cdcece6f3583fc8ac5.jpg
+I, [2017-06-06T07:43:27.769961 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/offer-demo-bg-95e4bc8a7da795671b2d3e2a2280da89f9adf2db73994365a3097a30a419d04c.jpg
+I, [2017-06-06T07:43:27.772038 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/500t-486b0180df6d5a7ff33259f953130ed8599d43f4543294fcd30dbc85c3412c7f.png
+I, [2017-06-06T07:43:27.772961 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/first-depo-slider.ru-3bf53e04632caf35f5eedd03bf626d1b653746667d0db2bbfc044c6e97e5c118.jpg
+I, [2017-06-06T07:43:27.774926 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/first-depo-slider.en-268fc1b09d84892e62f3651ee400538a3da48ace31321b46106cecf895710b7c.jpg
+I, [2017-06-06T07:43:27.777136 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/welcome-slide8-bg-0f64f3fd2f9bb16ff18633c192a3540149b466ecfaf88fb5c177ad4c609b9c55.jpg
+I, [2017-06-06T07:43:27.778377 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/bg-mega-offer-banner-54bc124aaf7cc7a73c8b2ca843c5a54fe362e3bb8e334ec6b5447066a72ef654.png
+I, [2017-06-06T07:43:27.779766 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/bg-mega-offer-slider-30-28a2df4d263bab1bf87c995b2693c5e82a25a8a04fff75216cd407b58b3d1cf0.png
+I, [2017-06-06T07:43:27.800321 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-content-bb51420f905d7bfa6cdac70db665aaf94d683759156e92112aa332a72eff571a.png
+I, [2017-06-06T07:43:27.801599 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-content-en-a3f83bb9fe252fa135b01020f60d73f660a895aa01acdb02ce50eded4ebcbe3e.png
+I, [2017-06-06T07:43:27.802798 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/banner-bg-abcead45d6f3027848d25ee2e02d6cbd2e4054b8d3026cf0a265862fdf32da35.jpg
+I, [2017-06-06T07:43:27.803912 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/madam-1217c40bab94fbf60651bb6a9b84e9040263f9f03c74ee56b08814d7b6866146.png
+I, [2017-06-06T07:43:27.805437 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/madam-step-2-023f68e2d77e6ddfe711557f7ec6ee6772f753a490a1d0bac44857dbd0b33016.png
+I, [2017-06-06T07:43:27.806929 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/girl-expired-1fe8da7d9995af4a7b0aaba1ccbd2deedcedea2e2efffd9b4dcdac31854fdeec.png
+I, [2017-06-06T07:43:27.808154 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/girl_verification-a8fb8d40d1529c2cca3d086d189c89ea4383cc21cd90661120c878c44de6f4a6.png
+I, [2017-06-06T07:43:27.809372 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free-trading-bg-36ee532703be9f2e7b042ea41084d29cbb01604cb15fbba406ba7d4cda60596b.jpg
+I, [2017-06-06T07:43:27.810661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free-20-e8a208226348a510a031b9b7a4f32a7a91e9734c14964d8038ba759304088442.png
+I, [2017-06-06T07:43:27.811976 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sad-girl-bac86690a3054bff6282bfc67687ffd685a3f7ac4b4b21d652fd649751d417b9.png
+I, [2017-06-06T07:43:27.813084 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/free_deals_finished_girl-34d8a4e2ec2b37cb31c4f9ab5b9cb9f98f9fab41eb7cc807415da6f133b538b2.png
+I, [2017-06-06T07:43:27.814490 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/404-8a980ce7a5bb4ac6de9dd77b19dcf5e05e09c86724074305b6ce445cfe712684.png
+I, [2017-06-06T07:43:27.815894 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/500-e25793f43b44209e5aa35493cd6441de4aab9b4124d0203fbefea091903509d5.png
+I, [2017-06-06T07:43:27.817627 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/javascript-8ba6b06b8f21ba6306ddc2a0a18265cf4a7e0e1960d8b12966e630a989b2c182.png
+I, [2017-06-06T07:43:27.818838 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-btn-sprite-44e0c0ab29f74655826fdd4a484758c4dc4b6ee7c51623b2d57bfe51eb12e460.png
+I, [2017-06-06T07:43:27.820212 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-up-btn-84816966f15df61568c07c06fc1f4864dd5d309b22a696088c8ab2dec2649f8d.png
+I, [2017-06-06T07:43:27.821294 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-up-btn-panel-a04b77d9d96f6d401854120f2df3fe8384ef6ae777a9d1e6206b954e65eb8326.png
+I, [2017-06-06T07:43:27.822618 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-down-btn-3bcf51924b49d553defb2986116c9ec590568220c48d6e73a43f324cc9ea5370.png
+I, [2017-06-06T07:43:27.823831 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-down-btn-panel-df2cfabc7cf1e96002c2644b788eebc42c73413a72efc43f1f0fe16d65c536b1.png
+I, [2017-06-06T07:43:27.824793 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/chart-logo-701f4fb34801ed9886b3f9ba5b2e94ad7184f007baac1a352673b708f8c696bb.png
+I, [2017-06-06T07:43:27.825908 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/bet-count-977c7c281b8a2a850029c51080d3ce1585f9ce24fd172890ca22a67ae5211a09.png
+I, [2017-06-06T07:43:27.826992 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/best-choice-996a190fd1dbd83c215d1bf6104821326e4805fe63c774117d163214a1597a9b.png
+I, [2017-06-06T07:43:27.828191 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sprite-help-section-44f3dffc01cb7ee6b08b99aed345059a722a0d6d0a6abfede6d82a5c25c38ab5.png
+I, [2017-06-06T07:43:27.829614 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/tutorial-7aa251c1b006b551d5598c8a99083bcdeb8cbb6b02345a9c32108f92caf3eb66.png
+I, [2017-06-06T07:43:27.835609 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-805235e9ee165c1cfca700b7b1305197dfc2864b9dd6af3b897000b8b2f095f9.png
+I, [2017-06-06T07:43:27.837870 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-girl-24ee38aebacdce6d2c9a8762506e1f00549979b1949dd679a6e531d36f58ef79.png
+I, [2017-06-06T07:43:27.839828 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/whatisit-tail-7376d7e5d8fcad47b68acda7d960750bac91dcef545fbfc3c299e7dc19a2ef3b.png
+I, [2017-06-06T07:43:27.840976 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/webinar-bg-4a45d6680afe43def2716863d565b5380e31ff0296f2860a8a353e288448cdce.jpg
+I, [2017-06-06T07:43:27.843063 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/apps-btns-sprite-28c467cc880763bd50d194eb564b6533b15bd796fe5e1f58d0599260ecb80261.png
+I, [2017-06-06T07:43:27.844335 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/sidebar-sprite-5570559992e75911729b9c060382e7bba60b8f24f1d633f621053ff64f386d1c.png
+I, [2017-06-06T07:43:27.845472 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/logo-sidebar-0fdfb0367a9dd0e1a90f05956e5937c39bc34a5bc7390db3d79eb5166e55356a.png
+I, [2017-06-06T07:43:27.846695 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/search-icon-744a7b89cfc93a91f2db4976513f4695bb2738f635956910f135398814ef4866.png
+I, [2017-06-06T07:43:27.847978 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-white-e161a4305beade36a393ddeabbc814266fc618b6ea9e0792cb89e1a6d96845b6.svg
+I, [2017-06-06T07:43:27.848749 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-white-e161a4305beade36a393ddeabbc814266fc618b6ea9e0792cb89e1a6d96845b6.svg.gz
+I, [2017-06-06T07:43:27.849724 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-black-e1baaac8d67b34e42c0296118e8498360bd11c8d4a30a77a2e768e21f9ccd134.svg
+I, [2017-06-06T07:43:27.850155 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-panels-black-e1baaac8d67b34e42c0296118e8498360bd11c8d4a30a77a2e768e21f9ccd134.svg.gz
+I, [2017-06-06T07:43:27.851291 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/offers/sprite-top-player-5358f75dea6f9c33b19bdb67b411fd48204bcef97004f98275ed9586bd93516b.png
+I, [2017-06-06T07:43:27.852913 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/d_images/stx-sprite-449b62a7a25f4161257192f0dfcd38a10e666e33ccd8b0426d738bdf00ab0016.png
+I, [2017-06-06T07:43:27.854193 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/modal-bg-1594bd3ae48ba07ee4bbe008e66bc79d3e46cdc94d3904cc4ea2282773f55951.jpg
+I, [2017-06-06T07:43:27.855864 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/n_icons/icon-red-gift-2adfd146e51172601ac0fe57c816428082e712f40724d5688e529dcca82387a8.png
+I, [2017-06-06T07:43:27.856921 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/n_icons/icon-accelerated-withdrawals-6d4751a72627229eba44d5798037e8bdcccc0ccf566b9d2a5ab2b896d1ac6a24.png
+I, [2017-06-06T07:43:27.858147 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-519d322d1409b784cab52d2f45d2c051cc1a2196deaeb206aca8f766a08bb4c7.eot
+I, [2017-06-06T07:43:27.858584 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-519d322d1409b784cab52d2f45d2c051cc1a2196deaeb206aca8f766a08bb4c7.eot.gz
+I, [2017-06-06T07:43:27.859324 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-2b91eaf0c80d8a12e5eda04a99a09b61a008ffd84f3c8d82f68690e3155ef7ed.woff
+I, [2017-06-06T07:43:27.860505 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-44c46d366e3cf814be62fcb7fc34aa650d38ab393fa4bc168b36b3db0d8b1f5a.woff2
+I, [2017-06-06T07:43:27.862055 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-85ea92cd145b5f9558c6d9521b4c57984de451fe3e982b9c20a2e0ee8d233b22.ttf
+I, [2017-06-06T07:43:27.862502 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-85ea92cd145b5f9558c6d9521b4c57984de451fe3e982b9c20a2e0ee8d233b22.ttf.gz
+I, [2017-06-06T07:43:27.863446 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-96377f9578c6d07ddcbba9fb5fee834acea757ed51e6e438157c1815f8248647.svg
+I, [2017-06-06T07:43:27.864158 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/icons/icons-96377f9578c6d07ddcbba9fb5fee834acea757ed51e6e438157c1815f8248647.svg.gz
+I, [2017-06-06T07:43:27.865232 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/preloader-8c4e69d638a52034eb80e39e7b75856b837928d5b1c62b86e41b7f7740e8ddcf.svg
+I, [2017-06-06T07:43:27.867273 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/preloader-8c4e69d638a52034eb80e39e7b75856b837928d5b1c62b86e41b7f7740e8ddcf.svg.gz
+I, [2017-06-06T07:43:28.067087 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application_th-183947371dc72b91e1a8be4186ca33b9500e527c20729023021f93a526a278c0.css
+I, [2017-06-06T07:43:28.067344 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_application_th-183947371dc72b91e1a8be4186ca33b9500e527c20729023021f93a526a278c0.css.gz
+I, [2017-06-06T07:43:28.434523 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize-393f385764b8f6f16f5e632dbd9e8fda3c5eae207e5921367286be785e45e2ca.css
+I, [2017-06-06T07:43:28.434775 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize-393f385764b8f6f16f5e632dbd9e8fda3c5eae207e5921367286be785e45e2ca.css.gz
+I, [2017-06-06T07:43:28.435644 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_flat_75_ffffff_40x100-39ab7ccd9f4e82579da78a9241265df288d8eb65dbbd7cf48aed2d0129887df5.png
+I, [2017-06-06T07:43:28.438378 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100-54270656df079c4da5182629a080fc633b6f84b87985eb016d25a560e2c38d4a.png
+I, [2017-06-06T07:43:28.439108 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400-ddf5dd4e0ef2b185e8bb0af7b6e90ebe74a84384cb4700658e76e754c8bfe550.png
+I, [2017-06-06T07:43:28.441936 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_75_dadada_1x400-c108f5cbf2dd9ec07a26530695ddd95e1664597ce6c056ae44c162cc2e28cec4.png
+I, [2017-06-06T07:43:28.442718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_65_ffffff_1x400-f0e6cd91b837d5c5644d026e5ffeccd907953317cd5c0f689901733afda260b2.png
+I, [2017-06-06T07:43:28.445476 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_55_fbf9ee_1x400-691597e8a40a891ea94d3589976ecfc33e6145c49422443b00ac2b5a0022964c.png
+I, [2017-06-06T07:43:28.450297 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_glass_95_fef1ec_1x400-f6f1c1bedf1a0f37cfef81d12f5f012869d1ee7c984775a569827a1784d34f5c.png
+I, [2017-06-06T07:43:28.453420 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_222222_256x240-57adb0d65f4e91dacfee975d9574422bee7486c8a182d60133728c672f2cdbbc.png
+I, [2017-06-06T07:43:28.454377 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_888888_256x240-ea2e29625de3463465e93b002b065f5833e05b97f7a052b1c141e754d62e1a8b.png
+I, [2017-06-06T07:43:28.457718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_454545_256x240-07460e843c3e59aaadbb34231e699e856a2980753c7a47b66447da5d9f93fb7f.png
+I, [2017-06-06T07:43:28.459202 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_2e83ff_256x240-20f8c6667afc48aa433ee9eb6d8a0584bdbd6b4a4a9091ff1e6b3adb31e63bd9.png
+I, [2017-06-06T07:43:28.461797 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-icons_cd0a0a_256x240-1e32c6dbf5d3fd342f27a78aa881550d6412aa207f48468724a6a15402b6041b.png
+I, [2017-06-06T07:43:28.462663 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/jquery-ui/ui-bg_flat_0_aaaaaa_40x100-9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab.png
+I, [2017-06-06T07:43:28.679138 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize_th-01b731c24e7dc39ebadc1c3d73f3cdb9ac72d68916e6a3dc13be09418ac1cff4.css
+I, [2017-06-06T07:43:28.679387 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_authorize_th-01b731c24e7dc39ebadc1c3d73f3cdb9ac72d68916e6a3dc13be09418ac1cff4.css.gz
+I, [2017-06-06T07:43:29.042379 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank-0e48ad180c744a40157cbeb0c9fe9f0d6f50f6aa26c87ff8a2a0ebb4619f94c7.css
+I, [2017-06-06T07:43:29.042621 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank-0e48ad180c744a40157cbeb0c9fe9f0d6f50f6aa26c87ff8a2a0ebb4619f94c7.css.gz
+I, [2017-06-06T07:43:29.105829 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/3-da753e319748e538fce77a4ef559a3add5d50c696ef9dd507b9cc4b7ccb67650.svg
+I, [2017-06-06T07:43:29.106457 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/3-da753e319748e538fce77a4ef559a3add5d50c696ef9dd507b9cc4b7ccb67650.svg.gz
+I, [2017-06-06T07:43:29.107538 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/1-0d0ae657bbb7bf46788bf3f1b30cfdfdce16dd1868498e6e838f8fe636505cb8.svg
+I, [2017-06-06T07:43:29.108072 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/1-0d0ae657bbb7bf46788bf3f1b30cfdfdce16dd1868498e6e838f8fe636505cb8.svg.gz
+I, [2017-06-06T07:43:29.109146 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/2-039e35500436341370e5af5150e3ad75e4fa27b6b02432d005764270cf66ee77.svg
+I, [2017-06-06T07:43:29.109775 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/2-039e35500436341370e5af5150e3ad75e4fa27b6b02432d005764270cf66ee77.svg.gz
+I, [2017-06-06T07:43:29.110711 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/5-c37bb9ec9bc13e838e38fd02e7e29731e8abf8ed8ef9f46175ca901aec68eb32.svg
+I, [2017-06-06T07:43:29.111155 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/unsubscribe/5-c37bb9ec9bc13e838e38fd02e7e29731e8abf8ed8ef9f46175ca901aec68eb32.svg.gz
+I, [2017-06-06T07:43:29.165827 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank_th-452dfa5ad31ddcf4df3d5e410202ac27b8d02b2af21f572fd5d048b74391cc4e.css
+I, [2017-06-06T07:43:29.166113 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_blank_th-452dfa5ad31ddcf4df3d5e410202ac27b8d02b2af21f572fd5d048b74391cc4e.css.gz
+I, [2017-06-06T07:43:29.268895 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue-43be81d21a3d40829617fc55f9c2acaba533f55909fd1a400b227fda57169513.css
+I, [2017-06-06T07:43:29.269194 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue-43be81d21a3d40829617fc55f9c2acaba533f55909fd1a400b227fda57169513.css.gz
+I, [2017-06-06T07:43:29.390916 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue_th-4c8aed41f194d15c01a2f4cb9de3e4312454adc0da42048e72ad455db93e1b2f.css
+I, [2017-06-06T07:43:29.391192 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/layout_signup_continue_th-4c8aed41f194d15c01a2f4cb9de3e4312454adc0da42048e72ad455db93e1b2f.css.gz
+I, [2017-06-06T07:43:29.521728 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-bd43f332b2946d6126287e15574ff761036831e989588135ee7b3288bcbbeb41.css
+I, [2017-06-06T07:43:29.522074 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile-bd43f332b2946d6126287e15574ff761036831e989588135ee7b3288bcbbeb41.css.gz
+I, [2017-06-06T07:43:29.710478 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile_th-bf870cdac647be5369a216122c4ce3f108cd7b7074d15871c56296f2c62fe829.css
+I, [2017-06-06T07:43:29.710718 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/mobile_th-bf870cdac647be5369a216122c4ce3f108cd7b7074d15871c56296f2c62fe829.css.gz
+I, [2017-06-06T07:43:29.934436 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/new_forms-b35103ca764b636f3d912782ccf054febbaa1af8c8885b49d9ec81deb35c9872.css
+I, [2017-06-06T07:43:29.934661 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/new_forms-b35103ca764b636f3d912782ccf054febbaa1af8c8885b49d9ec81deb35c9872.css.gz
+I, [2017-06-06T07:43:30.111336 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/promo-9611bb4beb7a519ce12af2f1f2a265cc32f40b5fad64a954dfa9705d79678348.js
+I, [2017-06-06T07:43:30.111633 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/promo-9611bb4beb7a519ce12af2f1f2a265cc32f40b5fad64a954dfa9705d79678348.js.gz
+I, [2017-06-06T07:43:30.112625 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/arrow_call-ce3c05f6a34e431e9f77d8bd57d109d7677c73f650a2576fc9aab72e35b23a77.png
+I, [2017-06-06T07:43:30.113584 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/arrow_put-3b0034e46af5b62bf044d7c0da448d90c454df5b610d344c8324d580b06eaf9b.png
+I, [2017-06-06T07:43:30.114537 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/timer-1f199caffaeedd0ca179028e001c2e40e6b55f96c0b834387c0beb09fc98bef1.png
+I, [2017-06-06T07:43:30.115572 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/finish-def27799e777c02cf06eca07baae5e7407fa3b7e627d3ed6642d7abf7c37f5de.png
+I, [2017-06-06T07:43:30.120295 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/loading-482426ac5d50c96e1e841a533cd8728808ad00fd3f4a70d8c74582e5eedec76b.png
+I, [2017-06-06T07:43:30.121179 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/chart/icons/wallet-bd516b62adce568ab010a3f6faa52fc941c9f2667756bff19cc70ed3d2c8daa2.png
+I, [2017-06-06T07:43:30.125444 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/old_browser-e1ef58b9fbd9eeea6ef94986b906e7f65fb51b4dc78d0c7ffca707f1c9102547.js
+I, [2017-06-06T07:43:30.125597 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/old_browser-e1ef58b9fbd9eeea6ef94986b906e7f65fb51b4dc78d0c7ffca707f1c9102547.js.gz
+I, [2017-06-06T07:43:30.129837 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/sign_up-92982954a13a3fefe7135eb12e96ea2d2ab9967bcbf316967f15953a6dd552c8.js
+I, [2017-06-06T07:43:30.130009 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/sign_up-92982954a13a3fefe7135eb12e96ea2d2ab9967bcbf316967f15953a6dd552c8.js.gz
+I, [2017-06-06T07:43:30.132727 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/vendor/bootstrap2/bootstrap-tab-3352fb4ef8a5c866a122896836c8a1c8aef48c94f0325b7dffacb1f3f9289380.js
+I, [2017-06-06T07:43:30.132875 #24386]  INFO -- : Writing /home/binomo/binomo.com/releases/20170606074220/binomo.com/public/assets/promo/vendor/bootstrap2/bootstrap-tab-3352fb4ef8a5c866a122896836c8a1c8aef48c94f0325b7dffacb1f3f9289380.js.gz
+rake aborted!
+SassC::SyntaxError: Error: media query expression must begin with '('
+        on line 7 of app/assets/stylesheets/promo/vars/_m_vars.scss
+>> @import 'font-config/v_font_config',
+   ^
+/home/binomo/binomo.com/releases/20170606074220/binomo.com/app/assets/stylesheets/promo/vars/_m_vars.scss:7
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-1.11.2/lib/sassc/engine.rb:47:in `render'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-rails-1.3.0/lib/sassc/rails/template.rb:34:in `block in call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/utils.rb:171:in `module_include'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sassc-rails-1.3.0/lib/sassc/rails/template.rb:33:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/sass_processor.rb:30:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:75:in `call_processor'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:60:in `block in load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:44:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:47:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/bundle.rb:23:in `block in call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/utils.rb:200:in `dfs'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/bundle.rb:24:in `call'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:75:in `call_processor'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/processor_utils.rb:56:in `call_processors'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:60:in `block in load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/loader.rb:44:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/cached_environment.rb:47:in `load'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/base.rb:66:in `find_asset'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/base.rb:73:in `find_all_linked_assets'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:134:in `block in find'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:133:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:133:in `find'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/sprockets/manifest.rb:185:in `compile'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:68:in `block (3 levels) in define'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-3.7.1/lib/rake/sprocketstask.rb:147:in `with_logger'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:67:in `block (2 levels) in define'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:332:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:20:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/cli.rb:11:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/exe/bundle:34:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.13.7/exe/bundle:26:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:22:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:22:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => assets:precompile
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+  INFO [65b6bcc1] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/config /home/binomo/binomo.com/releases/20170606074220 /home/binomo/binomo.com/releases/20170606074220/tmp as binomo@188.42.243.49
+  INFO [902cdb61] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/config /home/binomo/binomo.com/releases/20170606074220 /home/binomo/binomo.com/releases/20170606074220/tmp as binomo@188.42.243.105
+  INFO [65b6bcc1] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [902cdb61] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [8bfa6d88] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/binomo.com/config/symmetric_encryption as binomo@188.42.243.49
+  INFO [fb569681] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.105
+  INFO [8bfa6d88] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [fb569681] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [6c4a7f70] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.105
+  INFO [0326b4af] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170606074220/binomo.com/config/symmetric_encryption as binomo@188.42.243.49
+  INFO [6c4a7f70] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [16e5a5b4] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.105
+  INFO [0326b4af] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [c2521314] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/releases/20170606074220/binomo.com/config/symmetric_encryption as binomo@188.42.243.49
+  INFO [16e5a5b4] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [c2521314] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [1740ffb9] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/log as binomo@188.42.243.105
+  INFO [e2a88613] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/binomo.com/log as binomo@188.42.243.49
+  INFO [1740ffb9] Finished in 0.146 seconds with exit status 0 (successful).
+  INFO [e2a88613] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO [0499bba3] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/log as binomo@188.42.243.105
+  INFO [48ad581b] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170606074220/binomo.com/log as binomo@188.42.243.49
+  INFO [0499bba3] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [0cfaa874] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/log as binomo@188.42.243.105
+  INFO [48ad581b] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [eac51a26] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/releases/20170606074220/binomo.com/log as binomo@188.42.243.49
+  INFO [0cfaa874] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [eac51a26] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [426ac4ae] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/tmp/cache as binomo@188.42.243.105
+  INFO [4b101024] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/binomo.com/tmp/cache as binomo@188.42.243.49
+  INFO [426ac4ae] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [4b101024] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [17982821] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/tmp/cache as binomo@188.42.243.105
+  INFO [6996c7af] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170606074220/binomo.com/tmp/cache as binomo@188.42.243.49
+  INFO [17982821] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [c458ba6b] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/tmp/cache as binomo@188.42.243.105
+  INFO [6996c7af] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [c15b9b1f] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/releases/20170606074220/binomo.com/tmp/cache as binomo@188.42.243.49
+  INFO [c458ba6b] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [c15b9b1f] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [11334214] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/tmp/pids as binomo@188.42.243.105
+  INFO [8d940262] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170606074220/binomo.com/tmp/pids as binomo@188.42.243.49
+  INFO [11334214] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [8d940262] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [25b72b12] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/tmp/pids as binomo@188.42.243.105
+  INFO [32d906d3] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170606074220/binomo.com/tmp/pids as binomo@188.42.243.49
+  INFO [25b72b12] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [93ab570e] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/releases/20170606074220/crm.binomo.com/tmp/pids as binomo@188.42.243.105
+  INFO [32d906d3] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [1db11bd3] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/releases/20170606074220/binomo.com/tmp/pids as binomo@188.42.243.49
+  INFO [93ab570e] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [1db11bd3] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [056da974] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle install --path /home/binomo/binomo.com/shared/bundle --without development test --deployment --quiet as binomo@188.42.243.49
+  INFO [9e1b3c00] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle install --path /home/binomo/binomo.com/shared/bundle --without development test --deployment --quiet as binomo@188.42.243.105
+  INFO [056da974] Finished in 15.362 seconds with exit status 0 (successful).
+  INFO [9e1b3c00] Finished in 15.793 seconds with exit status 0 (successful).
+  INFO [9ab9742f] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake rollback_missing_migrations OLD_RELEASE='/home/binomo/binomo.com/current/crm.binomo.com' NEW_RELEASE='/home/binomo/binomo.com/releases/20170606074220/crm.binomo.com' as binomo@188.42.243.105
+  INFO [9ab9742f] Finished in 17.442 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in db
+  INFO [deploy:migrate] Run `rake db:migrate`
+  INFO [18585379] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake db:migrate as binomo@188.42.243.105
+  INFO [18585379] Finished in 11.974 seconds with exit status 0 (successful).
+  INFO [b4d70b51] Running /usr/bin/env ls /home/binomo/binomo.com/releases/20170606065339/crm.binomo.com/assets_manifest_backup as binomo@188.42.243.105
+  INFO [36d54f05] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake assets:precompile as binomo@188.42.243.105
+  INFO [879f044e] Running /usr/bin/env ls /home/binomo/binomo.com/releases/20170606065339/binomo.com/assets_manifest_backup as binomo@188.42.243.49
+  INFO [b3fb5115] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake assets:precompile as binomo@188.42.243.49

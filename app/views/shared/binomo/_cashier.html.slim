@@ -1,0 +1,18 @@
+.row
+  .col-xs-4
+    = f.input :scenario, label:false , as: :check_boxes, collection: ['cashier' ], required: false
+    = f.input :scenario, label:false , as: :check_boxes, collection: [ 'wire capital decline', 'wire capital success' ].reverse, required: false
+    = f.input :scenario, label:false , as: :check_boxes, collection: [ 'credit card decline', 'credit card success' ].reverse, required: false
+    = f.input :scenario, label:false , as: :check_boxes, collection: [ 'card pay decline', 'card pay success' ].reverse, required: false
+    = f.input :scenario, label:false , as: :check_boxes, collection: ['cancel bonus' ], required: false
+
+    .col-xs-4
+      .row
+        = f.input "Count deposit",  input_html: { class: 'count_cashier params-count-page', value: "1" }, required: false
+
+    .col-xs-2
+
+    .col-xs-4
+      .row
+        = f.input "Sum deposit",  input_html: { class: 'count_cashier_dep params-count-page', value: "1000" }, required: false
+p
