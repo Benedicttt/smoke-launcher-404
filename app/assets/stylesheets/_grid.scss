@@ -1,0 +1,46 @@
+.grid-row {
+  width:100% !important;
+  position: relative !important;
+}
+
+[class*=grid-col] {
+  float:none !important;
+
+}
+// .grid-row:after {
+//   content: '';
+//   display: table;
+//   height: 0;
+//   clear: both;
+// }
+
+.grid-row-top {
+  @extend %valign-top-parent;
+  > [class*=grid-col], .grid-col {
+    @extend %valign-top-child;
+  }
+}
+.grid-row-mid {
+  @extend %valign-mid-parent;
+  > [class*=grid-col], .grid-col {
+    @extend %valign-mid-child;
+    width: 40%;
+  }
+}
+.grid-row-bottom {
+  @extend %valign-bottom-parent;
+  > [class*=grid-col], .grid-col {
+    @extend %valign-bottom-child;
+  }
+}
+
+$cols-count: 12;
+@for $i from 1 through $cols-count {
+  .grid-col-#{$i} {
+    width: (100% / $cols-count) * $i;
+    float: right;
+  }
+}
+.relative{
+  position: relative;
+}

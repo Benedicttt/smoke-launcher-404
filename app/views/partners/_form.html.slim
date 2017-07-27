@@ -1,0 +1,23 @@
+= simple_form_for @stat_part do |f|
+  = f.error_notification
+  div.form-actions.row.btn.btn-success
+    = f.button :submit
+
+  = f.input :created_at
+  = f.input :driver
+  = f.input :branch
+  = f.input :email, disabled:true
+  = f.input :id, disabled:true
+  = f.input :referall, disabled:false
+  = f.input :stage_number
+  = f.input :platform
+  = f.input :locale
+  = f.input :refcode, disabled:true
+  = f.input :phone
+  = f.input :nickname
+  = f.input :card
+  = f.input :skype
+  = f.input :tariff_first
+  = f.input :tariff_last
+  = f.input :cpa_first
+  = f.input :cpa_last

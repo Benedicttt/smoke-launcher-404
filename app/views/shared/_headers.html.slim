@@ -1,0 +1,52 @@
+.row.form-part
+  br
+  .col-xs-2
+    .chk.fields
+      = f.input :stage, label: "staging" , as: :select, collection: @stage_select.keys, required: false, selected: "s2"
+
+  .col-xs-2
+    .drv.fields
+      = f.input :driver, label: "driver" , as: :select, collection: @drv, required: false, selected: "poltergeist"
+
+  .col-xs-2
+    .currency.fields
+      = f.input :currency, label: "currency" , as: :select, collection: @currency, required: false, selected: "USD"
+
+  .col-xs-2
+    .locale.fields
+      = f.input :chk_locale, label: "locale" , as: :select, collection: @locale, required: false, selected: "EN"
+
+  .col-xs-2
+    .geo.fields
+      = f.input :geo, label: "geo", as: :select, collection: @geo, required: false, selected: "RU"
+
+  .col-xs-2
+    .framework.fields
+      = f.input :work, label: "framework" , as: :select, collection: @framework, required: false, selected: "Cucumber"
+
+  .col-xs-2
+    .sleep_retried.fields
+      = f.input :sleep_retried, label: "sleep retried ", as: :select, collection: [5,10,15,20,25,30,60], required: false, selected: "5"
+
+
+  .col-xs-2
+    .sleep_retried.fields
+      = f.input :thread, label: "Thread ", as: :select, collection: [1, 2, 3, 4], required: false, selected: "1"
+
+  .col-xs-3
+    .tariff.fields
+      = f.input :sleep_retried, label: "tariff ", as: :select, collection: @tariff.map { |k,v| [k,v] }, required: false, default: ""
+
+  .col-xs-2
+    .proxy-server.fields
+        = f.input :proxy_server, label: "Proxy", required: false
+
+  .col-xs-2
+    .proxy-server.fields
+      = f.input :proxy_http, label: "Protocol", as: :select, collection: %w[http:// https://], required: false
+
+  .col-xs-2
+    = f.input "clear", label: false, as: :check_boxes, collection: ['Clear cache'], required: false
+
+  .col-xs-2
+    = f.input "plus", label: false, as: :check_boxes, collection: ['RSpec'], required: false, input_html: { checked: true}

@@ -1,0 +1,82 @@
+doctype html
+html
+  head
+    title Cucumber smoke test launcher
+
+
+  .container
+    =simple_form_for :generator, method: :post  do |f|
+
+      .panel.panel-top
+        = render "shared/buttons"
+
+
+    .form-links
+      .col-xs-3
+
+        .prod
+          =link_to "binomo", "https://binomo.com", class: "btn-primary btn-lg btn-block", target: "_blank"
+          =link_to "crm.binomo", "https://crm.binomo.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+          =link_to "profile", "https://binomo.com/api/profile?locale=ru&device=web", class: "btn-success btn-lg btn-block  ", target: "_blank"
+
+
+    .form-links.row
+      .col-xs-3
+        =link_to "binpartner", "https://binpartner.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "adm.binpartner", "https://adm.binpartner.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+        =link_to "s1.binomo", "https://s1.binomo.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "s1.crm.binomo", "https://s1-crm.binomo.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+        =link_to "profile", "https://s1.binomo.com/api/profile?locale=ru&device=web", class: "btn-success btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+        =link_to "s2.binomo", "https://s2.binomo.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "s2.crm.binomo", "https://s2-crm.binomo.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+        =link_to "profile", "https://s2.binomo.com/api/profile?locale=ru&device=web", class: "btn-success btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+
+        =link_to "s3.binomo", "https://s3.binomo.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "s3.crm.binomo", "https://s3-crm.binomo.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+        =link_to "profile", "https://s3.binomo.com/api/profile?locale=ru&device=web", class: "btn-success btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+
+        =link_to "s4.binomo", "https://s4.binomo.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "s4.crm.binomo", "https://s4-crm.binomo.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+        =link_to "profile", "https://s4.binomo.com/api/profile?locale=ru&device=web", class: "btn-success btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+        br
+        =link_to "s1.binpartner", "https://s1.binpartner.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "s1.adm.binpartner", "https://s1-adm.binpartner.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+        br
+        =link_to "s2.binpartner", "https://s2.binpartner.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "s2.adm.binpartner", "https://s2-adm.binpartner.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+        br
+        =link_to "s3.binpartner", "https://s3.binpartner.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "s3.adm.binpartner", "https://s3-adm.binpartner.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+        br
+        =link_to "s4.binpartner", "https://s4.binpartner.com", class: "btn-primary btn-lg btn-block  ", target: "_blank"
+        =link_to "s4.adm.binpartner", "https://s4-adm.binpartner.com", class: "btn-danger btn-lg btn-block  ", target: "_blank"
+
+    .form-links
+      .col-xs-3
+        br
+        =link_to "yopmail", "http://www.yopmail.com/ru/", class: "btn-warning btn-lg btn-block  ", target: "_blank"
+        =link_to "temp-mail", "https://temp-mail.org/", class: "btn-warning btn-lg btn-block  ", target: "_blank"

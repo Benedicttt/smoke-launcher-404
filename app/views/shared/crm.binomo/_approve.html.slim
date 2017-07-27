@@ -1,0 +1,5 @@
+.row
+  .col-xs-2
+    = f.input :scenario, label:false , as: :check_boxes, collection: ['payments_approve_crm'], required: false
+  .col-xs-1
+    = f.input :text, label: false,  input_html: { class: 'count_pay_approve params-count-page', value: "2" }

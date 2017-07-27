@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    body
+      title "Cucumber smoke test launcher"
+
+  .container.page_stage_ui
+    =simple_form_for :generator, method: :post  do |f|
+      br
+      .panel.panel-top
+        = render "shared/buttons"
+
+        .content_prod.fields.actions-btns
+            = render "shared/controls_buttons", id: "smoke-binpartner"
+        = f.input :global_link, label:" Smoke test partner", input_html: { class: 'global_link' }, required: false
+
+        .ws
+          = f.label "Connecting WS ...", required: false
+      = render 'shared/headers', f: f
+
+      .form-part.text-form
+        .row
+          .col-xs-12
+            = f.input :global_ckeckbox, label: false , collection: ["check"], as: :check_boxes, required: false
+
+        = render "shared/binpartner/delete_promo_code", f: f
+        .row
+          = render "shared/binpartner/receive_promo_code", f: f
+          = render "shared/binpartner/add_promo_landings", f: f
+          = render "shared/binpartner/add_promo_video", f: f
+          = render "shared/binpartner/add_promo_banners", f: f
+          = render "shared/binpartner/add_promo_logos", f: f
+
+        = render "shared/binpartner/registration_partner", f: f
+        = render "shared/binpartner/revshare", f: f
+        = render "shared/binpartner/cpa", f: f
+        = render "shared/binpartner/edit_profile", f: f
+        = render "shared/binpartner/delete_postbacks", f: f
+        = render "shared/binpartner/create_postbacks", f: f
+        br
+        br
+        = render "shared/reports-iframe", path_reports: "/reports/binpartner/smoke-binpartner.html"

@@ -1,0 +1,33 @@
+%button {
+  top: 115px;
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  z-index: 101;
+}
+
+.arrow {
+  @extend %button;
+  left: 75px;
+}
+
+.reload-page {
+  @extend %button;
+  left: 115px;
+}
+
+.home-page {
+  @extend %button;
+  width: 75px;
+  left: 155px;
+}
+
+.users-page {
+  @extend %button;
+  left: 245px;
+}
+
+.users-part-page {
+  @extend %button;
+  left: 290px;
+}

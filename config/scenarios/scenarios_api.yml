@@ -1,0 +1,87 @@
+registration_android: "
+  Scenario: Android\n
+  Given Request registration user Android
+"
+install_android: "
+  Given Request install app Android
+"
+sign_in_android: "
+  Given Authorize user android
+"
+profile_edit_android: "
+  Given Edit profile user android
+"
+agree_risk_android: "
+  Given I agree risk android
+"
+cashier_android: "
+  Given Cashier and deposit android
+"
+payouts_android: "
+  Given Payouts android
+"
+email_conf_android: "
+  Given Confirmed email android
+"
+deals_android: "
+  Given Deals android
+"
+
+registration_ios: "
+  Scenario: Ios\n
+  Given Request registration user Ios
+"
+install_ios: "
+  Given Request install app Ios
+"
+sign_in_ios: "
+  Given Authorize user ios
+"
+profile_edit_ios: "
+  Given Edit profile user ios
+"
+agree_risk_ios: "
+  Given I agree risk ios
+"
+cashier_ios: "
+  Given Cashier and deposit ios
+"
+payouts_ios: "
+  Given Payouts ios
+"
+email_conf_ios: "
+  Given Confirmed email ios
+"
+deals_ios: "
+  Given Deals ios
+"
+# Reg_web_api: "
+#   Given Reg web api count
+# "
+#
+# crm verified android: "
+#     Given Verified email crm android\n
+#     \tWhen Input email and find link
+# "
+#
+# crm verified ios: "
+#     Given Verified email crm ios\n
+#     \tWhen Input email and find link
+# "
+
+turbo: "
+  Given Selected turbo
+"
+binary:  "
+  Given Selected binary
+"
+lose: "
+  Given Visit page trading\n
+  \tWhen Make a deals asset GOL/OTC and lose bet\n
+  \tThen Transactions committed\n
+"
+win:  "
+  Given Visit page trading\n
+  \tWhen Make a deals asset GOL/OTC and win bet\n
+  \tThen Transactions committed\n
+"

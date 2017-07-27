@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    title Cucumber smoke test launcher
+
+  .container.page_stage_ui
+    =simple_form_for :generator, method: :post  do |f|
+      br
+      .panel.panel-top
+        = render "shared/buttons"
+
+        .content_prod.fields.actions-btns
+          = render "shared/controls_buttons", id: "smoke-status-code"
+        = f.input :global_link, label:" Smoke test status code pages", input_html: { class: 'global_link' }, required: false
+
+        .ws
+          = f.label "Connecting WS ...", required: false
+      =render "shared/headers", f: f
+
+      .form-part
+        .row
+          .col-xs-3
+            = f.input :scenario, label:false , as: :check_boxes, collection: ["status code page binomo"], required: false
+
+          .col-xs-12
+            = f.input :class_dom, label: "Input class or button name", as: :text
+
+        .row
+          .col-xs-3
+            = f.input :scenario, label:false , as: :check_boxes, collection: ["status code page partner"], required: false
+
+        .row
+          .col-xs-3
+            = f.input "Display" , as: :check_boxes, collection: ["response", "not_response"], required: false
+
+          br
+          br
+          = render "shared/reports-iframe", path_reports: "/reports/smoke-status-code.html"

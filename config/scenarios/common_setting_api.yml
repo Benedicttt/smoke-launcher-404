@@ -1,0 +1,67 @@
+ios_auth:
+  device: "ios"
+  app_version: "1.0"
+  first_name: "sergey"
+  last_name: "kyivskyi"
+  password: "Jemetr!@#()11Capybara123"
+  password_confirmation: "Jemetr!@#()11Capybara123"
+  receive_notification: "true"
+  country: "17"
+  gender : "true"
+  geo: "RU"
+
+android_auth:
+  first_name: "sergey"
+  last_name: "kyivskyi"
+  device: "android"
+  device_id: "1234567f"
+  app_version: "1.0"
+  password: "Jemetr!@#()11Capybara123"
+  password_confirmation: "Jemetr!@#()11Capybara123"
+  receive_notification: "true"
+  country: "17"
+  gender : "true"
+  geo: "RU"
+
+ios:
+  # first_name: "sergey"
+  # last_name: "kyivskyi"
+  app_version: "1.0"
+  device: "ios"
+  i_agree: "true"
+  currency: "USD"
+  password: "Jemetr!@#()11Capybara123"
+  password_confirmation: "Jemetr!@#()11Capybara123"
+  geo: "RU"
+  click_id: "login-123"
+  site_id: "partner-123"
+  currency: "USD"
+
+web_auth:
+  device: "web"
+  locale: "ru"
+  geo: "RU"
+  password: "Jemetr!@#()11Capybara123"
+
+web:
+  device: "web"
+  locale: 'ru'
+  i_agree: "true"
+  currency: "USD"
+  password: "Jemetr!@#()11Capybara123"
+  geo: "RU"
+  password_confirmation: "Jemetr!@#()11Capybara123"
+
+android:
+  first_name: "sergey"
+  last_name: "kyivskyi"
+  app_version: "1.0"
+  device: "android"
+  device_id: "1234567F"
+  i_agree: "true"
+  geo: "RU"
+  currency: "USD"
+  password: "Jemetr!@#()11Capybara123"
+  password_confirmation: "Jemetr!@#()11Capybara123"
+  # click_id: "login-123"
+  # site_id: "partner-123"

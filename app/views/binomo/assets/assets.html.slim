@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title Cucumber smoke test launcher
+
+.container.page_stage_ui
+  =simple_form_for :generator, method: :post  do |f|
+
+    .panel.panel-top
+      = render "shared/buttons"
+
+      .content_prod.fields.actions-btns
+        = render "shared/controls_buttons", id: "smoke-assets"
+      = f.input :global_link, label:" Smoke test all assets", input_html: { class: 'global_link' }, required: false
+
+      .ws
+        = f.label "Connecting WS ...", required: false
+    = render 'shared/headers', f: f
+
+    .form-part
+      = render "shared/binomo/assets/authorization", f: f
+      br
+      = render "shared/binomo/assets/left_sidebar", f: f
+      = render "shared/binomo/assets/right_sidebar", f: f
+      = render "shared/binomo/assets/headers", f: f
+      = render "shared/binomo/assets/footer", f: f
+      = render "shared/binomo/assets/value_demo", f: f
+      = render "shared/binomo/assets/value_real", f: f
+
+      = render "shared/reports-iframe", path_reports: "/reports/binomo/smoke-assets.html"

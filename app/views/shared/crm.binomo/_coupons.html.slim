@@ -1,0 +1,22 @@
+p
+
+.row
+br
+
+.col-xs-3
+  = f.input :scenario, label: "Filter" , as: :check_boxes, collection: ['user filter for coupons'], required: false
+
+.col-xs-3
+  = f.input :scenario, label: "Template individual" , as: :check_boxes, collection: ['bonus', 'bonus deposit', 'free'], required: false
+
+.col-xs-3
+  = f.input :scenario, label: "Template auto" , as: :check_boxes, collection: ['welcome bonus deposit', 'first deposit free deals', 'deposit free deals'], required: false
+
+.col-xs-3
+  = f.input :scenario, label: "Template common" , as: :check_boxes, collection: ['common'], required: false
+
+.row
+br
+
+.col-xs-3
+  = f.input :scenario, label: "User coupons" , as: :check_boxes, collection: ['common coupons', 'deposit bonus', 'free deals', 'balance', 'bonuses'], required: false

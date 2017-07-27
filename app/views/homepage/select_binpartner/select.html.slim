@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Select platform test
+      body
+
+.homepage
+  .container
+    .row
+      .row
+        .col-xs-12
+          =link_to "new partner ", :binpartner_smoke_binpartner , class: "platform smoke-binomo btn-primary btn-lg btn-block"
+          =link_to "trader for partner", :binpartner_trader_for_partner , class: "platform smoke-binomo btn-primary btn-lg btn-block"
+
+          br
+          .panel.panel-top
+            = render "shared/buttons"

@@ -1,0 +1,18 @@
+// Place all the styles related to the binpartner controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.form-partner {
+  text-transform: capitalize;
+  border-bottom: 1px solid #000;
+  padding: 30px 0;
+  margin-bottom: 60px;
+}
+
+.deals-part .generator_scenario {
+    display: inline-flex;
+}
+
+.deals-part  div > span {
+  margin-top: -5px;
+  padding-left: 5px;
+}

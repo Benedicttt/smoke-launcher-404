@@ -1,0 +1,26 @@
+ = simple_form_for @stat do |f|
+  = f.error_notification
+  div.form-actions.btn.btn-success
+    = f.button :submit
+  br
+  a href = "https://#{@stat.stage_number}-crm.binomo.com/users/#{@stat.id}" target='_blank'
+    = f.input :id, input_html: { disabled: true}
+
+  = f.input :branch
+  = f.input :email
+  = f.input :password
+  = f.input :tariff
+  = f.input :locale
+  = f.input :geo_locale
+  = f.input :email_confirmed
+  = f.input :phone_verifed
+  = f.input :document_verifed
+  = f.input :wire_capital
+  = f.input :card_pay
+  = f.input :ecommpay
+  = f.input :stage_number
+  = f.input :currency
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :platform
+  = f.input :driver, input_html: { disabled: true}

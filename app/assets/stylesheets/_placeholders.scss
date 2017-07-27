@@ -1,0 +1,60 @@
+
+%valign-mid-parent {
+  display:inline-block;
+  vertical-align: middle;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+%valign-mid-child {
+  display:inline-block;
+  vertical-align: middle;
+}
+
+// VERTICAL ALIGN TOP
+%valign-top-parent {
+  display:inline-block;
+  vertical-align: top;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+  }
+}
+
+%valign-top-child {
+  display:inline-block;
+  vertical-align: top;
+}
+
+// VERTICAL ALIGN BOTTOM
+%valign-bottom-parent {
+  display:inline-block;
+  vertical-align: bottom;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+  }
+}
+
+%valign-bottom-child {
+  display:inline-block;
+  vertical-align: bottom;
+}
+
+// TRANSLATE CENTERED FULL
+%total-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

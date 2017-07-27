@@ -1,0 +1,8 @@
+body.users-table
+  h1 Editing Post
+
+  = render 'form', post: @stat_part
+
+  .btn.btn-warning
+    = link_to 'Show', @stat_part
+    = link_to 'Back', partners_path

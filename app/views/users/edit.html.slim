@@ -1,0 +1,11 @@
+body.users-table
+  h1 Editing Post
+
+  br
+  br
+  .col-xs-3
+    = render 'form', post: @stat
+
+    .btn.btn-warning
+      = link_to 'Show', @stat
+      = link_to 'Back', user_path

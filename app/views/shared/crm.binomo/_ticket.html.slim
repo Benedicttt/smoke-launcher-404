@@ -1,0 +1,5 @@
+.row
+  .col-xs-2
+    = f.input :scenario, label:false , as: :check_boxes, collection: ['ticket_crm'], required: false
+  .col-xs-1
+    = f.input :text, label: false,  input_html: { class: 'count_tickets params-count-page', value: "5" }

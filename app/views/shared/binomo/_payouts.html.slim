@@ -1,0 +1,14 @@
+
+.col-xs-6
+  br
+  = f.input :scenario, label:false , as: :check_boxes, collection: ['payouts', 'payout_credit_card', 'payout_card_pay', 'payout_wire_capital'], required: false
+
+  .col-xs-3
+    .row
+      = f.input "count payouts tickets",  input_html: { class: 'count_payouts params-count-page', value: "10" }, required: false
+
+  .col-xs-2
+
+  .col-xs-3
+    .row
+      = f.input "sum payouts tickets",  input_html: { class: 'count_payouts_sum params-count-page', value: "10" }, required: false

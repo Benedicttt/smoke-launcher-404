@@ -1,0 +1,187 @@
+doctype html
+html
+  head
+    title Cucumber smoke test launcher
+
+.container.page_stage_ui
+  =simple_form_for "" do |f|
+
+    br
+    .panel.panel-top
+      = render "shared/buttons"
+
+      .content_prod.fields.actions-btns
+      = f.input :global_link,
+          label:" Deploy branchs for stagings",
+            input_html: { class: 'deploy' },
+             required: false
+      .ws
+        = f.label "Connecting WS ...", required: false
+
+      .checkbox-inline-params
+        = f.input "",
+           as: :check_boxes,
+            collection: ['Written in the log', 'Clear releases', 'Terminal'],
+             required: false
+
+    .form-part.field
+      br
+      	br
+      		br
+      .col-xs-2
+        .fields
+          = f.input :stage,
+              label: "Select staging",
+               collection: @params['stage_select'].values,
+                selected: @params['stage_select'].values[1],
+                 required: false,
+                  input_html: { id: "first-binomo" }
+
+      .col-xs-2
+        .fields
+          = f.input :work,
+              label: "Select framework",
+                collection: @params['project'].values,
+                  selected: @params['project'].values[0],
+                    required: false,
+                      input_html: { id: "first-project", disabled: true }
+
+
+      .col-xs-3
+        .fields
+          = f.input :branch,
+              label: "Input branch and param 'clean'",
+               input_html:{ value: "master",
+                  id: "first-branch" },
+                   required: false
+
+      .col-xs-1
+        br
+          = button_tag "DEPLOY",
+              class: "ws_sender_binomo btn-ls btn-success btn",
+                id: "deploy-project-binomo"
+
+      .col-xs-1
+        br
+          = button_tag "CLEAN",
+              class: "ws_sender_binomo_clean btn-ls btn-warning btn",
+                id: "deploy-project-binomo-clean"
+
+      .col-xs-1
+        br
+          = button_tag "DEBUG",
+              class: "ws_sender_binomo_clean_debug btn-ls btn-warning btn",
+                id: "deploy-project-binomo-clean-debug"
+
+      .col-xs-1
+        br
+          = button_tag "STOP !",
+              class: "pid_process_deploy btn-ls btn-danger btn"
+
+      .row
+        br
+        br
+        .col-xs-10
+          .col-xs-3
+            = button_tag "restart unicorn".upcase,
+                class: "restart_unicorn_first btn-ls btn-info btn"
+          .col-xs-3
+            = button_tag "restart daemons".upcase,
+                class: "restart_daemons_first btn-ls btn-info btn"
+          .col-xs-3
+            = button_tag "assets precompile".upcase,
+                class: "assets_precompile_first btn-ls btn-info btn"
+          .col-xs-3
+            = button_tag "memcached flush".upcase,
+                class: "memcached_flush_first btn-ls btn-info btn"
+
+
+    .form-part.field
+      .col-xs-2
+        .fields
+          = f.input :stage,
+              label: "Select staging",
+               collection: @params['stage_select'].values,
+                selected: @params['stage_select'].values[1],
+                 required: false,
+                  input_html: { id: "last-binpartner" }
+
+      .col-xs-2
+        .fields
+          = f.input :work,
+              label: "Select framework",
+               collection: @params['project'].values,
+                readonly: true ,
+                  selected: @params['project'].values[1],
+                   required: false,
+                     input_html: { id: "last-project", disabled: true }
+
+
+      .col-xs-3
+        .fields
+          = f.input :branch,
+              label: "Input branch and param 'clean'",
+                input_html:{ value: "master",
+                  id: "last-branch" },
+                    required: false
+
+      .col-xs-1
+        br
+      	= button_tag "DEPLOY",
+            class: "ws_sender_binpartner btn-ls btn-success btn",
+               id: "deploy-project-binpartner"
+
+
+      .col-xs-1
+        br
+        = button_tag "CLEAN",
+          class: "ws_sender_binpartner_clean btn-ls btn-warning btn",
+            id: "deploy-project-binpartner-clean"
+
+      .col-xs-1
+        br
+        = button_tag "DEBUG",
+          class: "ws_sender_binpartner_clean_debug btn-ls btn-warning btn",
+            id: "deploy-project-binpartner-clean-debug"
+
+      .col-xs-1
+        br
+      	= button_tag "STOP !",
+          class: "pid_process_deploy btn-ls btn-danger btn"
+
+      .row
+        br
+        br
+        .col-xs-10
+          .col-xs-3
+            = button_tag "restart unicorn".upcase,
+                class: "restart_unicorn_last btn-ls btn-info btn"
+          .col-xs-3
+            = button_tag "restart daemons".upcase,
+                class: "restart_daemons_last btn-ls btn-info btn"
+          .col-xs-3
+            = button_tag "assets precompile".upcase,
+                class: "assets_precompile_last btn-ls btn-info btn"
+          .col-xs-3
+            = button_tag "memcached flush".upcase,
+                class: "memcached_flush_last btn-ls btn-info btn"
+
+
+    .form-part.field
+      .col-xs-4
+        .fields
+          = f.input :binomo_test_date,
+              label: "New test_date",
+                input_html:{ value: Time.now.strftime("%Y.%m.%d")}
+        .col-xs-3
+          = button_tag "change date server and restart unicorn BINOMO",
+              class: "change_test_date_binomo btn-ls btn btn-danger"
+
+      .col-xs-4
+        .fields
+          = f.input :binpartner_test_date,
+              label: "New test_date",
+                input_html:{ value: Time.now.strftime("%Y.%m.%d")}
+        .col-xs-3
+          = button_tag "change date server and restart unicorn BINPARTNER",
+              class: "change_test_date_binpartner btn-ls btn btn-danger"

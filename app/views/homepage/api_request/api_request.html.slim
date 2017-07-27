@@ -1,0 +1,94 @@
+doctype html
+html
+  head
+    title Cucumber smoke test launcher
+
+.container.page_stage_ui
+  =simple_form_for :generator, method: :post  do |f|
+
+    .panel.panel-top
+      = render "shared/buttons"
+
+      .content_prod.fields.actions-btns
+        = render "shared/controls_buttons", id: "api-request"
+
+      = f.input :global_link, label:" Api request", input_html: { class: 'global_link' }, required: false
+
+      .ws
+        = f.label "Connecting WS ...", required: false
+
+    = render 'shared/headers', f: f
+
+
+
+    .row.form-api-request
+      .col-xs-2
+        = f.input :global_ckeckbox , label: false , collection: ["check"], as: :check_boxes, required: false
+
+      .container_android.text-form
+        .row
+          .col-xs-2
+            = f.input :api_select, label: false , collection: @config_api.keys[0..8], as: :check_boxes, required: false
+
+      .container_ios.text-form
+        .row
+          .col-xs-2
+            = f.input :api_select, label: false , collection: @config_api.keys[9..17], as: :check_boxes, required: false
+
+    .form-part
+      .row
+        .col-xs-2
+          = f.input :api_select, label: "Register by API" , collection: [@quality.keys[0]], as: :check_boxes, required: false
+          = f.input :text, label: false ,  input_html: { class: 'reg_api_count params-count-page', value: "1" }, required: false
+          = f.input :api_select, label: "Confirmed by CRM" , collection: [@quality.keys[1]], as: :check_boxes, required: false
+
+      .row
+        .col-xs-2
+          = f.input :text, label: "Count reg" ,  input_html: { class: 'conf_reg_api params-count-page', value: "1" }, required: false
+
+    .cahsier_params
+      .bonus_cashier_api
+
+        .row
+          .col-xs-3
+            = f.input :text, label: "Cashier count",  input_html: { class: 'count_cashier params-count-page', value: "1" }, required: false
+
+        .row
+          .col-xs-2
+            = f.input :text, label: "Cashier sum",  input_html: { class: 'count_cashier_dep params-count-page', value: "200" }, required: false
+
+          .cancel_bonus
+            .col-xs-6
+              = f.input :scenario, label:false , as: :check_boxes, collection: ["Cancel bonus"], required: false
+
+        .row
+          .col-xs-3
+            = f.input :text, label: "Pay count",  input_html: { class: 'count_payouts params-count-page', value: "2" }, required: false
+
+        .row
+          .col-xs-3
+            = f.input :text, label: "Pay sum",  input_html: { class: 'count_payouts_sum params-count-page', value: "10" }, required: false
+
+        .row
+
+          .col-xs-2
+            = f.input :text, label: "Count deals",  input_html: { class: 'count_deals params-count-page', value: "2" }, required: false
+
+          .col-xs-2
+            = f.input :text, label: "Sum deals",  input_html: { class: 'count_deals_sum params-count-page', value: "50" }, required: false
+
+          .col-xs-2
+            = f.input :text, label: "Delay between deals",  input_html: { class: 'between params-count-page', value: "2" }, required: false
+
+        .row
+          .col-xs-4
+            = f.input :scenario, label:false , as: :check_boxes, collection: @config_api.keys[21..22],required: false
+
+      .form-part
+        .fields
+          =button_tag "start", class: 'page-frame start submit_btn'
+          =button_tag "stop", class: 'page-frame stop submit_btn'
+          =link_to 'Link reports', "/reports/api-request.html", target: "_blank"
+
+        br
+          iframe id="report" src="/reports/api-request.html" width="100%" height="600px"

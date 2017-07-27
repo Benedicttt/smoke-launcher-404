@@ -1,0 +1,65 @@
+body.users-table
+
+  .btn.btn-warning
+    = link_to 'Edit', edit_partner_path(@stat_part)
+    = link_to 'Back', partners_path
+
+  p id="notice"
+    = notice
+  p
+    strong Date:
+    = @stat_part.created_at
+  p
+    strong Branch:
+    = @stat_part.branch
+  p
+    strong Driver:
+    = @stat_part.driver
+  p
+    strong Email:
+    = @stat_part.email
+  p
+    strong ID:
+    = @stat_part.id
+  p
+    strong Stage:
+    = @stat_part.stage_number
+  p
+    strong Platform:
+    = @stat_part.platform
+  p
+    strong Locale:
+    = @stat_part.locale
+  p
+    strong Refcode:
+    = @stat_part.refcode
+  p
+    strong Phone:
+    = @stat_part.phone
+  p
+    strong Nickname:
+    = @stat_part.nickname
+  p
+    strong Card:
+    = @stat_part.card
+  p
+    strong Skype:
+    = @stat_part.skype
+  p
+    strong Tariff first:
+    = @stat_part.tariff_first
+  p
+    strong Tariff last:
+    = @stat_part.tariff_last
+  p
+    strong CPA first:
+    = @stat_part.cpa_first
+  p
+    strong CPA last:
+    = @stat_part.cpa_last
+  p
+    strong Referall:
+    = @stat_part.referall
+
+     div.form-actions.row
+       = f.button :submit
