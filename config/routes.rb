@@ -1,16 +1,18 @@
+require "que/web"
+
 Rails.application.routes.draw do
+  mount ActionCable.server, at: '*'
+  mount Que::Web => "/que"
 
   resources :launcher
     root to: redirect("/homepage")
     get 'homepage' , to: 'homepage#homepage'
 
   resources :users
-    get 'users.html', to: 'users#index'
-    get 'users.json', to: 'users#index', defaults: {format: :json}
+  resources :reports_users
 
   resources :partners
-    get 'partners.html', to: 'partners#index'
-    get 'partners.json', to: 'partners#index', defaults: {format: :json}
+  resources :reports_partner
 
   namespace :homepage do
     get 'api_request' , to: 'api_request#api_request'

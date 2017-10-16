@@ -13,10 +13,10 @@ Given /^Testing balance$/ do
   sleep 0.5
   DRIVER.find_elements(:css, "input.btn")[0].click
 
-  sleep 1
+  sleep 3
   id =  "ID: #{DRIVER.find_element(:css, '#main-content > div > div:nth-child(5) > table > tbody > tr:nth-child(1) > td:nth-child(1)').text}"
   action =  "Action: #{DRIVER.find_element(:css, '#main-content > div > div:nth-child(5) > table > tbody > tr:nth-child(1) > td:nth-child(2)').text}"
-  sum =  "Count sum: #{DRIVER.find_element(:css, '#main-content > div > div:nth-child(5) > table > tbody > tr:nth-child(1) > td:nth-child(3) > span.currency-amount').text}"
-  balance =  "Balanse: #{DRIVER.find_element(:css, '#main-content > div > div:nth-child(5) > table > tbody > tr:nth-child(1) > td:nth-child(3) > span.currency-amount').text}"
+  sum =  "Count sum: #{DRIVER.find_element(:css, '#main-content > div > div:nth-child(5) > table > tbody > tr:nth-child(1) > td:nth-child(3)').text}"
+  balance =  "Balanse: #{DRIVER.find_element(:css, '#main-content > div > div:nth-child(5) > table > tbody > tr:nth-child(1) > td:nth-child(3)').text}"
   puts_warning "#{link_report_id(DRIVER.current_url.to_s, DRIVER.current_url.to_s)} #{id} #{action} #{sum} #{balance}"
 end

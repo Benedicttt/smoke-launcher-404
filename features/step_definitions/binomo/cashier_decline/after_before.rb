@@ -4,6 +4,7 @@ Then /^Before balance$/ do
   wait_until(3, :css, "span[ng-bind-html='vm.getBalance() | currencyUnit']" )
 
   if DRIVER.find_element(:css, "span[ng-bind-html='vm.getBalance() | currencyUnit']").displayed? == true
+    sleep 2
     DRIVER.find_element(:css, "span[ng-bind-html='vm.getBalance() | currencyUnit']").click
     sleep 2
     DRIVER.find_element(:css, "a[ng-click=\"vm.activateReal()\"]").click

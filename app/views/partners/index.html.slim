@@ -32,6 +32,7 @@ p
         th CPL DOI
         th Referall
         th IDS traiders
+        th Report
     tbody
 
       - @stat_part.each do |post|
@@ -114,8 +115,20 @@ p
                     li
                       a href = 'https://#{post.stage_number}-crm.binomo.com/users/#{i.id}' target='_blank'
                         = [i.id, "t=#{i.tariff}"].reverse.join(' ')
-            th
-              = link_to "Edit", edit_partner_path(post), class: "btn btn-info btn-xs"
+
+            th.col-xs-1
+              - if (@reports = ReportsPartner.where(user_id: post.id)).length > 0
+                div.dropdown
+                  button.btn.btn-xs.btn-sm.btn-primary type="button" data-toggle="dropdown"
+                    |reports
+                  ul.dropdown-menu style="background: black;"
+                    - @reports.each do |i|
+                      li
+                        .btn.btn-success.btn-xs style="margin-left: -50%;"
+                          a href = 'reports_partner/#{i.id}' target='_blank'
+                            =  [i.created_at.strftime("Report #{i.id}, #{i.platform}, %D %H:%M:%S")].join("#{i.id}")
+                          a href = 'reports_partner/#{i.id}' data-method='delete' class='btn btn-danger btn-xs" id="report-#{i.id}' del
+
             th
               = link_to 'Show', post, class: "btn btn-success btn-xs"
             th

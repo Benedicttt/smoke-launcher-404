@@ -21,7 +21,7 @@ Given /^Add widget$/ do
   DRIVER.find_element(:id, "widget_date_to").send_keys(Time.now.strftime("#{Time.now.day + 1}.%m.%Y %H:%M:%S"))
   banner = File.absolute_path('./app/assets/images/banner_cashier.jpg')
 
-  %i[en ru id ms es th vn cn pt tr pl md me kr].each_with_index do |locale, num|
+  %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
     DRIVER.find_element(:id, "widget_data_banner_#{locale}").send_keys(banner)
     DRIVER.find_element(:id, "widget_data_url_#{locale}").clear
     DRIVER.find_element(:id, "widget_data_url_#{locale}").send_keys("/#{locale}")
@@ -45,7 +45,7 @@ Given /^Add widget$/ do
   DRIVER.find_element(:id, "widget_date_to").send_keys(Time.now.strftime("#{Time.now.day + 1}.%m.%Y %H:%M:%S"))
   banner = File.absolute_path('./app/assets/images/banner_trading.png')
 
-  %i[en ru id ms es th vn cn pt tr pl md me kr].each_with_index do |locale, num|
+  %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
     DRIVER.find_element(:id, "widget_data_banner_#{locale}").send_keys(banner)
     DRIVER.find_element(:id, "widget_data_url_#{locale}").clear
     DRIVER.find_element(:id, "widget_data_url_#{locale}").send_keys("/#{locale}")

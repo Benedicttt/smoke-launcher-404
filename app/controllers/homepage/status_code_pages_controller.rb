@@ -4,7 +4,11 @@ class Homepage::StatusCodePagesController < ApplicationController
   def create
     scenarios_binomo = params["generator"]["scenario"]&.map {|f| @config_binomo[f]}.reject{ |x| x.nil?}
     File.open("./features/smoke-status-code.feature", 'w+'){|f| f.puts("Feature: SMoke test generate #{Time.now}\n Scenario: Run step\n Given Pid process\n  ")}
-    File.open("./features/smoke-status-code.feature", 'a'){|f| f.puts(scenarios_binomo.join("\n"))}
+    File.open("./features/smoke-status-code.feature", 'a') do |f|
+      f.puts(scenarios_binomo.join("\n"))
+      f.puts("\nScenario:\tThen Pool ranning?\nGiven Pool ranning?")
+    end
+
     p params["generator"]
   end
 

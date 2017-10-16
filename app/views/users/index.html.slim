@@ -13,7 +13,7 @@ p
     table
       thead
         tr
-          th Data
+          th Data, Ip
           th.col-xs-1 Branch
           th Driver
           th ID
@@ -33,6 +33,7 @@ p
           th Ecommpay
           th Card pay
           th Status
+          th Report
       tbody
         - @stat.each do |post|
           tr
@@ -49,12 +50,21 @@ p
               - if post.driver == "safari"
                 .safari
                   a href = post
-
             th
               - if (@id = post.id)
-                .btn.btn-warning.btn-xs
-                  a href = "https://#{post.stage_number}-crm.binomo.com/users/#{post.id}" target='_blank'
+                div.dropdown
+                  button.btn.btn-xs.btn-sm.btn-primary type="button" data-toggle="dropdown"
                     = post.id
+                  ul.dropdown-menu
+                    li style="background: black"
+                      .btn
+                        a href = "https://#{post.stage_number}-crm.binomo.com/users/#{post.id}" target='_blank'
+                          |CRM
+                      .btn
+                        a href = "https://#{post.stage_number}.binomo.com/" target='_blank'
+                          |BINOMO
+
+
             th = post.stage_number
             th = post.platform.upcase
             th
@@ -64,7 +74,7 @@ p
                     #{Partner.where(refcode: User.find(post.id).refcode).last&.email}" target="_blank"
                     = post.refcode
 
-            th = post.tariff        
+            th = post.tariff
             th = post.locale
             th = post.currency
             th = post.geo_locale
@@ -107,13 +117,26 @@ p
               - if post.status == 'free'
                 .free
                   = post.status
+              - if post.status == 'undefined'
+                = "undefined"
+
+            th.col-xs-1
+              - if (@reports = ReportsUser.where(user_id: post.id)).length > 0
+                div.dropdown
+                  button.btn.btn-xs.btn-sm.btn-primary type="button" data-toggle="dropdown"
+                    |reports
+                  ul.dropdown-menu.reload-menu-report style="background: black"
+                    - @reports.each do |i|
+                      li id="delete-report-#{i.id}"
+                        .btn.btn-success.btn-xs style="margin-left: -50%"
+                          a href = 'reports_users/#{i.id}' target='_blank'
+                            = [i.created_at.strftime("Report #{i.id}, #{i.platform}, %D %H:%M:%S")].join("#{i.id}")
+                          a href = 'reports_users/#{i.id}' data-method='delete' class='btn btn-danger btn-xs" id="report-#{i.id}' del
 
             th
-              = link_to "E", edit_user_path(post), class: "btn btn-info btn-xs"
-            th
-              = link_to 'S', post, class: "btn btn-success btn-xs"
-            th
-              = link_to 'D', post, method: :delete, class: "btn btn-danger btn-xs"
+              = link_to 'Edit', edit_user_path(post.id), class: "btn btn-warning btn-xs"
+              = link_to 'Show', post, class: "btn btn-success btn-xs"
+              = link_to 'Delete', post, method: :delete, class: "btn btn-danger btn-xs"
 
 
 .digg_pagination
@@ -121,5 +144,3 @@ p
 
 .paginates
   = page_entries_info @stat
-
-/  = link_to 'New Post', new_user_path

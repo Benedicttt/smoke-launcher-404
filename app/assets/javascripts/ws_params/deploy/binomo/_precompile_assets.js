@@ -2,7 +2,7 @@ $(function(){
 
   $('.assets_precompile_first').click(function(){
     if (str= '', $('.assets_precompile_first').prop('click')) {
-      $("#_global_link").val(str += " cap" + " " +
+      $("#_global_link").val(str += "cap" + " " +
       $('#first-binomo').val() + " deploy:assets:precompile" + " project=" +
       $('#first-project').val()
     )}

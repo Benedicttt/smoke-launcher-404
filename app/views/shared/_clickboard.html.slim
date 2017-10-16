@@ -1,4 +1,10 @@
 .row
-  .col-xs-12.click_board
-    - @stage_select.keys.each do |num|
-      =f.button :button, "#{User.where(stage_number: num).last&.email}", required: false, class: "col-xs-3 copy_user btn-success", "data-clipboard-target" => "txt_#{num}", id: "txt_#{num}"
+  div style="color: white; font-size: 18px; font-weight: 900; margin-left: 40%"
+    text Last users staging's
+  br
+    .col-xs-12.click_board
+
+      - @stage_select.keys.each do |num|
+        =f.button :button, "#{User.where(stage_number: num).last&.email}",
+            required: false,
+            class: "col-xs-3 copy_user btn-success", "data-clipboard-target" => "txt_#{num}", id: "txt_#{num}"

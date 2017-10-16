@@ -3,8 +3,11 @@ class Binpartner::TraderForPartnerController < ApplicationController
 
   def create
     partner_scenarios = params["generator"]["scenario"]&.map {|f| @config_part[f]}.reject{ |x| x.nil?}
-    File.open("./features/binpartner-treder.feature", 'w'){|f| f.puts("Feature: SMoke test generate #{Time.now}\n Scenario: Run step partner\n Given Pid process\n ")}
-    File.open("./features/binpartner-treder.feature", 'a'){|f| f.puts(partner_scenarios.join("\n"))}
+    File.open("./features/binpartner-treder.feature", 'w'){ |f| f.puts("Feature: SMoke test generate #{Time.now}\n Scenario: Run step partner\n Given Pid process\n ")}
+    File.open("./features/binpartner-treder.feature", 'a') do |f|
+      f.puts(partner_scenarios.join("\n"))
+      f.puts("\nScenario:\tThen Pool ranning?")
+    end
     p params["generator"]
   end
 

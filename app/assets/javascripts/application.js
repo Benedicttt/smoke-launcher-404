@@ -12,11 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-// require turbolinks
 //= require_tree
-//= require clipboard
 //= require zeroclipboard
 //= require bootstrap-sprockets
+//= require action_cable
+//= require_self
+//= require_tree ./channels
+
+
 
 "./app/assets/javascripts/"
 "./app/assets/javascripts/ws_params"

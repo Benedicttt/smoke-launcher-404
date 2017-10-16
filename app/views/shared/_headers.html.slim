@@ -35,7 +35,7 @@
 
   .col-xs-3
     .tariff.fields
-      = f.input :sleep_retried, label: "tariff ", as: :select, collection: @tariff.map { |k,v| [k,v] }, required: false, default: ""
+      = f.input :tariff, label: "tariff ", as: :select, collection: @tariff.map { |k,v| [k,v] }, required: false, default: ""
 
   .col-xs-2
     .proxy-server.fields
@@ -48,5 +48,5 @@
   .col-xs-2
     = f.input "clear", label: false, as: :check_boxes, collection: ['Clear cache'], required: false
 
-  .col-xs-2
-    = f.input "plus", label: false, as: :check_boxes, collection: ['RSpec'], required: false, input_html: { checked: true}
+//  .col-xs-2
+  //  = f.input "plus", label: false, as: :check_boxes, collection: ['RSpec'], required: false, input_html: { checked: true}

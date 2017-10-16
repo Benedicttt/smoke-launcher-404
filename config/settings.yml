@@ -1,0 +1,169 @@
+geo:
+  RU: "RU"
+  EN: "EN"
+  ID: "ID"
+  MS: "MS"
+  ES: "ES"
+  TH: "TH"
+  VN: "VN"
+  CN: "CN"
+  PT: "PT"
+  ZW: "ZW"
+  PL: "PL"
+  MD: "MD"
+  ME: "ME"
+  RO: "RO"
+  KR: "KR"
+
+locale:
+  RU: "ru"
+  EN: "en"
+  ID: "id"
+  MS: "ms"
+  ES: "es"
+  TH: "th"
+  VN: "vn"
+  CN: "cn"
+  PT: "pt"
+  MD: "md"
+  RO: "ro"
+  KR: "kr"
+
+currency:
+  USD: ["document.querySelectorAll('label[ng-repeat=\"currency in vm.currencies\"] > input[value=USD]')[0].click()", "USD"]
+  RUB: ["document.querySelectorAll('label[ng-repeat=\"currency in vm.currencies\"] > input[value=RUB]')[0].click()", "RUB"]
+  EUR: ["document.querySelectorAll('label[ng-repeat=\"currency in vm.currencies\"] > input[value=EUR]')[0].click()", "EUR"]
+  CNY: ["document.querySelectorAll('label[ng-repeat=\"currency in vm.currencies\"] > input[value=CNY]')[0].click()", "CNY"]
+  TRY: ["document.querySelectorAll('label[ng-repeat=\"currency in vm.currencies\"] > input[value=TRY]')[0].click()", "TRY"]
+  UAH: ["document.querySelectorAll('label[ng-repeat=\"currency in vm.currencies\"] > input[value=UAH]')[0].click()", "UAH"]
+
+email:
+  prod: ""
+  s4: ""
+  s3: ""
+  s2: ""
+  s1: ""
+  s5: ""
+  s6: ""
+  s7: ""
+
+email_name:
+  prod: "Prod."
+  s4: "Stage4."
+  s3: "Stage3."
+  s2: "Stage2."
+  s1: "Stage1."
+  s5: "Stage5."
+  s5: "Stage6."
+  s7: "Stage7."
+
+email_partner:
+  prod: "Part_prod.{0}"
+  s4: "Part_s4.{0}"
+  s3: "Part_s3.{0}"
+  s2: "Part_s2.{0}"
+  s1: "Part_s1.{0}"
+  s5: "Part_s5.{0}"
+  s6: "Part_s7.{0}"
+  s7: "Part_s6.{0}"
+
+user_crm:
+  login: "s.borisov@binpartner.com"
+  password: "uu$50hYLBrg5}j#grHLb"
+
+user_test:
+  first_name: "Тестостеровщик Мужской"
+  last_name: "Офисный гормон"
+  pass_platform: "Jemetr!@#()11Capybara123"
+  pass_partner: "Solomondoon123"
+  pass_recovery: "12345q"
+
+page:
+  mailer: "https://temp-mail.ru"
+  whatisit: "/whatisit"
+  account: "/acoount"
+  trading: "/trading"
+  tutorial: "/tutorial"
+  tickets: "/tickets"
+  payouts: "/payouts"
+  welcome: "/welcome"
+  cashier: "/cashier"
+  sign_out: "/api_request/sign_out"
+  fd_cancel: "/free_deals/cancel"
+  postback: "/ru/postbacks/new"
+
+app_host:
+  prod: "https://binomo.com/"
+  s7: "https://s7.binomo.com/"
+  s6: "https://s6.binomo.com/"
+  s5: "https://s5.binomo.com/"
+  s4: "https://s4.binomo.com/"
+  s3: "https://s3.binomo.com/"
+  s2: "https://s2.binomo.com/"
+  s1: "https://s1.binomo.com/"
+
+url_partner:
+  prod: "https://binpartner.com/"
+  s7: "https://s7.binpartner.com/"
+  s6: "https://s6.binpartner.com/"
+  s5: "https://s5.binpartner.com/"
+  s4: "https://s4.binpartner.com/"
+  s3: "https://s3.binpartner.com/"
+  s2: "https://s2.binpartner.com/"
+  s1: "https://s1.binpartner.com/"
+
+url_adm_partner:
+  prod: "https://adm.binpartner.com/"
+  s7: "https://s7-adm.binpartner.com/"
+  s6: "https://s6-adm.binpartner.com/"
+  s5: "https://s5-adm.binpartner.com/"
+  s4: "https://s4-adm.binpartner.com/"
+  s3: "https://s3-adm.binpartner.com/"
+  s2: "https://s2-adm.binpartner.com/"
+  s1: "https://s1-adm.binpartner.com/"
+
+url_page_crm:
+  prod: "https://crm.binomo.com/"
+  s7: "https://s7-crm.binomo.com/"
+  s6: "https://s6-crm.binomo.com/"
+  s5: "https://s5-crm.binomo.com/"
+  s4: "https://s4-crm.binomo.com/"
+  s3: "https://s3-crm.binomo.com/"
+  s2: "https://s2-crm.binomo.com/"
+  s1: "https://s1-crm.binomo.com/"
+
+url_user_crm:
+  prod: "https://crm.binomo.com/users"
+  s7: "https://s7-crm.binomo.com/users"
+  s6: "https://s6-crm.binomo.com/users"
+  s5: "https://s5-crm.binomo.com/users"
+  s4: "https://s4-crm.binomo.com/users"
+  s3: "https://s3-crm.binomo.com/users"
+  s2: "https://s2-crm.binomo.com/users"
+  s1: "https://s1-crm.binomo.com/users"
+
+drivers:
+  chrome: "chrome"
+  firefox: 'firefox'
+
+stage_select:
+  s1: "Stage1"
+  s2: "Stage2"
+  s3: "Stage3"
+  s4: "Stage4"
+  s5: "Stage5"
+  s6: "Stage6"
+  s7: "Stage7"
+  prod: "Production"
+
+frame_work:
+  cucumber: "cucumber"
+
+tariff:
+  FTD 1: "0"
+  FTD 2: "1"
+  CPA: "2"
+  CPA %: "3"
+  CPL SOI: "4"
+  CPL DOI: "5"
+  FTD 3: "6"

@@ -19,8 +19,9 @@ class Binomo::SmokeBinomoController < ApplicationController
        f.puts(coupons_common.join("\n"))
        f.puts(coupons_auto.join("\n"))
        f.puts(coupons_user.join("\n"))
-       f.puts("\n\t Then Run join thread's")
+       f.puts("\nScenario:\tThen Pool ranning?")
     end
+
   end
 
   def set_params

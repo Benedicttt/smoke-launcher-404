@@ -1,10 +1,9 @@
 module Server
   class Open
-    def self.host(param)
-      param.onopen do
-        param.send("Start")
-        print "\nWebSocket server start".yellow
-        puts " :port => 8081".red
+    def host(ws, ip)
+      ws.onopen do
+        print "\nWebSocket server #{ip.green}".yellow + " start".yellow
+        puts " :port => 8081".yellow
         puts Process.pid
         File.open("./features/temporary/pids/pid_ws", "w") { |f| f.puts("#{Process.pid}")}
       end
@@ -12,10 +11,9 @@ module Server
   end
 
   class Closed
-    def self.host(param)
-      param.onclose  do
-        param.send("Close")
-        puts "WebSocket server closed".red
+    def host(ws, ip)
+      ws.onclose  do
+        puts "WebSocket server #{ip.green}".red + " closed".red
       end
     end
   end

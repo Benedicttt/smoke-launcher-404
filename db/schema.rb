@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707133022) do
+ActiveRecord::Schema.define(version: 20171016102532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,38 @@ ActiveRecord::Schema.define(version: 20170707133022) do
     t.boolean  "cpl_soi"
     t.boolean  "cpl_doi"
     t.jsonb    "cookies"
+    t.string   "ip_address"
+  end
+
+  create_table "que_jobs", primary_key: ["queue", "priority", "run_at", "job_id"], force: :cascade, comment: "3" do |t|
+    t.integer   "priority",    limit: 2, default: 100,            null: false
+    t.datetime  "run_at",                default: -> { "now()" }, null: false
+    t.bigserial "job_id",                                         null: false
+    t.text      "job_class",                                      null: false
+    t.json      "args",                  default: [],             null: false
+    t.integer   "error_count",           default: 0,              null: false
+    t.text      "last_error"
+    t.text      "queue",                 default: "",             null: false
+  end
+
+  create_table "reports_partners", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "email"
+    t.string   "platform"
+    t.string   "stage"
+    t.text     "report"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reports_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "email"
+    t.string   "platform"
+    t.string   "stage"
+    t.text     "report"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
@@ -73,6 +105,7 @@ ActiveRecord::Schema.define(version: 20170707133022) do
     t.datetime "updated_at"
     t.string   "branch"
     t.integer  "tariff"
+    t.string   "ip_address"
   end
 
 end

@@ -1,6 +1,9 @@
 Given /^Visit with partner refcode$/ do
   # DRIVER.get "https://binomo.co?a=#{ENV["refcode"]}I&t=#{ENV['tariff'].to_s}&sa=Testing_sa&ac=testing_ac"
+  # DRIVER.get CommonSetting[:app_host] + CommonSetting[:locale] + "?a=#{ENV["refcode"]}gfdggdgfdgdf&t=#{ENV['tariff'].to_s}&sa=Testing_sa&ac=testing_ac&geo=#{ENV['geo']}"
+  # sleep 1
   DRIVER.get CommonSetting[:app_host] + CommonSetting[:locale] + "?a=#{ENV["refcode"]}&t=#{ENV['tariff'].to_s}&sa=Testing_sa&ac=testing_ac&geo=#{ENV['geo']}"
+  puts_info CommonSetting[:app_host] + CommonSetting[:locale] + "?a=#{ENV["refcode"]}&t=#{ENV['tariff'].to_s}&sa=Testing_sa&ac=testing_ac&geo=#{ENV['geo']}"
   DRIVER.manage.delete_cookie("geo");
   DRIVER.manage.add_cookie(name: "geo", value: "#{ENV['geo']}")
   sleep 1

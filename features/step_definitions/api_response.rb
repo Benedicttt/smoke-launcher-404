@@ -25,7 +25,7 @@ class ApiResponse
 
            que "INSERT INTO users(
                 email_confirmed, id, platform, email, locale, currency, password,
-                stage_number, geo_locale, created_at, phone_verifed, document_verifed, driver)
+                stage_number, geo_locale, created_at, phone_verifed, document_verifed, driver, ip)
                values(
                   '#{email_verified}',
                  '#{id}',
@@ -39,7 +39,8 @@ class ApiResponse
                  '#{Time.now}',
                  '#{phone}',
                  '#{documnets}',
-                 '#{ENV['driver']}')
+                 '#{ENV['driver']}',
+                 '')
                  ;"
 
       User.find(id).update(refcode: ENV['refcode'], branch: File.read("./features/temporary/binomo_branch_#{ENV['staging']}").sub(/\n/, ''))

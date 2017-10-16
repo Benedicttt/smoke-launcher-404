@@ -3,6 +3,7 @@ Given /^Created ticket$/ do
 
   $tickets.get(CommonSetting[:app_host]  + CommonSetting[:locale])
   $tickets.manage.add_cookie(name: "asset.daily", value: "FAKE")
+  $tickets.manage.add_cookie(name: "agreed", value: "1")
 
   id = User.where(stage_number: ENV['stage']).last.id
   $tickets.execute_script("localStorage.setItem(\"#{id}.real.welcome_bonus\", \"1\")" )

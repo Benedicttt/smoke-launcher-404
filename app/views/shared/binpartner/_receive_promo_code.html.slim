@@ -1,3 +1,7 @@
 .row
-  .col-xs-3
+  .col-xs-6
     = f.input :scenario, label:false , as: :check_boxes, collection: ['receive_promo_code'], required: false
+
+    .col-xs-4
+      = f.input :scenario, label: false, as: :check_boxes, collection: ['modify country Poland null'], required: false
+      = f.input :scenario, label: false, as: :check_boxes, collection: ['modify country Poland 1.0'], required: false, input_html: { checked: true }

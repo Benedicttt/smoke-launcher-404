@@ -1,5 +1,5 @@
 Given /^Testing bonuses$/ do
-  $pool.post do
+  # $pool.post do
     if ENV['driver'] == "firefox"
       bon = Selenium::WebDriver.for ENV['driver'].to_sym
     elsif ENV['driver'] == "chrome"
@@ -33,7 +33,8 @@ Given /^Testing bonuses$/ do
       add_cookies_to_page(bon)
       bon.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/trading")
       sleep 5
-      bon.execute_script("$(\"translate:contains('Bonuses')\")[0].click()")
+      bon.execute_script("$(\".i-unit > .title > translate\")[1].click()")
+      # bon.execute_script("$(\"translate:contains('Bonuses')\")[0].click()")
       sleep 2
       bon.execute_script("$('button.btn-primary.btn-sm').click()")
       sleep 2
@@ -44,9 +45,9 @@ Given /^Testing bonuses$/ do
       # wait_until(3, :css, "#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(1)")
 
       id =  "ID: #{bon.find_element(:css, "#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(1)").text}"
-      amount =  "Amount: #{bon.find_element(:css, "#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(2) > span.currency-amount").text}"
+      amount =  "Amount: #{bon.find_element(:css, "#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(2)").text}"
       status =  "Status: #{bon.find_element(:css, "#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(7)").text}"
-      leverage =  "Leverage: #{bon.find_element(:css,'#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(4) > span.currency-amount').text}"
+      leverage =  "Leverage: #{bon.find_element(:css,'#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(4)').text}"
       puts_warning "#{link_report_id(bon.current_url.to_s, bon.current_url.to_s)} #{id} #{amount} #{status} #{leverage}"
       sleep 2
 
@@ -62,5 +63,5 @@ Given /^Testing bonuses$/ do
 
     end
     bon.quit
-  end
+  # end
 end

@@ -2,7 +2,7 @@ $(function(){
 
   $('.assets_precompile_last').click(function(){
     if (str= '', $('.assets_precompile_last').prop('click')) {
-      $("#_global_link").val(str += " cap" + " " +
+      $("#_global_link").val(str += "cap" + " " +
       $('#last-binpartner').val() + " deploy:assets:precompile" + " project=" +
       $('#last-project').val()
     )}

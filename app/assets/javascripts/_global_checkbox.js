@@ -53,14 +53,5 @@ $(function(){
        }
       $('.global_link').val(get_data())
     });
-     //
-    //  $('.check-1').click(function(){$('.part-screen-1').click()});
-    //  $('.check-2').click(function(){$('.part-screen-2').click()});
-    //  $('.check-3').click(function(){$('.part-screen-3').click()});
-    //  $('.check-4').click(function(){$('.part-screen-4').click()});
-    //  $('.check-5').click(function(){$('.part-screen-5').click()});
-    //  $('.check-6').click(function(){$('.part-screen-6').click()});
-    //  $('.check-7').click(function(){$('.part-screen-7').click()});
-    //  $('.check-8').click(function(){$('.part-screen-8').click()});
 
 });

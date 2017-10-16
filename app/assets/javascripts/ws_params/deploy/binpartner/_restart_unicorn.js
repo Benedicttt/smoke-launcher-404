@@ -2,7 +2,7 @@ $(function(){
 
   $('.restart_unicorn_last').click(function(){
     if (str= '', $('.restart_unicorn_last').prop('click')) {
-      $("#_global_link").val(str += " cap" + " " +
+      $("#_global_link").val(str += "cap" + " " +
       $('#last-binpartner').val() + " project=" +
       $('#last-project').val() + " unicorn:stop"
       + " && " + "cap" + " " +

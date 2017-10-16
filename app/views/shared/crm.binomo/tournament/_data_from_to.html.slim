@@ -1,0 +1,11 @@
+.row
+  .col-xs-2
+    = f.input :data_tournaments_from,
+        label: "Data from",
+          input_html:{ value: (Time.now - 3.hour).strftime("%d.%m.%Y %H:%M:%S")}
+
+.row
+  .col-xs-2
+    = f.input :data_tournaments_to,
+        label: "Data to",
+          input_html:{ value: (Time.now - 3.hour + 6.minutes).strftime("%d.%m.%Y %H:%M:%S")}

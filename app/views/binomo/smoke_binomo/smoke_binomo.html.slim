@@ -27,7 +27,6 @@ html
           .row
             = render "shared/binomo/authorize", f: f
           .row
-            = render "shared/crm.binomo/doc_protected_to", f: f
             = render "shared/crm.binomo/phone_confirmed", f: f
 
         .row
@@ -36,6 +35,7 @@ html
           = render "shared/binomo/confirmed", f: f
         .row
           = render "shared/binomo/cashier", f: f
+          = render "shared/crm.binomo/doc_protected_to", f: f
         .row
           = render "shared/binomo/ticket", f: f
         .row
@@ -45,12 +45,14 @@ html
           = render "shared/binomo/deals", f: f
 
         = render "shared/crm.binomo/authorize", f: f
+        = render "shared/crm.binomo/all_templates", f: f
         = render "shared/crm.binomo/reject", f: f
         = render "shared/crm.binomo/manager", f: f
         = render "shared/crm.binomo/comments", f: f
         = render "shared/crm.binomo/ticket", f: f
         = render "shared/crm.binomo/approve", f: f
         = render 'shared/crm.binomo/coupons', f: f
+        = render "shared/binomo/check_rate_for_closed_deal", f: f
         br
       br
       = render "shared/reports-iframe", path_reports: "/reports/binomo/smoke-binomo.html"

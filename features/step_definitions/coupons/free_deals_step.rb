@@ -1,5 +1,5 @@
 Given /^Testing free deals$/ do
-  $pool.post do
+  # $pool.post do
     if ENV['driver'] == "firefox"
       fd = Selenium::WebDriver.for ENV['driver'].to_sym
       fd.manage.window.resize_to(1200, 700)
@@ -27,5 +27,5 @@ Given /^Testing free deals$/ do
       sleep 1
     end
     fd.quit
-  end
+  # end
 end

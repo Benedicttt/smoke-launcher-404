@@ -2,7 +2,7 @@ Given /^Add video$/ do
   PartnersSmoke::Admin.authorize
   DRIVER.get CommonSetting[:url_adm_partner] + "videos/new"
 
-  %i[tr en ru id ms es th vn cn pt md me kr].each_with_index do |locale, num|
+  %i[tr en ru id ms es th vn cn pt ro me kr].each_with_index do |locale, num|
     DRIVER.find_element(:id, "video_title_#{locale}").send_keys("#{Time.now} #{locale}")
     DRIVER.find_element(:id, "video_description_#{locale}").send_keys("#{locale}")
     DRIVER.find_element(:id, "video_url_#{locale}").send_keys("https://www.youtube.com/watch?v=x2YziwipYtU")
