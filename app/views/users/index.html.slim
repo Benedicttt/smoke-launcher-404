@@ -37,7 +37,7 @@ p
       tbody
         - @stat.each do |post|
           tr
-            th = post.created_at.strftime("%F %T")
+            th = post.created_at.strftime("%F %T\n ip:#{post.ip_address}")
 
             th.col-xs-1 = post.branch
             th

@@ -11,7 +11,7 @@ module Server
                   :count_pay_approve,
 
                   :thread, :geo, :clear_cache, :proxy_http,
-                  :proxy_server, :plus_rspec, :clear_cache, :refcode
+                  :proxy_server, :plus_rspec, :clear_cache, :refcode, :ip_address
 
     def initialize(params)
       @params = params
