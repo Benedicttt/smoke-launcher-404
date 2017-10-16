@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-16 18:08:24 +0300
+Feature: SMoke test generate 2017-10-16 18:26:38 +0300
  Scenario: Run step partner
  Given Pid process
  
@@ -26,13 +26,6 @@ Feature: SMoke test generate 2017-10-16 18:08:24 +0300
  	When Make deposit WireCapital
  	Then Deposit WireCapital created
  
- When Visit cashier WireCapital
- 	When Make deposit WireCapital decline
- 	Then Before balance
- 	When Check status 'Reject' in payment Wire Capital
- 	Then After balance
-
-
  Given Connect to the CRM provider "Credit card"
  	When Visit cashier CreditCard
  	When Make deposit CreditCard
