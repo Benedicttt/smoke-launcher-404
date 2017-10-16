@@ -4,7 +4,7 @@ When /^Make deposit WireCapital decline$/ do
    ENV['count_cashier'].to_i.times do |i|
      DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier")
      sleep 3
-     DRIVER.execute_script("document.querySelectorAll('input[name=useNew]').click()") 
+     DRIVER.execute_script("document.querySelectorAll('input[name=useNew]')[0].click()") 
 
      sleep 3
 
