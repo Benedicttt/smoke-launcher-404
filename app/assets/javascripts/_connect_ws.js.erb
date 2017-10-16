@@ -1,0 +1,8 @@
+w = new WebSocket (
+     <% @ip = Socket.ip_address_list.detect { |intf| intf.ipv4_private? } %>
+     'ws://<%= @ip.ip_address %>:8081'
+   )
+// $(function(){
+//   <% @ip = Socket.ip_address_list.detect { |intf| intf.ipv4_private? } %>
+//   w = ActionCable.createConsumer("ws://<%= @ip.ip_address %>:8081");
+// })

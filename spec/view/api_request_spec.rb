@@ -2,7 +2,7 @@ require "spec_helper"
 require "rails_helper"
 
 RSpec.describe "Capybara" , type: :view do
-  app_host = "http://localhost:3000"
+  app_host = "http://localhost:3001"
 
   context "find class api_request" do
     before(:each) do
@@ -13,8 +13,7 @@ RSpec.describe "Capybara" , type: :view do
     it "find pid procces button" do
       expect(page).to have_selector('.pid_process')
     end
-
-    it "find ws_sender button" do
+      it "find ws_sender button" do
       expect(page).to have_selector('.ws_sender')
     end
     it "find cucumber button" do
@@ -26,20 +25,17 @@ RSpec.describe "Capybara" , type: :view do
     it "find reload arrow" do
       expect(page).to  have_selector('.reload-page')
     end
-    it "find select stage" do
-      expect(page).to have_select('generator_stage', options:["s1", "s2", "s3", "s4", "prod"])
-    end
-    it "find select driver" do
-      expect(page).to have_select('generator_driver', options:["chrome", "webkit", "firefox", "safari"])
+        it "find select driver" do
+      expect(page).to have_select('generator_driver', options:["chrome", "firefox"])
     end
     it "find select faramework" do
-      expect(page).to have_select('generator_work', options:["rspec", "cucumber"])
+      expect(page).to have_select('generator_work', options:["cucumber"])
     end
-    it "find select currency" do
-      expect(page).to have_select('generator_currency', options:["RUB", "USD", "EUR"])
+    it "find select stage" do
+      expect(page).to have_select('generator_stage', options: %w[s1 s2 s3 s4 s5 s6 s7 prod] )
     end
     it "find select locale" do
-      expect(page).to have_select('generator_chk_locale', options: %w(ru en id ms es th vn cn pt zw).map(&:upcase))
+      expect(page).to have_select('generator_chk_locale', options: %w(ru en id ms es th vn cn pt md ro kr).map(&:upcase))
     end
     it "find select sleep after deposit or cashier" do
       expect(page).to have_select('generator_sleep_retried', options:%w(5 10 15 20 25 30 60))

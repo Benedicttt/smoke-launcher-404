@@ -2,7 +2,7 @@ $(function(){
 
   $('.memcached_flush_last').click(function(){
     if (str= '', $('.memcached_flush_last').prop('click')) {
-      $("#_global_link").val(str += "bundle exec cap" + " " +
+      $("#_global_link").val(str += "cap" + " " +
       $('#last-binpartner').val() + " memcached:flush" + " project=" +
       $('#last-project').val()
     )}

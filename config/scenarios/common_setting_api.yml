@@ -26,6 +26,7 @@ android_auth:
 ios:
   # first_name: "sergey"
   # last_name: "kyivskyi"
+  device_id: ''  
   app_version: "1.0"
   device: "ios"
   i_agree: "true"

@@ -16,7 +16,6 @@ Then /^Protected set done$/ do
     id = User.where(stage_number: ENV['stage']).last.id
     doc.get(CommonSetting[:url_user_crm] + "/#{id}")
     sleep 1
-    doc.find_element(:id, 'user_phone').clear
     date_now = Time.now
     date_to = Time.now.strftime("#{date_now.day + 1}.%m.%Y %H:%M:%S")
     doc.find_element(:id, 'user_docs_protected_to').clear
@@ -47,12 +46,6 @@ Given /^Phone verified find$/ do
     phone.get(CommonSetting[:url_user_crm] + "/#{id}")
     sleep 1
     phone.execute_script("$('#user_phone_verified').prop('checked', true)")
-    phone.find_element(:id, 'user_phone').clear
-
-    date_now = Time.now
-    date_to = Time.now.strftime("#{date_now.day + 1}.%m.%Y %H:%M:%S")
-    phone.find_element(:id, 'user_docs_protected_to').clear
-    phone.find_element(:id, 'user_docs_protected_to').send_keys(date_to)
 
     sleep 1
     phone.find_elements(:css, '.btn-primary')[0].click

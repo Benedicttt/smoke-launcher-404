@@ -38,7 +38,8 @@ module Server
         if msg_json[:write_log] == true
           ENV['log'] = "> ../deploy/logs/binomo/#{ENV['staging']}-#{count_deploy.split[4].gsub(/branch=/, '').gsub(/\//, '-')}-#{Time.now.strftime('%Y-%m-%d_%H-%M-%S')}.log 2>&1"
         end
-        puts count_deploy.green + " #{ENV['log'].to_s}".green
+        puts
+        print count_deploy.green + " #{ENV['log'].to_s}".green
 
         data.send("Start deploy Binomo staging, #{ENV['branch'].to_s}")
         data.send("Start deploy Binomo staging, #{ENV['branch'].to_s} #{ENV['clean'].to_s}")

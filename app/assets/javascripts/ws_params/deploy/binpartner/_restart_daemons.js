@@ -2,7 +2,7 @@ $(function(){
 
   $('.restart_daemons_last').click(function(){
     if (str= '', $('.restart_daemons_last').prop('click')) {
-      $("#_global_link").val(str += " cap" + " " +
+      $("#_global_link").val(str += "cap" + " " +
       $('#last-binpartner').val() + " project=" +
       $('#last-project').val() + " daemons:stop"
       + " && " + "cap" + " " +

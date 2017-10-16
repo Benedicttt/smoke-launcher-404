@@ -10,10 +10,8 @@ RSpec.describe Binomo::EmailMarketingController, type: :controller do
    it { should include("authorization_crm") }
    it { should include("cashier") }
    it { should include("comment_crm") }
-   it { should include("confirmed") }
    it { should include("send_letter_em") }
    it { should include("create_group_push_notify") }
-   it { should include("crm verified") }
    it { should include("deals") }
    it { should include("manager_crm") }
    it { should include("payments_approve_crm") }

@@ -7,16 +7,20 @@ When /^Registration traider$/ do
   DRIVER.manage.delete_cookie("geo");
   DRIVER.manage.add_cookie(name: "geo", value: "#{ENV['geo']}")
   DRIVER.navigate.refresh
-  sleep 1
+  sleep 3
 
   wait_until(5, :class, "btn-primary")
   DRIVER.find_element(:class, "btn-primary").click
   sleep 1
   DRIVER.find_element(:css, "input[name=email]").send_keys(EMAIL)
   DRIVER.find_element(:css, "input[name=password]").send_keys(CommonSetting[:user_test]['pass_platform'])
-  2.times { DRIVER.find_element(:css, "ui-checker[name=i_agree]").click; sleep 0.5 }
-  2.times { DRIVER.execute_script(CommonSetting[:currency][0]); sleep 0.3 }
-  DRIVER.find_element(:css, "fieldset > div:nth-child(6) > button").click
+  1.times { DRIVER.find_element(:css, "span[ng-bind='::vm.title']").click; sleep 0.5 }
+  sleep 1
+  DRIVER.execute_script(CommonSetting[:currency][0])
+  sleep 1
+  DRIVER.find_elements(:class, "btn-primary")[1].click
+  Runner.call_crm("User.last.update(agreed: true)")
+
   sleep 1
 end
 

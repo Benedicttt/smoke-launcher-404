@@ -2,7 +2,7 @@ $(function(){
 
   $('.ws_sender_binomo_clean_debug').click(function(){
     if (str= '', $('#deploy-project-binomo-clean-debug').prop('click')) {
-      $(".deploy").val(str += " cap" + " " +
+      $(".deploy").val(str += "cap" + " " +
       $('#first-binomo').val() + " deploy project=" +
       $('#first-project').val() + " branch=" +
       $('#first-branch').val().replace(/ /g, "") + " clean=1 debug=1"

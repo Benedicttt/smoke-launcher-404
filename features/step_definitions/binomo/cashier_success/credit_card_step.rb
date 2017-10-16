@@ -10,9 +10,9 @@ When /^Make deposit CreditCard$/ do
       sleep 2
       DRIVER.find_element(:css, "li.unit-payment-system.card").click
       sleep 0.5
-      DRIVER.execute_script("$('.form-control').val('#{ENV['count_cashier_dep']}').trigger('change').scope().vm.amount")
+      DRIVER.execute_script("angular.element(document.querySelectorAll('.form-control'))[0].value = #{ENV['count_cashier_dep']}")
       sleep 0.5
-      DRIVER.execute_script("$('.accept-bonus').scope().vm.applyBonus = false") if ENV["bonus_dep"].to_s == "true"
+      DRIVER.execute_script("angular.element(document.querySelectorAll('.accept-bonus')[0].click())[0] = false") if ENV["bonus_dep"].to_s == "true"
       sleep 1
       DRIVER.find_element(:css, "div.payment-wrapper.card > form > div.final-actions > div > div:nth-child(1) > div > input").click
 

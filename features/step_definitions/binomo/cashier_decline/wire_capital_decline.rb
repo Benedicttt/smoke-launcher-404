@@ -1,16 +1,20 @@
 When /^Make deposit WireCapital decline$/ do
   print_result = -> {puts_danger "Wire Capital not working!!!" }
-  retried_process(1, 1, print_result) do
+  retried_process(1, 1) do
    ENV['count_cashier'].to_i.times do |i|
      DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier")
+     sleep 3
+     DRIVER.execute_script("document.querySelectorAll('input[name=useNew]').click()") 
+
      sleep 3
 
      DRIVER.find_element(:css, "li.unit-payment-system.card").click
      sleep 0.5
-     DRIVER.execute_script("$('.form-control').val('#{ENV['count_cashier_dep']}').trigger('change').scope().vm.amount")
+     DRIVER.execute_script("angular.element(document.querySelectorAll('.form-control'))[0].value = #{ENV['count_cashier_dep']}")
      sleep 0.5
-     DRIVER.find_element(:css, ".custom-checkbox.custom-checkbox-lg").click if ENV["bonus_dep"].to_s == "true"
-     sleep 0.5
+     DRIVER.execute_script("angular.element(document.querySelectorAll('.accept-bonus')[0].click())[0] = false") if ENV["bonus_dep"].to_s == "true"
+     sleep 1
+
      DRIVER.find_element(:css, "div.payment-wrapper.card > form > div.final-actions > div > div:nth-child(1) > div > input").click
 
      wait_until(15, :id, "iframe")
@@ -52,6 +56,5 @@ When /^Check status 'Reject' in payment Wire Capital$/ do
   id = User.where(stage_number: ENV['stage']).last.id
   DRIVER.get(CommonSetting[:url_user_crm] + "/#{id}" + "/orders")
   sleep 2
-    # puts_info "WireCapital status = #{DRIVER.find_element(:xpath, "//td[text()='WireCapital']/..//span[@class='label label-' and text() = 'Pending']").text}"
     puts_success "WireCapital status = #{DRIVER.find_element(:xpath, "//td[text()='WireCapital']/..//span[@class='label label-warning' and text() = 'Rejected']").text}"
 end

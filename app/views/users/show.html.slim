@@ -26,13 +26,14 @@ body.users-table.col-xs-4
     = @stat.branch
   p
     = label_tag  "Email:"
-    = text_field(:user, "email", value: @stat.email, class: "form-control user", readonly: true)
-    = button_tag "Copy", class: "btn btn-s btn-primary", "data-clipboard-action" => "copy", "data-clipboard-target" => "user_email", id: "email_copy"
+    = text_field(:email, "email", value: @stat.email, class: "form-control user", readonly: true)
+    = button_tag "Copy", class: "btn btn-s btn-primary", "data-clipboard-action" => "copy", "data-clipboard-target" => "email_email", id: "email_copy"
 
   p
    = label_tag "Password:"
-   = text_field(:user, "pass", value: @stat.password, class: "form-control user", readonly: true)
-   = button_tag "Copy", class: "btn btn-s btn-primary", "data-clipboard-action" => "copy", "data-clipboard-target" => "user_pass", id: "pass_copy"
+   = text_field(:pass, "pass", value: @stat.password, class: "form-control user", readonly: true)
+   = button_tag "Copy", class: "btn btn-s btn-primary", "data-clipboard-action" => "copy", "data-clipboard-target" => "pass_pass", id: "pass_copy"
+
 
   p
     strong Locale:

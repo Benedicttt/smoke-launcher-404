@@ -30,6 +30,7 @@ $(function(){
       geo: $('#generator_geo').val(),
       proxy_server: $('#generator_proxy_server').val(),
       proxy_http: "--proxy-server=" + $('#generator_proxy_http').val(),
+      ip_address: $(return "App.config.ip")
     }));
 
     notify_status_testing();

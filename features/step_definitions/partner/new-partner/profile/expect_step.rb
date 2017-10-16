@@ -42,6 +42,6 @@ Then /^The figures are not reset when you save$/ do
   Partner.find(@@id).update(branch: File.read("./features/temporary/binpartner_branch_#{ENV['staging']}").sub(/\n/, ''), cookies: @cookies_partner)
 
   puts_warning link_report_id("#{CommonSetting[:url_adm_partner]}/customers/#{Partner.last.id}/edit", " Email: #{DRIVER.execute_script("return $('#customer_email').val()")}")
-  puts_warning link_report_id("#{CommonSetting[:url_adm_partner]}/stats?email=#{Partner.find("#{@@id}").email}", " Stats partner in adm: #{Partner.find("#{@@id}").email}")
+  puts_warning link_report_id("#{CommonSetting[:url_adm_partner]}/stats/common?email=#{Partner.find("#{@@id}").email}", " Stats partner in adm: #{Partner.find("#{@@id}").email}")
   puts_info "Deal rate default #{DRIVER.execute_script("return $('#customer_deal_rate').val()")} %"
 end

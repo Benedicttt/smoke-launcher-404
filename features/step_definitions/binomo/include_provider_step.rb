@@ -10,14 +10,15 @@ Given /^Connect to the CRM provider "(.*?)"$/ do |provider|
   end
 
   sleep 2
-  DRIVER.get(CommonSetting[:url_page_crm] + "/payment_groups")
-  DRIVER.get(CommonSetting[:url_page_crm] + "/payment_groups")
+  DRIVER.get(CommonSetting[:url_page_crm] + "payment_groups")
+  sleep 1
+  DRIVER.get(CommonSetting[:url_page_crm] + "payment_groups")
   sleep 2
 
   sleep 1
   DRIVER.find_elements(:css, 'a.btn')[1].click
 
-  sleep 3
+  sleep 5
   DRIVER.find_elements(:css, 'a.btn')[0].click
   sleep 1
 
@@ -33,7 +34,8 @@ Given /^Connect to the CRM provider "(.*?)"$/ do |provider|
       DRIVER.execute_script("$(\"span:contains('WireCapital')\").click()")
     end
   sleep 0.5
-  DRIVER.find_element(:css, '.btn-primary').click
+  DRIVER.find_element(:css, '.button.btn.btn-primary').send_keys:return
+  # DRIVER.find_element(:css, '.button.btn.btn-primary').click
   sleep 1
   puts_info("include #{DRIVER.find_element(:css, '#main-content > div > form.form > table > tbody > tr:nth-child(1) > td:nth-child(3)').text}")
 end

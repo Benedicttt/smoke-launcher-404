@@ -2,9 +2,9 @@ When /^Make a deals asset GOL\/OTC and win bet$/ do
     $deals.execute_script("$(\".asset:contains('FOR/HEIGHT'):first\").click()")
     sleep 5
 
-    ENV['count_deals_sum'].to_i.times { sleep 0.1; $deals.find_elements(:css, "button.control.plus")[0].click}
-    $deals.find_element(:css, "button.control.minus").click
-
+    ENV['count_deals_sum'].to_i.times { sleep 0.1; $deals.find_elements(:css, ".btn-control-sm")[0].click}
+    $deals.find_elements(:css, ".btn-control-sm")[1].click
+    
     if "#{ENV['turbo']}" == "true"
       $deals.execute_script("$(\"a:contains('#{Time.now.hour}:#{Time.now.min} + 1')\").click().trigger('change')")
     end

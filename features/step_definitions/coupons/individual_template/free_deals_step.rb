@@ -10,25 +10,20 @@ Given(/^Template Free Deals$/) do
   DRIVER.find_elements(:css, "button.btn.dropdown-toggle.selectpicker.btn-default")[0].click
   DRIVER.find_elements(:css, "span.text")[0].click
 
-  DRIVER.find_element(:id, "coupon_data_currencies_USD_amount").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_USD_amount").send_keys("10")
-  DRIVER.find_element(:id, "coupon_data_currencies_USD_limit").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_USD_limit").send_keys("10")
 
-  DRIVER.find_element(:id, "coupon_data_currencies_EUR_amount").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_EUR_amount").send_keys("10")
-  DRIVER.find_element(:id, "coupon_data_currencies_EUR_limit").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_EUR_limit").send_keys("10")
+  %w[USD EUR].each do |name|
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("10")
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").clear
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").send_keys("10")
+  end
 
-  DRIVER.find_element(:id, "coupon_data_currencies_RUB_amount").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_RUB_amount").send_keys("1000")
-  DRIVER.find_element(:id, "coupon_data_currencies_RUB_limit").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_RUB_limit").send_keys("10")
-
-  DRIVER.find_element(:id, "coupon_data_currencies_KZT_amount").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_KZT_amount").send_keys("10000")
-  DRIVER.find_element(:id, "coupon_data_currencies_KZT_limit").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_KZT_limit").send_keys("10")
+  %w[RUB KZT CNY TRY UAH INR ZAR].each do |name|
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").clear
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").send_keys("10")
+  end
 
   DRIVER.find_elements(:css, '.btn-primary')[1].click
   sleep 1

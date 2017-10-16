@@ -12,7 +12,8 @@ module Server
             puts "New global date => #{count_date_new_binpartner}".green
 
           data.send("Start change new date binpartner #{count_date_new_binpartner}")
-            system  "ssh binpartner@s2.binpartner.com \"cd binpartner.com/current && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binpartner}/\" .env\""
+          system  "ssh binpartner@s2.binpartner.com \"cd binpartner.com/current && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binpartner}/\" .env\""
+
           data.send("Binpartner change done #{count_date_new_binpartner}")
           puts "Date Binpartner=> #{count_date_new_binpartner} change".green
       end

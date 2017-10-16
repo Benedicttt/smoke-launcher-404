@@ -8,9 +8,12 @@ require 'factory_girl'
 require 'rest-client'
 require 'method_helper'
 require 'capybara/rspec'
+require 'capybara/dsl'
 
+Dir["./spec/client/api/web/request_web/*"].each { |f| require f }
+Dir["./spec/client/api/ios/request_ios/*"].each { |f| require f }
 
-Dir["./spec/client/api/request/*"].each { |file| require file}
+Dir["./spec/support/*"].each { |f| require f }
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods

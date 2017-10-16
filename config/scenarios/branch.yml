@@ -4,6 +4,8 @@ stage_select:
   s3: "staging3"
   s4: "staging4"
   s5: "staging5"
+  s6: "staging6"
+  s7: "staging7"
 
 project:
   binomo: "binomo"

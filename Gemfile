@@ -1,6 +1,6 @@
   source 'https://rubygems.org'
-  require 'zip'
 
+  gem 'zip'
   gem 'rails', '~> 5.0.2'
   gem 'sqlite3'
   gem 'puma', '~> 3.0'
@@ -24,8 +24,12 @@
     gem 'simple_form'
     gem 'syntax'
 
+    gem 'que'
+    gem 'que-web'
+    gem 'sequel'
+    gem 'sinatra', git: 'https://github.com/sinatra/sinatra'
+
     gem 'zeroclipboard-rails'
-    gem 'clipboard-rails'
     gem 'pg'
     gem 'will_paginate'
     gem 'concurrent-ruby', require: 'concurrent'
@@ -45,14 +49,10 @@
     gem 'rest-client'
     gem 'cucumber'
     gem 'cucumber-rails' , require: false
-    gem 'selenium-webdriver', '~> 3.4.3'
+    gem 'selenium-webdriver', '~> 3.6.0'
     gem 'selenium-proxy'
     gem 'selenium'
 
-    gem 'eventmachine', '~> 1.2', '>= 1.2.0.1'
-    gem 'mechanize', '~> 2.7', '>= 2.7.4'
-    gem 'faye'
-    gem 'faye-websocket'
     gem 'em-websocket'
     gem 'websocket-client-simple'
     gem 'websocket-eventmachine-client'

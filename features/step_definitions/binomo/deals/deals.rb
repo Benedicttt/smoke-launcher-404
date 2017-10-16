@@ -8,6 +8,7 @@ Given /^Visit page trading$/ do
   id = User.where(stage_number: ENV['stage']).last.id
   add_cookies_to_page($deals)
   $deals.manage.add_cookie(name: "asset.daily", value: "FAKE")
+  $deals.manage.add_cookie(name: "agreed", value: "1")
   $deals.execute_script("localStorage.setItem(\"#{id}.real.welcome_bonus\", \"1\")" )
   $deals.execute_script("localStorage.setItem(\"#{id}.demo.welcome_bonus\", \"1\")")
   $deals.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/trading")

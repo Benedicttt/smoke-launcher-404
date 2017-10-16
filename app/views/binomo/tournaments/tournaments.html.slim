@@ -21,14 +21,16 @@ html
 
       .form-part.text-form.binomo-page
         .row
-          = render "shared/crm.binomo/authorize", f: f
-        .row
           = render "shared/crm.binomo/tournament/delete_all_tournaments", f: f
           = render "shared/crm.binomo/tournament/created_tournament", f: f
         p
+          = render "shared/crm.binomo/tournament/data_from_to", f: f
           = render "shared/crm.binomo/tournament/type_tournament", f: f
+          .row
+            = render "shared/crm.binomo/tournament/deposit", f: f
           p
           = render "shared/crm.binomo/tournament/entrace_type", f: f
+          = render "shared/crm.binomo/tournament/prizes", f: f
         .row
           = render "shared/crm.binomo/tournament/created_tournametn_make_sure", f: f
           br
@@ -38,8 +40,8 @@ html
           .row
             = render "shared/binomo/authorize", f: f
             .row
-              = render "shared/crm.binomo/doc_protected_to", f: f
-              = render "shared/crm.binomo/phone_confirmed", f: f
+          = render "shared/crm.binomo/doc_protected_to", f: f
+          = render "shared/crm.binomo/phone_confirmed", f: f
           = render "shared/binomo/welcome", f: f
         .row.mailers
           = render "shared/binomo/confirmed", f: f

@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     @stats = User.all
   end
+  
   def new
     @stat = User.new
   end

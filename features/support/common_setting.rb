@@ -95,6 +95,6 @@ class CommonSetting
   end
 
   def self.config
-    @config ||= YAML.load_file('./config/scenarios/common_setting.yml').symbolize_keys
+    @config ||= YAML.load_file('./config/settings.yml').symbolize_keys
   end
 end

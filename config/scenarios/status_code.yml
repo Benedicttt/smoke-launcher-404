@@ -1,14 +1,17 @@
 status code page binomo: "
-  Scenario: CRM\n
-  \tGiven Visit all page crm, status code page\n
   Scenario: Binomo no authorized\n
   \tGiven Visit all page binomo, status code page - !!! no authorized\n
+
   Scenario: Binomo authorized\n
   \tGiven Visit page auth_platform\n
   \tGiven Visit all page binomo, status code page - !!! authorized\n
 "
-
+status code page crm: "
+  Scenario: CRM\n
+  \tGiven Visit all page crm, status code page\n
+"
 status code page partner: "
   Scenario: Binpartner\n
-  Given Visit all page binpartner, status code page\n
+  \tGiven Visit all page binpartner, status code page(adm and platform) - !!! no authorized\n
+  \tGiven Visit all page binpartner, status code page(adm and platform) - !!! authorized\n
 "

@@ -1,0 +1,44 @@
+(Backtrace restricted to imported tasks)
+cap aborted!
+SSHKit::Runner::ExecuteError: Exception while executing as binomo@188.42.243.104: git exit status: 128
+git stdout: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+git stderr: Nothing written
+
+SSHKit::Command::Failed: git exit status: 128
+git stdout: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+git stderr: Nothing written
+
+Tasks: TOP => git:check
+(See full trace by running task with --trace)
+The deploy has failed with an error: Exception while executing as binomo@188.42.243.104: git exit status: 128
+git stdout: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+git stderr: Nothing written
+  INFO [3734d2a0] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.97
+  INFO [a3829c34] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.104
+  INFO [3734d2a0] Finished in 1.256 seconds with exit status 0 (successful).
+  INFO [a3829c34] Finished in 1.357 seconds with exit status 0 (successful).
+  INFO [da7edeaf] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.104
+  INFO [3285c2b1] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.97
+  INFO [da7edeaf] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [3285c2b1] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-binomo-staging4-benedict.sh 100.0%
+  INFO Uploading /tmp/git-ssh-binomo-staging4-benedict.sh 100.0%
+  INFO [3bbbff23] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging4-benedict.sh as binomo@188.42.243.104
+  INFO [b083ff88] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging4-benedict.sh as binomo@188.42.243.97
+  INFO [3bbbff23] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [b083ff88] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [f572f278] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.104
+  INFO [981db3d6] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.97
+  INFO [981db3d6] Finished in 0.877 seconds with exit status 0 (successful).

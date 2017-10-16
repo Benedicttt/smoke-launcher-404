@@ -1,0 +1,1240 @@
+  INFO [8f967882] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.243
+  INFO [e33b214b] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.242
+  INFO [8f967882] Finished in 1.945 seconds with exit status 0 (successful).
+  INFO [e33b214b] Finished in 1.945 seconds with exit status 0 (successful).
+  INFO [555ce14c] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.242
+  INFO [c017f048] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.243
+  INFO [c017f048] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [555ce14c] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-binomo-staging7-benedict.sh 100.0%
+  INFO Uploading /tmp/git-ssh-binomo-staging7-benedict.sh 100.0%
+  INFO [d77c3b53] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging7-benedict.sh as binomo@188.42.243.242
+  INFO [d77c3b53] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [25be8d7a] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging7-benedict.sh as binomo@188.42.243.243
+  INFO [25be8d7a] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [8bbba881] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.243
+  INFO [17423819] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.242
+  INFO [17423819] Finished in 1.005 seconds with exit status 0 (successful).
+  INFO [8bbba881] Finished in 1.045 seconds with exit status 0 (successful).
+  INFO [e5adc9df] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared /home/binomo/binomo.com/releases as binomo@188.42.243.243
+  INFO [6c3ab002] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared /home/binomo/binomo.com/releases as binomo@188.42.243.242
+  INFO [6c3ab002] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [e5adc9df] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [4088bf05] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/shared/node_modules as binomo@188.42.243.242
+  INFO [19a19388] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/shared/node_modules as binomo@188.42.243.243
+  INFO [4088bf05] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [19a19388] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [8112685f] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config /home/binomo/binomo.com/shared as binomo@188.42.243.243
+  INFO [9825a1cf] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config /home/binomo/binomo.com/shared as binomo@188.42.243.242
+  INFO [8112685f] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [9825a1cf] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO Uploading /home/binomo/binomo.com/shared/.env 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/.env 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/unicorn.rb 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/unicorn.rb 100.0%
+  INFO [fc4bbd64] Running mkdir -p /home/binomo/binomo.com/shared/config as binomo@188.42.243.242
+  INFO [450c57f6] Running mkdir -p /home/binomo/binomo.com/shared/config as binomo@188.42.243.243
+  INFO [fc4bbd64] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [450c57f6] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO Uploading /home/binomo/binomo.com/shared/config/database.yml 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/database.yml 100.0%
+  INFO The repository mirror is at /home/binomo/binomo.com/repo
+  INFO The repository mirror is at /home/binomo/binomo.com/repo
+  INFO [6b591a24] Running /usr/bin/env git remote update --prune as binomo@188.42.243.242
+  INFO [34514458] Running /usr/bin/env git remote update --prune as binomo@188.42.243.243
+  INFO [6b591a24] Finished in 1.598 seconds with exit status 0 (successful).
+  INFO [34514458] Finished in 1.598 seconds with exit status 0 (successful).
+  INFO [1655ce3f] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546 as binomo@188.42.243.243
+  INFO [de2e9f96] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546 as binomo@188.42.243.242
+  INFO [1655ce3f] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [5ba85eb1] Running /usr/bin/env git archive bin-3714-feature/elixir-ws | tar -x -f - -C /home/binomo/binomo.com/releases/20170912085546 as binomo@188.42.243.243
+  INFO [de2e9f96] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [5a59d77e] Running /usr/bin/env git archive bin-3714-feature/elixir-ws | tar -x -f - -C /home/binomo/binomo.com/releases/20170912085546 as binomo@188.42.243.242
+  INFO [5a59d77e] Finished in 3.944 seconds with exit status 0 (successful).
+  INFO [5ba85eb1] Finished in 4.114 seconds with exit status 0 (successful).
+  INFO [fd1b2bfc] Running /usr/bin/env echo "ccb095b10e97b0ff843106322a9a8c455e0b9ea8" >> REVISION as binomo@188.42.243.243
+  INFO [7a3202e6] Running /usr/bin/env echo "ccb095b10e97b0ff843106322a9a8c455e0b9ea8" >> REVISION as binomo@188.42.243.242
+  INFO [7a3202e6] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [fd1b2bfc] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [ef65dedb] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/config /home/binomo/binomo.com/releases/20170912085546 as binomo@188.42.243.242
+  INFO [9977cd8e] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/config /home/binomo/binomo.com/releases/20170912085546 as binomo@188.42.243.243
+  INFO [9977cd8e] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [ef65dedb] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [f0bb6547] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/database.yml /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/config/database.yml as binomo@188.42.243.243
+  INFO [58f80f40] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/database.yml /home/binomo/binomo.com/releases/20170912085546/binomo.com/config/database.yml as binomo@188.42.243.242
+  INFO [f0bb6547] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [58f80f40] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [274e37c4] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/.env /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/.env as binomo@188.42.243.243
+  INFO [703ce9ff] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/.env /home/binomo/binomo.com/releases/20170912085546/binomo.com/.env as binomo@188.42.243.242
+  INFO [703ce9ff] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [274e37c4] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [0e4f34ef] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/unicorn.rb /home/binomo/binomo.com/releases/20170912085546/binomo.com/config/unicorn.rb as binomo@188.42.243.242
+  INFO [4869587c] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/unicorn.rb /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/config/unicorn.rb as binomo@188.42.243.243
+  INFO [0e4f34ef] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [4869587c] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [08d91ef3] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/risk_management_config.yml /home/binomo/binomo.com/releases/20170912085546/binomo.com/config/risk_management_config.yml as binomo@188.42.243.242
+  INFO [890ec4a7] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/risk_management_config.yml /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/config/risk_management_config.yml as binomo@188.42.243.243
+  INFO [08d91ef3] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [890ec4a7] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [0dbf8ac4] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/config /home/binomo/binomo.com/releases/20170912085546 /home/binomo/binomo.com/releases/20170912085546/tmp as binomo@188.42.243.242
+  INFO [e21e8e83] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/config /home/binomo/binomo.com/releases/20170912085546 /home/binomo/binomo.com/releases/20170912085546/tmp as binomo@188.42.243.243
+  INFO [e21e8e83] Finished in 0.144 seconds with exit status 0 (successful).
+  INFO [0dbf8ac4] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [feb8ec22] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.243
+  INFO [aaf63595] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/binomo.com/config/symmetric_encryption as binomo@188.42.243.242
+  INFO [feb8ec22] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [aaf63595] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [6c6f3687] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.243
+  INFO [6d91ebc3] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/binomo.com/config/symmetric_encryption as binomo@188.42.243.242
+  INFO [6d91ebc3] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [efa89e38] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/releases/20170912085546/binomo.com/config/symmetric_encryption as binomo@188.42.243.242
+  INFO [6c6f3687] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [0cf4f711] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.243
+  INFO [efa89e38] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [0cf4f711] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [f2287ceb] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/binomo.com/log as binomo@188.42.243.242
+  INFO [7cabcf55] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/log as binomo@188.42.243.243
+  INFO [f2287ceb] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [7cabcf55] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [2714c1f0] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/binomo.com/log as binomo@188.42.243.242
+  INFO [6d4843d2] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/log as binomo@188.42.243.243
+  INFO [2714c1f0] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [028452b8] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/releases/20170912085546/binomo.com/log as binomo@188.42.243.242
+  INFO [6d4843d2] Finished in 0.144 seconds with exit status 0 (successful).
+  INFO [40a81441] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/log as binomo@188.42.243.243
+  INFO [028452b8] Finished in 0.141 seconds with exit status 0 (successful).
+  INFO [40a81441] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [0b154312] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/binomo.com/tmp/cache as binomo@188.42.243.242
+  INFO [6d7ec2e2] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/tmp/cache as binomo@188.42.243.243
+  INFO [0b154312] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [6d7ec2e2] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [6a0205a5] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/binomo.com/tmp/cache as binomo@188.42.243.242
+  INFO [6396d3ca] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/tmp/cache as binomo@188.42.243.243
+  INFO [6a0205a5] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [5bafee1f] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/releases/20170912085546/binomo.com/tmp/cache as binomo@188.42.243.242
+  INFO [6396d3ca] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [c4b8367f] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/tmp/cache as binomo@188.42.243.243
+  INFO [5bafee1f] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [c4b8367f] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [9dcec67d] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/binomo.com/tmp/pids as binomo@188.42.243.242
+  INFO [1478a83d] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/tmp/pids as binomo@188.42.243.243
+  INFO [9dcec67d] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [1478a83d] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [f15a85cf] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/binomo.com/tmp/pids as binomo@188.42.243.242
+  INFO [d65be56f] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/tmp/pids as binomo@188.42.243.243
+  INFO [f15a85cf] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [3f4b4c81] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/releases/20170912085546/binomo.com/tmp/pids as binomo@188.42.243.242
+  INFO [d65be56f] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [beb77bd1] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/tmp/pids as binomo@188.42.243.243
+  INFO [3f4b4c81] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [beb77bd1] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [40edef65] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/binomo.com/node_modules as binomo@188.42.243.242
+  INFO [1b422aaf] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/node_modules as binomo@188.42.243.243
+  INFO [40edef65] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [1b422aaf] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [a0fc6985] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/binomo.com/node_modules as binomo@188.42.243.242
+  INFO [6f6932e3] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/node_modules as binomo@188.42.243.243
+  INFO [a0fc6985] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [30adfdb2] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/node_modules /home/binomo/binomo.com/releases/20170912085546/binomo.com/node_modules as binomo@188.42.243.242
+  INFO [6f6932e3] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [d4137aa1] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/node_modules /home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/node_modules as binomo@188.42.243.243
+  INFO [30adfdb2] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [d4137aa1] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [b23efc5f] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle install --path /home/binomo/binomo.com/shared/bundle --without development test --deployment --quiet as binomo@188.42.243.242
+  INFO [e5ac4925] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle install --path /home/binomo/binomo.com/shared/bundle --without development test --deployment --quiet as binomo@188.42.243.243
+(Backtrace restricted to imported tasks)
+cap aborted!
+SSHKit::Runner::ExecuteError: Exception while executing as binomo@188.42.243.243: Exception while executing as binomo@188.42.243.243: rake exit status: 1
+rake stdout: The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:259:in `load_dependency'
+SEQUEL DEPRECATION WARNING: Setting a model class dataset to an invalid dataset is deprecated and will be removed in Sequel 5.  Either use a valid dataset or set require_valid_table = false for the model class.
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:992:in `rescue in check_non_connection_error'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:985:in `check_non_connection_error'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:1106:in `block in get_db_schema'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:1139:in `get_db_schema'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:878:in `set_dataset'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:207:in `Model'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:152:in `block in def_Model'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/app/models/stats/daily_general.rb:3:in `<top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:293:in `require'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:293:in `block in require'
+== 20170911133212 UpdateCheckSessionFunction: migrating =======================
+-- execute(" CREATE OR REPLACE FUNCTION check_session(_token character varying,\n                                          _device character varying,\n                                          _device_id character varying,\n                                          _ip inet,\n                                          _new_version boolean)\n RETURNS json AS $$\n DECLARE\n   _json json;\n BEGIN\n   SELECT json_build_object(\n       'user_id', user_id,\n       'balance', balance,\n       'balance_version', balance_version,\n       'demo_balance', demo_balance,\n       'demo_balance_version', demo_balance_version,\n       'status_id', status_id)\n     INTO _json\n   FROM tokens AS t\n   INNER JOIN users AS u ON u.id = t.user_id and u.active\n   WHERE auth_key  = _token\n     AND device    = _device\n     AND device_id = _device_id\n     AND ip        = _ip\n     AND valid_to  >= now()::timestamp without time zone\n   LIMIT 1;\n\n   IF _json IS NOT NULL THEN\n     INSERT INTO user_activities(user_id, ip, created_at, updated_at)\n       SELECT (_json->>'user_id')::integer, _ip, now(), now()\n     ON CONFLICT (user_id) DO UPDATE\n       SET ip = excluded.ip, updated_at = now()\n       WHERE user_activities.user_id = excluded.user_id;\n   END IF;\n\n   RETURN _json;\n END;\n $$ LANGUAGE plpgsql;\n\n GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,\n                                                _device character varying,\n                                                _device_id character varying,\n                                                _ip inet,\n                                                _new_version boolean)\nTO web_service;\n")
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+:  CREATE OR REPLACE FUNCTION check_session(_token character varying,
+                                          _device character varying,
+                                          _device_id character varying,
+                                          _ip inet,
+                                          _new_version boolean)
+ RETURNS json AS $$
+ DECLARE
+   _json json;
+ BEGIN
+   SELECT json_build_object(
+       'user_id', user_id,
+       'balance', balance,
+       'balance_version', balance_version,
+       'demo_balance', demo_balance,
+       'demo_balance_version', demo_balance_version,
+       'status_id', status_id)
+     INTO _json
+   FROM tokens AS t
+   INNER JOIN users AS u ON u.id = t.user_id and u.active
+   WHERE auth_key  = _token
+     AND device    = _device
+     AND device_id = _device_id
+     AND ip        = _ip
+     AND valid_to  >= now()::timestamp without time zone
+   LIMIT 1;
+
+   IF _json IS NOT NULL THEN
+     INSERT INTO user_activities(user_id, ip, created_at, updated_at)
+       SELECT (_json->>'user_id')::integer, _ip, now(), now()
+     ON CONFLICT (user_id) DO UPDATE
+       SET ip = excluded.ip, updated_at = now()
+       WHERE user_activities.user_id = excluded.user_id;
+   END IF;
+
+   RETURN _json;
+ END;
+ $$ LANGUAGE plpgsql;
+
+ GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,
+                                                _device character varying,
+                                                _device_id character varying,
+                                                _ip inet,
+                                                _new_version boolean)
+TO web_service;
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+ActiveRecord::StatementInvalid: PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+:  CREATE OR REPLACE FUNCTION check_session(_token character varying,
+                                          _device character varying,
+                                          _device_id character varying,
+                                          _ip inet,
+                                          _new_version boolean)
+ RETURNS json AS $$
+ DECLARE
+   _json json;
+ BEGIN
+   SELECT json_build_object(
+       'user_id', user_id,
+       'balance', balance,
+       'balance_version', balance_version,
+       'demo_balance', demo_balance,
+       'demo_balance_version', demo_balance_version,
+       'status_id', status_id)
+     INTO _json
+   FROM tokens AS t
+   INNER JOIN users AS u ON u.id = t.user_id and u.active
+   WHERE auth_key  = _token
+     AND device    = _device
+     AND device_id = _device_id
+     AND ip        = _ip
+     AND valid_to  >= now()::timestamp without time zone
+   LIMIT 1;
+
+   IF _json IS NOT NULL THEN
+     INSERT INTO user_activities(user_id, ip, created_at, updated_at)
+       SELECT (_json->>'user_id')::integer, _ip, now(), now()
+     ON CONFLICT (user_id) DO UPDATE
+       SET ip = excluded.ip, updated_at = now()
+       WHERE user_activities.user_id = excluded.user_id;
+   END IF;
+
+   RETURN _json;
+ END;
+ $$ LANGUAGE plpgsql;
+
+ GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,
+                                                _device character varying,
+                                                _device_id character varying,
+                                                _ip inet,
+                                                _new_version boolean)
+TO web_service;
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+
+SSHKit::Runner::ExecuteError: Exception while executing as binomo@188.42.243.243: rake exit status: 1
+rake stdout: The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:259:in `load_dependency'
+SEQUEL DEPRECATION WARNING: Setting a model class dataset to an invalid dataset is deprecated and will be removed in Sequel 5.  Either use a valid dataset or set require_valid_table = false for the model class.
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:992:in `rescue in check_non_connection_error'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:985:in `check_non_connection_error'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:1106:in `block in get_db_schema'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:1139:in `get_db_schema'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:878:in `set_dataset'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:207:in `Model'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:152:in `block in def_Model'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/app/models/stats/daily_general.rb:3:in `<top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:293:in `require'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:293:in `block in require'
+== 20170911133212 UpdateCheckSessionFunction: migrating =======================
+-- execute(" CREATE OR REPLACE FUNCTION check_session(_token character varying,\n                                          _device character varying,\n                                          _device_id character varying,\n                                          _ip inet,\n                                          _new_version boolean)\n RETURNS json AS $$\n DECLARE\n   _json json;\n BEGIN\n   SELECT json_build_object(\n       'user_id', user_id,\n       'balance', balance,\n       'balance_version', balance_version,\n       'demo_balance', demo_balance,\n       'demo_balance_version', demo_balance_version,\n       'status_id', status_id)\n     INTO _json\n   FROM tokens AS t\n   INNER JOIN users AS u ON u.id = t.user_id and u.active\n   WHERE auth_key  = _token\n     AND device    = _device\n     AND device_id = _device_id\n     AND ip        = _ip\n     AND valid_to  >= now()::timestamp without time zone\n   LIMIT 1;\n\n   IF _json IS NOT NULL THEN\n     INSERT INTO user_activities(user_id, ip, created_at, updated_at)\n       SELECT (_json->>'user_id')::integer, _ip, now(), now()\n     ON CONFLICT (user_id) DO UPDATE\n       SET ip = excluded.ip, updated_at = now()\n       WHERE user_activities.user_id = excluded.user_id;\n   END IF;\n\n   RETURN _json;\n END;\n $$ LANGUAGE plpgsql;\n\n GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,\n                                                _device character varying,\n                                                _device_id character varying,\n                                                _ip inet,\n                                                _new_version boolean)\nTO web_service;\n")
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+:  CREATE OR REPLACE FUNCTION check_session(_token character varying,
+                                          _device character varying,
+                                          _device_id character varying,
+                                          _ip inet,
+                                          _new_version boolean)
+ RETURNS json AS $$
+ DECLARE
+   _json json;
+ BEGIN
+   SELECT json_build_object(
+       'user_id', user_id,
+       'balance', balance,
+       'balance_version', balance_version,
+       'demo_balance', demo_balance,
+       'demo_balance_version', demo_balance_version,
+       'status_id', status_id)
+     INTO _json
+   FROM tokens AS t
+   INNER JOIN users AS u ON u.id = t.user_id and u.active
+   WHERE auth_key  = _token
+     AND device    = _device
+     AND device_id = _device_id
+     AND ip        = _ip
+     AND valid_to  >= now()::timestamp without time zone
+   LIMIT 1;
+
+   IF _json IS NOT NULL THEN
+     INSERT INTO user_activities(user_id, ip, created_at, updated_at)
+       SELECT (_json->>'user_id')::integer, _ip, now(), now()
+     ON CONFLICT (user_id) DO UPDATE
+       SET ip = excluded.ip, updated_at = now()
+       WHERE user_activities.user_id = excluded.user_id;
+   END IF;
+
+   RETURN _json;
+ END;
+ $$ LANGUAGE plpgsql;
+
+ GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,
+                                                _device character varying,
+                                                _device_id character varying,
+                                                _ip inet,
+                                                _new_version boolean)
+TO web_service;
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+ActiveRecord::StatementInvalid: PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+:  CREATE OR REPLACE FUNCTION check_session(_token character varying,
+                                          _device character varying,
+                                          _device_id character varying,
+                                          _ip inet,
+                                          _new_version boolean)
+ RETURNS json AS $$
+ DECLARE
+   _json json;
+ BEGIN
+   SELECT json_build_object(
+       'user_id', user_id,
+       'balance', balance,
+       'balance_version', balance_version,
+       'demo_balance', demo_balance,
+       'demo_balance_version', demo_balance_version,
+       'status_id', status_id)
+     INTO _json
+   FROM tokens AS t
+   INNER JOIN users AS u ON u.id = t.user_id and u.active
+   WHERE auth_key  = _token
+     AND device    = _device
+     AND device_id = _device_id
+     AND ip        = _ip
+     AND valid_to  >= now()::timestamp without time zone
+   LIMIT 1;
+
+   IF _json IS NOT NULL THEN
+     INSERT INTO user_activities(user_id, ip, created_at, updated_at)
+       SELECT (_json->>'user_id')::integer, _ip, now(), now()
+     ON CONFLICT (user_id) DO UPDATE
+       SET ip = excluded.ip, updated_at = now()
+       WHERE user_activities.user_id = excluded.user_id;
+   END IF;
+
+   RETURN _json;
+ END;
+ $$ LANGUAGE plpgsql;
+
+ GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,
+                                                _device character varying,
+                                                _device_id character varying,
+                                                _ip inet,
+                                                _new_version boolean)
+TO web_service;
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+
+SSHKit::Command::Failed: rake exit status: 1
+rake stdout: The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:259:in `load_dependency'
+SEQUEL DEPRECATION WARNING: Setting a model class dataset to an invalid dataset is deprecated and will be removed in Sequel 5.  Either use a valid dataset or set require_valid_table = false for the model class.
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:992:in `rescue in check_non_connection_error'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:985:in `check_non_connection_error'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:1106:in `block in get_db_schema'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:1139:in `get_db_schema'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:878:in `set_dataset'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:207:in `Model'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:152:in `block in def_Model'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/app/models/stats/daily_general.rb:3:in `<top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:293:in `require'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:293:in `block in require'
+== 20170911133212 UpdateCheckSessionFunction: migrating =======================
+-- execute(" CREATE OR REPLACE FUNCTION check_session(_token character varying,\n                                          _device character varying,\n                                          _device_id character varying,\n                                          _ip inet,\n                                          _new_version boolean)\n RETURNS json AS $$\n DECLARE\n   _json json;\n BEGIN\n   SELECT json_build_object(\n       'user_id', user_id,\n       'balance', balance,\n       'balance_version', balance_version,\n       'demo_balance', demo_balance,\n       'demo_balance_version', demo_balance_version,\n       'status_id', status_id)\n     INTO _json\n   FROM tokens AS t\n   INNER JOIN users AS u ON u.id = t.user_id and u.active\n   WHERE auth_key  = _token\n     AND device    = _device\n     AND device_id = _device_id\n     AND ip        = _ip\n     AND valid_to  >= now()::timestamp without time zone\n   LIMIT 1;\n\n   IF _json IS NOT NULL THEN\n     INSERT INTO user_activities(user_id, ip, created_at, updated_at)\n       SELECT (_json->>'user_id')::integer, _ip, now(), now()\n     ON CONFLICT (user_id) DO UPDATE\n       SET ip = excluded.ip, updated_at = now()\n       WHERE user_activities.user_id = excluded.user_id;\n   END IF;\n\n   RETURN _json;\n END;\n $$ LANGUAGE plpgsql;\n\n GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,\n                                                _device character varying,\n                                                _device_id character varying,\n                                                _ip inet,\n                                                _new_version boolean)\nTO web_service;\n")
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+:  CREATE OR REPLACE FUNCTION check_session(_token character varying,
+                                          _device character varying,
+                                          _device_id character varying,
+                                          _ip inet,
+                                          _new_version boolean)
+ RETURNS json AS $$
+ DECLARE
+   _json json;
+ BEGIN
+   SELECT json_build_object(
+       'user_id', user_id,
+       'balance', balance,
+       'balance_version', balance_version,
+       'demo_balance', demo_balance,
+       'demo_balance_version', demo_balance_version,
+       'status_id', status_id)
+     INTO _json
+   FROM tokens AS t
+   INNER JOIN users AS u ON u.id = t.user_id and u.active
+   WHERE auth_key  = _token
+     AND device    = _device
+     AND device_id = _device_id
+     AND ip        = _ip
+     AND valid_to  >= now()::timestamp without time zone
+   LIMIT 1;
+
+   IF _json IS NOT NULL THEN
+     INSERT INTO user_activities(user_id, ip, created_at, updated_at)
+       SELECT (_json->>'user_id')::integer, _ip, now(), now()
+     ON CONFLICT (user_id) DO UPDATE
+       SET ip = excluded.ip, updated_at = now()
+       WHERE user_activities.user_id = excluded.user_id;
+   END IF;
+
+   RETURN _json;
+ END;
+ $$ LANGUAGE plpgsql;
+
+ GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,
+                                                _device character varying,
+                                                _device_id character varying,
+                                                _ip inet,
+                                                _new_version boolean)
+TO web_service;
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+ActiveRecord::StatementInvalid: PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+:  CREATE OR REPLACE FUNCTION check_session(_token character varying,
+                                          _device character varying,
+                                          _device_id character varying,
+                                          _ip inet,
+                                          _new_version boolean)
+ RETURNS json AS $$
+ DECLARE
+   _json json;
+ BEGIN
+   SELECT json_build_object(
+       'user_id', user_id,
+       'balance', balance,
+       'balance_version', balance_version,
+       'demo_balance', demo_balance,
+       'demo_balance_version', demo_balance_version,
+       'status_id', status_id)
+     INTO _json
+   FROM tokens AS t
+   INNER JOIN users AS u ON u.id = t.user_id and u.active
+   WHERE auth_key  = _token
+     AND device    = _device
+     AND device_id = _device_id
+     AND ip        = _ip
+     AND valid_to  >= now()::timestamp without time zone
+   LIMIT 1;
+
+   IF _json IS NOT NULL THEN
+     INSERT INTO user_activities(user_id, ip, created_at, updated_at)
+       SELECT (_json->>'user_id')::integer, _ip, now(), now()
+     ON CONFLICT (user_id) DO UPDATE
+       SET ip = excluded.ip, updated_at = now()
+       WHERE user_activities.user_id = excluded.user_id;
+   END IF;
+
+   RETURN _json;
+ END;
+ $$ LANGUAGE plpgsql;
+
+ GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,
+                                                _device character varying,
+                                                _device_id character varying,
+                                                _ip inet,
+                                                _new_version boolean)
+TO web_service;
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/database.rake:43:in `block (5 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/database.rake:42:in `block (4 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/database.rake:41:in `block (3 levels) in <top (required)>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+The deploy has failed with an error: Exception while executing as binomo@188.42.243.243: Exception while executing as binomo@188.42.243.243: rake exit status: 1
+rake stdout: The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:259:in `load_dependency'
+SEQUEL DEPRECATION WARNING: Setting a model class dataset to an invalid dataset is deprecated and will be removed in Sequel 5.  Either use a valid dataset or set require_valid_table = false for the model class.
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:992:in `rescue in check_non_connection_error'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:985:in `check_non_connection_error'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:1106:in `block in get_db_schema'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:1139:in `get_db_schema'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:878:in `set_dataset'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:207:in `Model'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/sequel-4.47.0/lib/sequel/model/base.rb:152:in `block in def_Model'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/app/models/stats/daily_general.rb:3:in `<top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:293:in `require'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/dependencies.rb:293:in `block in require'
+== 20170911133212 UpdateCheckSessionFunction: migrating =======================
+-- execute(" CREATE OR REPLACE FUNCTION check_session(_token character varying,\n                                          _device character varying,\n                                          _device_id character varying,\n                                          _ip inet,\n                                          _new_version boolean)\n RETURNS json AS $$\n DECLARE\n   _json json;\n BEGIN\n   SELECT json_build_object(\n       'user_id', user_id,\n       'balance', balance,\n       'balance_version', balance_version,\n       'demo_balance', demo_balance,\n       'demo_balance_version', demo_balance_version,\n       'status_id', status_id)\n     INTO _json\n   FROM tokens AS t\n   INNER JOIN users AS u ON u.id = t.user_id and u.active\n   WHERE auth_key  = _token\n     AND device    = _device\n     AND device_id = _device_id\n     AND ip        = _ip\n     AND valid_to  >= now()::timestamp without time zone\n   LIMIT 1;\n\n   IF _json IS NOT NULL THEN\n     INSERT INTO user_activities(user_id, ip, created_at, updated_at)\n       SELECT (_json->>'user_id')::integer, _ip, now(), now()\n     ON CONFLICT (user_id) DO UPDATE\n       SET ip = excluded.ip, updated_at = now()\n       WHERE user_activities.user_id = excluded.user_id;\n   END IF;\n\n   RETURN _json;\n END;\n $$ LANGUAGE plpgsql;\n\n GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,\n                                                _device character varying,\n                                                _device_id character varying,\n                                                _ip inet,\n                                                _new_version boolean)\nTO web_service;\n")
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+:  CREATE OR REPLACE FUNCTION check_session(_token character varying,
+                                          _device character varying,
+                                          _device_id character varying,
+                                          _ip inet,
+                                          _new_version boolean)
+ RETURNS json AS $$
+ DECLARE
+   _json json;
+ BEGIN
+   SELECT json_build_object(
+       'user_id', user_id,
+       'balance', balance,
+       'balance_version', balance_version,
+       'demo_balance', demo_balance,
+       'demo_balance_version', demo_balance_version,
+       'status_id', status_id)
+     INTO _json
+   FROM tokens AS t
+   INNER JOIN users AS u ON u.id = t.user_id and u.active
+   WHERE auth_key  = _token
+     AND device    = _device
+     AND device_id = _device_id
+     AND ip        = _ip
+     AND valid_to  >= now()::timestamp without time zone
+   LIMIT 1;
+
+   IF _json IS NOT NULL THEN
+     INSERT INTO user_activities(user_id, ip, created_at, updated_at)
+       SELECT (_json->>'user_id')::integer, _ip, now(), now()
+     ON CONFLICT (user_id) DO UPDATE
+       SET ip = excluded.ip, updated_at = now()
+       WHERE user_activities.user_id = excluded.user_id;
+   END IF;
+
+   RETURN _json;
+ END;
+ $$ LANGUAGE plpgsql;
+
+ GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,
+                                                _device character varying,
+                                                _device_id character varying,
+                                                _ip inet,
+                                                _new_version boolean)
+TO web_service;
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+ActiveRecord::StatementInvalid: PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+:  CREATE OR REPLACE FUNCTION check_session(_token character varying,
+                                          _device character varying,
+                                          _device_id character varying,
+                                          _ip inet,
+                                          _new_version boolean)
+ RETURNS json AS $$
+ DECLARE
+   _json json;
+ BEGIN
+   SELECT json_build_object(
+       'user_id', user_id,
+       'balance', balance,
+       'balance_version', balance_version,
+       'demo_balance', demo_balance,
+       'demo_balance_version', demo_balance_version,
+       'status_id', status_id)
+     INTO _json
+   FROM tokens AS t
+   INNER JOIN users AS u ON u.id = t.user_id and u.active
+   WHERE auth_key  = _token
+     AND device    = _device
+     AND device_id = _device_id
+     AND ip        = _ip
+     AND valid_to  >= now()::timestamp without time zone
+   LIMIT 1;
+
+   IF _json IS NOT NULL THEN
+     INSERT INTO user_activities(user_id, ip, created_at, updated_at)
+       SELECT (_json->>'user_id')::integer, _ip, now(), now()
+     ON CONFLICT (user_id) DO UPDATE
+       SET ip = excluded.ip, updated_at = now()
+       WHERE user_activities.user_id = excluded.user_id;
+   END IF;
+
+   RETURN _json;
+ END;
+ $$ LANGUAGE plpgsql;
+
+ GRANT EXECUTE ON FUNCTION public.check_session(_token character varying,
+                                                _device character varying,
+                                                _device_id character varying,
+                                                _ip inet,
+                                                _new_version boolean)
+TO web_service;
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+PG::InsufficientPrivilege: ERROR:  must be owner of function check_session
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `async_exec'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `block in execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activesupport-5.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:97:in `execute'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:846:in `block in method_missing'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `block in say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:815:in `say_with_time'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:835:in `method_missing'
+/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com/db/migrate/20170911133212_update_check_session_function.rb:5:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:792:in `exec_migration'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:773:in `block (2 levels) in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:772:in `block in migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `with_connection'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:771:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:951:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1232:in `block in execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `block in ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/transactions.rb:211:in `transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1300:in `ddl_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1231:in `execute_migration_in_transaction'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1203:in `block in migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `each'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1202:in `migrate_without_lock'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1152:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:1006:in `up'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/migration.rb:984:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/tasks/database_tasks.rb:163:in `migrate'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/activerecord-5.0.4/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/home/binomo/binomo.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `load'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/bundle:23:in `<main>'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `eval'
+/home/binomo/.rvm/gems/ruby-2.4.0@binomo/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+  INFO [b23efc5f] Finished in 9.058 seconds with exit status 0 (successful).
+  INFO [e5ac4925] Finished in 13.250 seconds with exit status 0 (successful).
+  INFO [23c33b4c] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake rollback_missing_migrations OLD_RELEASE='/home/binomo/binomo.com/current/crm.binomo.com' NEW_RELEASE='/home/binomo/binomo.com/releases/20170912085546/crm.binomo.com' as binomo@188.42.243.243
+  INFO [23c33b4c] Finished in 12.315 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in db
+  INFO [deploy:migrate] Run `rake db:migrate`
+  INFO [87434f51] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake db:migrate as binomo@188.42.243.243

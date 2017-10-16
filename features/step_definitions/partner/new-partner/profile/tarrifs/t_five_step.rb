@@ -8,10 +8,11 @@ Given /^Select only tarrif CPL DOI$/ do
 
   id = DRIVER.find_elements(:css, "td.sorting_1")[0].text
   DRIVER.get CommonSetting[:url_adm_partner] + "/customers/" + id.to_s + "/edit"
-  DRIVER.find_elements(:css, "input[name='customer_tariff[data][][profit]']")[10].clear
-  DRIVER.find_elements(:css, "input[name='customer_tariff[data][][profit]']")[11].clear
-  DRIVER.find_elements(:css, "input[name='customer_tariff[data][][profit]']")[10].send_keys('6')
-  DRIVER.find_elements(:css, "input[name='customer_tariff[data][][profit]']")[11].send_keys('10')
+  
+  DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_0_profit")[2].clear
+  DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_0_profit")[2].send_keys('600')
+  DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_1_profit")[2].clear
+  DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_1_profit")[2].send_keys('1000')
   DRIVER.find_elements(:css, "option[value=RU]")[4].click
 
   3.times do

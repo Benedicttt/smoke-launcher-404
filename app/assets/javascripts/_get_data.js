@@ -42,7 +42,7 @@ function get_data(checkbox){
    };
 
    if ($('#smoke-status-code').prop('click')) {
-     $(".global_link").val(str += "-f html > ./public/reports/binomo/smoke-status-code.html ./features/smoke-status-code.feature")
+     $(".global_link").val(str += "-f html > ./public/reports/smoke-status-code.html ./features/smoke-status-code.feature")
    };
 
    if ($('#smoke-binpartner').prop('click')) {

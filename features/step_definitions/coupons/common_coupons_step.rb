@@ -1,6 +1,7 @@
 
 And /^Visit users coupons adds$/ do
   DRIVER.get CommonSetting[:url_page_crm] + "/coupons/user_coupons/new?scope=common"
+  sleep 1
 end
 
 When /^Add coupons for users$/ do
@@ -31,5 +32,9 @@ Then /^Activate coupons\?$/ do
   DRIVER.find_elements(:css, ".coupon_code")[0].send_keys($code)
   sleep 2
   puts_success "#{$code}"
-  puts_success "Common coupon visible icon #{DRIVER.execute_script("return $('.text-green-darker').is(':visible')")}"
+  if DRIVER.execute_script("return $('.text-green-darker').is(':visible')") == true
+    puts_success "Common coupon visible icon true"
+  else
+    puts_danger "Common coupon visible icon false"
+  end
 end

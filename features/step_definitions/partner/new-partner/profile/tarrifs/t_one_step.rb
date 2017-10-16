@@ -12,7 +12,7 @@ Given /^Select only tarrif percent$/ do
   DRIVER.execute_script("$('option[value]').selected()")
   DRIVER.find_elements(:id, "customer_tariff_data_attributes_profit_reduce_rates_attributes_0_value")[1].send_keys('0,5')
   3.times do
-    DRIVER.find_elements(:id, 'customer_tariff_active')[1].click ; sleep 0.5
+    DRIVER.find_elements(:id, 'customer_tariff_active')[1].click; sleep 0.5
     DRIVER.find_elements(:css, "button.btn.btn-primary")[6].click
   end
 end

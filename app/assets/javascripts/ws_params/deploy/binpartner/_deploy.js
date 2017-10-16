@@ -2,7 +2,7 @@ $(function(){
 
   $('.ws_sender_binpartner').click(function(){
     if (str= '', $('#deploy-project-binpartner').prop('click')) {
-      $(".deploy").val(str += " cap" + " " +
+      $(".deploy").val(str += "cap" + " " +
       $('#last-binpartner').val() + " deploy project=" +
       $('#last-project').val() + " branch=" +
       $('#last-branch').val().replace(/ /g, "")

@@ -6,29 +6,23 @@ Given(/^Template Bonus$/) do
   DRIVER.find_element(:id, "coupon_name").send_keys("#{Time.now}")
 
   DRIVER.find_element(:id, "coupon_lifetime").clear
-  DRIVER.find_element(:id, "coupon_lifetime").send_keys('1')
+  DRIVER.find_element(:id, "coupon_lifetime").send_keys('100')
   DRIVER.find_elements(:css, "button.btn.dropdown-toggle.selectpicker.btn-default")[0].click
   DRIVER.find_elements(:css, "span.text")[0].click
 
-  DRIVER.find_element(:id, "coupon_data_currencies_USD_amount").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_USD_amount").send_keys("10")
-  DRIVER.find_element(:id, "coupon_data_currencies_USD_leverage").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_USD_leverage").send_keys("10")
+  %w[USD EUR].each do |name|
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("10")
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").clear
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").send_keys("10")
+  end
 
-  DRIVER.find_element(:id, "coupon_data_currencies_EUR_amount").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_EUR_amount").send_keys("10")
-  DRIVER.find_element(:id, "coupon_data_currencies_EUR_leverage").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_EUR_leverage").send_keys("10")
-
-  DRIVER.find_element(:id, "coupon_data_currencies_RUB_amount").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_RUB_amount").send_keys("1000")
-  DRIVER.find_element(:id, "coupon_data_currencies_RUB_leverage").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_RUB_leverage").send_keys("10")
-
-  DRIVER.find_element(:id, "coupon_data_currencies_KZT_amount").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_KZT_amount").send_keys("10000")
-  DRIVER.find_element(:id, "coupon_data_currencies_KZT_leverage").clear
-  DRIVER.find_element(:id, "coupon_data_currencies_KZT_leverage").send_keys("10")
+  %w[RUB KZT CNY TRY UAH INR ZAR].each do |name|
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").clear
+    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").send_keys("10")
+  end
 
   DRIVER.find_elements(:css, '.btn-primary')[1].click
   sleep 1

@@ -5,40 +5,44 @@ Then /^Status treder$/ do
   if ENV['driver'] == "firefox"
     @status_tr = Selenium::WebDriver.for ENV['driver'].to_sym
   elsif ENV['driver'] == "chrome"
-    options =  Selenium::WebDriver::Chrome::Options.new(args: %w[disable-gpu --disable-notifications])
+    options =  Selenium::WebDriver::Chrome::Options.new(args: ["--start-maximized", "--disable-gpu", "--disable-notifications"])
     @status_tr = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
+    @status_tr.manage.timeouts.implicit_wait = 5
   end
 
   @status_tr.get CommonSetting[:app_host] + CommonSetting[:locale]
-
   sleep 1
   id = User.where(stage_number: ENV['stage']).last.id
+
   add_cookies_to_page(@status_tr)
-  @status_tr.get CommonSetting[:app_host] + CommonSetting[:locale]
-  sleep 1
-  @status_tr.manage.window.resize_to(1200, 700)
+  @status_tr.execute_script("localStorage.setItem(\"#{id}.real.welcome_bonus\", \"1\")" )
+  @status_tr.execute_script("localStorage.setItem(\"#{id}.demo.welcome_bonus\", \"1\")")
+  @status_tr.manage.add_cookie(name: "asset.daily", value: "FAKE")
+  @status_tr.manage.add_cookie(name: "agreed", value: "1")
+  @status_tr.get CommonSetting[:app_host] + CommonSetting[:locale] + "/help"
 
-  @status_tr_treder = @status_tr.execute_script("return $('#dropdownProfile > i').attr('class')")
+  sleep 2
+  @status_tr_treder = @status_tr.execute_script("return angular.element(document.querySelectorAll('.btn-link > i')).attr('class')")
 
-  if "#{@status_tr_treder}" == "n-icon-user-free-status"
-    puts_info "#{@status_tr.execute_script("return $('#dropdownProfile > i').attr('class')")}"
-    que "update users set status='free', updated_at = '#{Time.now}' where id = '#{id}';"
+  retried_process(1,3) do
+    if "#{@status_tr_treder}" == "n-icon-user-free-status"
+      que "update users set status='free', updated_at = '#{Time.now}' where id = '#{id}';"
+      puts_info "#{@status_tr.execute_script("return angular.element(document.querySelectorAll('.btn-link > i')).attr('class')")}"
+
+    elsif "#{@status_tr_treder}" == "n-icon-user-standard-status"
+      que "update users set status='standard', updated_at = '#{Time.now}' where id = '#{id}';"
+      puts_info "#{@status_tr.execute_script("return angular.element(document.querySelectorAll('.btn-link > i')).attr('class')")}"
+
+    elsif "#{@status_tr_treder}" == "n-icon-user-gold-status"
+      que "update users set status='gold', updated_at = '#{Time.now}' where id = '#{id}';"
+      puts_info "#{@status_tr.execute_script("return angular.element(document.querySelectorAll('.btn-link > i')).attr('class')")}"
+
+    elsif "#{@status_tr_treder}" == "n-icon-user-vip-status"
+      que "update users set status='vip', updated_at = '#{Time.now}' where id = '#{id}';"
+      puts_info "#{@status_tr.execute_script("return angular.element(document.querySelectorAll('.btn-link > i')).attr('class')")}"
+
+    end
   end
 
-  if "#{@status_tr_treder}" == "n-icon-user-standard-status"
-    puts_info "#{@status_tr.execute_script("return $('#dropdownProfile > i').attr('class')")}"
-    que "update users set status= 'standard', updated_at = '#{Time.now}' where id = '#{id}';"
-  end
-
-  if "#{@status_tr_treder}" == "n-icon-user-gold-status"
-    puts_info "#{@status_tr.execute_script("return $('#dropdownProfile > i').attr('class')")}"
-    que "update users set status= 'gold', updated_at = '#{Time.now}' where id = '#{id}';"
-  end
-
-  if "#{@status_tr_treder}" == "n-icon-user-vip-status"
-    puts_info "#{@status_tr.execute_script("return $('#dropdownProfile > i').attr('class')")}"
-    que "update users set status= 'vip', updated_at = '#{Time.now}' where id = '#{id}';"
-  end
   @status_tr.quit
-
 end

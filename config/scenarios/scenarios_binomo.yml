@@ -1,3 +1,12 @@
+check rate for closed deal(win): "
+  \tGiven Visit page trading\n
+  \tWhen Open list deals\n
+  \tThen Rate by RIC equal percent sum win deal\n
+"
+
+activate all templates: "
+  \tGiven Activate all templates\n
+"
 social google: "
   \tGiven Visit homepage and click soc-reg google(not ref)\n
   \tWhen Click my email google\n
@@ -235,36 +244,6 @@ wire capital decline: "
   \tThen Before balance\n
   \tWhen Check status 'Reject' in payment Wire Capital\n
   \tThen After balance\n
-
-"
-
-deposit: "
-  When Select type tournament deposit\n
-"
-on_demand: "
-  When Select type tournament on demand\n
-"
-sum_deals: "
-  When Created Tournament 'sum deals'\n
-"
-sum_win_deals: "
-  When Created Tournament 'sum win deals'\n
-"
-max_demo_balance: "
-  When Created Tournament 'max demo balance'\n
-"
-created_tournament: "
-  \tGiven Tournament\n
-    When Add data\n
-"
-created_a_tournament?: "
-  Then Result\n
-"
-delete_all_tournaments: "
-  Given Delete all tournaments\n
-"
-participate: "
-  When Participate
 "
 use_demo: "
   When Use demo type\n
@@ -273,6 +252,7 @@ use_real: "
   When Use real type\n
 "
 smoke_prod: ""
+
 doc protected to: "
   \tGiven Doc protected to\n
 \t\tThen Protected set done\n

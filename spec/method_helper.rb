@@ -1,18 +1,10 @@
 $config_api = YAML.load_file('./config/scenarios/common_setting_api.yml')
-
-$link_binomo_auth_200 = File.read("./spec/client/pages/authorize/link_binomo_auth_200")
-$link_binomo_200 = File.read("./spec/client/pages/unauthorize/link_binomo_200")
-$link_binomo_404 = File.read("./spec/client/pages/unauthorize/link_binomo_404")
-
-$link_binpartner_adm_200 = File.read("./spec/client/pages/authorize/link_adm_partner_200")
-$link_auth_platform_binpartner_200 = File.read("./spec/client/pages/authorize/link_platform_partner_200")
-$link_noauth_platform_binpartner_200 = File.read("./spec/client/pages/unauthorize/link_platform_partner_200")
-
-$link_crm_1 = File.read("./spec/client/pages/unauthorize/link_crm_200")
-$link_crm_2 = File.read("./spec/client/pages/unauthorize/link_crm_parse_200")
+$uuid = "36ff4103-8a37-42ed-84d3-78c9ce96458f"
+# $uuid.upcase
 
 ENV['RAILS_ENV'] ||= 'test'
 ENV['api_host'] = "https://#{ENV['stage']}binomo.com/api"
+
 
 class Constant
   def self.email

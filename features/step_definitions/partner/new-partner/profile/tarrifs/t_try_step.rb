@@ -8,51 +8,21 @@ Given /^Select only tarrif CPA \%$/ do
     sleep 1
     id = DRIVER.find_elements(:css, "td.sorting_1")[0].text
     DRIVER.get CommonSetting[:url_adm_partner] + "/customers/" + id.to_s + "/edit"
-    #
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[7].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[7].send_keys('0')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[8].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[8].send_keys('101')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[9].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[9].send_keys('151')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[10].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[10].send_keys('201')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[11].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[11].send_keys('251')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[12].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[12].send_keys('300')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[13].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_from")[13].send_keys('350')
 
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[7].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[7].send_keys('100')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[8].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[8].send_keys('150')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[9].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[9].send_keys('200')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[10].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[10].send_keys('250')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[11].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[11].send_keys('300')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[12].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[12].send_keys('350')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[13].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__deposit_to")[13].send_keys('1300')
+    %w[ 0 50 100 150 200 250 300 ].each_with_index do |from, num|
+      DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_#{num}_deposit_from")[1].clear
+      DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_#{num}_deposit_from")[1].send_keys(from)
+    end
 
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[0].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[0].send_keys('1')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[1].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[1].send_keys('5')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[2].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[2].send_keys('10')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[3].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[3].send_keys('15')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[4].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[4].send_keys('20')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[5].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[5].send_keys('30')
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[6].clear
-    DRIVER.find_elements(:css, "input#customer_tariff_data__rate")[6].send_keys('40')
+    %w[ 50 100 150 200 250 300 350 ].each_with_index do |to, num|
+      DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_#{num}_deposit_to")[1].clear
+      DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_#{num}_deposit_to")[1].send_keys(to)
+    end
+
+    %w[ 5 10 15 20 30 40 50 ].each_with_index do |rate, num|
+      DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_#{num}_rate")[0].clear
+      DRIVER.find_elements(:css, "input#customer_tariff_data_attributes_#{num}_rate")[0].send_keys(rate)
+    end
 
     3.times do
       DRIVER.find_elements(:id, 'customer_tariff_active')[3].click ; sleep 0.5

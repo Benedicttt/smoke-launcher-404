@@ -20,10 +20,7 @@ html
       .form-part
         .row
           .col-xs-3
-            = f.input :scenario, label:false , as: :check_boxes, collection: ["status code page binomo"], required: false
-
-          .col-xs-12
-            = f.input :class_dom, label: "Input class or button name", as: :text
+            = f.input :scenario, label:false , as: :check_boxes, collection: ["status code page binomo", "status code page crm"], required: false
 
         .row
           .col-xs-3
@@ -31,7 +28,7 @@ html
 
         .row
           .col-xs-3
-            = f.input "Display" , as: :check_boxes, collection: ["response", "not_response"], required: false
+            = f.input :display , as: :check_boxes, collection: ["return only response <= 200", "return only response <= 400"], required: false
 
           br
           br

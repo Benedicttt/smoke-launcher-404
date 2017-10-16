@@ -48,20 +48,12 @@ reg_treder_refcode: "
 confirmed: "
 "
 
-temp-mail: "
-    Given Mailer temp\n
-    \tWhen Input email and find link temp \n
-    \tThen Visit to link temp\n
-    "
 yopmail: "
     Given Mailers yopmail\n
     \tWhen Input email and find link yopmail \n
     \tThen Visit to link yopmail\n
   "
-crm verified: "
-    Given Verified email crm /binomo\n
-    \tWhen Input email and find link
-  "
+
 welcome: "
   Given Visit page Welcome\n
   \tWhen Fill /welcome\n
@@ -189,7 +181,6 @@ payout_card_pay: "
   \tWhen The creation of an application for withdrawal for CardPay\n
   \tThen Applications created CardPay\n
 "
-
 delete_all_postbacks: "
   \tGiven Visit to page profile partner\n
   \tWhen Delete postbacks\n
@@ -207,7 +198,6 @@ doc protected to: "
 \tGiven Doc protected to\n
 \t\tThen Protected set done\n
 "
-
 add_promo_landings: "
   \tGiven Add landings
 "
@@ -223,4 +213,26 @@ add_promo_logos: "
 phone confirmed: "
   \tGiven Phone verified find \n
 \t\tThen Phone verifed\n
+"
+authorize binpartner.com: "
+  Given Visit to page binpartner.com\n
+  Then Add data form\n
+  Then Click button Sign in and Authorize to partner.com\n
+"
+registration forms: "
+  Given Add promo forms registartions\n
+  Given Open registration forms\n
+  \tWhen Add data input and submit registration\n
+  \t\tThen Assert registartion\n
+  Given Open registration forms\n
+  \tWhen Add data input and submit registration new\n
+  \t\tThen Assert registartion new\n
+"
+modify country Poland null: "
+  Given Open page modify country\n
+  When Set modify country null\n
+"
+modify country Poland 1: "
+  Given Open page modify country\n
+  When Set modify country 1.0\n
 "

@@ -16,7 +16,8 @@ module Server
         if msg_json[:write_log] == true
           ENV['log'] = "> ../deploy/logs/binpartner/#{ENV['staging']}-#{count_deploy.split[4].gsub(/branch=/, '').gsub(/\//, '-')}-#{Time.now.strftime('%Y-%m-%d_%H-%M-%S')}.log 2>&1"
         end
-        puts count_deploy.green + " #{ENV['log'].to_s}".green
+        puts
+        print count_deploy.green + " #{ENV['log'].to_s}".green
 
         if ENV['staging'] == 'staging'
           @stage_deploy = 's1'

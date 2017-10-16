@@ -1,0 +1,198 @@
+  INFO [51c56c5a] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.106
+  INFO [1eaf9a2d] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.51
+  INFO [51c56c5a] Finished in 1.088 seconds with exit status 0 (successful).
+  INFO [1eaf9a2d] Finished in 1.373 seconds with exit status 0 (successful).
+  INFO [9e7694ef] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.106
+  INFO [e0b7e647] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.51
+  INFO [9e7694ef] Finished in 4.905 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-binomo-staging-benedict.sh 100.0%
+  INFO [21902488] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging-benedict.sh as binomo@188.42.243.106
+  INFO [21902488] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [e0b7e647] Finished in 6.643 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-binomo-staging-benedict.sh 100.0%
+  INFO [ad82a6af] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging-benedict.sh as binomo@188.42.243.51
+  INFO [ad82a6af] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [742a426c] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.106
+  INFO [f75b158f] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.51
+  INFO [742a426c] Finished in 0.888 seconds with exit status 0 (successful).
+  INFO [f75b158f] Finished in 0.930 seconds with exit status 0 (successful).
+  INFO [38a22d43] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared /home/binomo/binomo.com/releases as binomo@188.42.243.106
+  INFO [ecbee007] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared /home/binomo/binomo.com/releases as binomo@188.42.243.51
+  INFO [ecbee007] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [38a22d43] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [007ceba2] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/shared/node_modules as binomo@188.42.243.106
+  INFO [043c3831] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/shared/node_modules as binomo@188.42.243.51
+  INFO [043c3831] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [007ceba2] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [a00fdb13] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config /home/binomo/binomo.com/shared as binomo@188.42.243.51
+  INFO [c90183b2] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/shared/config /home/binomo/binomo.com/shared as binomo@188.42.243.106
+  INFO [a00fdb13] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [c90183b2] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO Uploading /home/binomo/binomo.com/shared/.env 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/.env 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/unicorn.rb 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/unicorn.rb 100.0%
+  INFO [e3c18890] Running mkdir -p /home/binomo/binomo.com/shared/config as binomo@188.42.243.51
+  INFO [96fd2803] Running mkdir -p /home/binomo/binomo.com/shared/config as binomo@188.42.243.106
+  INFO [e3c18890] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [96fd2803] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO Uploading /home/binomo/binomo.com/shared/config/database.yml 100.0%
+  INFO Uploading /home/binomo/binomo.com/shared/config/database.yml 100.0%
+  INFO The repository mirror is at /home/binomo/binomo.com/repo
+  INFO The repository mirror is at /home/binomo/binomo.com/repo
+  INFO [e533fcee] Running /usr/bin/env git remote update --prune as binomo@188.42.243.51
+  INFO [c9dd15bd] Running /usr/bin/env git remote update --prune as binomo@188.42.243.106
+  INFO [e533fcee] Finished in 3.379 seconds with exit status 0 (successful).
+  INFO [c9dd15bd] Finished in 3.379 seconds with exit status 0 (successful).
+  INFO [dc7bc2d0] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948 as binomo@188.42.243.51
+  INFO [d063a9f1] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948 as binomo@188.42.243.106
+  INFO [dc7bc2d0] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [0f07e2a3] Running /usr/bin/env git archive bin-4015-epic/new-tutorial | tar -x -f - -C /home/binomo/binomo.com/releases/20171006131948 as binomo@188.42.243.51
+  INFO [d063a9f1] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [acd90382] Running /usr/bin/env git archive bin-4015-epic/new-tutorial | tar -x -f - -C /home/binomo/binomo.com/releases/20171006131948 as binomo@188.42.243.106
+  INFO [0f07e2a3] Finished in 4.072 seconds with exit status 0 (successful).
+  INFO [acd90382] Finished in 4.076 seconds with exit status 0 (successful).
+  INFO [1553abe5] Running /usr/bin/env echo "6c44ed796bb6d0ae31af6f45d11b9daa7100dd31" >> REVISION as binomo@188.42.243.106
+  INFO [9a357548] Running /usr/bin/env echo "6c44ed796bb6d0ae31af6f45d11b9daa7100dd31" >> REVISION as binomo@188.42.243.51
+  INFO [1553abe5] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [9a357548] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [8843e996] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/config /home/binomo/binomo.com/releases/20171006131948 as binomo@188.42.243.106
+  INFO [be9e4dcf] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/config /home/binomo/binomo.com/releases/20171006131948 as binomo@188.42.243.51
+  INFO [8843e996] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [be9e4dcf] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [d703a3cc] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/database.yml /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/config/database.yml as binomo@188.42.243.106
+  INFO [16472266] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/database.yml /home/binomo/binomo.com/releases/20171006131948/binomo.com/config/database.yml as binomo@188.42.243.51
+  INFO [d703a3cc] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [16472266] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [f09a2182] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/.env /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/.env as binomo@188.42.243.106
+  INFO [9231aef8] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/.env /home/binomo/binomo.com/releases/20171006131948/binomo.com/.env as binomo@188.42.243.51
+  INFO [f09a2182] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [9231aef8] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [eef045df] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/unicorn.rb /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/config/unicorn.rb as binomo@188.42.243.106
+  INFO [2b7799d1] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/unicorn.rb /home/binomo/binomo.com/releases/20171006131948/binomo.com/config/unicorn.rb as binomo@188.42.243.51
+  INFO [eef045df] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [2b7799d1] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [3fd69efe] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/risk_management_config.yml /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/config/risk_management_config.yml as binomo@188.42.243.106
+  INFO [3fd69efe] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [e986db4c] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/risk_management_config.yml /home/binomo/binomo.com/releases/20171006131948/binomo.com/config/risk_management_config.yml as binomo@188.42.243.51
+  INFO [e986db4c] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [24a46655] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/config /home/binomo/binomo.com/releases/20171006131948 /home/binomo/binomo.com/releases/20171006131948/tmp as binomo@188.42.243.106
+  INFO [10b21d1a] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/config /home/binomo/binomo.com/releases/20171006131948 /home/binomo/binomo.com/releases/20171006131948/tmp as binomo@188.42.243.51
+  INFO [24a46655] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [10b21d1a] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [b08e16e2] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/binomo.com/config/symmetric_encryption as binomo@188.42.243.51
+  INFO [0f8a6c4a] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.106
+  INFO [b08e16e2] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [0f8a6c4a] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [3056a852] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/binomo.com/config/symmetric_encryption as binomo@188.42.243.51
+  INFO [c3cd0571] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.106
+  INFO [3056a852] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [bd4b381c] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/releases/20171006131948/binomo.com/config/symmetric_encryption as binomo@188.42.243.51
+  INFO [c3cd0571] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [32e260b7] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/config/symmetric_encryption /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/config/symmetric_encryption as binomo@188.42.243.106
+  INFO [bd4b381c] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [32e260b7] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [4f046b24] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/binomo.com/log as binomo@188.42.243.51
+  INFO [f7fd2b45] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/log as binomo@188.42.243.106
+  INFO [4f046b24] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [f7fd2b45] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [5af3325b] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/binomo.com/log as binomo@188.42.243.51
+  INFO [da38426b] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/log as binomo@188.42.243.106
+  INFO [5af3325b] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [b8f9d0dd] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/releases/20171006131948/binomo.com/log as binomo@188.42.243.51
+  INFO [da38426b] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [de19fbd3] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/log /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/log as binomo@188.42.243.106
+  INFO [b8f9d0dd] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [de19fbd3] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [a4d4c5cf] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/binomo.com/tmp/cache as binomo@188.42.243.51
+  INFO [3c529e4a] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/tmp/cache as binomo@188.42.243.106
+  INFO [a4d4c5cf] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [3c529e4a] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [43bde888] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/binomo.com/tmp/cache as binomo@188.42.243.51
+  INFO [a20ffeee] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/tmp/cache as binomo@188.42.243.106
+  INFO [43bde888] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [f53bdfda] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/releases/20171006131948/binomo.com/tmp/cache as binomo@188.42.243.51
+  INFO [a20ffeee] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [ad7eac23] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/cache /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/tmp/cache as binomo@188.42.243.106
+  INFO [f53bdfda] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [ad7eac23] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [03808f91] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/binomo.com/tmp/pids as binomo@188.42.243.51
+  INFO [13085056] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/tmp/pids as binomo@188.42.243.106
+  INFO [03808f91] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [13085056] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [1c6e75d2] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/binomo.com/tmp/pids as binomo@188.42.243.51
+  INFO [57325e39] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/tmp/pids as binomo@188.42.243.106
+  INFO [1c6e75d2] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [74caff56] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/releases/20171006131948/binomo.com/tmp/pids as binomo@188.42.243.51
+  INFO [57325e39] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [8fcae812] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/tmp/pids /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/tmp/pids as binomo@188.42.243.106
+  INFO [74caff56] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [8fcae812] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [4513039c] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/binomo.com/node_modules as binomo@188.42.243.51
+  INFO [c0bc7fa6] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/node_modules as binomo@188.42.243.106
+  INFO [4513039c] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [c0bc7fa6] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [7202386b] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/binomo.com/node_modules as binomo@188.42.243.51
+  INFO [c42ac79a] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/node_modules as binomo@188.42.243.106
+  INFO [7202386b] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [8c36b87c] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/node_modules /home/binomo/binomo.com/releases/20171006131948/binomo.com/node_modules as binomo@188.42.243.51
+  INFO [c42ac79a] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [844b7fb6] Running /usr/bin/env ln -s /home/binomo/binomo.com/shared/node_modules /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/node_modules as binomo@188.42.243.106
+  INFO [8c36b87c] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [844b7fb6] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [3ad8ca36] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle install --path /home/binomo/binomo.com/shared/bundle --without development test --deployment --quiet as binomo@188.42.243.51
+  INFO [f2938ba0] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle install --path /home/binomo/binomo.com/shared/bundle --without development test --deployment --quiet as binomo@188.42.243.106
+  INFO [f2938ba0] Finished in 14.859 seconds with exit status 0 (successful).
+  INFO [3ad8ca36] Finished in 14.953 seconds with exit status 0 (successful).
+  INFO [05c92e65] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake rollback_missing_migrations OLD_RELEASE='/home/binomo/binomo.com/current/crm.binomo.com' NEW_RELEASE='/home/binomo/binomo.com/releases/20171006131948/crm.binomo.com' as binomo@188.42.243.106
+  INFO [05c92e65] Finished in 11.547 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in db
+  INFO [deploy:migrate] Skip `deploy:migrate` (nothing changed in db)
+  INFO [fa259cf9] Running /usr/bin/env ls /home/binomo/binomo.com/releases/20171006131423/binomo.com/assets_manifest_backup as binomo@188.42.243.51
+  INFO [928b2d94] Running /usr/bin/env ls /home/binomo/binomo.com/releases/20171006131423/crm.binomo.com/assets_manifest_backup as binomo@188.42.243.106
+  INFO [cc386858] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake assets:precompile as binomo@188.42.243.51
+  INFO [e7748521] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake assets:precompile as binomo@188.42.243.106
+  INFO [e7748521] Finished in 37.247 seconds with exit status 0 (successful).
+  INFO [cc386858] Finished in 253.708 seconds with exit status 0 (successful).
+  INFO [2f7a0e12] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/binomo.com/assets_manifest_backup as binomo@188.42.243.51
+  INFO [2f7a0e12] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [7ef3c160] Running /usr/bin/env cp /home/binomo/binomo.com/releases/20171006131948/binomo.com/public/assets/.sprockets-manifest-2cc8ba53a7dc10ac06ec1ae6082e9eff.json /home/binomo/binomo.com/releases/20171006131948/binomo.com/assets_manifest_backup as binomo@188.42.243.51
+  INFO [7ef3c160] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [a7b910ea] Running /usr/bin/env mkdir -p /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/assets_manifest_backup as binomo@188.42.243.106
+  INFO [a7b910ea] Finished in 0.246 seconds with exit status 0 (successful).
+  INFO [0badc6ed] Running /usr/bin/env cp /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/public/assets/.sprockets-manifest-e0bfd470be0d7b340ab9205e626fd34c.json /home/binomo/binomo.com/releases/20171006131948/crm.binomo.com/assets_manifest_backup as binomo@188.42.243.106
+  INFO [0badc6ed] Finished in 0.190 seconds with exit status 0 (successful).
+  INFO [20433d0b] Running /usr/bin/env ln -s /home/binomo/binomo.com/releases/20171006131948 /home/binomo/binomo.com/releases/current as binomo@188.42.243.106
+  INFO [a6733bc8] Running /usr/bin/env ln -s /home/binomo/binomo.com/releases/20171006131948 /home/binomo/binomo.com/releases/current as binomo@188.42.243.51
+  INFO [20433d0b] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [10dee8b6] Running /usr/bin/env mv /home/binomo/binomo.com/releases/current /home/binomo/binomo.com as binomo@188.42.243.106
+  INFO [a6733bc8] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [d1da7bb1] Running /usr/bin/env mv /home/binomo/binomo.com/releases/current /home/binomo/binomo.com as binomo@188.42.243.51
+  INFO [10dee8b6] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [d1da7bb1] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [2941b45a] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rake daemon:que_daemon:restart as binomo@188.42.243.106
+  INFO [2941b45a] Finished in 10.452 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+  INFO unicorn is running...
+  INFO unicorn restarting...
+  INFO [1eacd215] Running /usr/bin/env kill -s USR2 `cat /home/binomo/binomo.com/shared/tmp/pids/unicorn.pid` as binomo@188.42.243.106
+  INFO unicorn restarting...
+  INFO [61c999f5] Running /usr/bin/env kill -s USR2 `cat /home/binomo/binomo.com/shared/tmp/pids/unicorn.pid` as binomo@188.42.243.51
+  INFO [1eacd215] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [61c999f5] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [3089312f] Running /usr/bin/env sleep 20 as binomo@188.42.243.51
+  INFO [04b10214] Running /usr/bin/env sleep 20 as binomo@188.42.243.106
+  INFO [04b10214] Finished in 20.134 seconds with exit status 0 (successful).
+  INFO [3089312f] Finished in 20.136 seconds with exit status 0 (successful).
+  INFO [6c0cea5e] Running echo 'flush_all' | nc 188.42.243.49 11211 as binomo@188.42.243.106
+  INFO [6c0cea5e] Finished in 0.143 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 5 deployed releases on 188.42.243.51
+  INFO [3aa0720a] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006112507 /home/binomo/binomo.com/releases/20171006124332 /home/binomo/binomo.com/releases/20171006125546 as binomo@188.42.243.51
+  INFO Keeping 2 of 5 deployed releases on 188.42.243.106
+  INFO [4e5c8769] Running /usr/bin/env rm -rf /home/binomo/binomo.com/releases/20171006112507 /home/binomo/binomo.com/releases/20171006124332 /home/binomo/binomo.com/releases/20171006125546 as binomo@188.42.243.106
+  INFO [4e5c8769] Finished in 3.416 seconds with exit status 0 (successful).
+  INFO [3aa0720a] Finished in 4.257 seconds with exit status 0 (successful).
+  INFO [083fb58b] Running /usr/bin/env echo "Branch bin-4015-epic/new-tutorial (at 6c44ed796bb6d0ae31af6f45d11b9daa7100dd31) deployed as release 20171006131948 by benedict" >> /home/binomo/binomo.com/revisions.log as binomo@188.42.243.51
+  INFO [00945a8e] Running /usr/bin/env echo "Branch bin-4015-epic/new-tutorial (at 6c44ed796bb6d0ae31af6f45d11b9daa7100dd31) deployed as release 20171006131948 by benedict" >> /home/binomo/binomo.com/revisions.log as binomo@188.42.243.106
+  INFO [00945a8e] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [083fb58b] Finished in 0.120 seconds with exit status 0 (successful).

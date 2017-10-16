@@ -3,20 +3,19 @@ end
 
 When /^Make deposit CardPay$/ do
   print_result = -> {puts_danger "CardPay not working!!!" }
-  retried_process(2, 2, print_result) do
+  # retried_process(2, 2, print_result) do
     ENV['count_cashier'].to_i.times do |i|
       DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier")
       sleep 5
       DRIVER.find_element(:css, "li.unit-payment-system.card").click
       sleep 0.5
-      DRIVER.execute_script("$('.form-control').val('#{ENV['count_cashier_dep']}').trigger('change').scope().vm.amount")
+      DRIVER.execute_script("angular.element(document.querySelectorAll('.form-control'))[0].value = #{ENV['count_cashier_dep']}")
       sleep 0.5
-      DRIVER.execute_script("$('.accept-bonus').scope().vm.applyBonus = false") if ENV["bonus_dep"].to_s == "true"
+      DRIVER.execute_script("angular.element(document.querySelectorAll('.accept-bonus')[0].click())[0] = false") if ENV["bonus_dep"].to_s == "true"
       sleep 1
       DRIVER.find_element(:css, "div.payment-wrapper.card > form > div.final-actions > div > div:nth-child(1) > div > input").click
 
-      # wait_until(10, :id, "iframe")
-      10
+      wait_until(10, :id, "iframe")
       frame = DRIVER.find_element(:id, 'iframe')
       DRIVER.switch_to.frame frame
         wait_until(5, :id, "card-number")
@@ -40,7 +39,7 @@ When /^Make deposit CardPay$/ do
          sleep 4
          close_active_window
     end
-  end
+  # end
 end
 
 Then /^Deposit CardPay created$/ do

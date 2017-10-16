@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'spec_helper'
 
 RSpec.describe Homepage::NeedLinkController, type: :view do
-  app_host = "http://localhost:3000"
+  app_host = "http://localhost:3001"
 
   describe "/need_link.html.slim" do
     before do
