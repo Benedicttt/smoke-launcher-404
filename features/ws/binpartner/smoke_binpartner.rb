@@ -2,7 +2,7 @@ require "./features/helpers/decor"
 
 module Server
   class SmokeBinpartner
-    attr_accessor :smoke_binpartner, :count_features, :thread, :clear_cache, :proxy_http, :proxy_server
+    attr_accessor :smoke_binpartner, :count_features, :thread, :clear_cache, :proxy_http, :proxy_server, :ip_address
 
     def initialize(params)
       @params = params
