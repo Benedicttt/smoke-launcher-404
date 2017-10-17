@@ -5,7 +5,7 @@ When /^Testing bonus deposit$/ do
   DRIVER.find_element(:css, ".filter-option").click
   sleep 0.5
   DRIVER.find_element(:css, ".filter-option").click
-  DRIVER.execute_script("$(\".text:contains('#{$id_bonus_deposit}')\").click()")
+  find_and_click_selectors('.text', $id_bonus_deposit, DRIVER)
   sleep 1
   DRIVER.find_elements(:css, ".btn-primary")[1].click
   sleep 0.5

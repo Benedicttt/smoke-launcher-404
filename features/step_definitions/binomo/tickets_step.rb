@@ -19,15 +19,15 @@ When /^Data ticket$/ do
     print_result = -> {puts "Error open form (retried)"; return; puts}
     retried_process(3, 3, print_result) do
       sleep 1
-      $tickets.execute_script("$('.b-unit-ask-question').scope().showTicketQuestion()")
+      $tickets.execute_script("angular.element(document.querySelectorAll('.b-unit-ask-question')[0]).scope().showTicketQuestion()")
       sleep 1
-      $tickets.execute_script("$('span.unit.ng-binding.ng-scope').click()")
+      $tickets.execute_script("document.querySelectorAll('span.unit.ng-binding.ng-scope')[0].click()")
       sleep 1
       $tickets.find_element(:css, "input[name='title']").send_keys("Question title")
       sleep 1
       $tickets.find_element(:css, "textarea[name='text']").send_keys("Question textarea")
       sleep 1
-      $tickets.execute_script("$('.btn-primary:first').click()")
+      $tickets.execute_script("document.querySelector('.btn-primary:first').click()")
       sleep 5
       puts_info "Tickets created"
     end
@@ -35,6 +35,6 @@ When /^Data ticket$/ do
 end
 
 Then /^Ticket created$/ do
-  $tickets.execute_script("$('.btn-primary')[1].click()")
+  $tickets.execute_script("document.querySelector('.btn-primary').click()")
   $tickets.quit
 end

@@ -56,7 +56,7 @@ Then(/^Auth soc reg facebook$/) do
   DRIVER.manage.add_cookie(name: "geo", value: "#{ENV['geo']}")
   DRIVER.navigate.refresh
   sleep 1
-  DRIVER.find_element(:css, "div:nth-child(2) > div > button").click
+  DRIVER.find_element(:css, "button[ui-sidebar-control=\"sign-in\"]").click
   sleep 3
   DRIVER.find_elements(:css, 'div.btn-icon.btn-md.ng-scope.btn-icon-facebook')[1].click
   sleep 1
