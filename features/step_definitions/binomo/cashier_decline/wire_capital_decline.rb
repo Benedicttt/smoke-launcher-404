@@ -4,8 +4,11 @@ When /^Make deposit WireCapital decline$/ do
    ENV['count_cashier'].to_i.times do |i|
      DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier")
      sleep 3
-     DRIVER.execute_script("document.querySelectorAll('input[name=useNew]').click()") 
-
+     begin
+       DRIVER.execute_script("document.querySelector('input[name=useNew]').click()")
+     rescue
+       puts_danger "Not found checkbox \"NEW\""
+     end
      sleep 3
 
      DRIVER.find_element(:css, "li.unit-payment-system.card").click
