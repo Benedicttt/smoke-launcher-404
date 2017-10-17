@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-16 18:26:38 +0300
+Feature: SMoke test generate 2017-10-16 19:35:31 +0300
  Scenario: Run step partner
  Given Pid process
  

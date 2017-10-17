@@ -12,14 +12,18 @@ When(/^Open list deals$/) do
   @sum_deal = ENV['count_deals_sum'].to_s
   sleep 1
 
+  sleep 1
+  $deals.find_elements(:css, "a.i-unit-icon-toggle.ng-isolate-scope")[0].click
+  sleep 1
+
   begin
-    sleep 1
-    $deals.find_elements(:css, "a.i-unit-icon-toggle.ng-isolate-scope")[0].click
-    sleep 1
+
     @result = $deals.find_elements(:css, "div.total-count > div.result > span.currency-amount")[0].text
-  rescue
+
+  rescue NoMethodError
     puts_info "not found"
     puts raise
+
   end
 
 end
