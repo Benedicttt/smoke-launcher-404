@@ -19,7 +19,8 @@ class Payouts
     ENV['count_payouts'].to_i.times do |i|
       sleep 0.5
       begin
-        driver.execute_script("$(\"span:contains('#{number_small}')\").click().trigger('change')")
+        find_and_click_selectors('span', "#{number_small}", driver)
+
         sleep 1
       rescue
         puts_danger "No find type card #{number_full}" if i == 0

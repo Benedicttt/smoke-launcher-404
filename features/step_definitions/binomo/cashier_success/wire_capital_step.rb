@@ -11,11 +11,15 @@ When /^Make deposit WireCapital$/ do
      sleep 3
      DRIVER.find_element(:css, "li.unit-payment-system.card").click
      sleep 0.5
+
+     DRIVER.execute_script("angular.element(document.querySelector(\".checkbox.checkbox-secondary\").click())") if ENV["bonus_dep"].to_s == "true"
+
      DRIVER.execute_script("angular.element(document.querySelectorAll('.form-control'))[0].value = #{ENV['count_cashier_dep']}")
+     sleep 1
      DRIVER.execute_script("document.querySelectorAll('.form-control')[0].dispatchEvent(new Event('change'))")
 
-     sleep 1
-     DRIVER.execute_script("angular.element(document.querySelectorAll('.accept-bonus')[0].click())[0] = false") if ENV["bonus_dep"].to_s == "true"
+    #  sleep 1
+    #  DRIVER.execute_script("angular.element(document.querySelectorAll('.accept-bonus')[0].click())[0] = false") if ENV["bonus_dep"].to_s == "true"
      sleep 1
      DRIVER.find_element(:css, "div.payment-wrapper.card > form > div.final-actions > div > div:nth-child(1) > div > input").click
 
