@@ -18,12 +18,14 @@ Given /^Testing bonuses$/ do
 
       bon.get(CommonSetting[:url_page_crm] + "coupons/user_coupons/new?scope=individual")
       sleep 2
-      bon.execute_script("$(\"span:contains('#{$id_bonus}')\").click()")
+
+      find_and_click_selectors('.text', $id_bonus, bon)
+
       bon.find_element(:id, "coupon_count").send_keys("2")
 
       @id = User.where(stage_number: ENV['stage']).last.id
       bon.find_element(:id, "coupon_user_ids").send_keys("#{@id}")
-      bon.execute_script("$('input[type=submit].btn-primary').click()")
+      bon.execute_script("document.querySelector('input[type=submit].btn-primary').click()")
       sleep 1
 
       bon.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/trading")
@@ -33,10 +35,10 @@ Given /^Testing bonuses$/ do
       add_cookies_to_page(bon)
       bon.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/trading")
       sleep 5
-      bon.execute_script("$(\".i-unit > .title > translate\")[1].click()")
+      bon.execute_script("document.querySelectorAll(\".i-unit > .title > translate\")[1].click()")
       # bon.execute_script("$(\"translate:contains('Bonuses')\")[0].click()")
       sleep 2
-      bon.execute_script("$('button.btn-primary.btn-sm').click()")
+      bon.execute_script("document.querySelector('button.btn-primary.btn-sm').click()")
       sleep 2
 
 

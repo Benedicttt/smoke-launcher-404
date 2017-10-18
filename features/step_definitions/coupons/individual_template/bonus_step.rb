@@ -17,7 +17,7 @@ Given(/^Template Bonus$/) do
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").send_keys("10")
   end
 
-  %w[RUB KZT CNY TRY UAH INR ZAR].each do |name|
+  %w[RUB KZT CNY TRY UAH INR ZAR GDQ IDR VND MYR GTQ].each do |name|
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").clear

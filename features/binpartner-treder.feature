@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-16 19:35:31 +0300
+Feature: SMoke test generate 2017-10-18 11:59:42 +0300
  Scenario: Run step partner
  Given Pid process
  
@@ -26,51 +26,19 @@ Feature: SMoke test generate 2017-10-16 19:35:31 +0300
  	When Make deposit WireCapital
  	Then Deposit WireCapital created
  
- Given Connect to the CRM provider "Credit card"
- 	When Visit cashier CreditCard
- 	When Make deposit CreditCard
- 	Then Deposit CreditCard created
- 
- 	When Visit cashier CreditCard
- 	When Make deposit CreditCard decline
- 	Then Before balance
- 	When Check status 'Reject' in payment Credit Card
- 	Then After balance
- 
- Given Connect to the CRM provider "Card Pay"
- When Visit cashier CardPay
- 	When Make deposit CardPay
- 	Then Deposit CardPay created
- 
- When Visit cashier CardPay
- 	When Make deposit CardPay decline
- 	When Check status 'Reject' in payment CardPay
- 	Then Before balance
- 	Then Deposit CardPay decline
- 	Then After balance
- 
  	Given Doc protected to
  		Then Protected set done
  
  Given Visit payouts
  
- 	When The creation of an application for withdrawal for CreditCard
- 	Then Applications created CreditCard
- 
- 	When The creation of an application for withdrawal for CardPay
- 	Then Applications created CardPay
- 
 Given Visit page trading
 
  When Use real type
  
- 	When Make a deals asset GOL/OTC and win bet
+ 	When Make a deals asset GOL/OTC and lose bet
  	Then Transactions committed
  
 
- 	Given Find status treder
- 	Then Status treder
- 
  Given Visit page CRM
  	When Authorization crm
  	Then Success
