@@ -236,3 +236,8 @@ modify country Poland 1: "
   Given Open page modify country\n
   When Set modify country 1.0\n
 "
+
+payout_wire_capital: "
+  \tWhen The creation of an application for withdrawal for WireCapital\n
+  \tThen Applications created WireCapital\n
+"

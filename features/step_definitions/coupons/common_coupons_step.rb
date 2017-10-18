@@ -32,7 +32,8 @@ Then /^Activate coupons\?$/ do
   DRIVER.find_elements(:css, ".coupon_code")[0].send_keys($code)
   sleep 2
   puts_success "#{$code}"
-  if DRIVER.execute_script("return $('.text-green-darker').is(':visible')") == true
+
+  if DRIVER.find_elements(:css, '.text-green-darker')[0].displayed? == true
     puts_success "Common coupon visible icon true"
   else
     puts_danger "Common coupon visible icon false"

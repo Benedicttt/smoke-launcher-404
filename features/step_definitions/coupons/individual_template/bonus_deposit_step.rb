@@ -14,7 +14,7 @@ Given(/^Template Bonus Deposit$/) do
   DRIVER.find_elements(:css, "button.btn.dropdown-toggle.selectpicker.btn-default")[0].click
   DRIVER.find_elements(:css, "span.text")[0].click
 
-  [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ].each do |i|
+  [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].each do |i|
     DRIVER.find_elements(:id, "amount")[i].clear
     DRIVER.find_elements(:id, "bonus")[i].clear
     DRIVER.find_elements(:id, "leverage")[i].clear

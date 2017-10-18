@@ -10,6 +10,7 @@ When /^Make deposit CardPay$/ do
       DRIVER.find_element(:css, "li.unit-payment-system.card").click
       sleep 0.5
       DRIVER.execute_script("angular.element(document.querySelectorAll('.form-control'))[0].value = #{ENV['count_cashier_dep']}")
+      DRIVER.execute_script("document.querySelectorAll('.form-control')[0].dispatchEvent(new Event('change'))")
       sleep 0.5
       DRIVER.execute_script("angular.element(document.querySelectorAll('.accept-bonus')[0].click())[0] = false") if ENV["bonus_dep"].to_s == "true"
       sleep 1

@@ -3,7 +3,7 @@ When(/^Open list deals$/) do
   sleep 3
   $deals.find_elements(:css, ".dropdown-caret")[2].click
   sleep 3
-  $deals.execute_script("$(\".f-left:contains('FOR/HEIGHT')\")[0].click()")
+  find_and_click_selectors('span', 'FOR/HEIGHT', $deals)
   sleep 2
   $deals.find_elements(:css, ".dropdown-caret")[2].click
   sleep 5

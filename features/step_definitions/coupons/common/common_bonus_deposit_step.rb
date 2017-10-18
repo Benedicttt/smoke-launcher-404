@@ -4,13 +4,14 @@ Given(/^Template common \- bonus deposit$/) do
 
   $name_coupons = "Common-#{Time.now}"
   DRIVER.find_element(:id, "coupon_name").send_keys($name_coupons)
-  DRIVER.find_element(:id, "coupon_lifetime").clear
-  DRIVER.find_element(:id, "coupon_activations").send_keys("100")
-  DRIVER.find_element(:id, "coupon_lifetime").clear
+  DRIVER.find_element(:id, "coupon_activations").clear
   DRIVER.find_element(:id, "coupon_activations").send_keys("100")
 
+  DRIVER.find_element(:id, "coupon_lifetime").clear
+  DRIVER.find_element(:id, "coupon_lifetime").send_keys("100")
 
-  9.times do |i, num|
+
+  14.times do |i, num|
     i +=11
     DRIVER.find_element(:css, "#new_coupon > table:nth-child(#{i}) > tfoot > tr > td:nth-child(2) > #amount").clear
     DRIVER.find_element(:css, "#new_coupon > table:nth-child(#{i}) > tfoot > tr > td:nth-child(2) > #amount").send_keys("50")

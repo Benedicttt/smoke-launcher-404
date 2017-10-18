@@ -8,7 +8,19 @@ def status_code_pages(driver, src)
       xhr.send(null);
       setTimeout(function(){}, 500)
 JSS
+
+  jquery = <<JSS
+   msg = '';
+    if (window.jQuery) {
+        msg = 'You are running jQuery version: ' + jQuery.fn.jquery;
+    } else {
+        msg = 'jQuery is not installed';
+    }
+    return msg
+JSS
+
   driver.execute_script(js_script)
+  jquery = driver.execute_script(jquery)
 
   retried_process(1) do
     sleep 0.5
@@ -19,10 +31,11 @@ JSS
     else
     end
 
+
     if status == 200 || status == 302
-      print "<br><br>" + link_report_id(URI.encode(src).sub(/%0A/, ''), URI.encode(src).sub(/%0A/, '') + " => " + "<text class= 'status_green'><style type='text/css'> .status_green { color:#245; font-size:16px;} </style> #{status}</text>") + "<br><br><br>" if ENV['response_http'] == "true"
+      print "<br><br>" + link_report_id(URI.encode(src).sub(/%0A/, ''), URI.encode(src).sub(/%0A/, '') + " => " + "<text class= 'status_green'><style type='text/css'> .status_green { color:#245; font-size:16px;} </style> #{status} #{jquery}</text>") + "<br><br><br>" if ENV['response_http'] == "true"
     else
-      print "<br><br>" + link_report_id(URI.encode(src).sub(/%0A/, ''), URI.encode(src).sub(/%0A/, '') + " => " + "<text class= 'status_red'><style type='text/css'> .status_red { color:red; font-size:16px;} </style> #{status}</text>") + "<br><br><br>" if ENV['not_response_http'] == "true"
+      print "<br><br>" + link_report_id(URI.encode(src).sub(/%0A/, ''), URI.encode(src).sub(/%0A/, '') + " => " + "<text class= 'status_red'><style type='text/css'> .status_red { color:red; font-size:16px;} </style> #{status} #{jquery} </text>") + "<br><br><br>" if ENV['not_response_http'] == "true"
     end
   end
 end
