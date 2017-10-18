@@ -18,7 +18,7 @@ When /^Registration traider refcode$/  do
   DRIVER.find_element(:css, "input[name=email]").send_keys(EMAIL)
   DRIVER.find_element(:css, "input[name=password]").send_keys(CommonSetting[:user_test]['pass_platform'])
   1.times { DRIVER.find_element(:css, "span[ng-bind='::vm.title']").click; sleep 0.5 }
-  
+
   2.times { DRIVER.execute_script(CommonSetting[:currency][0]) }
   sleep 1
   DRIVER.find_element(:css, "fieldset > div:nth-child(6) > button").click
@@ -36,5 +36,5 @@ Then /^Email, locale, id, currency \- partner$/ do
         refcode = '#{ENV["refcode"]}',
         tariff = '#{ENV['tariff']}',
         partner_id = (select id from partners where refcode = '#{Partner.last.refcode}')
-        where id = '#{User.last.id}' ;"
+        where id = '#{User.where(stage_number: ENV['stage']).last.id}' ;"
 end

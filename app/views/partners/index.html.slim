@@ -111,10 +111,10 @@ p
                 button.btn.btn-xs.btn-sm.btn-primary type="button" data-toggle="dropdown"
                   | Users
                 ul.dropdown-menu
-                  - @users.each do |i|
+                  - @users.each do |user|
                     li
-                      a href = 'https://#{post.stage_number}-crm.binomo.com/users/#{i.id}' target='_blank'
-                        = [i.id, "t=#{i.tariff}"].reverse.join(' ')
+                      a href = 'https://#{post.stage_number}-crm.binomo.com/users/#{user.id}' target='_blank'
+                        = [user.id, "t=#{user.tariff}"].reverse.join(' ')
 
             th.col-xs-1
               - if (@reports = ReportsPartner.where(user_id: post.id)).length > 0

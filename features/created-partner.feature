@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-18 11:10:59 +0300
+Feature: SMoke test generate 2017-10-18 14:23:19 +0300
  Scenario: Run step partner
  Given Pid process
  
@@ -8,10 +8,6 @@ Scenario:	Then Pool ranning?
  Given Open page modify country
  When Set modify country null
  
- 	Given Add landings 
- 	Given Add video 
- 	Given Add banners 
- 	Given Add logos 
  Given Visit to page partner.com
  	When Partner registration
  	Then Registered partner
