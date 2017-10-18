@@ -17,7 +17,8 @@ When /^Registration traider refcode$/  do
   DRIVER.find_element(:class, "btn-primary").click
   DRIVER.find_element(:css, "input[name=email]").send_keys(EMAIL)
   DRIVER.find_element(:css, "input[name=password]").send_keys(CommonSetting[:user_test]['pass_platform'])
-  1.times { DRIVER.find_element(:css, "span[ng-bind='::vm.title']").click; sleep 0.5 }
+  1.times { DRIVER.find_element(:css, "span[ng-bind='::vm.title']").click if ENV['geo'].to_s != "PL" }
+  sleep 0.5
 
   2.times { DRIVER.execute_script(CommonSetting[:currency][0]) }
   sleep 1

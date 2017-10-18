@@ -1,11 +1,11 @@
-Feature: SMoke test generate 2017-10-18 14:32:26 +0300
+Feature: SMoke test generate 2017-10-18 18:44:25 +0300
  Scenario: Run step partner
  Given Pid process
  
- Given Visit with partner refcode
- 	When Registration traider refcode
- 	Then Email, locale, id, currency - partner
+ When Use demo type
  
-Given Visit page trading
+ 	When Make a deals asset GOL/OTC and lose bet
+ 	Then Transactions committed
+ 
 
 Scenario:	Then Pool ranning?
