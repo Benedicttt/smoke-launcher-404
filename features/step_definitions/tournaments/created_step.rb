@@ -53,7 +53,7 @@ When /^Add data$/ do
     DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").clear
 
     DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").send_keys("100")
-    DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").send_keys("5000")
+    DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").send_keys("100")
     DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").send_keys("100")
   end
   sleep 1

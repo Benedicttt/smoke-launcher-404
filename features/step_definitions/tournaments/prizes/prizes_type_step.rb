@@ -6,7 +6,7 @@ Given /^Fixed$/ do
 
   (1..quality.to_i).each do |num|
     13.times do |i|
-      DRIVER.find_element(:css, "input[name='tournament[prizes_attributes][#{num}][amounts_attributes][#{i}][value]']").send_keys("1000")
+      DRIVER.find_element(:css, "input[name='tournament[prizes_attributes][#{num}][amounts_attributes][#{i}][value]']").send_keys("#{100/quality}")
     end
   end
 end
@@ -18,6 +18,6 @@ Given /^Percentage$/ do
   sleep 1
 
   (1..quality.to_i).each do |num|
-    DRIVER.find_element(:css, "input[name='tournament[prizes_attributes][#{num}][percent]']").send_keys("1000")
+    DRIVER.find_element(:css, "input[name='tournament[prizes_attributes][#{num}][percent]']").send_keys("#{100/quality}")
   end
 end
