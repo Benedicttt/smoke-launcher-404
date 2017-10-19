@@ -32,7 +32,6 @@ class RequestWS
                   "ref":"2",
                   "join_ref":"1"
                 }
-      puts msg
       demo_request = JSON.dump(params)
       count.times { ws.send demo_request }
       exit 1 if disconnect == true

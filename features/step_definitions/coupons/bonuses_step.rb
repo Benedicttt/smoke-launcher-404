@@ -39,6 +39,8 @@ Given /^Testing bonuses$/ do
       # bon.execute_script("$(\"translate:contains('Bonuses')\")[0].click()")
       sleep 2
       bon.execute_script("document.querySelector('button.btn-primary.btn-sm').click()")
+      sleep 1
+      bon.execute_script("document.querySelector('button.btn-primary.btn-sm').click()")
       sleep 2
 
 

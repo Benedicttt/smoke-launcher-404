@@ -13,40 +13,48 @@ Given /^Tournament$/ do
   sleep 1
 end
 
-When /^Add data$/ do
-  %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
-    num += 1
-    DRIVER.execute_script("$('#main-content > div > ul > li:nth-child(#{num.to_i}) > a').click()") #en
 
-    banner = File.join(Rails.root, './app/assets/images/bg.jpeg')
-    DRIVER.find_element(:id, "tournament_banner_content_#{locale}").send_keys(banner)
-    DRIVER.find_element(:id, "tournament_banner_preview_#{locale}").send_keys(banner)
-    sleep 0.1
-    DRIVER.find_element(:id, "tournament_name_#{locale}").clear
-    DRIVER.find_element(:id, "tournament_name_#{locale}").send_keys("#{locale} " + "#{Time.now}")
-    DRIVER.find_element(:id, "tournament_url_#{locale}").clear
-    DRIVER.find_element(:id, "tournament_url_#{locale}").send_keys("url-tour-#{locale}")
+When /^Add data$/ do
+
+    banner = File.join(Rails.root, './app/assets/images/bg.png')
+    DRIVER.find_element(:id, "tournament_banner_content").send_keys(banner)
+    DRIVER.find_element(:id, "tournament_banner_preview").send_keys(banner)
+    DRIVER.find_element(:id, "tournament_url").clear
+    DRIVER.find_element(:id, "tournament_url").send_keys("url-tournament")
+
+    DRIVER.find_element(:id, "tournament_registration_interval").clear
+    DRIVER.find_element(:id, "tournament_registration_interval").send_keys("150")
+    DRIVER.find_element(:id, "tournament_initial_balance").clear
+    DRIVER.find_element(:id, "tournament_initial_balance").send_keys("100")
+    DRIVER.find_element(:id, "tournament_min_users_count").clear
+    DRIVER.find_element(:id, "tournament_min_users_count").send_keys("0")
+    DRIVER.find_element(:id, "tournament_rebuy").click
+    DRIVER.find_element(:id, "tournament_rebuy_max_balance").clear
+    DRIVER.find_element(:id, "tournament_rebuy_max_balance").send_keys("100")
+    DRIVER.find_element(:id, "tournament_rebuy_amount").clear
+    DRIVER.find_element(:id, "tournament_rebuy_amount").send_keys("10")
 
     DRIVER.execute_script("$('.fr-element.fr-view').text('Tournament for all locales')")
     DRIVER.execute_script("$(\"span:contains('activated')\").click()")
-    DRIVER.execute_script("$('.bs-select-all').click()")
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_USD").clear
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_USD").send_keys('10')
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_EUR").clear
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_EUR").send_keys('10')
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_RUB").clear
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_RUB").send_keys('100')
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_KZT").clear
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_KZT").send_keys('100')
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_CNY").clear
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_CNY").send_keys('10')
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_TRY").clear
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_TRY").send_keys('10')
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_INR").clear
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_INR").send_keys('10')
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_UAH").clear
-    DRIVER.find_element(:id, "tournament_configuration_deals_min_amount_UAH").send_keys('10')
-    DRIVER.find_element(:id, "tournament_count_winners").clear
-    DRIVER.find_element(:id, "tournament_count_winners").send_keys('10')
+
+
+  %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
+    num += 1
+    DRIVER.execute_script("$('#new_tournament > div:nth-child(4) > div:nth-child(1) > ul > li:nth-child(#{num.to_i}) > a').click()") #en
+    sleep 0.1
+    DRIVER.find_element(:id, "tournament_content_#{locale}").send_keys("Tornaments #{locale.upcase}")
+    DRIVER.find_element(:id, "tournament_name_#{locale}").clear
+    DRIVER.find_element(:id, "tournament_name_#{locale}").send_keys("#{locale} " + "#{Time.now}")
   end
+
+  (0..12).each do |num|
+    DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").clear
+    DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").clear
+    DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").clear
+
+    DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").send_keys("100")
+    DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").send_keys("5000")
+    DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").send_keys("100")
+  end
+  sleep 1
 end

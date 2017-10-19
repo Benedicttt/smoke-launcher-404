@@ -5,6 +5,7 @@ require 'em-websocket'
 require 'websocket'
 require 'socket'
 require 'selenium-webdriver'
+require 'cucumber'
 
 Given /^Pid process$/ do
   if ENV['driver'] == "firefox"

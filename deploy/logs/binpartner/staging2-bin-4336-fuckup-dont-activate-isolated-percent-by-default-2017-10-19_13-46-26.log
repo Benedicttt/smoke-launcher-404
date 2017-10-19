@@ -1,0 +1,107 @@
+  INFO [fdc47c1e] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle -v as binpartner@188.42.243.71
+  INFO [fdc47c1e] Finished in 1.159 seconds with exit status 0 (successful).
+  INFO [ceb35675] Running /usr/bin/env mkdir -p /tmp as binpartner@188.42.243.71
+  INFO [ceb35675] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-binpartner-staging2-benedict.sh 100.0%
+  INFO [065c02b9] Running /usr/bin/env chmod 700 /tmp/git-ssh-binpartner-staging2-benedict.sh as binpartner@188.42.243.71
+  INFO [065c02b9] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [e8475fbe] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binpartner@188.42.243.71
+  INFO [e8475fbe] Finished in 0.860 seconds with exit status 0 (successful).
+  INFO [257019f7] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/shared /home/binpartner/binpartner.com/releases as binpartner@188.42.243.71
+  INFO [257019f7] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [b5fa12a9] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/shared/public/assets /home/binpartner/binpartner.com/shared/config/symmetric_encryption /home/binpartner/binpartner.com/shared/log /home/binpartner/binpartner.com/shared/tmp/cache /home/binpartner/binpartner.com/shared/tmp/pids /home/binpartner/binpartner.com/shared/node_modules as binpartner@188.42.243.71
+  INFO [b5fa12a9] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [c2078b79] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/shared/config /home/binpartner/binpartner.com/shared as binpartner@188.42.243.71
+  INFO [c2078b79] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO Uploading /home/binpartner/binpartner.com/shared/.env 100.0%
+  INFO Uploading /home/binpartner/binpartner.com/shared/config/unicorn.rb 100.0%
+  INFO [afc6efd6] Running mkdir -p /home/binpartner/binpartner.com/shared/config as binpartner@188.42.243.71
+  INFO [afc6efd6] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO Uploading /home/binpartner/binpartner.com/shared/config/database.yml 100.0%
+  INFO The repository mirror is at /home/binpartner/binpartner.com/repo
+  INFO [bffbe10f] Running /usr/bin/env git remote update --prune as binpartner@188.42.243.71
+  INFO [bffbe10f] Finished in 1.115 seconds with exit status 0 (successful).
+  INFO [1b1eba29] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641 as binpartner@188.42.243.71
+  INFO [1b1eba29] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [ddc6441f] Running /usr/bin/env git archive bin-4336-fuckup/dont-activate-isolated-percent-by-default binpartner.com | tar -x --strip-components 1 -f - -C /home/binpartner/binpartner.com/releases/20171019104641 as binpartner@188.42.243.71
+  INFO [ddc6441f] Finished in 0.826 seconds with exit status 0 (successful).
+  INFO [b8980c12] Running /usr/bin/env echo "a8d19852e3990e8bbe4ae80c637a2170a902d3d4" >> REVISION as binpartner@188.42.243.71
+  INFO [b8980c12] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [95ad2da5] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/config /home/binpartner/binpartner.com/releases/20171019104641 as binpartner@188.42.243.71
+  INFO [95ad2da5] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [1dbe0920] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/config/database.yml /home/binpartner/binpartner.com/releases/20171019104641/config/database.yml as binpartner@188.42.243.71
+  INFO [1dbe0920] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [d87396e8] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/.env /home/binpartner/binpartner.com/releases/20171019104641/.env as binpartner@188.42.243.71
+  INFO [d87396e8] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [998690b1] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/config/unicorn.rb /home/binpartner/binpartner.com/releases/20171019104641/config/unicorn.rb as binpartner@188.42.243.71
+  INFO [998690b1] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [f72cd987] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/public /home/binpartner/binpartner.com/releases/20171019104641/config /home/binpartner/binpartner.com/releases/20171019104641 /home/binpartner/binpartner.com/releases/20171019104641/tmp as binpartner@188.42.243.71
+  INFO [f72cd987] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [1802aea4] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/public/assets as binpartner@188.42.243.71
+  INFO [1802aea4] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [459c1782] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019104641/public/assets as binpartner@188.42.243.71
+  INFO [459c1782] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [088b27e5] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/public/assets /home/binpartner/binpartner.com/releases/20171019104641/public/assets as binpartner@188.42.243.71
+  INFO [088b27e5] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [c6da92e6] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/config/symmetric_encryption as binpartner@188.42.243.71
+  INFO [c6da92e6] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [a7f8d5e3] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019104641/config/symmetric_encryption as binpartner@188.42.243.71
+  INFO [a7f8d5e3] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [82250f70] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/config/symmetric_encryption /home/binpartner/binpartner.com/releases/20171019104641/config/symmetric_encryption as binpartner@188.42.243.71
+  INFO [82250f70] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [657a7a7e] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/log as binpartner@188.42.243.71
+  INFO [657a7a7e] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [2c611444] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019104641/log as binpartner@188.42.243.71
+  INFO [2c611444] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [24173264] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/log /home/binpartner/binpartner.com/releases/20171019104641/log as binpartner@188.42.243.71
+  INFO [24173264] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [83fb832a] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/tmp/cache as binpartner@188.42.243.71
+  INFO [83fb832a] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [b0d5b4d1] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019104641/tmp/cache as binpartner@188.42.243.71
+  INFO [b0d5b4d1] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [320670f0] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/tmp/cache /home/binpartner/binpartner.com/releases/20171019104641/tmp/cache as binpartner@188.42.243.71
+  INFO [320670f0] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [61946b75] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/tmp/pids as binpartner@188.42.243.71
+  INFO [61946b75] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [4cc77789] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019104641/tmp/pids as binpartner@188.42.243.71
+  INFO [4cc77789] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [c31d4f61] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/tmp/pids /home/binpartner/binpartner.com/releases/20171019104641/tmp/pids as binpartner@188.42.243.71
+  INFO [c31d4f61] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [0b21f58e] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/node_modules as binpartner@188.42.243.71
+  INFO [0b21f58e] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [bd25315f] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019104641/node_modules as binpartner@188.42.243.71
+  INFO [bd25315f] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [09454d8a] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/node_modules /home/binpartner/binpartner.com/releases/20171019104641/node_modules as binpartner@188.42.243.71
+  INFO [09454d8a] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [b90e5bab] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle install --path /home/binpartner/binpartner.com/shared/bundle --without development test --deployment --quiet as binpartner@188.42.243.71
+  INFO [b90e5bab] Finished in 13.590 seconds with exit status 0 (successful).
+  INFO [076b282b] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle exec rake rollback_missing_migrations OLD_RELEASE='/home/binpartner/binpartner.com/current/' NEW_RELEASE='/home/binpartner/binpartner.com/releases/20171019104641/' as binpartner@188.42.243.71
+  INFO [076b282b] Finished in 7.845 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in db
+  INFO [deploy:migrate] Skip `deploy:migrate` (nothing changed in db)
+  INFO [7a409484] Running /usr/bin/env ls /home/binpartner/binpartner.com/releases/20171019102608/assets_manifest_backup as binpartner@188.42.243.71
+  INFO [9df43c2b] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle exec rake assets:precompile as binpartner@188.42.243.71
+  INFO [9df43c2b] Finished in 26.099 seconds with exit status 0 (successful).
+  INFO [8fa4a205] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019104641/assets_manifest_backup as binpartner@188.42.243.71
+  INFO [8fa4a205] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [a558b42b] Running /usr/bin/env cp /home/binpartner/binpartner.com/releases/20171019104641/public/assets/.sprockets-manifest-36f8e2cc4033593bc1d9173eeb14275b.json /home/binpartner/binpartner.com/releases/20171019104641/assets_manifest_backup as binpartner@188.42.243.71
+  INFO [a558b42b] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [c8d13bae] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/releases/20171019104641 /home/binpartner/binpartner.com/releases/current as binpartner@188.42.243.71
+  INFO [c8d13bae] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [670e2753] Running /usr/bin/env mv /home/binpartner/binpartner.com/releases/current /home/binpartner/binpartner.com as binpartner@188.42.243.71
+  INFO [670e2753] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [64fe685c] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle exec rake daemon:que_daemon:restart as binpartner@188.42.243.71
+  INFO [64fe685c] Finished in 7.681 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+  INFO unicorn restarting...
+  INFO [8ff2bef2] Running /usr/bin/env kill -s USR2 `cat /home/binpartner/binpartner.com/shared/tmp/pids/unicorn.pid` as binpartner@188.42.243.71
+  INFO [8ff2bef2] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [1ed21294] Running /usr/bin/env sleep 20 as binpartner@188.42.243.71
+  INFO [1ed21294] Finished in 20.226 seconds with exit status 0 (successful).
+  INFO [37178f98] Running echo 'flush_all' | nc 188.42.243.49 11211 as binpartner@188.42.243.71
+  INFO [37178f98] Finished in 0.222 seconds with exit status 0 (successful).
+  INFO Keeping 2 of 6 deployed releases on 188.42.243.71
+  INFO [13af2f4e] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171016140040 /home/binpartner/binpartner.com/releases/20171018073755 /home/binpartner/binpartner.com/releases/20171019084637 /home/binpartner/binpartner.com/releases/20171019101214 as binpartner@188.42.243.71
+  INFO [13af2f4e] Finished in 0.832 seconds with exit status 0 (successful).
+  INFO [602b4542] Running /usr/bin/env echo "Branch bin-4336-fuckup/dont-activate-isolated-percent-by-default (at a8d19852e3990e8bbe4ae80c637a2170a902d3d4) deployed as release 20171019104641 by benedict" >> /home/binpartner/binpartner.com/revisions.log as binpartner@188.42.243.71
+  INFO [602b4542] Finished in 0.135 seconds with exit status 0 (successful).

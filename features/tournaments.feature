@@ -1,7 +1,11 @@
-Feature: SMoke test generate 2017-10-17 14:49:29 +0300
+Feature: SMoke test generate 2017-10-19 17:25:02 +0300
  Scenario: Run step
  Given Pid process
   
- Given Delete all tournaments
+ When Use demo type
+ 
+ 	When Make a deals asset GOL/OTC and lose bet
+ 	Then Transactions committed
+ 
 
 Scenario:	Then Pool ranning?
