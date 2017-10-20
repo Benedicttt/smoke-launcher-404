@@ -16,7 +16,7 @@ end
 
 When /^Add data$/ do
 
-    banner = File.join(Rails.root, './app/assets/images/bg.png')
+    banner = File.join(Rails.root, './app/assets/images/bg.jpeg')
     DRIVER.find_element(:id, "tournament_banner_content").send_keys(banner)
     DRIVER.find_element(:id, "tournament_banner_preview").send_keys(banner)
     DRIVER.find_element(:id, "tournament_url").clear

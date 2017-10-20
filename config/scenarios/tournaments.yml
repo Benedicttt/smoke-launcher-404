@@ -12,9 +12,7 @@ draft: "
 
 sum_deals: "
   \t\tWhen Created Tournament 'sum deals'"
-sum_win_deals: "
-  \t\tWhen Created Tournament 'sum win deals'"
-max_demo_balance: "
+max_balance: "
   \t\tWhen Created Tournament 'max demo balance'"
 
 created_tournament: "

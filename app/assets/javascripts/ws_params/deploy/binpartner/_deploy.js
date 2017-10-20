@@ -14,6 +14,8 @@ $(function(){
         count_deploy: $('#_global_link').val(),
         write_log : $('#__written_in_the_log').prop('checked')
       }));
+
     deploy_binpartner();
   })
+
 });

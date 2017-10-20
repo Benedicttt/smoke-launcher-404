@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-19 19:06:16 +0300
+Feature: SMoke test generate 2017-10-20 13:48:49 +0300
  Scenario: Run step
  Given Pid process
   
@@ -7,9 +7,9 @@ Feature: SMoke test generate 2017-10-19 19:06:16 +0300
  	Given Data from
  	Given Data to
  		 When Select type tournament on activate 
- 		 When Repeat type loopead 
+ 		 When Repeat type periodical 
  		When Created Tournament 'sum deals'
- 	Given Percentage
+ 	Given Fixed
  Then Result
  Given Preparation of static data and visit homepage
  	When Registration traider
@@ -23,11 +23,15 @@ Feature: SMoke test generate 2017-10-19 19:06:16 +0300
  	Given Phone verified find 
  		Then Phone verifed
  
+ Given Visit page Welcome
+ 	When Fill /welcome
+ 	Then Redirect pages tutorial and agree risk
+ 	Then Profile last and first name
+ 
  Given Mailers yopmail
  	When Input email and find link yopmail 
  	Then Visit to link yopmail
  
- 		When Participate
  	Given Find status treder
  	Then Status treder
  
@@ -37,5 +41,12 @@ Feature: SMoke test generate 2017-10-19 19:06:16 +0300
  	Then Deposit WireCapital created
  
  		When Participate
+Given Visit page trading
+
+ When Use real type
+ 
+ 	When Make a deals asset GOL/OTC and win bet
+ 	Then Transactions committed
+ 
 
 Scenario:	Then Pool ranning?

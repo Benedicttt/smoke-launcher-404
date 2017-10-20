@@ -10,17 +10,16 @@ Given /^Delete all tournaments$/ do
   end
 
   DRIVER.get CommonSetting[:url_page_crm] + "tournaments"
-  sleep 1
+  sleep 0.3
   begin
     $i = 0
     $num = 200
     while $i < $num do
       DRIVER.find_elements(:css, ".btn-primary")[0].click
-      sleep 1
       DRIVER.find_element(:css, ".btn-danger").click
       print u
       $i += 1
-      sleep 1
+      sleep 0.3
     end
   rescue
     puts "Delete ALL Tournaments"

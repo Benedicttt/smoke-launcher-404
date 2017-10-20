@@ -78,6 +78,7 @@ $(function(){
 
     from.setHours(date.getHours() - 3);
     to.setHours(date.getHours() - 3);
+    to.setDate(to.getDate() + 1);
 
     new_date_from = strftime('%e.%m.%Y %H:%M:%S', from)
     new_date_to = strftime('%e.%m.%Y %H:%M:%S', to)
