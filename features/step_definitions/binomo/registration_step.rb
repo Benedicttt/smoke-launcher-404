@@ -4,6 +4,7 @@ end
 When /^Registration traider$/ do
   DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale])
   sleep 1
+  puts DRIVER.current_url
   DRIVER.manage.delete_cookie("geo");
   DRIVER.manage.add_cookie(name: "geo", value: "#{ENV['geo']}")
   DRIVER.navigate.refresh
