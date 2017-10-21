@@ -1,28 +1,22 @@
-require 'selenium-webdriver'
-require 'rspec/expectations'
 require 'rubygems'
 require 'headless'
+require 'selenium-webdriver'
 
-include RSpec::Matchers
-
-def setup
-  headless = Headless.new
-  headless.start
-  @driver = Selenium::WebDriver.for :chrome
+Headless.ly do
+  driver = Selenium::WebDriver.for :chrome
+  driver.navigate.to 'http://google.com'
+  puts driver.title
 end
 
-def teardown
-  @driver.quit
-end
+require 'rubygems'
+require 'headless'
+require 'selenium-webdriver'
 
-def run
-  setup
-  yield
-  teardown
-end
+headless = Headless.new
+headless.start
 
-run do
-  @driver.get 'http://the-internet.herokuapp.com'
-  expect(@driver.title).to eql 'The Internet'
-  @driver.save_screenshot 'headless.png'
-end
+driver = Selenium::WebDriver.for :firefox
+driver.navigate.to 'http://google.com'
+puts driver.title
+
+headless.destroy

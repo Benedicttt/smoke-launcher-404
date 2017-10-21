@@ -34,7 +34,7 @@ module Server
       puts
       puts get_link.yellow
       puts
-      system "Xvfb :99 & export DISPLAY=:99"
+      system "Xvfb :0 & export DISPLAY=:0"
       system get_link
 
     end
