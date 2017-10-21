@@ -9,7 +9,7 @@ require 'cucumber'
 
 Given /^Pid process$/ do
 
-  $headless = Headless.new
+  $headless = Headless.new(display: 1, reuse: true, destroy_at_exit: false)
   $headless.start
 
   if ENV['driver'] == "firefox"
