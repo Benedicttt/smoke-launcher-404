@@ -8,11 +8,15 @@ require 'selenium-webdriver'
 require 'cucumber'
 
 Given /^Pid process$/ do
+
+  $headless = Headless.new(display: 1, reuse: true, destroy_at_exit: true)
+  $headless.start
+
   if ENV['driver'] == "firefox"
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym
 
   elsif ENV['driver'] == "chrome"
-    options =  Selenium::WebDriver::Chrome::Options.new(args: [ "--start-maximized", 'no-sandbox', "--disable-gpu", "--disable-notifications", "disable-setuid-sandbox", 'allow-insecure-localhost', 'test-type' , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
+    options =  Selenium::WebDriver::Chrome::Options.new(args: [ "--start-maximized", "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
     DRIVER.manage.timeouts.implicit_wait = 5
 
@@ -22,6 +26,7 @@ Given /^Pid process$/ do
     DRIVER.manage.timeouts.implicit_wait = 5
 
   end
+
   buttons_include
   File.open("./features/temporary/pids/pid_cucumber", "a"){ |f| f.puts("#{Process.pid}")}
 
