@@ -17,10 +17,10 @@ namespace :server do
         system "rails s -b 0.0.0.0 -p 3001"
       end
 
-      thr << Thread.new do
-        puts "Run xvfb server".yellow
-        system " Xvfb :1 -screen 0 1024x768x24 2>&1 >/dev/null & export DISPLAY=:1"
-      end
+      # thr << Thread.new do
+      #   puts "Run xvfb server".yellow
+      #   system " Xvfb :1 -screen 0 1024x768x24 2>&1 >/dev/null & export DISPLAY=:1"
+      # end
 
       thr << Thread.new do
         system "driver=chrome cucumber ./features/ws.feature"
