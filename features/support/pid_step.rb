@@ -8,10 +8,6 @@ require 'selenium-webdriver'
 require 'cucumber'
 
 Given /^Pid process$/ do
-
-  $headless = Headless.new(display: 100, reuse: true, destroy_at_exit: false)
-  $headless.start
-
   if ENV['driver'] == "firefox"
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym
 
@@ -49,5 +45,4 @@ end
 Given /^Pool ranning\?$/ do
   $pool.shutdown && $pool.wait_for_termination
   puts_danger "Last threads? #{$pool.running?}"
-  $headless.destroy
 end
