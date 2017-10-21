@@ -38,6 +38,7 @@
     }
 
     $('#__written_in_the_log').prop('checked', false)
+    $('#__clear_releases').prop('checked', false)
   };
 
   function deploy_binomo() {
@@ -59,6 +60,7 @@
     }
 
     $('#__written_in_the_log').prop('checked', false)
+    $('#__clear_releases').prop('checked', false)
   };
 
   function change_date_binpartner() {

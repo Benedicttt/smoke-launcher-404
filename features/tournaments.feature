@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-20 13:48:49 +0300
+Feature: SMoke test generate 2017-10-20 15:16:04 +0300
  Scenario: Run step
  Given Pid process
   
@@ -8,8 +8,8 @@ Feature: SMoke test generate 2017-10-20 13:48:49 +0300
  	Given Data to
  		 When Select type tournament on activate 
  		 When Repeat type periodical 
- 		When Created Tournament 'sum deals'
- 	Given Fixed
+ 		When Created Tournament 'max demo balance'
+ 	Given Percentage
  Then Result
  Given Preparation of static data and visit homepage
  	When Registration traider
@@ -32,6 +32,7 @@ Feature: SMoke test generate 2017-10-20 13:48:49 +0300
  	When Input email and find link yopmail 
  	Then Visit to link yopmail
  
+ 		When Participate
  	Given Find status treder
  	Then Status treder
  
@@ -39,6 +40,12 @@ Feature: SMoke test generate 2017-10-20 13:48:49 +0300
  When Visit cashier WireCapital
  	When Make deposit WireCapital
  	Then Deposit WireCapital created
+ 
+ When Visit cashier WireCapital
+ 	When Make deposit WireCapital decline
+ 	Then Before balance
+ 	When Check status 'Reject' in payment Wire Capital
+ 	Then After balance
  
  		When Participate
 Given Visit page trading
