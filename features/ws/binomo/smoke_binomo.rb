@@ -32,9 +32,9 @@ module Server
       end
 
       puts
-      puts "xvfb-run " + get_link.yellow
+      puts get_link.yellow
       puts
-      system "xvfb-run " + get_link
+      system get_link
 
     end
   end
