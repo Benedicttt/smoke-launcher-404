@@ -8,14 +8,12 @@ require 'selenium-webdriver'
 require 'cucumber'
 
 Given /^Pid process$/ do
-
-
-
   if ENV['driver'] == "firefox"
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym
 
   elsif ENV['driver'] == "chrome"
-    options =  Selenium::WebDriver::Chrome::Options.new(args: [ "--start-maximized", "--disable-gpu", "--disable-notifications" , "headless", "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
+    # "headless",
+    options =  Selenium::WebDriver::Chrome::Options.new(args: [ "--start-maximized", "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
     DRIVER.manage.timeouts.implicit_wait = 5
 
@@ -23,7 +21,8 @@ Given /^Pid process$/ do
       $headless = Headless.new
       $headless.start
     end
-      DRIVER.manage.window.resize_to(1600, 1020)
+
+    DRIVER.manage.window.resize_to(1600, 1020)
 
   elsif ENV['driver'] == "safari"
     client = Selenium::WebDriver::Remote::Http::Default.new
