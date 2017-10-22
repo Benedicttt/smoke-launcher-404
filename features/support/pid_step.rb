@@ -9,7 +9,7 @@ require 'cucumber'
 
 Given /^Pid process$/ do
 
-  $headless = Headless.new(display: 1, reuse: true, destroy_at_exit: true)
+  $headless = Headless.new
   $headless.start
 
   if ENV['driver'] == "firefox"
@@ -49,4 +49,5 @@ end
 Given /^Pool ranning\?$/ do
   $pool.shutdown && $pool.wait_for_termination
   puts_danger "Last threads? #{$pool.running?}"
+  $headless.destroy
 end
