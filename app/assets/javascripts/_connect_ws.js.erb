@@ -1,6 +1,10 @@
 w = new WebSocket (
-     <% ip = IPSocket.getaddress(Socket.gethostname) %>
-     'ws://<%= @ip %>:8081'
+      <% if @ip = Socket.ip_address_list.detect { |intf| intf.ipv4_private? } %>
+     <% @ip = Socket.ip_address_list.detect { |intf| intf.ipv4_private? } %>
+       'ws://<%= @ip.ip_address %>:8081'
+     <% else %>
+       'ws://<%= ip = IPSocket.getaddress(Socket.gethostname) %>:8081'
+     <% end %>
    )
 
 // w = new WebSocket (
