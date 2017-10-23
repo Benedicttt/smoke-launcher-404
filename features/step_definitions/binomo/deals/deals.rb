@@ -18,7 +18,7 @@ When /^Use demo type$/ do
   sleep 5
   $deals.find_element(:css, "div.b-unit-dropdown-balance").click
   # $deals.find_element(:css, ".btn-earlgrey.btn-bolder.btn-earlgrey-secondary").click
-  sleep 0.5
+  sleep 1
   $deals.find_elements(:css, ".i-unit-account-type")[1].click
   sleep 0.5
 
@@ -33,7 +33,7 @@ When /^Use real type$/ do
   sleep 5
   $deals.find_element(:css, "div.b-unit-dropdown-balance").click
   # $deals.find_element(:css, ".btn-earlgrey.btn-bolder.btn-earlgrey-secondary").click
-  sleep 0.5
+  sleep 1
   $deals.find_elements(:css, ".i-unit-account-type")[0].click
   sleep 0.5
 
