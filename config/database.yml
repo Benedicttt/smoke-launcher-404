@@ -28,6 +28,8 @@ development:
   adapter: postgresql
   encoding: utf8
   database: binomo
+  username: binomo
+  password: binomo
   pool: 5
   timeout: 5000
 
@@ -35,6 +37,8 @@ test:
   adapter: postgresql
   encoding: utf8
   database: binomo
+  username: binomo
+  password: binomo
   pool: 5
   timeout: 5000
 
