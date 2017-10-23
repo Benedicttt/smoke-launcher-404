@@ -17,6 +17,9 @@ Given /^Pid process$/ do
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
     DRIVER.manage.timeouts.implicit_wait = 5
 
+    Selenium::WebDriver.logger.level = :info
+    Selenium::WebDriver.logger.output = 'selenium.log'
+
     if ENV['test_xvfb'].to_s == "true"
       $headless = Headless.new
       $headless.start
