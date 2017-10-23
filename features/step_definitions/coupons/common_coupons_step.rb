@@ -19,15 +19,15 @@ Then /^Visit to user from cahsier$/ do
   id = User.where(stage_number: ENV['stage']).last.id
 
   DRIVER.get CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier"
-    DRIVER.manage.add_cookie(name: "asset.daily", value: "FAKE")
-    DRIVER.execute_script("localStorage.setItem(\"#{id}.real.welcome_bonus\", \"1\")" )
-    DRIVER.execute_script("localStorage.setItem(\"#{id}.demo.welcome_bonus\", \"1\")")
+  DRIVER.manage.add_cookie(name: "asset.daily", value: "FAKE")
+  DRIVER.execute_script("localStorage.setItem(\"#{id}.real.welcome_bonus\", \"1\")" )
+  DRIVER.execute_script("localStorage.setItem(\"#{id}.demo.welcome_bonus\", \"1\")")
   DRIVER.get CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier"
   sleep 5
 end
 
 Then /^Activate coupons\?$/ do
-  DRIVER.find_elements(:css, ".active.link-have-bonus > span.ng-binding")[0].click
+  DRIVER.find_element(:css, ".active.link-have-bonus > span.ng-binding").click
   sleep 0.5
   DRIVER.find_elements(:css, ".coupon_code")[0].send_keys($code)
   sleep 2

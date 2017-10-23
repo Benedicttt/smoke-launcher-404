@@ -18,10 +18,13 @@ Given(/^Template Bonus$/) do
   end
 
   %w[RUB KZT CNY TRY UAH INR ZAR GDQ IDR VND MYR GTQ].each do |name|
-    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
-    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
-    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").clear
-    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").send_keys("10")
+    begin
+      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
+      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
+      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").clear
+      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").send_keys("10")
+    rescue
+    end
   end
 
   DRIVER.find_elements(:css, '.btn-primary')[1].click

@@ -46,7 +46,6 @@ Given /^Testing bonuses$/ do
 
       bon.get(CommonSetting[:url_user_crm] + "/#{@id}" + "/bonuses")
       sleep 1
-      # wait_until(3, :css, "#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(1)")
 
       id =  "ID: #{bon.find_element(:css, "#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(1)").text}"
       amount =  "Amount: #{bon.find_element(:css, "#main-content > div > div:nth-child(3) > table > tbody > tr > td:nth-child(2)").text}"
@@ -57,7 +56,6 @@ Given /^Testing bonuses$/ do
 
       bon.get(CommonSetting[:url_user_crm] + "/#{@id}" + "/free_deals")
       sleep 3
-      # wait_until(3, :css, "#main-content > div > div > div > table > tbody > tr > td:nth-child(1)")
 
       sum =  "ID: #{bon.find_element(:css, "#main-content > div > div > div > table > tbody > tr > td:nth-child(1)").text}"
       amount =  "Amount: #{bon.find_element(:css, "#main-content > div > div > div > table > tbody > tr > td:nth-child(3)").text}"
