@@ -27,7 +27,7 @@ When /^Data ticket$/ do
       sleep 1
       $tickets.find_element(:css, "textarea[name='text']").send_keys("Question textarea")
       sleep 1
-      $tickets.execute_script("document.querySelector('.btn-primary:first').click()")
+      $tickets.execute_script("document.querySelector('.btn-primary').click()")
       sleep 5
       puts_info "Tickets created"
     end
