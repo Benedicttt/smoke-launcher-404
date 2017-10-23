@@ -27,20 +27,20 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: launcher_binomo_db
+  database: binomo
   pool: 5
   timeout: 5000
 
 test:
   adapter: postgresql
   encoding: utf8
-  database: launcher_binomo_db
+  database: binomo
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
   encoding: utf8
-  database: launcher_binomo_db
+  database: binomo
   pool: 5
   timeout: 5000
