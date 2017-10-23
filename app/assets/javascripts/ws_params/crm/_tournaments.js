@@ -2,7 +2,7 @@ $(function(){
   $('#smoke-tournaments').click(function(){
     $('.ws label').css('color','yellow').text("Tests runs, expect...");
     $(".step_cucumber").click();
-    $(".reload-time").click();
+    // $(".reload-time").click();
     $(".start").click();
     window.scrollTo(0, 999999);
 

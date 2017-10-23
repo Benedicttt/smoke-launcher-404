@@ -18,6 +18,6 @@
 /public/assets/*
 !/log/.keep
 !/tmp/.keep
-
+./selenium.log
 # Ignore Byebug command history file.
 .byebug_history

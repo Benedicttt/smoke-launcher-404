@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-20 15:16:04 +0300
+Feature: SMoke test generate 2017-10-23 14:07:07 +0300
  Scenario: Run step
  Given Pid process
   
@@ -8,7 +8,7 @@ Feature: SMoke test generate 2017-10-20 15:16:04 +0300
  	Given Data to
  		 When Select type tournament on activate 
  		 When Repeat type periodical 
- 		When Created Tournament 'max demo balance'
+ 		When Created Tournament 'sum deals'
  	Given Percentage
  Then Result
  Given Preparation of static data and visit homepage
@@ -40,12 +40,6 @@ Feature: SMoke test generate 2017-10-20 15:16:04 +0300
  When Visit cashier WireCapital
  	When Make deposit WireCapital
  	Then Deposit WireCapital created
- 
- When Visit cashier WireCapital
- 	When Make deposit WireCapital decline
- 	Then Before balance
- 	When Check status 'Reject' in payment Wire Capital
- 	Then After balance
  
  		When Participate
 Given Visit page trading

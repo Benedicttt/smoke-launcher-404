@@ -24,7 +24,7 @@ When /^Participate$/ do
   sleep 1
   DRIVER.find_elements(:css, '.btn-primary')[0].click
   sleep 1
-  DRIVER.find_elements(:css, '.btn-primary')[0].click
+  DRIVER.find_elements(:css, '.btn-primary')[0].click if DRIVER.find_elements(:css, '.btn-primary')[0] == true
   sleep 1
   DRIVER.navigate.refresh
   puts_success "#{link_report_id("#{$url_tournaments}", "BINOMO")}"
