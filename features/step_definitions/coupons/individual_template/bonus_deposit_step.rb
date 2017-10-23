@@ -15,15 +15,18 @@ Given(/^Template Bonus Deposit$/) do
   DRIVER.find_elements(:css, "span.text")[0].click
 
   [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ].each do |i|
-    DRIVER.find_elements(:id, "amount")[i].clear
-    DRIVER.find_elements(:id, "bonus")[i].clear
-    DRIVER.find_elements(:id, "leverage")[i].clear
+    begin
+      DRIVER.find_elements(:id, "amount")[i].clear
+      DRIVER.find_elements(:id, "bonus")[i].clear
+      DRIVER.find_elements(:id, "leverage")[i].clear
 
-    DRIVER.find_elements(:id, "amount")[i].send_keys("10")
-    DRIVER.find_elements(:id, "bonus")[i].send_keys("10")
-    DRIVER.find_elements(:id, "leverage")[i].send_keys("10")
-    sleep 0.2
-    DRIVER.find_elements(:css, '.btn-success')[i].click
+      DRIVER.find_elements(:id, "amount")[i].send_keys("10")
+      DRIVER.find_elements(:id, "bonus")[i].send_keys("10")
+      DRIVER.find_elements(:id, "leverage")[i].send_keys("10")
+      sleep 0.2
+      DRIVER.find_elements(:css, '.btn-success')[i].click
+    rescue
+    end
   end
 
   DRIVER.find_elements(:css, '.btn-primary')[1].click

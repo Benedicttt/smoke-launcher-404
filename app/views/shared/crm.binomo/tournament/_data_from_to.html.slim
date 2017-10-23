@@ -2,10 +2,17 @@
   .col-xs-2
     = f.input :data_tournaments_from,
         label: "Data from",
-          input_html:{ value: (Time.now - 3.hour).strftime("%d.%m.%Y %H:%M:%S")}
+          input_html:{ value: (Time.now - 3.hour + 2.minutes).strftime("%d.%m.%Y %H:%M:%S")}
+  .col-xs-2
+  br
+  br
 
 .row
   .col-xs-2
     = f.input :data_tournaments_to,
         label: "Data to",
-          input_html:{ value: (Time.now - 3.hour + 6.minutes).strftime("%d.%m.%Y %H:%M:%S")}
+          input_html:{ value: (Time.now - 3.hour + 7.minutes).strftime("%d.%m.%Y %H:%M:%S")}
+  .col-xs-1
+    = button_tag "Reload time", class: "btn btn-success reload-time"
+
+    

@@ -1,0 +1,304 @@
+  INFO [a25584c6] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle -v as binpartner@188.42.243.71
+  INFO [a25584c6] Finished in 1.058 seconds with exit status 0 (successful).
+  INFO [2cd5b9f9] Running /usr/bin/env mkdir -p /tmp as binpartner@188.42.243.71
+  INFO [2cd5b9f9] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-binpartner-staging2-benedict.sh 100.0%
+  INFO [7ff5a2e4] Running /usr/bin/env chmod 700 /tmp/git-ssh-binpartner-staging2-benedict.sh as binpartner@188.42.243.71
+  INFO [7ff5a2e4] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [4f29352b] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binpartner@188.42.243.71
+  INFO [4f29352b] Finished in 0.820 seconds with exit status 0 (successful).
+  INFO [1eeb7fc0] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/shared /home/binpartner/binpartner.com/releases as binpartner@188.42.243.71
+  INFO [1eeb7fc0] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [1f1d6fa3] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/shared/public/assets /home/binpartner/binpartner.com/shared/config/symmetric_encryption /home/binpartner/binpartner.com/shared/log /home/binpartner/binpartner.com/shared/tmp/cache /home/binpartner/binpartner.com/shared/tmp/pids /home/binpartner/binpartner.com/shared/node_modules as binpartner@188.42.243.71
+  INFO [1f1d6fa3] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [dd31cbbe] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/shared/config /home/binpartner/binpartner.com/shared as binpartner@188.42.243.71
+  INFO [dd31cbbe] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO Uploading /home/binpartner/binpartner.com/shared/.env 100.0%
+  INFO Uploading /home/binpartner/binpartner.com/shared/config/unicorn.rb 100.0%
+  INFO [10d0fbcf] Running mkdir -p /home/binpartner/binpartner.com/shared/config as binpartner@188.42.243.71
+  INFO [10d0fbcf] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO Uploading /home/binpartner/binpartner.com/shared/config/database.yml 100.0%
+  INFO The repository mirror is at /home/binpartner/binpartner.com/repo
+  INFO [4372c246] Running /usr/bin/env git remote update --prune as binpartner@188.42.243.71
+  INFO [4372c246] Finished in 1.159 seconds with exit status 0 (successful).
+  INFO [64c0f69f] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608 as binpartner@188.42.243.71
+  INFO [64c0f69f] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [76decb1c] Running /usr/bin/env git archive bin-4336-fuckup/dont-activate-isolated-percent-by-default binpartner.com | tar -x --strip-components 1 -f - -C /home/binpartner/binpartner.com/releases/20171019102608 as binpartner@188.42.243.71
+  INFO [76decb1c] Finished in 0.852 seconds with exit status 0 (successful).
+  INFO [36d45745] Running /usr/bin/env echo "2c4a5f082e79425972b5fa69ab2985436cdaf483" >> REVISION as binpartner@188.42.243.71
+  INFO [36d45745] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [6a074f2b] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608/config /home/binpartner/binpartner.com/releases/20171019102608 as binpartner@188.42.243.71
+  INFO [6a074f2b] Finished in 0.387 seconds with exit status 0 (successful).
+  INFO [43f9fe7b] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/config/database.yml /home/binpartner/binpartner.com/releases/20171019102608/config/database.yml as binpartner@188.42.243.71
+  INFO [43f9fe7b] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [185ad1cb] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/.env /home/binpartner/binpartner.com/releases/20171019102608/.env as binpartner@188.42.243.71
+  INFO [185ad1cb] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [e03325c7] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/config/unicorn.rb /home/binpartner/binpartner.com/releases/20171019102608/config/unicorn.rb as binpartner@188.42.243.71
+  INFO [e03325c7] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [7cdbf991] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608/public /home/binpartner/binpartner.com/releases/20171019102608/config /home/binpartner/binpartner.com/releases/20171019102608 /home/binpartner/binpartner.com/releases/20171019102608/tmp as binpartner@188.42.243.71
+  INFO [7cdbf991] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [2f5c5b73] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608/public/assets as binpartner@188.42.243.71
+  INFO [2f5c5b73] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [714715ca] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019102608/public/assets as binpartner@188.42.243.71
+  INFO [714715ca] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [1877a5da] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/public/assets /home/binpartner/binpartner.com/releases/20171019102608/public/assets as binpartner@188.42.243.71
+  INFO [1877a5da] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO [d37a7225] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608/config/symmetric_encryption as binpartner@188.42.243.71
+  INFO [d37a7225] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [92daf917] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019102608/config/symmetric_encryption as binpartner@188.42.243.71
+  INFO [92daf917] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [7c2bcae1] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/config/symmetric_encryption /home/binpartner/binpartner.com/releases/20171019102608/config/symmetric_encryption as binpartner@188.42.243.71
+  INFO [7c2bcae1] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [7384fe19] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608/log as binpartner@188.42.243.71
+  INFO [7384fe19] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [0be569ee] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019102608/log as binpartner@188.42.243.71
+  INFO [0be569ee] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [55ab0568] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/log /home/binpartner/binpartner.com/releases/20171019102608/log as binpartner@188.42.243.71
+  INFO [55ab0568] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [1bf6a073] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608/tmp/cache as binpartner@188.42.243.71
+  INFO [1bf6a073] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [2d5b0abe] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019102608/tmp/cache as binpartner@188.42.243.71
+  INFO [2d5b0abe] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [d13a3fa5] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/tmp/cache /home/binpartner/binpartner.com/releases/20171019102608/tmp/cache as binpartner@188.42.243.71
+  INFO [d13a3fa5] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [217c1247] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608/tmp/pids as binpartner@188.42.243.71
+  INFO [217c1247] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [06e103e2] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019102608/tmp/pids as binpartner@188.42.243.71
+  INFO [06e103e2] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [9dc399e6] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/tmp/pids /home/binpartner/binpartner.com/releases/20171019102608/tmp/pids as binpartner@188.42.243.71
+  INFO [9dc399e6] Finished in 0.117 seconds with exit status 0 (successful).
+(Backtrace restricted to imported tasks)
+cap aborted!
+SSHKit::Runner::ExecuteError: Exception while executing as binpartner@188.42.243.71: rake exit status: 1
+rake stdout: rake aborted!
+NoMethodError: undefined method `tariff_default' for Tariff::Percent:Class
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:8:in `<class:Percent>'
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:4:in `<module:Tariff>'
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:3:in `<top (required)>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `block in require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:240:in `load_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:360:in `require_or_load'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:317:in `depend_on'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:233:in `require_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:19:in `block in load_for'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `block in load_files'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `each'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `load_files'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:38:in `call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:19:in `load_for'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:11:in `load_concepts'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:31:in `block (2 levels) in <class:Railtie>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:446:in `instance_exec'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:446:in `block in make_lambda'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:192:in `block in simple'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `block in call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `each'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:778:in `_run_prepare_callbacks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/reloader.rb:83:in `prepare!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/reloader.rb:55:in `prepare!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application/finisher.rb:50:in `block in <module:Finisher>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:30:in `run'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:352:in `initialize!'
+/home/binpartner/binpartner.com/releases/20171019102608/config/environment.rb:5:in `<top (required)>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `block in require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:240:in `load_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:328:in `require_environment!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:457:in `block in run_tasks_blocks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:335:in `exec'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:20:in `dispatch'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:11:in `start'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/exe/bundle:32:in `block in <top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/exe/bundle:24:in `<top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/bundle:22:in `load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/bundle:22:in `<main>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/ruby_executable_hooks:15:in `eval'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => environment
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+
+SSHKit::Command::Failed: rake exit status: 1
+rake stdout: rake aborted!
+NoMethodError: undefined method `tariff_default' for Tariff::Percent:Class
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:8:in `<class:Percent>'
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:4:in `<module:Tariff>'
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:3:in `<top (required)>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `block in require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:240:in `load_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:360:in `require_or_load'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:317:in `depend_on'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:233:in `require_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:19:in `block in load_for'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `block in load_files'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `each'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `load_files'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:38:in `call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:19:in `load_for'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:11:in `load_concepts'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:31:in `block (2 levels) in <class:Railtie>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:446:in `instance_exec'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:446:in `block in make_lambda'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:192:in `block in simple'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `block in call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `each'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:778:in `_run_prepare_callbacks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/reloader.rb:83:in `prepare!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/reloader.rb:55:in `prepare!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application/finisher.rb:50:in `block in <module:Finisher>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:30:in `run'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:352:in `initialize!'
+/home/binpartner/binpartner.com/releases/20171019102608/config/environment.rb:5:in `<top (required)>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `block in require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:240:in `load_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:328:in `require_environment!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:457:in `block in run_tasks_blocks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:335:in `exec'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:20:in `dispatch'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:11:in `start'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/exe/bundle:32:in `block in <top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/exe/bundle:24:in `<top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/bundle:22:in `load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/bundle:22:in `<main>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/ruby_executable_hooks:15:in `eval'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => environment
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:73:in `rescue in block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:35:in `block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:34:in `block (5 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:33:in `block (4 levels) in <top (required)>'
+Capistrano::PrecompileRequired: Capistrano::PrecompileRequired
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:45:in `rescue in block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:45:in `block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:34:in `block (5 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:33:in `block (4 levels) in <top (required)>'
+SSHKit::Command::Failed: ls exit status: 2
+ls stdout: ls: невозможно получить доступ к /home/binpartner/binpartner.com/releases/20171019101214/assets_manifest_backup: Нет такого файла или каталога
+ls stderr: Nothing written
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:45:in `block (6 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:34:in `block (5 levels) in <top (required)>'
+/Users/benedict/Documents/smoke-binomo/qa/lib/capistrano/tasks/assets.rake:33:in `block (4 levels) in <top (required)>'
+Tasks: TOP => deploy:assets:precompile
+(See full trace by running task with --trace)
+The deploy has failed with an error: Exception while executing as binpartner@188.42.243.71: rake exit status: 1
+rake stdout: rake aborted!
+NoMethodError: undefined method `tariff_default' for Tariff::Percent:Class
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:8:in `<class:Percent>'
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:4:in `<module:Tariff>'
+/home/binpartner/binpartner.com/releases/20171019102608/app/models/tariff/percent.rb:3:in `<top (required)>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `block in require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:240:in `load_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:360:in `require_or_load'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:317:in `depend_on'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:233:in `require_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:19:in `block in load_for'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `block in load_files'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `each'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:75:in `load_files'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-loader-0.1.1/lib/trailblazer/loader.rb:38:in `call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:19:in `load_for'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:11:in `load_concepts'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/trailblazer-rails-1.0.2/lib/trailblazer/rails/railtie.rb:31:in `block (2 levels) in <class:Railtie>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:446:in `instance_exec'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:446:in `block in make_lambda'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:192:in `block in simple'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `block in call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `each'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:504:in `call'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:778:in `_run_prepare_callbacks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/reloader.rb:83:in `prepare!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/reloader.rb:55:in `prepare!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application/finisher.rb:50:in `block in <module:Finisher>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:30:in `instance_exec'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:30:in `run'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:55:in `block in run_initializers'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/initializable.rb:54:in `run_initializers'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:352:in `initialize!'
+/home/binpartner/binpartner.com/releases/20171019102608/config/environment.rb:5:in `<top (required)>'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `block in require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:240:in `load_dependency'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/activesupport-4.2.8/lib/active_support/dependencies.rb:274:in `require'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:328:in `require_environment!'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/railties-4.2.8/lib/rails/application.rb:457:in `block in run_tasks_blocks'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+/home/binpartner/binpartner.com/shared/bundle/ruby/2.4.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:74:in `load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli/exec.rb:27:in `run'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:335:in `exec'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:20:in `dispatch'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/cli.rb:11:in `start'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/exe/bundle:32:in `block in <top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/gems/bundler-1.14.4/exe/bundle:24:in `<top (required)>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/bundle:22:in `load'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/bundle:22:in `<main>'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/ruby_executable_hooks:15:in `eval'
+/home/binpartner/.rvm/gems/ruby-2.4.0@binpartner/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => environment
+(See full trace by running task with --trace)
+rake stderr: Nothing written
+  INFO [10d8c7c3] Running /usr/bin/env mkdir -p /home/binpartner/binpartner.com/releases/20171019102608/node_modules as binpartner@188.42.243.71
+  INFO [10d8c7c3] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [da93e6a8] Running /usr/bin/env rm -rf /home/binpartner/binpartner.com/releases/20171019102608/node_modules as binpartner@188.42.243.71
+  INFO [da93e6a8] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [914b801f] Running /usr/bin/env ln -s /home/binpartner/binpartner.com/shared/node_modules /home/binpartner/binpartner.com/releases/20171019102608/node_modules as binpartner@188.42.243.71
+  INFO [914b801f] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [d8c9ff4b] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle install --path /home/binpartner/binpartner.com/shared/bundle --without development test --deployment --quiet as binpartner@188.42.243.71
+  INFO [d8c9ff4b] Finished in 12.646 seconds with exit status 0 (successful).
+  INFO [64909351] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle exec rake rollback_missing_migrations OLD_RELEASE='/home/binpartner/binpartner.com/current/' NEW_RELEASE='/home/binpartner/binpartner.com/releases/20171019102608/' as binpartner@188.42.243.71
+  INFO [64909351] Finished in 8.783 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Checking changes in db
+  INFO [deploy:migrate] Skip `deploy:migrate` (nothing changed in db)
+  INFO [35f7e833] Running /usr/bin/env ls /home/binpartner/binpartner.com/releases/20171019101214/assets_manifest_backup as binpartner@188.42.243.71
+  INFO [b974d6c3] Running ~/.rvm/bin/rvm ruby-2.4.0@binpartner do bundle exec rake assets:precompile as binpartner@188.42.243.71

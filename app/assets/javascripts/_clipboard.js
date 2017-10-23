@@ -19,12 +19,4 @@ $(function(){
     var clip = new ZeroClipboard($("#txt_prod"))
   });
 
-  $(document).ready(function() {
-    var clip = new ZeroClipboard($("#email_copy"))
-  });
-
-  $(document).ready(function() {
-    var clip = new ZeroClipboard($("#pass_copy"))
-  });
-
 });

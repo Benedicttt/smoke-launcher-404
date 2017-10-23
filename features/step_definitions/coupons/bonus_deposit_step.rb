@@ -25,7 +25,7 @@ When /^Testing bonus deposit$/ do
   sleep 2
   puts_success "#{$code}"
 
-  if DRIVER.find_elements(:css, '.text-green-darker')[0].displayed? == true
+  if DRIVER.find_elements(:css, '.text-green-darker')[0].present? == true
     puts_success "Common coupon visible icon true"
   else
     puts_danger "Common coupon visible icon false"

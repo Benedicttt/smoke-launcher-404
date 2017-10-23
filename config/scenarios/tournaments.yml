@@ -1,35 +1,36 @@
+
 fixed: "
   \tGiven Fixed"
 percentage: "
   \tGiven Percentage"
-f_prizes_free: "
-  \t\tWhen Add prize free fixed"
-f_prizes_real: "
-  \t\tWhen Add prize real fixed"
-f_prizes_bonus: "
-  \t\tWhen Add prize bonus fixed"
-p_prizes_real: "
-  \t\tWhen Add prize real percantage"
-p_prizes_bonus: "
-  \t\tWhen Add prize bonus percantage"
-deposit: "
-  \t\tWhen Select type tournament deposit"
+
+activate: "
+  \t\t When Select type tournament on activate
+"
 draft: "
   \t\tWhen Select type tournament on demand"
+
 sum_deals: "
   \t\tWhen Created Tournament 'sum deals'"
-sum_win_deals: "
-  \t\tWhen Created Tournament 'sum win deals'"
-max_demo_balance: "
+max_balance: "
   \t\tWhen Created Tournament 'max demo balance'"
+
 created_tournament: "
   \tGiven Tournament\n
     \t\tWhen Add data\n
     \tGiven Data from\n
     \tGiven Data to"
+
 created_a_tournament?: "
   Then Result"
 delete_all_tournaments: "
   Given Delete all tournaments"
 participate: "
   \t\tWhen Participate"
+
+repeat type loopead: "
+  \t\t When Repeat type loopead
+"
+repeat type periodical: "
+  \t\t When Repeat type periodical
+"

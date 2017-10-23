@@ -2,8 +2,6 @@
   .row
     .col-xs-2
       = f.input :scenario, label: "Type" , as: :check_boxes, collection: %w[fixed], required: false
-      = f.input :scenario, label: "Fixed prizes" , as: :check_boxes, collection: %w[f_prizes_free f_prizes_real f_prizes_bonus], required: false
 
     .col-xs-2
       = f.input :scenario, label: "Type" , as: :check_boxes, collection: %w[percentage], required: false
-      = f.input :scenario, label: "Percentage prizes" , as: :check_boxes, collection: %w[p_prizes_real p_prizes_bonus], required: false

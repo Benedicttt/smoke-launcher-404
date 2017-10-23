@@ -1,12 +1,7 @@
 # README
-* Ruby version - 2.3.3 and 2.4.0
-
-* Chrome browser - 60
-
-* Firefox - last version
-
-* NodeJs - last version
-
-* PostgreSQL - 9.6.4
-
-* Git
+centos 7
+https://losst.ru/ustanovka-postgresql-centos-7 (9.5)
+sudo systemctl start postgresql-9.5
+rvm
+ruby 2.4.0
+git

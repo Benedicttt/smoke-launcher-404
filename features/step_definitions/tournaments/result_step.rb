@@ -1,6 +1,7 @@
 Then /^Result$/ do
   DRIVER.find_element(:css, '.button').click
   sleep 1
+
   uri = URI "#{DRIVER.current_url}"
   puts_info "#{link_report_id(DRIVER.current_url.to_s, "CRM")}"
     %i[en ru id ms es th vn cn pt tr pl me ro kr].each_with_index do |locale, num|
@@ -19,7 +20,11 @@ When /^Participate$/ do
   DRIVER.manage.add_cookie(name: "asset.daily", value: "FAKE")
   DRIVER.execute_script("localStorage.setItem(\"#{User.last.id}.real.welcome_bonus\", \"1\")" )
   DRIVER.execute_script("localStorage.setItem(\"#{User.last.id}.demo.welcome_bonus\", \"1\")")
-  DRIVER.find_elements(:css, '.btn-primary')[1].click
+  DRIVER.find_elements(:css, '.btn-primary')[2].click
+  sleep 1
+  DRIVER.find_elements(:css, '.btn-primary')[0].click
+  sleep 1
+  DRIVER.find_elements(:css, '.btn-primary')[0].click if DRIVER.find_elements(:css, '.btn-primary')[0] == true
   sleep 1
   DRIVER.navigate.refresh
   puts_success "#{link_report_id("#{$url_tournaments}", "BINOMO")}"

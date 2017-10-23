@@ -18,4 +18,5 @@ $(function(){
     }));
     deploy_binomo();
   })
+
 });

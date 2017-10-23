@@ -1,0 +1,23 @@
+(Backtrace restricted to imported tasks)
+cap aborted!
+SignalException: SIGTERM
+
+Tasks: TOP => git:check
+(See full trace by running task with --trace)
+The deploy has failed with an error: SIGTERM
+  INFO [3f6de89a] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.49
+  INFO [98c6d128] Running ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle -v as binomo@188.42.243.105
+  INFO [98c6d128] Finished in 1.157 seconds with exit status 0 (successful).
+  INFO [3f6de89a] Finished in 1.198 seconds with exit status 0 (successful).
+  INFO [20a227f7] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.49
+  INFO [d3f6c93a] Running /usr/bin/env mkdir -p /tmp as binomo@188.42.243.105
+  INFO [20a227f7] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [d3f6c93a] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO Uploading /tmp/git-ssh-binomo-staging2-benedict.sh 100.0%
+  INFO Uploading /tmp/git-ssh-binomo-staging2-benedict.sh 100.0%
+  INFO [9714af1a] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging2-benedict.sh as binomo@188.42.243.49
+  INFO [231c7643] Running /usr/bin/env chmod 700 /tmp/git-ssh-binomo-staging2-benedict.sh as binomo@188.42.243.105
+  INFO [9714af1a] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [231c7643] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [41d56bdd] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.49
+  INFO [3447730e] Running /usr/bin/env git ls-remote --heads git@gitlab.binomo.com:main/binomo.git as binomo@188.42.243.105

@@ -52,6 +52,7 @@
     gem 'selenium-webdriver', '~> 3.6.0'
     gem 'selenium-proxy'
     gem 'selenium'
+    gem 'headless'
 
     gem 'em-websocket'
     gem 'websocket-client-simple'

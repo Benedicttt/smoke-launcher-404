@@ -1,4 +1,5 @@
 When /^Make a deals asset GOL\/OTC and lose bet$/ do
+    sleep 3
     $deals.find_elements(:css, ".dropdown-caret")[2].click
     sleep 1
     find_and_click_selectors('span', 'FOR/HEIGHT', $deals)

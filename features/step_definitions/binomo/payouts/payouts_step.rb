@@ -7,11 +7,13 @@ end
 class Payouts
   def include(type, number_small, number_full)
     driver = Driver::Set.session(type)
-    driver.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/payouts")
+    driver.get(CommonSetting[:app_host] + "/en/payouts")
+    # driver.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/payouts")
     sleep 1
     add_cookies_to_page(driver)
     driver.manage.add_cookie(name: "agreed", value: "1")
-    driver.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/payouts")
+    driver.get(CommonSetting[:app_host] + "/en/payouts")
+    # driver.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/payouts")
     sleep 1
     driver.manage.window.resize_to(1200, 700)
     sleep 2
@@ -45,7 +47,7 @@ class Payouts
           driver.find_element(:css, 'input[name=amount]').clear
           sleep 0.4
           driver.find_element(:css, 'input[name=amount]').send_keys(ENV['count_payouts_sum'])
-          sleep 0.3
+          sleep 1
           driver.find_element(:css, '.btn-lg.btn-primary').click
           sleep 0.3
       rescue

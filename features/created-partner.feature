@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-18 16:37:59 +0300
+Feature: SMoke test generate 2017-10-19 13:25:02 +0300
  Scenario: Run step partner
  Given Pid process
  
@@ -24,4 +24,21 @@ Scenario:	Then Pool ranning?
  	When Administration
  	When Notes
  	Then The figures are not reset when you save
+ 
+ Given Created postback
+ 	When  Enter data
+ 	Then Data is entered
+ 	When Activate postback
+ 
+ Given Visit to page binpartner.com
+ Then Add data form
+ Then Click button Sign in and Authorize to partner.com
+ 
+ Given Add promo forms registartions
+ Given Open registration forms
+ 	When Add data input and submit registration
+ 		Then Assert registartion
+ Given Open registration forms
+ 	When Add data input and submit registration new
+ 		Then Assert registartion new
  

@@ -1,5 +1,4 @@
 When(/^Open list deals$/) do
-
   sleep 3
   $deals.find_elements(:css, ".dropdown-caret")[2].click
   sleep 3
@@ -14,18 +13,18 @@ When(/^Open list deals$/) do
 
   sleep 1
   $deals.find_elements(:css, "a.i-unit-icon-toggle.ng-isolate-scope")[0].click
-  sleep 1
+  sleep 2
 
   begin
-
-    @result = $deals.find_elements(:css, "div.total-count > div.result > span.currency-amount")[0].text
-
+    if $deals.find_elements(:css, "div.total-count > div.result > span.currency-amount")[0].nil? == true
+      puts_danger "No create deals"
+    else
+      @result = $deals.find_elements(:css, "div.total-count > div.result > span.currency-amount")[0].text
+    end
   rescue NoMethodError
     puts_info "not found"
     puts raise
-
   end
-
 end
 
 Then(/^Rate by RIC equal percent sum win deal$/) do

@@ -36,6 +36,9 @@
         }
       };
     }
+
+    $('#__written_in_the_log').prop('checked', false)
+    $('#__clear_releases').prop('checked', false)
   };
 
   function deploy_binomo() {
@@ -46,6 +49,7 @@
         if (data.data == "Start deploy Binomo staging, branch=" + $('#first-branch').val().replace(/ /g, "")) {
           $('.ws label').text("Start deploy Binomo staging, branch=" +
           $('#first-branch').val().replace(/ /g, "") + " ") .css("color", "yellow")
+
         }
 
         if (data.data == "Deploy Binomo staging done, branch=" + $('#first-branch').val().replace(/ /g, "")){
@@ -54,6 +58,9 @@
         }
       };
     }
+
+    $('#__written_in_the_log').prop('checked', false)
+    $('#__clear_releases').prop('checked', false)
   };
 
   function change_date_binpartner() {
