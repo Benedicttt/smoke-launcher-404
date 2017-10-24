@@ -1,18 +1,4 @@
 w = new WebSocket (
-      <% @ip = Socket.ip_address_list.detect { |intf| intf.ipv4_private? } %>
-      <% if @ip.nil? == true %>
-     <% @ip = Socket.ip_address_list.detect { |intf| intf.ipv4_private? } %>
-       'ws://<%= @ip.ip_address %>:8081'
-     <% else %>
-       'ws://<%= ip = IPSocket.getaddress(Socket.gethostname) %>:8081'
-     <% end %>
+      <% ip_address = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address %>
+       'ws://<%= ip_address %>:8081'
    )
-
-// w = new WebSocket (
-//      <% @ip = Socket.ip_address_list.detect { |intf| intf.ipv4_private? } %>
-//      'ws://<%= @ip.ip_address %>:8081'
-//    )
-// $(function(){
-//   <% @ip = Socket.ip_address_list.detect { |intf| intf.ipv4_private? } %>
-//   w = ActionCable.createConsumer("ws://<%= @ip.ip_address %>:8081");
-// })
