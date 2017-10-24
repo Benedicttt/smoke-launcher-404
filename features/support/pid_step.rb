@@ -12,16 +12,6 @@ Given /^Pid process$/ do
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym
 
   elsif ENV['driver'] == "chrome"
-    # if ENV['test_xvfb'].to_s == "true"
-    #   $headless = Headless.new
-    #   $headless.start
-    # end
-    # "headless",
-    # options =  Selenium::WebDriver::Chrome::Options.new(args: [ "--start-maximized", "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
-    # DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
-    # DRIVER.manage.timeouts.implicit_wait = 5
-    #
-
    options =  Selenium::WebDriver::Chrome::Options.new(args: [ "--verbose", "--headless", "--window-size=1600, 768", "--start-maximized",  "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
    DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
    DRIVER.manage.timeouts.implicit_wait = 5
