@@ -15,7 +15,7 @@ Given /^Connect to the CRM provider "(.*?)"$/ do |provider|
   DRIVER.get(CommonSetting[:url_page_crm] + "payment_groups")
   sleep 2
 
-  sleep 1
+  sleep 3
   DRIVER.find_elements(:css, 'a.btn')[1].click
 
   sleep 5

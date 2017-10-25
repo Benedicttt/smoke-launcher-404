@@ -14,7 +14,12 @@ Given /^Visit page auth_platform$/ do
   sleep 3
   DRIVER.find_elements(:css, "input[name='email']")[1].send_keys(email)
   DRIVER.find_elements(:css, "input[name='password']")[1].send_keys(CommonSetting[:user_test]["pass_platform"])
-  DRIVER.find_element(:css, "form > div:nth-child(5) > input").click
+
+  begin
+    DRIVER.find_element(:css, "form > div:nth-child(5) > input").click
+  rescue
+    DRIVER.find_element(:css, "form > div:nth-child(5) > button").click
+  end
   sleep 3
   puts_success "<br><br>#{link_report_id("#{CommonSetting[:url_user_crm]}/#{id}", " Authorized success, Email: #{email}<br><br>")}"
 end
