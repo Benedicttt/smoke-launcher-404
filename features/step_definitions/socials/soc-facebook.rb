@@ -33,7 +33,7 @@ When(/^Click my email facebook$/) do
     [w,DRIVER.title]
   end
   #
-  sleep 3
+  sleep 5
   DRIVER.find_element(:id, "email").send_keys("reg27051987@gmail.com")
   DRIVER.find_element(:id, "pass").send_keys(CommonSetting[:user_crm]['password'])
   DRIVER.find_element(:id, "loginbutton").click

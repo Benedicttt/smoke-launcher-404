@@ -1,10 +1,9 @@
-Feature: SMoke test generate 2017-10-24 17:34:07 +0300
+Feature: SMoke test generate 2017-10-25 12:56:09 +0300
  Scenario: Run step
  Given Pid process
- When Use demo type
-  	When Make a deals asset GOL/OTC and lose bet
- 	Then Transactions committed
-  	Given Activate all templates
+ Given Preparation of static data and visit homepage
+ 	When Registration traider
+ 	Then Email, locale, id, currency
  
 
 
