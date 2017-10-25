@@ -29,7 +29,9 @@ $(function(){
       proxy_http: "--proxy-server=" + $('#generator_proxy_http').val(),
       data_from: '"' + $('#generator_data_tournaments_from').val() + '"',
       data_to: '"' + $('#generator_data_tournaments_to').val() + '"',
-      ip_address: App.config.ip
+      ip_address: App.config.ip,
+      headless: $('#generator_headless').val(),
+      
     }));
 
     notify_status_testing();
