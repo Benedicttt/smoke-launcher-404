@@ -33,16 +33,25 @@ When(/^Click my email google$/) do
   end
 
   sleep 5
-  DRIVER.find_element(:css, "input[name=identifier]").send_keys("reg27051987@gmail.com")
-  DRIVER.find_element(:css, ".RveJvd.snByac").click
-  sleep 0.5
-  DRIVER.find_element(:css, "input[name=password]").send_keys(CommonSetting[:user_crm]['password'])
-  sleep 0.5
-  DRIVER.find_element(:css, ".RveJvd.snByac").click
+  begin
+    DRIVER.find_element(:css, "input[name=identifier]").send_keys("reg27051987@gmail.com")
+    DRIVER.find_element(:css, ".RveJvd.snByac").click
+  rescue
+    DRIVER.find_element(:id, "Email").send_keys("reg27051987@gmail.com")
+    DRIVER.find_element(:id, "next").click
+  end
+
+  sleep 5
+  begin
+    DRIVER.find_element(:css, "input[name=password]").send_keys(CommonSetting[:user_crm]['password'])
+    DRIVER.find_element(:css, ".RveJvd.snByac").click
+  rescue
+    DRIVER.find_element(:id, "Passwd").send_keys(CommonSetting[:user_crm]['password'])
+    DRIVER.find_element(:id, "signIn").click
+  end
   sleep 3
   DRIVER.switch_to.window(DRIVER.window_handles[0])
-  # wait_until(5, :id, "submit_approve_access")
-  # DRIVER.find_element(:id, "submit_approve_access").click
+
 end
 
 Then(/^Auth soc reg google$/) do
