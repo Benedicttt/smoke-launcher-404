@@ -12,7 +12,7 @@ module Server
                   :count_comments, :count_tickets,
 
                   :thread, :geo, :clear_cache, :proxy_http,
-                  :proxy_server, :plus_rspec, :clear_cache, :ip_address
+                  :proxy_server, :plus_rspec, :clear_cache, :ip_address, :headless
 
     def initialize(params)
       @params = params

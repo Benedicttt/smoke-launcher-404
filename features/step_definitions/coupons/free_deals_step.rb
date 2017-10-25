@@ -4,7 +4,7 @@ Given /^Testing free deals$/ do
       fd = Selenium::WebDriver.for ENV['driver'].to_sym
       fd.manage.window.resize_to(1200, 700)
     elsif ENV['driver'] == "chrome"
-      options =  Selenium::WebDriver::Chrome::Options.new(args: ["--verbose", "--headless", "--window-size=1600, 768", "--start-maximized",  "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
+      options =  Selenium::WebDriver::Chrome::Options.new(args: ["--verbose", "#{ENV['headless']}", "--window-size=1600, 768", "--start-maximized",  "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
       fd = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
     end
 

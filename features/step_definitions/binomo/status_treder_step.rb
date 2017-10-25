@@ -5,7 +5,7 @@ Then /^Status treder$/ do
   if ENV['driver'] == "firefox"
     @status_tr = Selenium::WebDriver.for ENV['driver'].to_sym
   elsif ENV['driver'] == "chrome"
-    options =  Selenium::WebDriver::Chrome::Options.new(args: ["--verbose", "--headless", "--window-size=1600, 768", "--start-maximized",  "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
+    options =  Selenium::WebDriver::Chrome::Options.new(args: ["--verbose", "#{ENV['headless']}", "--window-size=1600, 768", "--start-maximized",  "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
     @status_tr = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
     @status_tr.manage.timeouts.implicit_wait = 5
   end

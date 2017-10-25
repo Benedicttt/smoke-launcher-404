@@ -32,7 +32,7 @@ When(/^Click my email google$/) do
     [w,DRIVER.title]
   end
 
-  sleep 3
+  sleep 5
   DRIVER.find_element(:css, "input[name=identifier]").send_keys("reg27051987@gmail.com")
   DRIVER.find_element(:css, ".RveJvd.snByac").click
   sleep 0.5
