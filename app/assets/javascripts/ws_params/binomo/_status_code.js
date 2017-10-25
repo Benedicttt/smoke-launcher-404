@@ -15,7 +15,7 @@ $(function(){
       proxy_http: "--proxy-server=" + $('#generator_proxy_http').val(),
       response_http: $('#generator_display_return_only_response__200').prop('checked'),
       not_response_http: $('#generator_display_return_only_response__400').prop('checked'),
-      headless: $('#generator_headless').val(),
+      param_headless: $('#generator_param_headless').val(),
 
     }));
 

@@ -8,11 +8,20 @@ require 'selenium-webdriver'
 require 'cucumber'
 
 Given /^Pid process$/ do
+  ENV['param_headless'] = "--verbose" if ENV['param_headless'] != "--headless"
+
   if ENV['driver'] == "firefox"
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym
 
   elsif ENV['driver'] == "chrome"
-   options =  Selenium::WebDriver::Chrome::Options.new(args: [ "--verbose", "#{ENV['headless']}", "--window-size=1600, 768", "--start-maximized",  "--disable-gpu", "--disable-notifications" , "#{ENV['proxy_http']}#{ENV['proxy_server']}"])
+   options =  Selenium::WebDriver::Chrome::Options.new(args: [
+      "#{ENV['param_headless']}",
+      "--window-size=1600, 768",
+      "--disable-gpu",
+      "--disable-notifications" ,
+      "#{ENV['proxy_http']}#{ENV['proxy_server']}"
+      ])
+
    DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
    DRIVER.manage.timeouts.implicit_wait = 5
    DRIVER.manage.window.resize_to(1600, 768)
@@ -46,5 +55,4 @@ end
 Given /^Pool ranning\?$/ do
   $pool.shutdown && $pool.wait_for_termination
   puts_danger "Last threads? #{$pool.running?}"
-  $headless.destroy if ENV['test_xvfb'].to_s == "true"
 end
