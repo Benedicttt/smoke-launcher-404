@@ -2,7 +2,7 @@ require "./features/helpers/decor"
 
 module Server
   class StatusCode
-    attr_accessor :smoke_status_code, :count_features, :thread, :clear_cache, :geo, :proxy_http, :proxy_server, :response_http, :not_response_http
+    attr_accessor :smoke_status_code, :count_features, :thread, :clear_cache, :geo, :proxy_http, :proxy_server, :response_http, :not_response_http, :headless
 
     def initialize(params)
       @params = params
