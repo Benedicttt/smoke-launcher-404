@@ -31,7 +31,7 @@ $(function(){
       proxy_server: $('#generator_proxy_server').val(),
       proxy_http: "--proxy-server=" + $('#generator_proxy_http').val(),
       ip_address: App.config.ip,
-      headless: $('#generator_headless').val(),
+      param_headless: $('#generator_param_headless').val(),
       
     }));
 

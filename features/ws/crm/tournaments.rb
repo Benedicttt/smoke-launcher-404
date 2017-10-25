@@ -11,7 +11,7 @@ module Server
                   :count_pay_approve, :data_from, :data_to,
 
                   :thread, :geo, :clear_cache, :proxy_http,
-                  :proxy_server, :ip_address, :headless
+                  :proxy_server, :ip_address, :param_headless 
 
     def initialize(params)
       @params = params

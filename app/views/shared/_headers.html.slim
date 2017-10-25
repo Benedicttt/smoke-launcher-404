@@ -46,7 +46,7 @@
       = f.input :proxy_http, label: "Protocol", as: :select, collection: %w[http:// https://], required: false
 
   .col-xs-2
-    = f.input :headless, label: "params Chrome", as: :select, collection: %w[ --headless ], required: false
+    = f.input :param_headless , label: "params Chrome", as: :select, collection: %w[--headless], required: false
 
   .col-xs-2
     = f.input "clear", label: false, as: :check_boxes, collection: ['Clear cache'], required: false

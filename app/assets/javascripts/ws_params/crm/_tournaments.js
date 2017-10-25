@@ -30,7 +30,7 @@ $(function(){
       data_from: '"' + $('#generator_data_tournaments_from').val() + '"',
       data_to: '"' + $('#generator_data_tournaments_to').val() + '"',
       ip_address: App.config.ip,
-      headless: $('#generator_headless').val(),
+      param_headless: $('#generator_param_headless').val(),
       
     }));
 
