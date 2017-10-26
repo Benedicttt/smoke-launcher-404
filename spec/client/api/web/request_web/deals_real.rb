@@ -16,7 +16,7 @@ class Deals
 
       if user_balance == true
         id = Cookies.where(stage: ENV['stage']).last.id
-        Runner.call("User.find(#{id.to_s}).update(balance: \"10000\", email_verified: true)")
+        Runner.call("User.find(#{id.to_s}).update(balance: \"10000000\", email_verified: true)")
       end
 
       api_deals_create = "https://#{ENV['stage']}binomo.com/api/deals/create"
