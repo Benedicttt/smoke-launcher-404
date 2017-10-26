@@ -52,7 +52,6 @@ RSpec.describe "Config authorized success" do
   end
 
   context "params" do
-    it { puts @config_auth }
     it { expect(data(@config_auth, 'success')).to eq true }
     it { expect(data(@config_auth, 'errors')).to eq [] }
     it { expect(data(@config_auth, 'data')['authorized']).to eq true }

@@ -12,12 +12,45 @@ class Tournaments
             return JSON.parse(api.body)
   end
 
-  def list
-  end
   def profile
   end
   def participants
   end
-  def participate
+  
+  def participate(locale, device, password, email, id)
+
+    api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
+    response = RestClient::Request.execute(
+      method: :post,
+      url: api_sign_in,
+      headers: {
+        cookies: Config.new.get_config("web", "ru"),
+        referer: "https://#{ENV['stage']}binomo.com",
+        params:{
+            locale: locale,
+            device: device,
+            password: password,
+            email: email,
+            geo: "RU"
+          }
+        }
+       ) { |response, request, result, &block| response}
+
+    api_participate = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/participate"
+    api_participate = RestClient::Request.execute(
+      method: :post,
+      url: api_participate,
+      headers: {
+        cookies: response.cookies,
+        referer: "https://#{ENV['stage']}binomo.com",
+        params:{
+            locale: locale,
+            device: device,
+            geo: "RU"
+          }
+        }
+       ) { |response, request, result, &block| response}
+
+     return JSON.parse(api_participate.body)
   end
 end
