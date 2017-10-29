@@ -33,11 +33,9 @@ end
 RSpec.describe "Config authorized success" do
   before(:context) do
     @config_auth = ConfigApp.new.get_config("ios", "ru", $uuid, "1.0", "#{Cookies.where(stage: ENV['stage']).last.authtoken}")
-      puts Cookies.where(stage: ENV['stage']).last.authtoken
   end
 
   context "params" do
-    it { puts @config_auth.body }
     it { expect(@config_auth.code).to eq(200) }
     it { expect(data(@config_auth, 'success')).to eq true }
     it { expect(data(@config_auth, 'errors')).to eq [] }

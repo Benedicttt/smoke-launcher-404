@@ -18,9 +18,11 @@ class Tournaments
        url: "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}",
         headers: {
           params: {
-            locale: locale, device: device
-            }}) { |response, request, result, &block| response}
-            return JSON.parse(api.body)
+           locale: locale, device: device
+          }}) { |response, request, result, &block| response}
+
+
+    return JSON.parse(api.body)
   end
 
 
@@ -38,6 +40,7 @@ class Tournaments
           }
         }
        ) { |response, request, result, &block| response }
+
      return JSON.parse(participants.body)
   end
 
@@ -74,7 +77,6 @@ class Tournaments
           }
         }
        ) { |response, request, result, &block| response}
-
      return JSON.parse(api_participate.body)
   end
 end

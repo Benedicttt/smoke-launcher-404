@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Registration success" do
   before(:all) do
-    @registration = RegApp.new.post_sign_up("web", "ru", "123456q", true, "sign_up_ios.#{SecureRandom.hex(8)}@yopmail.com", true, $uuid, "1.0")[0]
+    @registration = RegApp.new.post_sign_up("ios", "ru", "123456q", true, "sign_up_ios.#{SecureRandom.hex(8)}@yopmail.com", true, $uuid, "1.0")[0]
   end
 
   context "params" do

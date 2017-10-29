@@ -5,8 +5,11 @@ Given /^Fixed$/ do
   sleep 1
 
   (1..quality.to_i).each do |num|
-    13.times do |i|
-      DRIVER.find_element(:css, "input[name='tournament[prizes_attributes][#{num}][amounts_attributes][#{i}][value]']").send_keys("#{100/quality}")
+    begin
+      15.times do |i|
+        DRIVER.find_element(:css, "input[name='tournament[prizes_attributes][#{num}][amounts_attributes][#{i}][value]']").send_keys("#{100/quality}")
+      end
+    rescue
     end
   end
 end
