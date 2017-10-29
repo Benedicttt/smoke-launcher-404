@@ -6,14 +6,14 @@ RSpec.describe "Api tournaments success" do
 
       ids = []
       ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" }
-      $id_max = ids[0].compact.max
+      @id_max = ids[0].compact.max
       print "#{$id_max}".yellow
 
     email = Cookies.where(stage: "#{ENV['stage']}").last.email
     password = "12345q"
-    @partcitipate = Tournaments.new.participate("ru", "web", password, email, $id_max)
-    @partcitipants = Tournaments.new.participants("ru", "web", $id_max)
-    @show = Tournaments.new.show("ru", "web", $id_max)
+    @partcitipate = Tournaments.new.participate("ru", "web", password, email, @id_max)
+    @partcitipants = Tournaments.new.participants("ru", "web", @id_max)
+    @show = Tournaments.new.show("ru", "web", @id_max)
 
   end
 
@@ -22,7 +22,6 @@ RSpec.describe "Api tournaments success" do
     it { expect(@tournaments['success']).to eq true }
     it { expect(@tournaments['errors']).to eq [] }
     it { expect(@tournaments['data'].class).to eq Array }
-    it { expect(@tournaments['data'][0]['id']).to be_a Integer  }
     it { expect(@tournaments['data'][0]['id']).to be_a Integer  }
     it { expect(@tournaments['data'][0]['name']).to be_a String  }
     it { expect(@tournaments['data'][0]['url']).to be_a String  }

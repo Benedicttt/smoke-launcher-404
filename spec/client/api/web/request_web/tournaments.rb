@@ -79,4 +79,23 @@ class Tournaments
        ) { |response, request, result, &block| response}
      return JSON.parse(api_participate.body)
   end
+
+  def deals_list(device, deal_type, tournament_id)
+
+    api_deals_create = "https://#{ENV['stage']}binomo.com/api/deals/list"
+    deals_tournament_list = RestClient::Request.execute(
+    method: :get,
+    url: api_deals_create,
+    headers: {
+      cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
+      params: {
+        locale: 'ru',
+        device: device,
+        deal_type: deal_type,
+        tournament_id: tournament_id,
+        geo: "RU"
+    }
+    }) { |response, request, result, &block|  response }
+    return JSON.parse(deals_tournament_list)
+  end
 end

@@ -41,7 +41,8 @@ RSpec.describe "join session" do
      @demo          = false
      @amount        = 100
      @deal_type     = "tournament"
-     @trend = "put"
+     @won_deal = "put"
+     @lose_deal = "call"
      @count = 1
      @device = "web"
      @option_type = "turbo"
@@ -49,29 +50,101 @@ RSpec.describe "join session" do
      @expire_at  = (Time.now.to_i / 60).to_i * 60
      @expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
 
+     @won =  ws.send_ws(@device, @demo, @asset, @expire_at, @amount, @option_type, @deal_type, @won_deal, @count, @id_max, @stage, @authtoken, @device_id)
+     @lose =  ws.send_ws(@device, @demo, @asset, @expire_at, @amount, @option_type, @deal_type, @lose_deal, @count, @id_max, @stage, @authtoken, @device_id)
 
-    @deals_list =  ws.send_ws(@device, @demo, @asset, @expire_at, @amount, @option_type, @deal_type, @trend, @count, @id_max, @stage, @authtoken, @device_id)
+     @deals_lose = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][0] #lose
+     @deals_won = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][1] #won
+
+     print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
+     sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
+
+     @closed_lose_deal_data = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][0]
+     @closed_won_deal_data = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][1]
+     sleep 1
   end
 
-  context "params" do
-    it { puts @deals_list['data']['deals'][0]['bet']}
-    it { expect(@deals_list['data']['deals'][0]['id']).to be_a Integer }
-    it { expect(@deals_list['data']['deals'][0]['asset']).to eq @asset }
-    it { expect(@deals_list['data']['deals'][0]['name']).to eq "FOR/HEIGHT" }
-    it { expect(@deals_list['data']['deals'][0]['trend']).to eq @trend }
+  context "params open PUT deal" do
+    it { expect(@deals_won['id']).to be_a Integer }
+    it { expect(@deals_won['asset']).to eq @asset }
+    it { expect(@deals_won['name']).to eq "FOR/HEIGHT" }
+    it { expect(@deals_won['trend']).to eq @won_deal }
 
-    it { expect(@deals_list['data']['deals'][0]['entrie_rate']).to be_a Float }
-    it { expect(@deals_list['data']['deals'][0]['bet'].to_f).to be_a Float }
-    it { expect(@deals_list['data']['deals'][0]['bet']).to eq "#{@amount.to_f}" }
-    it { expect(@deals_list['data']['deals'][0]['payment']).to be_a Float }
-    it { expect(@deals_list['data']['deals'][0]['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f }
-    it { expect(@deals_list['data']['deals'][0]['status']).to eq "open"  }
-    it { expect(@deals_list['data']['deals'][0]['option_type']).to eq @option_type  }
-    it { expect(@deals_list['data']['deals'][0]['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f   }
-    it { expect(@deals_list['data']['deals'][0]['demo']).to eq @demo}
-    it { expect(@deals_list['data']['deals'][0]['deal_type']).to eq @deal_type}
-    it { expect(@deals_list['data']['deals'][0]['tournament_id']).to eq @id_max}
-    it { expect(@deals_list['data']['deals'][0]['end_rate']).to eq 0.0}
-    it { expect(@deals_list['data']['deals'][0]['win']).to eq 0}
+    it { expect(@deals_won['entrie_rate']).to be_a Float }
+    it { expect(@deals_won['bet'].to_f).to be_a Float }
+    it { expect(@deals_won['bet']).to eq "#{@amount.to_f}" }
+    it { expect(@deals_won['payment']).to be_a Float }
+    it { expect(@deals_won['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f }
+    it { expect(@deals_won['status']).to eq "open"  }
+    it { expect(@deals_won['option_type']).to eq @option_type  }
+    it { expect(@deals_won['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f   }
+    it { expect(@deals_won['demo']).to eq @demo}
+    it { expect(@deals_won['deal_type']).to eq @deal_type}
+    it { expect(@deals_won['tournament_id']).to eq @id_max}
+    it { expect(@deals_won['end_rate']).to eq 0.0}
+    it { expect(@deals_won['win']).to eq 0}
+  end
+
+  context "params open CALL deal" do
+    it { expect(@deals_lose['id']).to be_a Integer }
+    it { expect(@deals_lose['asset']).to eq @asset }
+    it { expect(@deals_lose['name']).to eq "FOR/HEIGHT" }
+    it { expect(@deals_lose['trend']).to eq @lose_deal }
+
+    it { expect(@deals_lose['entrie_rate']).to be_a Float }
+    it { expect(@deals_lose['bet'].to_f).to be_a Float }
+    it { expect(@deals_lose['bet']).to eq "#{@amount.to_f}" }
+    it { expect(@deals_lose['payment']).to be_a Float }
+    it { expect(@deals_lose['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f }
+    it { expect(@deals_lose['status']).to eq "open"  }
+    it { expect(@deals_lose['option_type']).to eq @option_type  }
+    it { expect(@deals_lose['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f   }
+    it { expect(@deals_lose['demo']).to eq @demo}
+    it { expect(@deals_lose['deal_type']).to eq @deal_type}
+    it { expect(@deals_lose['tournament_id']).to eq @id_max}
+    it { expect(@deals_lose['end_rate']).to eq 0.0}
+    it { expect(@deals_lose['win']).to eq 0}
+  end
+
+  context "params close CALL deal" do
+    it { expect(@closed_won_deal_data['id']).to be_a Integer }
+    it { expect(@closed_won_deal_data['asset']).to eq @asset }
+    it { expect(@closed_won_deal_data['name']).to eq "FOR/HEIGHT" }
+    it { expect(@closed_won_deal_data['trend']).to eq @won_deal }
+
+    it { expect(@closed_won_deal_data['entrie_rate']).to be_a Float }
+    it { expect(@closed_won_deal_data['bet'].to_f).to be_a Float }
+    it { expect(@closed_won_deal_data['bet']).to eq "#{@amount.to_f}" }
+    it { expect(@closed_won_deal_data['payment']).to be_a Float }
+    it { expect(@closed_won_deal_data['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f }
+    it { expect(@closed_won_deal_data['status']).to eq "won"  }
+    it { expect(@closed_won_deal_data['option_type']).to eq @option_type }
+    it { expect(@closed_won_deal_data['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f   }
+    it { expect(@closed_won_deal_data['demo']).to eq @demo}
+    it { expect(@closed_won_deal_data['deal_type']).to eq @deal_type }
+    it { expect(@closed_won_deal_data['tournament_id']).to eq @id_max }
+    it { expect(@closed_won_deal_data['end_rate']).to be_a Float }
+    it { expect(@closed_won_deal_data['win']).to eq @amount + Assets.new.get('web', 'ru')[1][0] }
+  end
+
+  context "params close CALL deal" do
+    it { expect( @closed_lose_deal_data['id']).to be_a Integer }
+    it { expect( @closed_lose_deal_data['asset']).to eq @asset }
+    it { expect( @closed_lose_deal_data['name']).to eq "FOR/HEIGHT" }
+    it { expect( @closed_lose_deal_data['trend']).to eq @lose_deal }
+
+    it { expect( @closed_lose_deal_data['entrie_rate']).to be_a Float }
+    it { expect( @closed_lose_deal_data['bet'].to_f).to be_a Float }
+    it { expect( @closed_lose_deal_data['bet']).to eq "#{@amount.to_f}" }
+    it { expect( @closed_lose_deal_data['payment']).to be_a Float }
+    it { expect( @closed_lose_deal_data['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f }
+    it { expect( @closed_lose_deal_data['status']).to eq "lost"  }
+    it { expect( @closed_lose_deal_data['option_type']).to eq @option_type  }
+    it { expect( @closed_lose_deal_data['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f   }
+    it { expect( @closed_lose_deal_data['demo']).to eq @demo}
+    it { expect( @closed_lose_deal_data['deal_type']).to eq @deal_type}
+    it { expect( @closed_lose_deal_data['tournament_id']).to eq @id_max }
+    it { expect( @closed_lose_deal_data['end_rate']).to be_a Float }
+    it { expect( @closed_lose_deal_data['win']).to eq 0 }
   end
 end

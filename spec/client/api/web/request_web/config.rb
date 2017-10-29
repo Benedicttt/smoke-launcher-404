@@ -11,9 +11,7 @@ class Config
 
      return JSON.parse(response)
   end
-end
 
-class Config
   def get_config(device, locale)
     api_conf_up = "https://#{ENV['stage']}binomo.com/api/config"
     response = RestClient.get(
