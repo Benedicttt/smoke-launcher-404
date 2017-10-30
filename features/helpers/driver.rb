@@ -21,7 +21,7 @@ end
 
 
 $pool = Concurrent::RubyThreadPoolExecutor.new(
-     min_threads: 4,
-     max_threads: 4,
-     max_queue: 100
+     min_threads: 1,
+     max_threads: 1,
+     max_queue: 30
    )

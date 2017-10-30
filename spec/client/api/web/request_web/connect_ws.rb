@@ -54,6 +54,7 @@ class RequestWS
         }) { |response, request, result, &block|  response }
 
         puts msg.data
+        $msg_deals = msg.data
         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['status'] == 'open'
         # exit 1 if JSON.parse(msg.data)["payload"]['status'] == 'open'
       end
