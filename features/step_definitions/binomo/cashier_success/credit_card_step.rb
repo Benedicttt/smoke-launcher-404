@@ -8,7 +8,7 @@ When /^Make deposit CreditCard$/ do
     ENV['count_cashier'].to_i.times do |i|
       DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier")
       sleep 2
-      DRIVER.find_element(:css, "li.unit-payment-system.card").click
+      DRIVER.find_element(:css, "li.card").click
       sleep 0.5
       DRIVER.execute_script("angular.element(document.querySelectorAll('.form-control'))[0].value = #{ENV['count_cashier_dep']}")
       DRIVER.execute_script("document.querySelectorAll('.form-control')[0].dispatchEvent(new Event('change'))")
