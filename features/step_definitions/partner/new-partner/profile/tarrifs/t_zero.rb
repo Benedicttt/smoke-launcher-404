@@ -10,10 +10,13 @@ Given /^Select only tarrif first$/ do
   sleep 1
 
   DRIVER.execute_script("$('option[value]').selected()")
-  DRIVER.find_elements(:id, "customer_tariff_data_attributes_profit_reduce_rates_attributes_0_value")[0].send_keys("0,5")
+  sleep 3
+
+  DRIVER.find_elements(:id, "customer_tariff_data_attributes_profit_reduce_rates_attributes_0_value")[0].send_keys("0.5")
   2.times do
     sleep 1
     DRIVER.find_elements(:id, 'customer_tariff_active')[0].click ; sleep 0.5
     DRIVER.find_elements(:css, "button.btn.btn-primary")[5].click
   end
+  DRIVER.save_screenshot "part.png"
 end
