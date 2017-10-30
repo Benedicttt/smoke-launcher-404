@@ -1,11 +1,23 @@
-Feature: SMoke test generate 2017-10-26 16:17:56 +0300
+Feature: SMoke test generate 2017-10-30 15:12:16 +0300
  Scenario: Run step partner
  Given Pid process
  
 
 Scenario:	Then Pool ranning?
- Given Delete all promo-code
+ Given Visit to page partner.com
+ 	When Partner registration
+ 	Then Registered partner
  
- 	Given Visit to page profile partner
- 	When Delete postbacks
+ Given Select only tarrif first 
+ Given Select only tarrif percent 
+ Given Select only tarrif CPA 
+ Given Select only tarrif CPA % 
+ Given Select only tarrif CPL SOI 
+ Given Select only tarrif CPL DOI 
+ Given Visit to page profile partner
+ 	When Total information
+ 	When Security
+ 	When Administration
+ 	When Notes
+ 	Then The figures are not reset when you save
  

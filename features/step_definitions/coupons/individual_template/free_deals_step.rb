@@ -18,7 +18,7 @@ Given(/^Template Free Deals$/) do
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").send_keys("10")
   end
 
-  %w[RUB KZT CNY TRY UAH INR ZAR GDQ IDR VND MYR GTQ].each do |name|
+  %w[RUB KZT CNY TRY UAH INR ZAR GDQ IDR VND MYR GTQ PYG].each do |name|
     begin
       DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
       DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
