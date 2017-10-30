@@ -1,5 +1,4 @@
 Then /^Assert registartion$/ do
-  DRIVER.save_screenshot "part.png"
   DRIVER.switch_to.window(DRIVER.window_handles[0])
   reg = DRIVER.find_element(:id, 'reg')
   sleep 1
@@ -8,7 +7,6 @@ Then /^Assert registartion$/ do
     sleep 1
     DRIVER.get CommonSetting[:app_host]
     sleep 1
-    DRIVER.save_screenshot "part1.png"
 
     puts_info "Redirect page /trading #{DRIVER.current_url == CommonSetting[:app_host] + CommonSetting[:locale] + "/trading"}"
 end
