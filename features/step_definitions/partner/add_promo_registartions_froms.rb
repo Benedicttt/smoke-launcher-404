@@ -5,7 +5,6 @@ Given /^Add promo forms registartions$/ do
   sleep 0.5
   DRIVER.find_element(:css, "a[data-widget='reg']").click
   sleep 0.5
-  # DRIVER.find_element(:css, ".widget-campaign").send_keys("reg_company")
   DRIVER.find_element(:css, ".widget-subaccount").send_keys("reg_sub_ac")
   widget_code = DRIVER.find_element(:css, ".widget-code").text
   File.open("./features/step_definitions/partner/forms/registration.html", "w") do |f|
