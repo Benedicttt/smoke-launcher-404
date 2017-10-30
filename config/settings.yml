@@ -48,7 +48,7 @@ email:
   s7: ""
 
 email_name:
-  # prod: "Prod."
+  prod: "Prod."
   s4: "Stage4."
   s3: "Stage3."
   s2: "Stage2."
@@ -58,7 +58,7 @@ email_name:
   s7: "Stage7."
 
 email_partner:
-  # prod: "Part_prod.{0}"
+  prod: "Part_prod.{0}"
   s4: "Part_s4.{0}"
   s3: "Part_s3.{0}"
   s2: "Part_s2.{0}"
@@ -93,7 +93,7 @@ page:
   postback: "/ru/postbacks/new"
 
 app_host:
-  # prod: "https://binomo.com/"
+  prod: "https://binomo.com/"
   s7: "https://s7.binomo.com/"
   s6: "https://s6.binomo.com/"
   s5: "https://s5.binomo.com/"
@@ -103,7 +103,7 @@ app_host:
   s1: "https://s1.binomo.com/"
 
 url_partner:
-  # prod: "https://binpartner.com/"
+  prod: "https://binpartner.com/"
   s7: "https://s7.binpartner.com/"
   s6: "https://s6.binpartner.com/"
   s5: "https://s5.binpartner.com/"
@@ -113,7 +113,7 @@ url_partner:
   s1: "https://s1.binpartner.com/"
 
 url_adm_partner:
-  # prod: "https://adm.binpartner.com/"
+  prod: "https://adm.binpartner.com/"
   s7: "https://s7-adm.binpartner.com/"
   s6: "https://s6-adm.binpartner.com/"
   s5: "https://s5-adm.binpartner.com/"
@@ -154,7 +154,7 @@ stage_select:
   s5: "Stage5"
   s6: "Stage6"
   s7: "Stage7"
-  # prod: "Production"
+  prod: "Production"
 
 frame_work:
   cucumber: "cucumber"

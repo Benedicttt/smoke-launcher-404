@@ -47,14 +47,18 @@ When /^Add data$/ do
     DRIVER.find_element(:id, "tournament_name_#{locale}").send_keys("#{locale} " + "#{Time.now}")
   end
 
-  (0..12).each do |num|
-    DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").clear
-    DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").clear
-    DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").clear
+  begin
+    (0..20).each do |num|
+      DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").clear
+      DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").clear
+      DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").clear
 
-    DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").send_keys("100")
-    DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").send_keys("100")
-    DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").send_keys("100")
+      DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").send_keys("100")
+      DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").send_keys("100")
+      DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").send_keys("100")
+    end
+  rescue
   end
+  
   sleep 1
 end

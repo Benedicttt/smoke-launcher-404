@@ -11,7 +11,6 @@ class ConfigApp
          app_version: app_version
 
      }){ |response, request, result, &block| response}
-
   end
 end
 
@@ -29,6 +28,5 @@ class ConfigApp
 
      }){ |response, request, result, &block| response }
 
-     return response
   end
 end

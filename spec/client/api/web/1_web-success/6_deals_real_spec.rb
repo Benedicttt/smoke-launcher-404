@@ -37,7 +37,7 @@ end
 RSpec.describe "Deals success turbo call" do
   before(:all) do
     @expired = (Time.now.to_i / 60).to_i*60
-      @expired += Time.now.sec > 15 ? 2.minutes : 1.minutes
+    @expired += Time.now.sec > 15 ? 2.minutes : 1.minutes
     @deals_real = Deals.new.real_create(false, "1000", 'GOL/OTC', "turbo", "call", "mouse", Time.now.to_i, @expired, 'ru', 'web', false)
     sleep 1
   end

@@ -10,7 +10,8 @@ html
       .row
         =link_to "binomo", :homepage_select_binomo , class: "platform platform-binomo btn-primary btn-lg btn-block"
         =link_to "binpartner", :homepage_select_binpartner, class: "platform platform-binpartner btn-primary btn-lg btn-block"
-        // =link_to "api request", :homepage_api_request, class: "platform platform-request btn-primary btn-lg btn-block"
         =link_to "status code pages", :homepage_status_code_pages , class: "platform smoke-binomo btn-primary btn-lg btn-block"
-        =link_to "deploy branch", :homepage_deploy_branch, class: "platform deploy btn-primary btn-lg btn-block"
+
+        - if Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address  == "192.168.4.200"
+            =link_to "deploy branch", :homepage_deploy_branch, class: "platform deploy btn-primary btn-lg btn-block"
         =link_to "need link?", :homepage_need_link, class: "platform need_link btn-primary btn-lg btn-block"

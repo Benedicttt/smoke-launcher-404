@@ -50,20 +50,6 @@ end
 
 RSpec.describe "Authorized success" do
   before(:all) do
-    api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
-    response = RestClient::Request.execute(
-      method: :post,
-      url: api_sign_in,
-      headers: {
-        referer: "https://#{ENV['stage']}binomo.com",
-        cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
-        params:{
-            locale: "ru",
-            device: "web",
-            geo: "RU"
-          }
-        })
-
     @authorized = Authorized.new.get_auth("web", "ru", "123456q", "#{Cookies.where(stage: "#{ENV['stage']}").last.email}")
     Cookies.where(stage: "#{ENV['stage']}").last.update(authtoken: @authorized['data']['authtoken'].to_s)
   end

@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe "Registration success" do
   before(:all) do
-    @registration = RegApp.new.post_sign_up("web", "ru", "123456q", true, "sign_up_ios.#{SecureRandom.hex(8)}@yopmail.com", true, $uuid, "1.0")[0]
+    @registration = RegApp.new.post_sign_up("ios", "ru", "123456q", true, "sign_up_ios.#{SecureRandom.hex(8)}@yopmail.com", true, $uuid, "1.0")[0]
   end
 
   context "params" do
     it { expect(@registration["success"]).to eq true }
     it { expect(@registration["errors"]).to eq [] }
-    it { expect(@registration['data']['authtoken'].length).to eq 32 }
+    it { expect(@registration['data']['authtoken'].length).to eq 36 }
     it { expect(@registration['data']['balance']).to eq 0 }
     it { expect(@registration['data']['bonus']).to eq 0 }
     it { expect(@registration['data']['avatar']).to eq nil }

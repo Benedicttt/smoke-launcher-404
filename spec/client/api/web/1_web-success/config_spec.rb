@@ -14,13 +14,13 @@ RSpec.describe "Config success" do
     it { expect(data(@config, 'data')['device_id']).to eq nil}
     it { expect(data(@config, 'data')['device_type']).to eq 'web' }
 
-    it { expect(list_currency("USD").compact).to be_in [currency_usd, currency_usd_nil] }
-    it { expect(list_currency("EUR").compact).to be_in [currency_eur, currency_eur_nil] }
-    it { expect(list_currency("CNY").compact).to be_in [currency_cny, currency_cny_nil] }
-    it { expect(list_currency("INR").compact).to be_in [currency_inr, currency_inr_nil] }
-    it { expect(list_currency("TRY").compact).to be_in [currency_try, currency_try_nil] }
-    it { expect(list_currency("RUB").compact).to be_in [currency_rub, currency_rub_nil] }
-    it { expect(list_currency("UAH").compact).to be_in [currency_uah, currency_uah_nil] }
+    # it { expect(list_currency("USD").compact).to be_in [currency_usd, currency_usd_nil] }
+    # it { expect(list_currency("EUR").compact).to be_in [currency_eur, currency_eur_nil] }
+    # it { expect(list_currency("CNY").compact).to be_in [currency_cny, currency_cny_nil] }
+    # it { expect(list_currency("INR").compact).to be_in [currency_inr, currency_inr_nil] }
+    # it { expect(list_currency("TRY").compact).to be_in [currency_try, currency_try_nil] }
+    # it { expect(list_currency("RUB").compact).to be_in [currency_rub, currency_rub_nil] }
+    # it { expect(list_currency("UAH").compact).to be_in [currency_uah, currency_uah_nil] }
 
     it { expect(data(@config, 'data')['currencies']['default']).to eq 'RUB'}
     it { expect(data(@config, 'data')['show_tutorial']).to eq false}
@@ -52,7 +52,6 @@ RSpec.describe "Config authorized success" do
   end
 
   context "params" do
-    it { puts @config_auth }
     it { expect(data(@config_auth, 'success')).to eq true }
     it { expect(data(@config_auth, 'errors')).to eq [] }
     it { expect(data(@config_auth, 'data')['authorized']).to eq true }

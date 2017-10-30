@@ -56,6 +56,7 @@
 
     gem 'em-websocket'
     gem 'websocket-client-simple'
+    gem 'faye-websocket'
     gem 'websocket-eventmachine-client'
     gem 'chromedriver-helper'
     gem "watir"
