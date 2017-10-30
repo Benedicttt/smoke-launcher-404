@@ -18,5 +18,4 @@ Given /^Select only tarrif first$/ do
     DRIVER.find_elements(:id, 'customer_tariff_active')[0].click ; sleep 0.5
     DRIVER.find_elements(:css, "button.btn.btn-primary")[5].click
   end
-  DRIVER.save_screenshot "part.png"
 end

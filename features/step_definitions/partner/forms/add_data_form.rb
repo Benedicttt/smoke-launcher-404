@@ -1,5 +1,6 @@
 When /^Add data input and submit registration$/ do
   reg = DRIVER.find_element(:id, 'reg')
+  sleep 1
   DRIVER.switch_to.frame reg
     DRIVER.find_element(:css, "input[name=email]").send_keys(CommonSetting[:email_name] + "#{SecureRandom.hex(8)}@yopmail.com")
     DRIVER.find_element(:css, "input[name=password]").send_keys(CommonSetting[:user_test]['pass_platform'])
@@ -11,6 +12,7 @@ end
 
 When /^Add data input and submit registration new$/ do
   reg_new = DRIVER.find_element(:id, 'reg-new')
+  sleep 1
   DRIVER.switch_to.frame reg_new
 
     DRIVER.find_element(:css, "input[name=email]").send_keys(CommonSetting[:email_name] + "#{SecureRandom.hex(8)}@yopmail.com")
