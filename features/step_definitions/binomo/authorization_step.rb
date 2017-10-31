@@ -2,7 +2,7 @@ Given /^Visit page auth_platform$/ do
   DRIVER.get CommonSetting[:app_host] + CommonSetting[:locale]
   sleep 1
   DRIVER.manage.delete_all_cookies
-  DRIVER.manage.add_cookie(name: "agreed", value: "1")
+  # DRIVER.manage.add_cookie(name: "agreed", value: "1")
   DRIVER.manage.add_cookie(name: "agreedBeforeReg", value: "true")
 
   DRIVER.get CommonSetting[:app_host] + CommonSetting[:locale]
