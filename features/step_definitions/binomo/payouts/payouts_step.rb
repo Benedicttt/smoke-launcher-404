@@ -8,12 +8,12 @@ class Payouts
   def include(type, number_small, number_full)
     driver = Driver::Set.session(type)
     driver.get(CommonSetting[:app_host] + "/en/payouts")
-    # driver.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/payouts")
+
     sleep 1
     add_cookies_to_page(driver)
-    driver.manage.add_cookie(name: "agreed", value: "1")
+    driver.manage.delete_cookie("agreed");
+
     driver.get(CommonSetting[:app_host] + "/en/payouts")
-    # driver.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/payouts")
     sleep 1
     driver.manage.window.resize_to(1200, 700)
     sleep 2

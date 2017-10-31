@@ -55,9 +55,8 @@ class RequestWS
 
         puts msg.data
 
-        $msg_deals = msg.data
+        $msg_deals = msg.data if JSON.parse(msg.data)["payload"]['status'] == 'open'
         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['status'] == 'open' || JSON.parse(msg.data)["payload"]['status'] == 'error'
-        # exit 1 if JSON.parse(msg.data)["payload"]['status'] == 'open'
       end
     }
 
