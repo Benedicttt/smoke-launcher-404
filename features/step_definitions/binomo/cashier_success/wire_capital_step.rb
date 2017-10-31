@@ -9,7 +9,6 @@ When /^Make deposit WireCapital$/ do
 
      DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier")
      sleep 3
-     DRIVER.save_screenshot "part.png"
      DRIVER.find_element(:css, "li.card").click
      sleep 0.5
 
