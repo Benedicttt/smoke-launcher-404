@@ -18,7 +18,7 @@ Then /^Status treder$/ do
   @status_tr.execute_script("localStorage.setItem(\"#{id}.real.welcome_bonus\", \"1\")" )
   @status_tr.execute_script("localStorage.setItem(\"#{id}.demo.welcome_bonus\", \"1\")")
   @status_tr.manage.add_cookie(name: "asset.daily", value: "FAKE")
-  @status_tr.manage.add_cookie(name: "agreed", value: "1")
+  @status_tr.manage.delete_cookie("agreed")
   @status_tr.get CommonSetting[:app_host] + CommonSetting[:locale] + "/help"
 
   sleep 2
