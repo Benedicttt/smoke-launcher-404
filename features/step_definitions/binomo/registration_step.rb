@@ -14,6 +14,8 @@ When /^Registration traider$/ do
   sleep 1
   DRIVER.find_element(:css, "input[name=email]").send_keys(EMAIL)
   DRIVER.find_element(:css, "input[name=password]").send_keys(CommonSetting[:user_test]['pass_platform'])
+  DRIVER.find_element(:css, "span[ng-bind='::vm.title']").click if ENV['geo'] != "RU"
+  sleep 0.5
   1.times { DRIVER.find_element(:css, "span[ng-bind='::vm.title']").click; sleep 0.5 }
   sleep 1
   DRIVER.execute_script(CommonSetting[:currency][0])
