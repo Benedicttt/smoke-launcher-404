@@ -31,7 +31,9 @@ RSpec.describe "join session" do
      ids = []
      ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" }
      @id_max = ids[0].compact.max
-     puts "#{@id_max}".yellow
+
+     print "#{@id_max}".yellow
+    #  puts Cookies.where(stage: "#{ENV['stage']}").last.email
 
      ws          = RequestWS.new
      @stage       = ENV['stage']
@@ -65,6 +67,7 @@ RSpec.describe "join session" do
      null = "l"
      @msg_ws_deal = JSON.parse(eval($msg_deals).to_json)
 
+    #  puts "#{@msg_ws_deal}".red
   end
 
   context "param create deal" do

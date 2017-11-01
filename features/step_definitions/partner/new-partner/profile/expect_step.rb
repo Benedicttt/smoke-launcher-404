@@ -39,7 +39,7 @@ Then /^The figures are not reset when you save$/ do
   sleep 0.2
   @cookies_partner = DRIVER.manage.all_cookies.each_with_object({}) { |cookie, acc| acc[cookie[:name]] = cookie[:value] }
 
-  Partner.find(@@id).update(branch: File.read("./features/temporary/binpartner_branch_#{ENV['staging']}").sub(/\n/, ''), cookies: @cookies_partner)
+  Partner.find(@@id).update(branch: Runner.current_branch_binpartner, cookies: @cookies_partner)
 
   puts_warning link_report_id("#{CommonSetting[:url_adm_partner]}/customers/#{Partner.last.id}/edit", " Email: #{DRIVER.execute_script("return $('#customer_email').val()")}")
   puts_warning link_report_id("#{CommonSetting[:url_adm_partner]}/stats/common?email=#{Partner.find("#{@@id}").email}", " Stats partner in adm: #{Partner.find("#{@@id}").email}")

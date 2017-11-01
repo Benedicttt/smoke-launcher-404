@@ -36,7 +36,7 @@ class RequestWS
                   }
 
         demo_request = JSON.dump(params)
-        count.times { ws.send demo_request; sleep 0.1 }
+        count.times { ws.send demo_request; sleep 0.01 }
 
         api_deals_create = "https://#{ENV['stage']}binomo.com/api/deals/list"
         deals_real_list = RestClient::Request.execute(
@@ -53,7 +53,7 @@ class RequestWS
         }
         }) { |response, request, result, &block|  response }
 
-        puts msg.data
+        # puts msg.data
 
         $msg_deals = msg.data if JSON.parse(msg.data)["payload"]["status"] == "open"
         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['status'] == 'open' || JSON.parse(msg.data)["payload"]['status'] == 'error'

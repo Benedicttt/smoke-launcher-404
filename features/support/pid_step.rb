@@ -9,7 +9,6 @@ require 'cucumber'
 
 Given /^Pid process$/ do
   ENV['param_headless'] = "--verbose" if ENV['param_headless'] != "--headless"
-
   if ENV['driver'] == "firefox"
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym
 
