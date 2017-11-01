@@ -18,4 +18,16 @@ class Runner
       end
     end
   end
+
+  def self.current_branch_binomo
+    Net::SSH.start("#{ENV['stage']}.binomo.com", 'binomo') do |ssh|
+      return ssh.exec!("cd binomo.com && tail -1 revisions.log").split[1]
+    end
+  end
+
+  def self.current_branch_binpartner
+    Net::SSH.start("#{ENV['stage']}.binpartner.com", 'binpartner') do |ssh|
+      return ssh.exec!("cd binpartner.com && tail -1 revisions.log").split[1]
+    end
+  end
 end

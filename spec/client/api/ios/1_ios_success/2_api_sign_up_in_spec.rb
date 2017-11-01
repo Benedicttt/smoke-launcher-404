@@ -57,7 +57,7 @@ RSpec.describe "Authorized success" do
 
   context "params" do
     it { expect(@authorized['success']).to eq true }
-    it { expect(@authorized['data']['authtoken'].length).to eq 32 }
+    it { expect(@authorized['data']['authtoken'].length).to eq 36 }
     it { expect(@authorized['data']['url']).to eq nil }
     it { expect(@authorized['errors']).to eq [] }
   end

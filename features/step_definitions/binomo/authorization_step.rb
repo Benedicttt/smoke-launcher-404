@@ -23,4 +23,5 @@ Given /^Visit page auth_platform$/ do
   end
   sleep 3
   puts_success "<br><br>#{link_report_id("#{CommonSetting[:url_user_crm]}/#{id}", " Authorized success, Email: #{email}<br><br>")}"
+
 end

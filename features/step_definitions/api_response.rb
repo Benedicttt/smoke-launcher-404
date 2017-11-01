@@ -43,9 +43,8 @@ class ApiResponse
                  '#{ENV['ip_address']}')
                  ;"
 
-      User.find(id).update(refcode: ENV['refcode'], branch: File.read("./features/temporary/binomo_branch_#{ENV['staging']}").sub(/\n/, ''))
+      User.find(id).update(refcode: ENV['refcode'], branch: Runner.current_branch_binomo)
       Cookies.create(id: id, cookies_traider: @authorized.cookies.to_json)
-
       id = User.where(stage_number: ENV['stage']).last.id
       email = User.where(stage_number: ENV['stage']).last.email
 
