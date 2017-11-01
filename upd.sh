@@ -2,5 +2,5 @@
 # sudo  touch /Users/benedict/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle
 # sudo chown root /Users/benedict/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle
 # sudo chmod 644 /Users/benedict/Library/Google/GoogleSoftwareUpdate/GoogleSoftwareUpdate.bundle
-
+#!/bin/bash
 ga . && gcmsg 'fix' && gp auto && gp origin
