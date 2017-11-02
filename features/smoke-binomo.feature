@@ -1,14 +1,13 @@
-Feature: SMoke test generate 2017-11-02 17:05:01 +0300
+Feature: SMoke test generate 2017-11-02 17:58:30 +0300
  Scenario: Run step
  Given Pid process
- 	Given Visit page CRM
- 	When Authorization crm
- 	Then Success
+ When Use demo type
+  	When Make a deals asset GOL/OTC and lose bet
+ 	Then Transactions committed
+  	Given Activate all templates
  
 
-	Given Template Bonus
-	Given Template Bonus Deposit
- 	Given Template Free Deals
+
 
 
 

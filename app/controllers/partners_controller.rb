@@ -42,6 +42,7 @@ class PartnersController < ApplicationController
   end
 
   def destroy
+    ReportsPartner.where(user_id: @stat_part.id).destroy_all
     @stat_part.destroy
     respond_to do |format|
       format.html { redirect_to partners_path, notice: 'Post was successfully destroyed.' }

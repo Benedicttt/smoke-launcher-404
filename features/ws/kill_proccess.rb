@@ -12,6 +12,7 @@ module Server
           pid.each { |x| system "kill -9 #{x}" }
           system "for pid in $(ps -ef | grep rspec | grep -v grep | awk '{print $2}'); do kill $pid; done"
           pid = File.open("./features/temporary/pids/pid_cucumber", 'w'){ |f| f.puts("")}
+          system "killall chrome && killall chromedriver"
           data.send("Test aborting")
         end
       end

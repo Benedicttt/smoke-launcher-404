@@ -38,7 +38,8 @@ When /^Add data$/ do
     DRIVER.execute_script("$(\"span:contains('activated')\").click()")
 
 
-  %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
+  %i[en ru].each_with_index do |locale, num|
+  # %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
     num += 1
     DRIVER.execute_script("$('#new_tournament > div:nth-child(4) > div:nth-child(1) > ul > li:nth-child(#{num.to_i}) > a').click()") #en
     sleep 0.1
@@ -48,7 +49,7 @@ When /^Add data$/ do
   end
 
   begin
-    (0..20).each do |num|
+    (0..14).each do |num|
       DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").clear
       DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").clear
       DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").clear
@@ -59,6 +60,6 @@ When /^Add data$/ do
     end
   rescue
   end
-  
+
   sleep 1
 end

@@ -15,7 +15,6 @@ class Coupons
      ) { |response, request, result, &block| response}
      return JSON.parse(response.body)
   end
-
   def coupons(locale, device)
     api = "https://#{ENV['stage']}binomo.com/api/coupons"
     response = RestClient::Request.execute(
@@ -26,6 +25,7 @@ class Coupons
         params: {
            locale: locale,
            device: device,
+           geo: "RU"
          }
        }
      ) { |response, request, result, &block| response}
@@ -49,5 +49,3 @@ class Coupons
      return JSON.parse(response.body)
   end
 end
-
-puts Coupons.new.coupons("ru", "web")
