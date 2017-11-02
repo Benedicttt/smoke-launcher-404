@@ -1,4 +1,5 @@
 class Runner
+
   def self.call(command)
     Net::SSH.start("#{ENV['stage']}.binomo.com", "binomo") do |ssh|
       if ENV['stage'] == "s1."

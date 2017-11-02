@@ -1,4 +1,14 @@
 Given(/^Template Free Deals$/) do
+  DRIVER.get CommonSetting[:url_page_crm] + "/coupons/patterns/new?handler=bonus&scope=individual"
+
+  sleep 1
+  list_currency = []
+
+  DRIVER.find_elements(:css, 'strong').each do |text|
+    list_currency << text.text
+  end
+
+
   DRIVER.get CommonSetting[:url_page_crm] + "/coupons/patterns/new?handler=free_deals&scope=individual"
   sleep 1
 
@@ -11,22 +21,13 @@ Given(/^Template Free Deals$/) do
   DRIVER.find_elements(:css, "span.text")[0].click
 
 
-  %w[USD EUR].each do |name|
+  list_currency.each do |name|
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("10")
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").clear
     DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").send_keys("10")
   end
 
-  %w[RUB KZT CNY TRY UAH INR ZAR GDQ IDR VND MYR GTQ PYG].each do |name|
-    begin
-      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
-      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
-      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").clear
-      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_limit").send_keys("10")
-    rescue
-    end
-  end
 
   DRIVER.find_elements(:css, '.btn-primary')[1].click
   sleep 1
