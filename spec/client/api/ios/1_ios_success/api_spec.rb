@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Api success" do
   before(:context) do
-    @api = RestClient.get("https://#{ENV['stage']}binomo.com/api", {params: {locale: 'ru', device: 'ios'}})
+    @api = RestClient.get("https://#{ENV['stage']}binomo.com/api", { params: { locale: 'ru', device: 'ios' } })
   end
 
   context "params" do

@@ -10,8 +10,8 @@ RSpec.describe "Assets success" do
   it { expect(@assets['name']).to eq "FOR/HEIGHT"}
   it { expect(@assets['ric']).to eq "GOL/OTC"}
   it { expect(@assets['type']).to eq 1}
-  it { expect(@assets['payment_rate_turbo']).to eq 83 }
-  it { expect(@assets['payment_rate_binary']).to eq 84 }
+  it { expect(@assets['payment_rate_turbo']).to be_in [ 83, 84 ] }
+  it { expect(@assets['payment_rate_binary']).to be_in [ 84, 85 ] }
 
   it "schedule" do
     expect(@assets['schedule']).to eq "sun"=>[["00:00", "23:59"]],

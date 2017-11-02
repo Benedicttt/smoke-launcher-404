@@ -1,10 +1,16 @@
-Feature: SMoke test generate 2017-11-01 19:28:09 +0300
+Feature: SMoke test generate 2017-11-02 13:10:22 +0300
  Scenario: Run step
  Given Pid process
  	Given Visit homepage and click soc-reg vk(not ref)
  	When Click my email vk
  	Then Assert page welcome
  	Then Auth soc reg vk
+ 	Then Assert page welcome
+ 	Then Delete all providers stage and rename email account
+  	Given Visit homepage and click soc-reg google(not ref)
+ 	When Click my email google
+ 	Then Assert page welcome
+ 	Then Auth soc reg google
  	Then Assert page welcome
  	Then Delete all providers stage and rename email account
   	Given Visit homepage and click soc-reg facebook(not ref)
@@ -97,6 +103,7 @@ Feature: SMoke test generate 2017-11-01 19:28:09 +0300
  
 	Given User filters coupons 
 	Given Template Bonus
+	Given Template Bonus Deposit
  	Given Template Free Deals
 	Given Template common - bonus deposit
 	Given Template Welcome Bonus Deposit
@@ -107,6 +114,7 @@ Feature: SMoke test generate 2017-11-01 19:28:09 +0300
  	 When Add coupons for users
  	 Then Visit to user from cahsier
  	 Then Activate coupons? 
+	Given Testing bonus deposit
 	Given Testing free deals
 	Given Testing balance
 	Given Testing bonuses
