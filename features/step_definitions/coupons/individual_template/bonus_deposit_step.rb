@@ -1,7 +1,14 @@
 Given(/^Template Bonus Deposit$/) do
-  DRIVER.get CommonSetting[:url_page_crm] + "/coupons/patterns/new?handler=bonus_deposit&scope=individual"
-  sleep 1
+  DRIVER.get CommonSetting[:url_page_crm] + "/coupons/patterns/new?handler=bonus&scope=individual"
 
+  sleep 1
+  list_currency = []
+
+  DRIVER.find_elements(:css, 'strong').each do |text|
+    list_currency << text.text
+  end
+
+  DRIVER.get CommonSetting[:url_page_crm] + "/coupons/patterns/new?handler=bonus_deposit&scope=individual"
   DRIVER.find_element(:id, "coupon_name").clear
   DRIVER.find_element(:id, "coupon_name").send_keys("#{Time.now}")
 
@@ -14,7 +21,8 @@ Given(/^Template Bonus Deposit$/) do
   DRIVER.find_elements(:css, "button.btn.dropdown-toggle.selectpicker.btn-default")[0].click
   DRIVER.find_elements(:css, "span.text")[0].click
 
-  [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].each do |i|
+  count = list_currency.size - 1
+  (0..count).each do |i|
     begin
       DRIVER.find_elements(:id, "amount")[i].clear
       DRIVER.find_elements(:id, "bonus")[i].clear

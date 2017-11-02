@@ -10,17 +10,16 @@ Given(/^Template Bonus$/) do
   DRIVER.find_elements(:css, "button.btn.dropdown-toggle.selectpicker.btn-default")[0].click
   DRIVER.find_elements(:css, "span.text")[0].click
 
-  %w[USD EUR].each do |name|
-    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
-    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("10")
-    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").clear
-    DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").send_keys("10")
+  list_currency = []
+
+  DRIVER.find_elements(:css, 'strong').each do |text|
+    list_currency << text.text
   end
 
-  %w[RUB KZT CNY TRY UAH INR ZAR GDQ IDR VND MYR GTQ PYG].each do |name|
+  list_currency.each do |name|
     begin
       DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
-      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
+      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000") 
       DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").clear
       DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").send_keys("10")
     rescue

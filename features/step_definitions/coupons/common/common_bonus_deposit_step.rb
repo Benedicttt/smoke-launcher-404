@@ -1,4 +1,13 @@
 Given(/^Template common \- bonus deposit$/) do
+  DRIVER.get CommonSetting[:url_page_crm] + "/coupons/patterns/new?handler=bonus&scope=individual"
+
+  sleep 1
+  list_currency = []
+
+  DRIVER.find_elements(:css, 'strong').each do |text|
+    list_currency << text.text
+  end
+
   DRIVER.get CommonSetting[:url_page_crm] + "/coupons/patterns/new?handler=bonus_deposit&scope=common"
   sleep 1
 
@@ -10,8 +19,8 @@ Given(/^Template common \- bonus deposit$/) do
   DRIVER.find_element(:id, "coupon_lifetime").clear
   DRIVER.find_element(:id, "coupon_lifetime").send_keys("100")
 
-
-  14.times do |i, num|
+  count = list_currency.size - 1
+  count.times do |i, num|
     begin
       i +=11
       DRIVER.find_element(:css, "#new_coupon > table:nth-child(#{i}) > tfoot > tr > td:nth-child(2) > #amount").clear
