@@ -14,6 +14,7 @@ geo:
   ME: "ME"
   RO: "RO"
   KR: "KR"
+  KZ: "KZ"
 
 locale:
   RU: "ru"
@@ -28,6 +29,7 @@ locale:
   MD: "md"
   RO: "ro"
   KR: "kr"
+  KZ: "kz"
 
 currency:
   USD: ["document.querySelectorAll('label[ng-repeat=\"currency in vm.currencies\"] > input[value=USD]')[0].click()", "USD"]
