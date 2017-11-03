@@ -41,6 +41,7 @@ Given(/^Template Bonus Deposit$/) do
   sleep 1
 
   $id_bonus_deposit = URI(DRIVER.current_url).path.gsub(/\/coupons\/patterns\//, '').gsub(/\/edit/, '')
+
   DRIVER.find_element(:id, "coupon_name").clear
   DRIVER.find_element(:id, "coupon_name").send_keys("#{$id_bonus_deposit}")
   DRIVER.find_elements(:css, '.btn-primary')[1].click

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016102532) do
+ActiveRecord::Schema.define(version: 20171103134511) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20171016102532) do
     t.string "email"
     t.string "reset_password_token"
     t.string "authtoken"
+  end
+
+  create_table "coupons", force: :cascade do |t|
+    t.integer "user_id"
+    t.string  "stage"
+    t.string  "welcome"
+    t.string  "common"
+    t.integer "bonus"
+    t.string  "bonus_deposit"
+    t.integer "free_deals"
   end
 
   create_table "partners", force: :cascade do |t|

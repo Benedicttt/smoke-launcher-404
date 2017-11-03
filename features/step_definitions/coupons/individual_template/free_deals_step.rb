@@ -32,6 +32,7 @@ Given(/^Template Free Deals$/) do
   DRIVER.find_elements(:css, '.btn-primary')[1].click
   sleep 1
   $id_free_deals = URI(DRIVER.current_url).path.gsub(/\/coupons\/patterns\//, '').gsub(/\/edit/, '')
+  Coupons.where(stage: ENV['stage']).last.update(free_deals: $id_free_deals)
 
   DRIVER.find_element(:id, "coupon_name").clear
   DRIVER.find_element(:id, "coupon_name").send_keys("#{$id_free_deals}")

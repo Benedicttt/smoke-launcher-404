@@ -1,15 +1,16 @@
-class Coupons
+class CouponsWeb
   def check(locale, device, code)
     api = "https://#{ENV['stage']}binomo.com/api/coupons/check"
+
     response = RestClient::Request.execute(
       method: :get,
       url: api,
       headers: {
-        cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
+        cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider.merge(Config.new.get_config("web", "ru")),
         params: {
            locale: locale,
            device: device,
-          code: code
+          code: code,
          }
        }
      ) { |response, request, result, &block| response}
