@@ -1,34 +1,65 @@
-require 'rubygems'
-require 'websocket-client-simple'
-require 'json'
-class RequestWS
+class Coupons
+#   def check(locale, device, id)
+#
+#
+#     api = "https://#{ENV['stage']}binomo.com/api/coupons/check"
+#     response = RestClient::Request.execute(
+#       method: :get,
+#       url: api,
+#       headers: {
+#         cookies: response.cookies,
+#         params: {
+#            locale: locale,
+#            device: device,
+#            geo: "RU"
+#          }
+#        }
+#      ) { |response, request, result, &block| response}
+#      return JSON.parse(response.body)
+#   end
+#
+#
+#   def coupons_id(locale, device)
+#     api = "https://#{ENV['stage']}binomo.com/api/coupons/#{id}"
+#     response = RestClient::Request.execute(
+#       method: :get,
+#       url:api,
+#       headers: {
+#         cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
+#         params: {
+#            locale: locale,
+#            device: device,
+#            geo: "RU"
+#          }
+#        }
+#      ) { |response, request, result, &block| response}
+#      return JSON.parse(response.body)
+#   end
+# end
 
-  def connect_ws(stage, authtoken, device, device_id)
-    ws = WebSocket::Client::Simple.connect "wss://#{stage}-ws.binomo.com:8080/?vsn=2.0.0"
 
-    ws.on :open do
-      phx_join = {
-            "topic":"base",
-            "event":"phx_join",
-            "payload": {
-              "authtoken":"8740c0ff3e2f6fdf0e370a9e5f1535e3",
-              "device":device,
-              "device_id":device_id
-              },
-            "ref":"1",
-            "join_ref":"1"
-          }
 
-      ws.send(JSON.dump(phx_join))
-    end
 
-    ws.on :message do |msg|
-      puts msg.data
-      exit 1
-    end
 
-    loop do
-      ws.send STDIN.gets.strip
-    end
+
+  def coupons(locale, device, consumer)
+    api = "https://#{ENV['stage']}binomo.com/api/coupons"
+    cookies = Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider
+       response = RestClient::Request.execute(
+      method: :get,
+      url:api,
+      headers: {
+        cookies: cookies,
+        params: {
+           locale: locale,
+           device: device,
+           consumer: consumer
+         }
+       }
+     ) { |response, request, result, &block| response}
+     return JSON.parse(response.body)
   end
+
 end
+
+puts Coupons.new.coupons("ru", "web", "cashier")

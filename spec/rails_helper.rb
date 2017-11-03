@@ -1,7 +1,3 @@
-#
-# $link_binomo_200 = File.read("./spec/client/pages/unauthorize/link_binomo_200")
-# $link_binomo_404 = File.read("./spec/client/pages/unauthorize/link_binomo_404")
-
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 
 require File.expand_path('../../config/environment', __FILE__)

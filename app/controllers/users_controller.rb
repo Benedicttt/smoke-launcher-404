@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def show
     @stats = User.all
   end
-  
+
   def new
     @stat = User.new
   end
@@ -43,6 +43,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    ReportsUser.where(user_id: @stat.id).destroy_all
     @stat.destroy
     respond_to do |format|
       format.html { redirect_to users_path, notice: 'Post was successfully destroyed.' }
