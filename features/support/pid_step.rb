@@ -9,8 +9,6 @@ require 'cucumber'
 
 Given /^Pid process$/ do
   ENV['param_headless'] = "--verbose" if ENV['param_headless'] != "--headless"
-  Coupons.create(stage: "#{ENV['stage']}")
-
   if ENV['driver'] == "firefox"
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym
 

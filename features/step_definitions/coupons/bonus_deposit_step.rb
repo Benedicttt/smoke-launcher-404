@@ -11,9 +11,6 @@ When /^Testing bonus deposit$/ do
   sleep 0.5
   $code = DRIVER.find_element(:css, "#main-content > div > table > tbody > tr > td:nth-child(5)").text
 
-  Coupons.where(stage: ENV['stage']).last.update(bonus_deposit: $code)
-
-
   id = User.where(stage_number: ENV['stage']).last.id
   DRIVER.get CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier"
   DRIVER.manage.add_cookie(name: "asset.daily", value: "FAKE")

@@ -37,7 +37,10 @@ RSpec.describe "Check coupons error locale for user" do
 end
 
 RSpec.describe "Check coupons error device for user" do
-  let :coupon_cashier { CouponsWeb.new.check("ru", "wb", "zxcX3SqnlIJS") }
+  let :coupon_cashier do
+    code = Coupons.where(stage: ENV['stage']).last.welcome
+    CouponsWeb.new.check("ru", "wb", "z#{code}")
+  end
 
   context "params" do
     it { expect(coupon_cashier['success']).to eq false }

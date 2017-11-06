@@ -13,7 +13,6 @@ When /^Add coupons for users$/ do
   DRIVER.find_elements(:css, ".btn-primary")[1].click
   sleep 0.5
   $code = DRIVER.find_element(:css, "#main-content > div > table > tbody > tr > td:nth-child(5)").text
-  Coupons.where(stage: ENV['stage']).last.update(common: $code)
 end
 
 Then /^Visit to user from cahsier$/ do

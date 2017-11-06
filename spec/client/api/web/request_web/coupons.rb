@@ -17,22 +17,6 @@ class CouponsWeb
      return JSON.parse(response.body)
   end
 
-  def id(locale, device)
-    api = "https://#{ENV['stage']}binomo.com/api/coupons"
-    response = RestClient::Request.execute(
-      method: :get,
-      url:api,
-      headers: {
-        cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
-        params: {
-           locale: locale,
-           device: device,
-         }
-       }
-     ) { |response, request, result, &block| response}
-     return JSON.parse(response.body)
-  end
-
   def coupons(locale, device, consumer)
     api = "https://#{ENV['stage']}binomo.com/api/coupons"
     cookies = Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider
@@ -48,6 +32,23 @@ class CouponsWeb
          }
        }
      ) { |response, request, result, &block| response}
+     return JSON.parse(response.body)
+  end
+
+  def id(locale, device, id)
+    api = "https://#{ENV['stage']}binomo.com/api/coupons/#{id}"
+    response = RestClient::Request.execute(
+      method: :get,
+      url:api,
+      headers: {
+        cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
+        params: {
+           locale: locale,
+           device: device,
+         }
+       }
+     ) { |response, request, result, &block| response}
+     puts  Cookies.where(stage: "#{ENV['stage']}").last.email
      return JSON.parse(response.body)
   end
 end
