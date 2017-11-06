@@ -41,7 +41,7 @@ class Tournaments
         }
        ) { |response, request, result, &block| response }
 
-     return JSON.parse(participants.body)
+     return JSON.parse(participants.body), api_participate.code
   end
 
   def participate(locale, device, password, email, id)
@@ -77,7 +77,8 @@ class Tournaments
           }
         }
        ) { |response, request, result, &block| response}
-     return JSON.parse(api_participate.body)
+
+     return JSON.parse(api_participate.body), api_participate.code
   end
 
   def deals_list(device, deal_type, tournament_id)

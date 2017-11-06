@@ -24,4 +24,17 @@ Given /^Visit page auth_platform$/ do
   sleep 3
   puts_success "<br><br>#{link_report_id("#{CommonSetting[:url_user_crm]}/#{id}", " Authorized success, Email: #{email}<br><br>")}"
 
+  #
+  # DRIVER.get CommonSetting[:app_host] +  "/account"
+  # sleep 3
+  #
+  # DRIVER.execute_script("angular.element(document.querySelector('input')).scope().vm.first_name = 'Найденый первый' ")
+  # DRIVER.execute_script("angular.element(document.querySelector('input')).scope().vm.last_name = 'Найденый второй' ")
+  # DRIVER.execute_script("angular.element(document.querySelector('input')).scope().vm.nickname = 'Найденый никнэйм' ")
+  # DRIVER.find_elements(:css, '.btn-primary')[2].click
+  #
+  # puts DRIVER.execute_script("return angular.element(document.querySelector('input')).scope().vm.first_name")
+  # puts DRIVER.execute_script("return angular.element(document.querySelector('input')).scope().vm.last_name")
+  # puts DRIVER.execute_script("return angular.element(document.querySelector('input')).scope().vm.nickname")
+
 end

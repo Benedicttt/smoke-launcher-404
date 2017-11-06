@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-10-30 18:11:16 +0300
+Feature: SMoke test generate 2017-11-06 20:44:24 +0300
  Scenario: Run step
  Given Pid process
   
@@ -11,10 +11,6 @@ Scenario: Binomo authorized
  
  Scenario: CRM
  	Given Visit all page crm, status code page
- 
- Scenario: Binpartner
- 	Given Visit all page binpartner, status code page(adm and platform) - !!! no authorized
- 	Given Visit all page binpartner, status code page(adm and platform) - !!! authorized
  
 
 Scenario:	Then Pool ranning?

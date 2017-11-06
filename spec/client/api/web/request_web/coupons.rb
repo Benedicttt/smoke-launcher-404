@@ -48,7 +48,6 @@ class CouponsWeb
          }
        }
      ) { |response, request, result, &block| response}
-     puts  Cookies.where(stage: "#{ENV['stage']}").last.email
      return JSON.parse(response.body)
   end
 end
