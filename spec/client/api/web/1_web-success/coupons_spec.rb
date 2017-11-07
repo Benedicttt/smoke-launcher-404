@@ -20,13 +20,6 @@ RSpec.describe "Success coupons cahsier for user" do
     "
 
     @welcome_cashier = CouponsWeb.new.coupons("ru", "web", "cashier")['data'][0]
-    @bonus_cashier_individual = CouponsWeb.new.coupons("ru", "web", "cashier")['data'][1]
-
-
-    @bonus_cashier_common = CouponsWeb.new.coupons("ru", "web", "cashier")['data'][2]
-
-    @bonus_trading = CouponsWeb.new.coupons("ru", "web", "trading")['data'][0]
-    @free_trading = CouponsWeb.new.coupons("ru", "web", "trading")['data'][1]
   end
 
   context "params" do
@@ -51,7 +44,6 @@ RSpec.describe "Check coupons for user (welcome)" do
   end
 
   context "params" do
-
     it { expect(@welcome_cashier['success']).to eq true }
     it { expect(@welcome_cashier['errors']).to eq [] }
     it { expect(@welcome_cashier['data'][0]['amount']).to eq 0 }
@@ -62,5 +54,54 @@ RSpec.describe "Check coupons for user (welcome)" do
     it { expect(@welcome_cashier['data'][2]['bonus']).to eq 100 }
     it { expect(@welcome_cashier['data'][3]['amount']).to eq 6000 }
     it { expect(@welcome_cashier['data'][3]['bonus']).to eq 10 }
+  end
+end
+
+RSpec.describe "Check coupons params cashier individual" do
+  before(:context) do
+    @bonus_cashier_individual = CouponsWeb.new.coupons("ru", "web", "cashier")['data'][1]
+  end
+
+  context "param success" do
+    it { expect(@bonus_cashier_individual['id']).to be_a Integer }
+    it { expect(@bonus_cashier_individual['type']).to eq "bonus_deposit" }
+    it { expect(@bonus_cashier_individual['status']).to eq "issued" }
+    it { expect(@bonus_cashier_individual['data'].empty?).to eq false }
+  end
+end
+
+RSpec.describe "Check coupons params cashier common" do
+  before(:context) do
+    @bonus_cashier_common = CouponsWeb.new.coupons("ru", "web", "cashier")['data'][2]
+  end
+
+  context "param success" do
+    it { expect(@bonus_cashier_common['id']).to be_a Integer }
+    it { expect(@bonus_cashier_common['type']).to eq "bonus_deposit" }
+    it { expect(@bonus_cashier_common['status']).to eq "issued" }
+  end
+end
+
+RSpec.describe "Check coupons bonus trading" do
+  before(:context) do
+    @bonus_trading = CouponsWeb.new.coupons("ru", "web", "trading")['data'][0]
+  end
+
+  context "param success" do
+    it { expect(@bonus_trading['id']).to be_a Integer }
+    it { expect(@bonus_trading['type']).to eq "bonus" }
+    it { expect(@bonus_trading['status']).to eq "issued" }
+  end
+end
+
+RSpec.describe "Check coupons free deals trading" do
+  before(:context) do
+    @free_trading = CouponsWeb.new.coupons("ru", "web", "trading")['data'][1]
+  end
+
+  context "param success" do
+    it { expect(@free_trading['id']).to be_a Integer }
+    it { expect(@free_trading['type']).to eq "free_deals" }
+    it { expect(@free_trading['status']).to eq "issued" }
   end
 end
