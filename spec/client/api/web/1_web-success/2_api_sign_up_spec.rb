@@ -6,13 +6,7 @@ RSpec.describe "Registration success" do
   end
 
   after(:context) do
-
-    Coupons.create(
-      stage: "#{ENV['stage']}",
-      id: @registration['data']['id'],
-      welcome: @registration['data']['welcome_coupon']['code']
-    )
-
+    Cookies.where(stage: "#{ENV['stage']}").last.update(welcome_coupon: @registration['data']['welcome_coupon']['code'])
   end
 
   context "params" do

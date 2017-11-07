@@ -46,7 +46,7 @@ end
 
 RSpec.describe "Check coupons for user (welcome)" do
   before(:context) do
-    code = Coupons.where(stage: ENV['stage']).last.welcome
+    code = Cookies.where(stage: ENV['stage']).last.welcome_coupon
     @welcome_cashier = CouponsWeb.new.check("ru", "web", code)
   end
 
