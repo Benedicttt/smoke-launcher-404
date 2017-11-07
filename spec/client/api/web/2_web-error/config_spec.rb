@@ -22,24 +22,24 @@ RSpec.describe "Config request in api errors validations, not geo" do
   end
 end
 
-RSpec.describe "Config request in api errors validations v2" do
-  context "params" do
-    it { expect(Config.new.get_web_v2('web', 'r', 'RU')['success']).to eq false }
-    it { expect(Config.new.get_web_v2('web', 'r', 'RU')['data']).to eq nil }
-    it { expect(Config.new.get_web_v2('we', 'r', 'RU')['errors']).to eq locale }
-    it { expect(Config.new.get_web_v2('we', '', 'RU')['errors']).to eq blank }
-    it { expect(Config.new.get_web_v2('web', 'r', 'RU')['errors']).to eq locale }
-    it { expect(Config.new.get_web_v2('we', 'ru', 'RU')['success']).to eq true }
-  end
-end
-
-RSpec.describe "Config request in api errors validations, not geo v2" do
-  context "params" do
-    it { expect(Config.new.get_config_v2('web', 'r')['success']).to eq false }
-    it { expect(Config.new.get_config_v2('web', 'r')['data']).to eq nil }
-    it { expect(Config.new.get_config_v2('we', 'r')['errors']).to eq locale }
-    it { expect(Config.new.get_config_v2('we', '')['errors']).to eq blank }
-    it { expect(Config.new.get_config_v2('web', 'r')['errors']).to eq locale }
-    it { expect(Config.new.get_config_v2('we', 'ru')['success']).to eq true }
-  end
-end
+# RSpec.describe "Config request in api errors validations v2" do
+#   context "params" do
+#     it { expect(Config.new.get_web_v2('web', 'r', 'RU')['success']).to eq false }
+#     it { expect(Config.new.get_web_v2('web', 'r', 'RU')['data']).to eq nil }
+#     it { expect(Config.new.get_web_v2('we', 'r', 'RU')['errors']).to eq locale }
+#     it { expect(Config.new.get_web_v2('we', '', 'RU')['errors']).to eq blank }
+#     it { expect(Config.new.get_web_v2('web', 'r', 'RU')['errors']).to eq locale }
+#     it { expect(Config.new.get_web_v2('we', 'ru', 'RU')['success']).to eq true }
+#   end
+# end
+#
+# RSpec.describe "Config request in api errors validations, not geo v2" do
+#   context "params" do
+#     it { expect(Config.new.get_config_v2('web', 'r')['success']).to eq false }
+#     it { expect(Config.new.get_config_v2('web', 'r')['data']).to eq nil }
+#     it { expect(Config.new.get_config_v2('we', 'r')['errors']).to eq locale }
+#     it { expect(Config.new.get_config_v2('we', '')['errors']).to eq blank }
+#     it { expect(Config.new.get_config_v2('web', 'r')['errors']).to eq locale }
+#     it { expect(Config.new.get_config_v2('we', 'ru')['success']).to eq true }
+#   end
+# end

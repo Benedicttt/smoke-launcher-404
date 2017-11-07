@@ -33,7 +33,6 @@ RSpec.describe "join session" do
      @id_max = ids[0].compact.max
 
      print "#{@id_max}".yellow
-    #  puts Cookies.where(stage: "#{ENV['stage']}").last.email
 
      ws          = RequestWS.new
      @stage       = ENV['stage']
