@@ -38,7 +38,7 @@ end
 
 RSpec.describe "Check coupons error device for user" do
   let :coupon_cashier do
-    code = Coupons.where(stage: ENV['stage']).last.welcome
+    code = Cookies.where(stage: ENV['stage']).last.welcome_coupon
     CouponsWeb.new.check("ru", "wb", "z#{code}")
   end
 
