@@ -23,7 +23,7 @@ When /^Add data$/ do
     DRIVER.find_element(:id, "tournament_url").send_keys("url-tournament")
 
     DRIVER.find_element(:id, "tournament_registration_interval").clear
-    DRIVER.find_element(:id, "tournament_registration_interval").send_keys("150")
+    DRIVER.find_element(:id, "tournament_registration_interval").send_keys("1500")
     DRIVER.find_element(:id, "tournament_initial_balance").clear
     DRIVER.find_element(:id, "tournament_initial_balance").send_keys("100")
     DRIVER.find_element(:id, "tournament_min_users_count").clear
