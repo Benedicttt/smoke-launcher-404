@@ -23,7 +23,7 @@ Given /^Pid process$/ do
 
    DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
    DRIVER.manage.timeouts.implicit_wait = 5
-   DRIVER.manage.window.resize_to(1600, 768)
+   DRIVER.manage.window.resize_to(1900, 768)
 
   elsif ENV['driver'] == "safari"
     client = Selenium::WebDriver::Remote::Http::Default.new

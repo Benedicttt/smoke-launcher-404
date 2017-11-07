@@ -1,6 +1,4 @@
 class Tournaments
-  def last_demo
-  end
   def api(locale, device)
      api = RestClient::Request.execute(
        method: :get,
@@ -9,7 +7,7 @@ class Tournaments
           params: {
             locale: locale, device: device
             }}) { |response, request, result, &block| response}
-            return JSON.parse(api.body)
+    return JSON.parse(api.body)
   end
 
   def show(locale, device, id)
@@ -20,7 +18,6 @@ class Tournaments
           params: {
            locale: locale, device: device
           }}) { |response, request, result, &block| response}
-
 
     return JSON.parse(api.body)
   end
@@ -41,11 +38,10 @@ class Tournaments
         }
        ) { |response, request, result, &block| response }
 
-     return JSON.parse(participants.body), api_participate.code
+   return JSON.parse(participants.body)
   end
 
   def participate(locale, device, password, email, id)
-
     api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
     response = RestClient::Request.execute(
       method: :post,
@@ -78,25 +74,24 @@ class Tournaments
         }
        ) { |response, request, result, &block| response}
 
-     return JSON.parse(api_participate.body), api_participate.code
+     return JSON.parse(api_participate.body)
   end
 
   def deals_list(device, deal_type, tournament_id)
-
     api_deals_create = "https://#{ENV['stage']}binomo.com/api/deals/list"
     deals_tournament_list = RestClient::Request.execute(
-    method: :get,
-    url: api_deals_create,
-    headers: {
-      cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
-      params: {
-        locale: 'ru',
-        device: device,
-        deal_type: deal_type,
-        tournament_id: tournament_id,
-        geo: "RU"
-    }
-    }) { |response, request, result, &block|  response }
+      method: :get,
+      url: api_deals_create,
+      headers: {
+        cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
+        params: {
+          locale: 'ru',
+          device: device,
+          deal_type: deal_type,
+          tournament_id: tournament_id,
+          geo: "RU"
+      }
+      }) { |response, request, result, &block|  response }
     return JSON.parse(deals_tournament_list)
   end
 end

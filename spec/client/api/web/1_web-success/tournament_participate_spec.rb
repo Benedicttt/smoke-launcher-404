@@ -11,8 +11,8 @@ RSpec.describe "Api tournaments success" do
 
     email = Cookies.where(stage: "#{ENV['stage']}").last.email
     password = "12345q"
-    @partcitipate = Tournaments.new.participate("ru", "web", password, email, @id_max)[0]
-    @partcitipants = Tournaments.new.participants("ru", "web", @id_max)[0]
+    @partcitipate = Tournaments.new.participate("ru", "web", password, email, @id_max)
+    @partcitipants = Tournaments.new.participants("ru", "web", @id_max)
     @show = Tournaments.new.show("ru", "web", @id_max)
 
   end

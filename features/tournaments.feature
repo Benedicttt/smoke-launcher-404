@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-11-02 18:54:53 +0300
+Feature: SMoke test generate 2017-11-07 12:51:21 +0300
  Scenario: Run step
  Given Pid process
   
@@ -7,7 +7,7 @@ Feature: SMoke test generate 2017-11-02 18:54:53 +0300
  	Given Data from
  	Given Data to
  		 When Select type tournament on activate 
- 		 When Repeat type periodical 
+ 		 When Repeat type loopead 
  		When Created Tournament 'max demo balance'
  	Given Fixed
  Then Result

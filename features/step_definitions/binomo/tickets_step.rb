@@ -14,7 +14,9 @@ When /^Data ticket$/ do
   add_cookies_to_page($tickets)
   $tickets.get(CommonSetting[:app_host]  + CommonSetting[:locale])
   $tickets.manage.window.resize_to(1600, 600)
-  sleep 3
+  $tickets.get(CommonSetting[:app_host]  + CommonSetting[:locale])
+
+    sleep 3
 
     print_result = -> {puts "Error open form (retried)"; return; puts}
     retried_process(3, 3, print_result) do
