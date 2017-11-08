@@ -54,8 +54,8 @@ RSpec.describe "join session" do
      @won =  ws.send_ws(@device, @demo, @asset, @expire_at, @amount, @option_type, @deal_type, @won_deal, @count, @id_max, @stage, @authtoken, @device_id)
      @lose =  ws.send_ws(@device, @demo, @asset, @expire_at, @amount, @option_type, @deal_type, @lose_deal, @count, @id_max, @stage, @authtoken, @device_id)
 
-     @deals_won = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][0] #won
-     @deals_lose = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][1] #lose
+     @deals_won = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][1] #won
+     @deals_lose = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][0] #lose
 
      print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
      sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
