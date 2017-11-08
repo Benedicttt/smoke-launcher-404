@@ -23,7 +23,7 @@ Given /^Pid process$/ do
 
    DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
    DRIVER.manage.timeouts.implicit_wait = 5
-   DRIVER.manage.window.resize_to(1600, 768)
+   DRIVER.manage.window.resize_to(1900, 768)
 
   elsif ENV['driver'] == "safari"
     client = Selenium::WebDriver::Remote::Http::Default.new
@@ -53,6 +53,7 @@ end
 
 Given /^Pool ranning\?$/ do
   $pool.shutdown && $pool.wait_for_termination
+  DRIVER.quit
   puts_danger "Last threads? #{$pool.running?}"
   system "killall chrome"
   system "killall chromedriver"

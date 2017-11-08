@@ -19,7 +19,7 @@ Given(/^Template Bonus$/) do
   list_currency.each do |name|
     begin
       DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").clear
-      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000") 
+      DRIVER.find_element(:id, "coupon_data_currencies_#{name}_amount").send_keys("1000")
       DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").clear
       DRIVER.find_element(:id, "coupon_data_currencies_#{name}_leverage").send_keys("10")
     rescue

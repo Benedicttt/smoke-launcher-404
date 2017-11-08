@@ -31,7 +31,7 @@
 
   .col-xs-2
     .sleep_retried.fields
-      = f.input :thread, label: "Thread ", as: :select, collection: [1, 2, 3, 4], required: false, selected: "1"
+      = f.input :thread, label: "#{@que_count_running} ", as: :select, collection: [1, 2], required: false, selected: "1"
 
   .col-xs-3
     .tariff.fields
@@ -45,8 +45,10 @@
     .proxy-server.fields
       = f.input :proxy_http, label: "Protocol", as: :select, collection: %w[http:// https://], required: false
 
-  .col-xs-2
+  .col-xs-2.fields
     = f.input :param_headless , label: "params Chrome", as: :select, collection: %w[--headless], required: false
 
   .col-xs-2
-    = f.input "clear", label: false, as: :check_boxes, collection: ['Clear cache'], required: false
+    br
+    br
+      = f.input "clear", label: false, as: :check_boxes, collection: ['Clear cache'], required: false

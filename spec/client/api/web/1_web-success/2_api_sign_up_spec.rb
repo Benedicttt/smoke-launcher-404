@@ -5,6 +5,10 @@ RSpec.describe "Registration success" do
     @registration = Reg.new.post_sign_up("web", "ru", "123456q", true, "sign_up.#{SecureRandom.hex(8)}@yopmail.com", true)[0]
   end
 
+  after(:context) do
+    Cookies.where(stage: "#{ENV['stage']}").last.update(welcome_coupon: @registration['data']['welcome_coupon']['code'])
+  end
+
   context "params" do
     it { expect(@registration["success"]).to eq true }
     it { expect(@registration["errors"]).to eq [] }
@@ -46,6 +50,7 @@ RSpec.describe "Registration success" do
     it { expect(@registration['data']['status_group']).to eq 'free' }
     it { expect(@registration['data']['docs_verified']).to eq false }
   end
+
 end
 
 RSpec.describe "Authorized success" do

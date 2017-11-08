@@ -24,4 +24,19 @@ Given /^Visit page auth_platform$/ do
   sleep 3
   puts_success "<br><br>#{link_report_id("#{CommonSetting[:url_user_crm]}/#{id}", " Authorized success, Email: #{email}<br><br>")}"
 
+    #
+    # sleep 15
+    #
+    #   5.times do |integer|
+    #     DRIVER.find_elements(css: ".dropdown")[6].click
+    #     sleep 1
+    #     DRIVER.find_elements(css: ".indicator-name")[integer].click
+    #     sleep 1
+    #     puts "Индикатор " + DRIVER.find_element(css: ".b-unit-indicator-title").text + " построен"
+    #     DRIVER.find_element(css: "a[t=\"labels.graph_apply\"]").click
+    #
+    #   end
+    #
+    #   abort
+
 end

@@ -32,8 +32,7 @@ RSpec.describe "join session" do
      ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" }
      @id_max = ids[0].compact.max
 
-     print "#{@id_max}".yellow
-    #  puts Cookies.where(stage: "#{ENV['stage']}").last.email
+     print "#{@id_max} ".yellow
 
      ws          = RequestWS.new
      @stage       = ENV['stage']
@@ -55,8 +54,8 @@ RSpec.describe "join session" do
      @won =  ws.send_ws(@device, @demo, @asset, @expire_at, @amount, @option_type, @deal_type, @won_deal, @count, @id_max, @stage, @authtoken, @device_id)
      @lose =  ws.send_ws(@device, @demo, @asset, @expire_at, @amount, @option_type, @deal_type, @lose_deal, @count, @id_max, @stage, @authtoken, @device_id)
 
-     @deals_lose = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][0] #lose
      @deals_won = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][1] #won
+     @deals_lose = Tournaments.new.deals_list(@device, @deal_type, @id_max)['data']['deals'][0] #lose
 
      print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
      sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
@@ -98,8 +97,7 @@ RSpec.describe "join session" do
     it { expect(@deals_won['trend']).to eq @won_deal }
 
     it { expect(@deals_won['entrie_rate']).to be_a Float }
-    it { expect(@deals_won['bet'].to_f).to be_a Float }
-    it { expect(@deals_won['bet']).to eq "#{@amount.to_f}" }
+    it { expect(@deals_won['bet']).to eq @amount }
     it { expect(@deals_won['payment']).to be_a Float }
     it { expect(@deals_won['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f - 1 }
     it { expect(@deals_won['status']).to eq "open"  }
@@ -119,8 +117,7 @@ RSpec.describe "join session" do
     it { expect(@deals_lose['trend']).to eq @lose_deal }
 
     it { expect(@deals_lose['entrie_rate']).to be_a Float }
-    it { expect(@deals_lose['bet'].to_f).to be_a Float }
-    it { expect(@deals_lose['bet']).to eq "#{@amount.to_f}" }
+    it { expect(@deals_lose['bet']).to eq @amount }
     it { expect(@deals_lose['payment']).to be_a Float }
     it { expect(@deals_lose['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f - 1 }
     it { expect(@deals_lose['status']).to eq "open"  }
@@ -140,8 +137,7 @@ RSpec.describe "join session" do
     it { expect(@closed_won_deal_data['trend']).to eq @won_deal }
 
     it { expect(@closed_won_deal_data['entrie_rate']).to be_a Float }
-    it { expect(@closed_won_deal_data['bet'].to_f).to be_a Float }
-    it { expect(@closed_won_deal_data['bet']).to eq "#{@amount.to_f}" }
+    it { expect(@closed_won_deal_data['bet']).to eq @amount }
     it { expect(@closed_won_deal_data['payment']).to be_a Float }
     it { expect(@closed_won_deal_data['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f - 1 }
     it { expect(@closed_won_deal_data['status']).to eq "won"  }
@@ -161,8 +157,7 @@ RSpec.describe "join session" do
     it { expect( @closed_lose_deal_data['trend']).to eq @lose_deal }
 
     it { expect( @closed_lose_deal_data['entrie_rate']).to be_a Float }
-    it { expect( @closed_lose_deal_data['bet'].to_f).to be_a Float }
-    it { expect( @closed_lose_deal_data['bet']).to eq "#{@amount.to_f}" }
+    it { expect( @closed_lose_deal_data['bet']).to eq @amount }
     it { expect( @closed_lose_deal_data['payment']).to be_a Float }
     it { expect( @closed_lose_deal_data['payment']).to eq "#{@amount + Assets.new.get('web', 'ru')[1][0]}.0".to_f - 1 }
     it { expect( @closed_lose_deal_data['status']).to eq "lost"  }

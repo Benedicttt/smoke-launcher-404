@@ -1,6 +1,5 @@
 class Deals
   def real_create(demo, amount, asset, option_type, trend, source, create_at, expire_at, locale, device, user_balance)
-
     api_agree_risk = "https://#{ENV['stage']}binomo.com/api/profile/agree_risk"
     activate = RestClient::Request.execute(
       method: :get,

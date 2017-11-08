@@ -1,22 +1,22 @@
 $(function(){
   $(document).ready(function() {
-    var clip = new ZeroClipboard($("#txt_s1"))
+    var s1 = new ZeroClipboard($("#txt_s1"))
   });
 
   $(document).ready(function() {
-    var clip = new ZeroClipboard($("#txt_s2"))
+    var s2 = new ZeroClipboard($("#txt_s2"))
   });
 
   $(document).ready(function() {
-    var clip = new ZeroClipboard($("#txt_s3"))
+    var s3 = new ZeroClipboard($("#txt_s3"))
   });
 
   $(document).ready(function() {
-    var clip = new ZeroClipboard($("#txt_s4"))
+    var s4 = new ZeroClipboard($("#txt_s4"))
   });
 
   $(document).ready(function() {
-    var clip = new ZeroClipboard($("#txt_prod"))
+    var s5 = new ZeroClipboard($("#txt_prod"))
   });
 
 });
