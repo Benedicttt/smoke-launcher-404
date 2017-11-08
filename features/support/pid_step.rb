@@ -53,6 +53,7 @@ end
 
 Given /^Pool ranning\?$/ do
   $pool.shutdown && $pool.wait_for_termination
+  DRIVER.quit
   puts_danger "Last threads? #{$pool.running?}"
   system "killall chrome"
   system "killall chromedriver"

@@ -26,7 +26,6 @@
 
     gem 'que'
     gem 'que-web'
-    gem 'sequel'
     gem 'sinatra', git: 'https://github.com/sinatra/sinatra'
 
     gem 'zeroclipboard-rails'

@@ -10,10 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+//= require zeroclipboard
 //= require jquery
 //= require jquery_ujs
 //= require_tree
-//= require zeroclipboard
 //= require bootstrap-sprockets
 //= require action_cable
 //= require_self

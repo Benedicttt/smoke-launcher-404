@@ -1,6 +1,6 @@
 $(function(){
   $('.arrow').click(function(){
-    window.history.back();
+    window.history.go(-1);
   });
 
 });

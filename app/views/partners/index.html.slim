@@ -58,7 +58,7 @@ p
               =post.email
             javascript:
               $(document).ready(function(){
-                  var clip = new ZeroClipboard($("#email-#{post.id}"))
+                  var email#{post.id} = new ZeroClipboard($("#email-#{post.id}"))
               });
 
           th
@@ -71,7 +71,7 @@ p
               =post.refcode
             javascript:
               $(function(){
-                  var clip = new ZeroClipboard($("#refcode-#{post.id}"))
+                  var ref#{post.id} = new ZeroClipboard($("#refcode-#{post.id}"))
               });
 
           th = post.phone

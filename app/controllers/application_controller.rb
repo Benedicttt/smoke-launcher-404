@@ -19,11 +19,11 @@ class ApplicationController < ActionController::Base
   end
 
   def locale
-    @locale = @common_setting["locale"].keys.map {|i| i.upcase}
+    @locale = @common_setting["locale"].keys.map { |i| i.upcase }
   end
 
   def geo
-    @geo = @common_setting["geo"].keys.map {|i| i.upcase}
+    @geo = @common_setting["geo"].keys.map { |i| i.upcase }
   end
 
   def framework
@@ -31,7 +31,11 @@ class ApplicationController < ActionController::Base
   end
 
   def currency
-    @currency = @common_setting["currency"].values.map {|i| i[1]}
+    @currency = @common_setting["currency"].values.map { |i| i[1] }
   end
 
+  def que_count_running
+    @que_count_running = Que.job_stats.count.to_s
+    puts "#{@que_count_running}".red
+  end
 end
