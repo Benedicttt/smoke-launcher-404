@@ -6,7 +6,7 @@ RSpec.describe "Api tournaments success" do
     ids = []
     ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" }
     @id_max = ids[0].compact.max
-    print "#{$id_max} ".yellow
+    print "#{@id_max} ".yellow
 
     email = Cookies.where(stage: "#{ENV['stage']}").last.email
     password = "12345q"
