@@ -1,3 +1,6 @@
+last select provider to crm: "
+  Given Last select provider to crm(Eccompay)
+"
 check rate for closed deal(win): "
   \tGiven Visit page trading\n
   \tWhen Open list deals\n
