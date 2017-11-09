@@ -33,9 +33,4 @@ class ApplicationController < ActionController::Base
   def currency
     @currency = @common_setting["currency"].values.map { |i| i[1] }
   end
-
-  def que_count_running
-    @que_count_running = Que.job_stats.count.to_s
-    puts "#{@que_count_running}".red
-  end
 end
