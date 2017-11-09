@@ -28,10 +28,9 @@
     .sleep_retried.fields
       = f.input :sleep_retried, label: "sleep retried ", as: :select, collection: [5,10,15,20,25,30,60], required: false, selected: "5"
 
-
   .col-xs-2
-    .sleep_retried.fields
-      = f.input :thread, label: "#{@que_count_running} ", as: :select, collection: [1, 2], required: false, selected: "1"
+    .thread.fields
+      = f.input :thread, label: "thread", as: :select, collection: [1,2], required: false, selected: "1"
 
   .col-xs-3
     .tariff.fields

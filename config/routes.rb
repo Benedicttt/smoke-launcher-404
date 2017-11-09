@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   mount ActionCable.server, at: '*'
   mount Que::Web => "/que"
 
-  resources :launcher
-    root to: redirect("/homepage")
-    get 'homepage' , to: 'homepage#homepage'
+  root to: redirect("/homepage")
+  get 'homepage' , to: 'homepage#homepage'
 
   resources :users
   resources :reports_users

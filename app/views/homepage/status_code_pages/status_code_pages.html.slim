@@ -16,19 +16,19 @@ html
         .ws
           = f.label "Connecting WS ...", required: false
       =render "shared/headers", f: f
+      br
+        .form-part
+          .row
+            .col-xs-3
+              = f.input :scenario, label:false , as: :check_boxes, collection: ["status code page binomo", "status code page crm"], required: false
 
-      .form-part
-        .row
-          .col-xs-3
-            = f.input :scenario, label:false , as: :check_boxes, collection: ["status code page binomo", "status code page crm"], required: false
+          .row
+            .col-xs-3
+              = f.input :scenario, label:false , as: :check_boxes, collection: ["status code page partner"], required: false
 
-        .row
-          .col-xs-3
-            = f.input :scenario, label:false , as: :check_boxes, collection: ["status code page partner"], required: false
-
-        .row
-          .col-xs-3
-            = f.input :display , as: :check_boxes, collection: ["return only response <= 200", "return only response <= 400"], required: false
+          .row
+            .col-xs-3
+              = f.input :display , as: :check_boxes, collection: ["return only response <= 200", "return only response <= 400"], required: false
 
           br
           br

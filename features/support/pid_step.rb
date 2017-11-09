@@ -6,6 +6,7 @@ require 'websocket'
 require 'socket'
 require 'selenium-webdriver'
 require 'cucumber'
+require 'cucumber/rails'
 
 Given /^Pid process$/ do
   ENV['param_headless'] = "--verbose" if ENV['param_headless'] != "--headless"
