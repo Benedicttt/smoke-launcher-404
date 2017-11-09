@@ -43,26 +43,6 @@ on_worker_boot do
   ActiveRecord::Base.establish_connection
   Que.mode = :async
   Que::Worker.workers.push
-
 end
-
-# on_worker_boot do
-#   Que::Job.work
-# end
-#
-# on_worker_shutdown do
-#   puts 'On worker shutdown...'
-# end
-#
-#
-# on_worker_fork do
-#   puts 'Before worker fork...'
-# end
-#
-#
-# after_worker_fork do
-#   puts 'After worker fork...'
-# end
-
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart

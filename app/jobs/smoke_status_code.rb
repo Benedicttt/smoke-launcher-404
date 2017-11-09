@@ -2,8 +2,8 @@ Dir["./features/ws/binomo/*"].each { |file| require file}
 require "./features/helpers/decor"
 
 class SmokeStatusCode < Que::Job
+
   def run(msg_json)
-    begin
       return unless msg_json["smoke_status_code"] == true
       http_status = Server::StatusCode.new(msg_json)
       http_status.message
@@ -22,7 +22,6 @@ class SmokeStatusCode < Que::Job
       report_add_partner(partner_id, partner, "Status code pages", ENV["stage"], report_url_binpartner)
 
     rescue
-      puts "Test failed, see report"
-    end
+      puts "Test failed, see report".red
   end
 end
