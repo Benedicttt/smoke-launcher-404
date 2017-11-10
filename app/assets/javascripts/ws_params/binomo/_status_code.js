@@ -16,6 +16,7 @@ $(function(){
       response_http: $('#generator_display_return_only_response__200').prop('checked'),
       not_response_http: $('#generator_display_return_only_response__400').prop('checked'),
       param_headless: $('#generator_param_headless').val(),
+      send: "Test complete"
     }));
 
     notify_status_testing();

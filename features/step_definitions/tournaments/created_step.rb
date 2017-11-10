@@ -9,6 +9,15 @@ Given /^Tournament$/ do
     end
   end
 
+  DRIVER.get CommonSetting[:url_page_crm] + "/coupons/patterns/new?handler=bonus&scope=individual"
+
+  sleep 1
+  $list_currency = []
+
+  DRIVER.find_elements(:css, 'strong').each do |text|
+    $list_currency << text.text
+  end
+
   DRIVER.get CommonSetting[:url_page_crm] + "tournaments/new"
   sleep 1
 end
@@ -43,13 +52,13 @@ When /^Add data$/ do
     num += 1
     DRIVER.execute_script("$('#new_tournament > div:nth-child(4) > div:nth-child(1) > ul > li:nth-child(#{num.to_i}) > a').click()") #en
     sleep 0.1
-    DRIVER.find_element(:id, "tournament_content_#{locale}").send_keys("Tornaments #{locale.upcase}")
+    DRIVER.find_element(:id, "tournament_content_#{locale}").send_keys("Tournaments #{locale.upcase}")
     DRIVER.find_element(:id, "tournament_name_#{locale}").clear
     DRIVER.find_element(:id, "tournament_name_#{locale}").send_keys("#{locale} " + "#{Time.now}")
   end
 
-  begin
-    (0..14).each do |num|
+    count = $list_currency.count - 1
+    (0..count).each do |num|
       DRIVER.find_element(:id, "tournament_participation_fees_attributes_#{num}_value").clear
       DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").clear
       DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").clear
@@ -58,8 +67,7 @@ When /^Add data$/ do
       DRIVER.find_element(:id, "tournament_prize_fund_attributes_#{num}_value").send_keys("100")
       DRIVER.find_element(:id, "tournament_rebuy_fees_attributes_#{num}_value").send_keys("100")
     end
-  rescue
-  end
+  # rescue
 
   sleep 1
 end

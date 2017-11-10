@@ -1,57 +1,162 @@
 require 'rails_helper'
+include RSpec
 
-RSpec.describe "Api tournaments success" do
-  before(:context) do
-    api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
-    @response_auth = RestClient::Request.execute(
-      method: :post,
-      url: api_sign_in,
-      headers: {
-        referer: "https://#{ENV['stage']}binomo.com",
-        content_type: 'text/plain',
-        params:{
-          email: Cookies.where(stage: "#{ENV['stage']}").last.email,
-          password: "12345q",
-          locale: "ru",
-          device: "web",
-          geo: "RU"
-        }
-      })
+  shared_context "variable_configure" do
+    let :ws { RequestWsError.new }
+    let :stage { ENV['stage'] }
 
-      api_conf_up = "https://#{ENV['stage']}binomo.com/api/config"
-      @response = RestClient.get(
-        api_conf_up,
-        cookies: @response_auth.cookies,
-         params: {
-           locale: 'ru',
-           device: 'web'
-       }) { |response, request, result, &block| response }
+    let :tournaments { Tournaments.new.api("ru", "web") }
 
-         ws          = RequestWsError.new
-         @stage       = ENV['stage']
-         @authtoken   = JSON.parse(@response_auth)['data']['authtoken']
-         @device_id   = JSON.parse(@response)['data']['device_id']
-         @asset = "GOL/OTC"
-         @demo          = false
-         @amount        = 100
-         @deal_type     = "tournament"
-         @won_deal = "put"
-         @lose_deal = "call"
-         @count = 1
-         @device = "web"
-         @option_type = "turbo"
+    let :id do
+      ids = []
+      ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" }
+      id = ids[0].compact.max
+    end
 
-         @expire_at  = (Time.now.to_i / 60).to_i * 60
-         @expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
+    let! :expire_at do
+      expire_at  =  (Time.now.to_i / 60).to_i * 60
+      expire_at  += Time.now.sec > 10 ? 2.minutes : 1.minutes
+    end
 
-         @won =  ws.send_ws(@device, @demo, @asset, @expire_at, @amount, @option_type, @deal_type, @won_deal, @count, @id_max, @stage, @authtoken, @device_id)
-
+    let :required { [{"validation"=>"required", "field"=>"tournament_id"}] }
+    let :blank { [{"validation"=>"blank", "field"=>"tournament_user"}] }
+    let :inclusion { [{"validation"=>"inclusion", "field"=>"deal_type"}] }
+    let :asset { [{"validation"=>"inclusion", "field"=>"asset"}] }
+    let :not_started { [{"validation"=>"not_started", "field"=>"tournament"}] }
+    let :expire_at_error { [{"validation"=>"cast", "type"=>"integer", "field"=>"expire_at"}] }
+    let :topic { {"reason"=>"unmatched topic"} }
   end
+  #
+  # describe "Api tournaments error" do
+  #   include_context "variable_configure"
+  #   before do
+  #     deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 100, "turbo", "tournament", "put", 1, "" , stage
+  #   end
+  #
+  #   context "response to error tournaments id " do
+  #     it { expect($result['payload']['status']).to eq 'error' }
+  #     it { expect($result['payload']['response']['reasons']).to eq required }
+  #   end
+  # end
 
-  context "params list" do
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 100, "turbo", "tournament", "put", 1, id, stage
+    end
 
-    it 'dd' do
-      it { puts @won}
+    context "response to error tournaments id " do
+      it { expect($result['payload']['status']).to eq 'error' }
+      it { expect($result['payload']['response']).to eq topic }
     end
   end
-end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 100, "turbo", "tournamen", "pu", 1, id, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']).to eq topic }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 100, "turb", "tournament", "put", 1, id, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq blank }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 0, "turbo", "tournament", "put", 1, id, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq blank }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OT", expire_at, 10, "turbo", "tournament", "put", 1, id, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq asset }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", true, "GOL/OTC", expire_at, 10, "turbo", "tournament", "put", 1, id, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq blank }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "we", false, "GOL/OTC", expire_at, 10, "turbo", "tournament", "put", 1, id - 1, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq nil }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 10000, "turbo", "tournament", "put", 1, id - 1, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq blank }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 10000, "turbo", "tournament", "put", 1, id + 1, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq not_started }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 10000, "turbo", "tournament", "put", 1, nil, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq required }
+    end
+  end
+
+  describe "Api tournaments error" do
+    include_context "variable_configure"
+    before do
+      deal_creat = ws.send_ws "web", false, "GOL/OTC", "", 10000, "turbo", "tournament", "put", 1, nil, stage
+    end
+
+    context "response to error tournaments id " do
+      it { expect($result['payload']['response']['reasons']).to eq expire_at_error }
+    end
+  end

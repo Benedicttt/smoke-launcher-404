@@ -2,7 +2,10 @@ require "./features/helpers/decor"
 
 module Server
   class StatusCode
-    attr_accessor :smoke_status_code, :count_features, :thread, :clear_cache, :geo, :proxy_http, :proxy_server, :response_http, :not_response_http, :param_headless
+    attr_accessor :smoke_status_code, :count_features,
+                  :thread, :clear_cache, :geo, :proxy_http,
+                  :proxy_server, :response_http,
+                  :not_response_http, :param_headless, :send
 
     def initialize(params)
       @params = params
@@ -22,7 +25,6 @@ module Server
           puts "Cache clear done".yellow
         end
 
-        puts
         puts get_link.yellow
         puts; system get_link
       end

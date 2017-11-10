@@ -3,7 +3,7 @@ require "./features/helpers/decor"
 
 class SmokeStatusCode < Que::Job
 
-  def run(msg_json)
+  def run(msg_json, ws)
       return unless msg_json["smoke_status_code"] == true
       http_status = Server::StatusCode.new(msg_json)
       http_status.message
@@ -21,7 +21,7 @@ class SmokeStatusCode < Que::Job
       partner_id = Partner.where(stage_number: ENV['stage']).last.id
       report_add_partner(partner_id, partner, "Status code pages", ENV["stage"], report_url_binpartner)
 
-    rescue
-      puts "Test failed, see report".red
+    # rescue
+    #   puts "Test failed, see report".red
   end
 end

@@ -1,11 +1,15 @@
-Feature: SMoke test generate 2017-11-08 12:42:05 +0300
+Feature: SMoke test generate 2017-11-10 17:27:05 +0300
  Scenario: Run step
  Given Pid process
   
- When Use demo type
- 
- 	When Make a deals asset GOL/OTC and lose bet
- 	Then Transactions committed
- 
+ 	Given Tournament
+ 		When Add data
+ 	Given Data from
+ 	Given Data to
+ 		 When Select type tournament on activate 
+ 		 When Repeat type loopead 
+ 		When Created Tournament 'sum deals'
+ 	Given Fixed
+ Then Result
 
 Scenario:	Then Pool ranning?
