@@ -27,9 +27,7 @@ Then /^Redirect pages tutorial and agree risk$/ do
 
     wait_until(5, :class, "modal-content")
     sleep 2
-    # DRIVER.execute_script("$(\"input[name=i_agree]\").trigger('change').prop('checked', true)")
     DRIVER.find_elements(:css, ".title")[1].click
-    # DRIVER.find_element(:css, "input[ng-model=\"confirm\"]").click
     sleep 2
     DRIVER.find_element(:css, ".btn-primary").click
     sleep 1

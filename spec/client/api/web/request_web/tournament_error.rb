@@ -4,7 +4,7 @@ require 'faye/websocket'
 require 'json'
 
 class RequestWsError
-  def send_ws(device, demo, asset, expire_at, amount, option_type, deal_type, trend, count, tournament_id, stage)
+  def send_ws(device, demo, asset, expire_at, amount, option_type, deal_type, trend, count, tournament_id, stage, ref)
 
     api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
     @response_auth = RestClient::Request.execute(
@@ -45,12 +45,13 @@ class RequestWsError
                      "authtoken":authtoken,
                      "device":device,
                      "device_id":device_id },
-                     "ref":"1",
+                     "ref":"#{ref}",
                      "join_ref":"1"
                    }
 
         message = JSON.dump(phx_join)
         ws.send(message)
+        sleep 0.2
       end
 
       ws.on :message do |msg|
@@ -73,29 +74,15 @@ class RequestWsError
 
                   },
                 "ref":"2",
-                "join_ref":"1"
+                "join_ref":"#{ref + 1}"
               }
 
         demo_request = JSON.dump(params)
         count.times { ws.send demo_request; sleep 0.01 }
 
-        api_deals_create = "https://#{ENV['stage']}binomo.com/api/deals/list"
-        deals_real_list = RestClient::Request.execute(
-        method: :get,
-        url: api_deals_create,
-        headers: {
-          cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
-          params: {
-            locale: 'ru',
-            device: device,
-            deal_type: deal_type,
-            tournament_id: tournament_id,
-            geo: "RU"
-        }
-        }) { |response, request, result, &block|  response }
 
+        # puts msg.data
         $result = JSON.parse(msg.data)
-        puts $result
         return $result if $result['payload']['status'] == 'error'
       end
     }
