@@ -8,7 +8,7 @@ RSpec.describe "Registration success" do
   context "params" do
     it { expect(@registration["success"]).to eq true }
     it { expect(@registration["errors"]).to eq [] }
-    it { expect(@registration['data']['authtoken'].length).to eq 32 }
+    it { expect(@registration['data']['authtoken'].length).to eq 36 }
     it { expect(@registration['data']['balance']).to eq 0 }
     it { expect(@registration['data']['bonus']).to eq 0 }
     it { expect(@registration['data']['avatar']).to eq nil }

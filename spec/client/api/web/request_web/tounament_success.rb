@@ -4,7 +4,7 @@ require 'faye/websocket'
 require 'json'
 
 class RequestWS
-  def send_ws(device, demo, asset, expire_at, amount, option_type, deal_type, trend, count, tournament_id, stage)
+  def send_ws(device, demo, asset, expire_at, amount, option_type, deal_type, trend, count, tournament_id, stage, ref)
 
     api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
     @response_auth = RestClient::Request.execute(
@@ -39,14 +39,15 @@ class RequestWS
       ws = Faye::WebSocket::Client.new("wss://#{ENV['stage'].sub(/[.]/, '')}-ws.binomo.com:8080/?vsn=2.0.0")
       ws.on :open do |event|
         phx_join = {
-                   "topic":"base",
-                   "event":"phx_join",
-                   "payload": {
-                     "authtoken":authtoken,
-                     "device":device,
-                     "device_id":device_id },
+                     "topic":"base",
+                     "event":"phx_join",
                      "ref":"1",
-                     "join_ref":"1"
+                     "join_ref":"1",
+                     "payload": {
+                       "device":device,
+                       "device_id":device_id,
+                       "authtoken":authtoken
+                     },
                    }
 
         message = JSON.dump(phx_join)
@@ -58,7 +59,6 @@ class RequestWS
                  "topic":"base",
                  "event":"create_deal",
                  "payload": {
-                    "device":device,
                     "demo":demo,
                     "asset":asset,
                     "expire_at":expire_at,
@@ -72,7 +72,7 @@ class RequestWS
                     "tournament_id":tournament_id
 
                   },
-                "ref":"2",
+                "ref":ref,
                 "join_ref":"1"
               }
 

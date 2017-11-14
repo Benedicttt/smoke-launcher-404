@@ -8,7 +8,7 @@ RSpec.describe "Locale success" do
   context "params" do
     it { expect(@locale['success']).to eq true }
     it { expect(@locale['errors']).to eq [] }
-    it { expect(@locale['data']['available_locales']).to eq %w[en ru id ms es th vn cn pt tr pl ro me kr in ua] }
+    it { expect(@locale['data']['available_locales']).to eq %w[en ru id ms es th vn cn pt tr pl ro me kr in ua kz] }
     it { expect(@locale['data']['default_locale']).to eq 'en'}
   end
 end

@@ -4,7 +4,7 @@ RSpec.describe "Api tournaments success" do
   before(:context) do
     @tournaments = Tournaments.new.api("ru", "web")
     ids = []
-    ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" }
+    ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru"  }
     @id_max = ids[0].compact.max
     print "#{@id_max} ".yellow
 
@@ -17,16 +17,13 @@ RSpec.describe "Api tournaments success" do
   end
 
   context "params list" do
-    it { @tournaments['data'].each { |k, v| k['id'] if k['timeline_status'] == "actual" } }
     it { expect(@tournaments['success']).to eq true }
     it { expect(@tournaments['errors']).to eq [] }
     it { expect(@tournaments['data'].class).to eq Array }
     it { expect(@tournaments['data'][0]['id']).to be_a Integer  }
     it { expect(@tournaments['data'][0]['name']).to be_a String  }
-    it { expect(@tournaments['data'][0]['url']).to be_a String  }
     it { expect(@tournaments['data'][0]['content']).to be_a(String) }
     it { expect(@tournaments['data'][0]['name'].nil?).to eq false }
-    it { expect(@tournaments['data'][0]['url'].nil?).to eq false }
     it { expect(@tournaments['data'][0]['content'].nil?).to eq false }
     it { expect(@tournaments['data'][0]['banner_preview']).to be_a String }
     it { expect(@tournaments['data'][0]['banner_preview'].nil?).to eq false }

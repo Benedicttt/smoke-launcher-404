@@ -47,12 +47,11 @@ When /^Add data$/ do
     DRIVER.execute_script("$(\"span:contains('activated')\").click()")
 
 
-  %i[en ru].each_with_index do |locale, num|
-  # %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
+  %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
     num += 1
     DRIVER.execute_script("$('#new_tournament > div:nth-child(4) > div:nth-child(1) > ul > li:nth-child(#{num.to_i}) > a').click()") #en
     sleep 0.1
-    DRIVER.find_element(:id, "tournament_content_#{locale}").send_keys("Tournaments #{locale.upcase}")
+    DRIVER.find_element(:id, "tournament_content_#{locale}").send_keys("Tournaments #{locale.upcase} for rspec")
     DRIVER.find_element(:id, "tournament_name_#{locale}").clear
     DRIVER.find_element(:id, "tournament_name_#{locale}").send_keys("#{locale} " + "#{Time.now}")
   end

@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-11-09 17:40:56 +0300
+Feature: SMoke test generate 2017-11-14 19:24:55 +0300
  Scenario: Run step
  Given Pid process
  	Given Visit homepage and click soc-reg vk(not ref)

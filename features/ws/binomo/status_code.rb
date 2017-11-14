@@ -5,7 +5,7 @@ module Server
     attr_accessor :smoke_status_code, :count_features,
                   :thread, :clear_cache, :geo, :proxy_http,
                   :proxy_server, :response_http,
-                  :not_response_http, :param_headless, :send
+                  :not_response_http, :param_headless
 
     def initialize(params)
       @params = params
