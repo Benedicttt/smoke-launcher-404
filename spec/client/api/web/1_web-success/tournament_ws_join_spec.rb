@@ -18,18 +18,18 @@ RSpec.describe "join session" do
      sleep 1
      @lose =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "call", 1, @id_max, stage, "3"
 
-     # @deals_won = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1] #won
-     # sleep 0.5
-     # @deals_lose = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0] #lose
+     @deals_won = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1] #won
+     sleep 0.5
+     @deals_lose = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0] #lose
 
-     # print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
-     # sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
-     #
-     # @closed_lose_deal_data = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1]
-     # @closed_won_deal_data = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0]
-     # sleep 1
-     # null = "l"
-     # @msg_ws_deal = JSON.parse(eval($msg_deals).to_json)
+     print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
+     sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
+
+     @closed_lose_deal_data = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1]
+     @closed_won_deal_data = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0]
+     sleep 1
+     null = "l"
+     @msg_ws_deal = JSON.parse(eval($msg_deals).to_json)
   end
 
   context "param create deal" do

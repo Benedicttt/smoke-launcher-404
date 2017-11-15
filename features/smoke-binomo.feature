@@ -1,25 +1,7 @@
-Feature: SMoke test generate 2017-11-14 19:24:55 +0300
+Feature: SMoke test generate 2017-11-15 12:32:51 +0300
  Scenario: Run step
  Given Pid process
- 	Given Visit homepage and click soc-reg vk(not ref)
- 	When Click my email vk
- 	Then Assert page welcome
- 	Then Auth soc reg vk
- 	Then Assert page welcome
- 	Then Delete all providers stage and rename email account
-  	Given Visit homepage and click soc-reg google(not ref)
- 	When Click my email google
- 	Then Assert page welcome
- 	Then Auth soc reg google
- 	Then Assert page welcome
- 	Then Delete all providers stage and rename email account
-  	Given Visit homepage and click soc-reg facebook(not ref)
- 	When Click my email facebook
- 	Then Assert page welcome
- 	Then Auth soc reg facebook
- 	Then Assert page welcome
- 	Then Delete all providers stage and rename email account
-  Given Preparation of static data and visit homepage
+ Given Preparation of static data and visit homepage
  	When Registration traider
  	Then Email, locale, id, currency
   Given Visit page auth_platform
