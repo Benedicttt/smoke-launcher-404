@@ -1,7 +1,7 @@
 require 'rails_helper'
 include RSpec
 
-  shared_context "variable_configure" do
+  shared_context "variable_configure_error" do
     let! :ws { RequestWsError.new }
     let! :stage { ENV['stage'] }
 
@@ -33,7 +33,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 100, "turbo", "tournament", "put", 1, nil , stage, 1
     end
@@ -45,7 +45,7 @@ include RSpec
 
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 100, "turbo", "tournamen", "pu", 1, id + 1, stage, 3
     end
@@ -56,7 +56,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 0, "turbo", "tournament", "put", 1, id, stage, 5
     end
@@ -67,7 +67,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", false, "GOL/OT", expire_at, 10, "turbo", "tournament", "put", 1, id, stage, 6
     end
@@ -78,7 +78,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", true, "GOL/OTC", expire_at, 10, "turbo", "tournament", "put", 1, id, stage, 7
     end
@@ -89,7 +89,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "we", false, "GOL/OTC", expire_at, 10, "turbo", "tournament", "put", 1, id, stage, 8
     end
@@ -100,7 +100,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 100, "turbo", "tournament", "pu", 1, id, stage, 9
     end
@@ -111,7 +111,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", true, "GOL/OTC", expire_at, 10000000, "turbo", "tournament", "put", 1, id, stage, 10
     end
@@ -122,7 +122,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", false, "GOL/OTC", expire_at, 1000, "turbo", "ournament", "put", 1, id, stage, 11
     end
@@ -133,7 +133,7 @@ include RSpec
   end
 
   describe "Api tournaments error" do
-    include_context "variable_configure"
+    include_context "variable_configure_error"
     before do
       deal_creat = ws.send_ws "web", false, "GOL/OTC", "", 10000, "turbo", "tournament", "put", 1, id, stage, 12
     end

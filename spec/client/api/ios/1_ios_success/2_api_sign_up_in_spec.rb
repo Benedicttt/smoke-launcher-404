@@ -8,7 +8,7 @@ RSpec.describe "Registration success" do
   context "params" do
     it { expect(@registration["success"]).to eq true }
     it { expect(@registration["errors"]).to eq [] }
-    it { expect(@registration['data']['authtoken'].length).to eq 36 }
+    it { expect(@registration['data']['authtoken'].length).to eq 32 }
     it { expect(@registration['data']['balance']).to eq 0 }
     it { expect(@registration['data']['bonus']).to eq 0 }
     it { expect(@registration['data']['avatar']).to eq nil }
@@ -71,7 +71,7 @@ RSpec.describe "Config authorized success" do
     it { expect(data(@config_auth, 'success')).to eq true }
     it { expect(data(@config_auth, 'errors')).to eq [] }
     it { expect(data(@config_auth, 'data')['authorized']).to eq true }
-    it { expect(data(@config_auth, 'data')['device_id'].length).to eq 32 }
+    it { expect(data(@config_auth, 'data')['device_id'].length).to eq 36 }
     it { expect(data(@config_auth, 'data')['device_type']).to eq 'ios' }
     it { expect(data(@config_auth, 'data')['currencies']['list'][0]).to include currency_usd_auth }
     it { expect(data(@config_auth, 'data')['currencies']['default']).to eq 'RUB'}
