@@ -5,7 +5,8 @@ RSpec.describe "join session" do
      tournaments = Tournaments.new.api("ru", "web")
      ids = []
      ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
-     @id_max = ids[0].compact.max
+     @id_max = 319
+     # @id_max = ids[0].compact.max
      print "#{@id_max} ".yellow
 
      ws          = RequestWS.new

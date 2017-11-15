@@ -11,7 +11,8 @@ include RSpec
     let! :id do
       ids = []
       ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
-      id = ids[0].compact.max
+      # id = ids[0].compact.max
+      id = 319
     end
 
     let! :expire_at do
@@ -157,7 +158,8 @@ RSpec.describe "Api tournaments success" do
     @tournaments = Tournaments.new.api("ru", "web")
     ids = []
     ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru"  }
-    @id_max = ids[0].compact.max
+    # @id_max = ids[0].compact.max
+    @id_max = 319
     print "#{@id_max} ".yellow
 
     email = Cookies.where(stage: "#{ENV['stage']}").last.email
