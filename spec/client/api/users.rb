@@ -230,14 +230,14 @@ class RequestWS
         }
         }) { |response, request, result, &block|  response }
 
-        # puts msg.data
+        puts msg.data
         $msg_deals = msg.data if JSON.parse(msg.data)["payload"]["status"] == "open"
         return puts msg.data if JSON.parse(msg.data)["payload"]["status"] == "error"
 
-        return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'put'
-        return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'call'
-        puts deals_real_list.body
-        # return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['status'] == 'open'
+        # return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'put'
+        # return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'call'
+        $deal_list_tour = JSON.parse(deals_real_list.body.to_json)
+        return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['status'] == 'open'
       end
     }
   end
@@ -267,18 +267,21 @@ RSpec.describe "join session" do
      @deals_won = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1] #won
      sleep 0.5
      @deals_lose = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0] #lose
+     #
+     # print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
+     # sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
 
-     print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
-     sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
-
-     @closed_lose_deal_data = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1]
-     @closed_won_deal_data = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0]
+     @call = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1]
+     @put = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0]
      sleep 1
      null = "l"
      @msg_ws_deal = JSON.parse(eval($msg_deals).to_json)
+
+     puts $deal_list_tour['data']['deals'].each { |i| puts i if i['trend'] == "put" }[0]
+     puts $deal_list_tour['data']['deals'].each { |i| puts i if i['trend'] == "call" }[0]
   end
 
   context "param create deal" do
-    it { expect(@msg_ws_deal['topic']).to eq "base" }
+    it {  $deal_list_tour }
   end
 end

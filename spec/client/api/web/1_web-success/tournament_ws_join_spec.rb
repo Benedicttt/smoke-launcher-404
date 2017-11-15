@@ -13,23 +13,30 @@ RSpec.describe "join session" do
 
      expire_at  = (Time.now.to_i / 60).to_i * 60
      expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
-     #
+
      @won =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "put", 1, @id_max, stage, "2"
      sleep 1
      @lose =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "call", 1, @id_max, stage, "3"
-
-     @deals_won = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1] #won
-     sleep 0.5
+     sleep 1
      @deals_lose = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0] #lose
+     @deals_won = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1] #won
+     sleep 1
 
      print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
      sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
 
-     @closed_lose_deal_data = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1]
-     @closed_won_deal_data = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0]
-     sleep 1
      null = "l"
      @msg_ws_deal = JSON.parse(eval($msg_deals).to_json)
+
+
+     put = []
+     call = []
+     $deal_list_tour['data'].each_with_index { |value, num| @parses = JSON.parse(value[num].to_json);  }
+     @parses.map { |deals| put << deals if deals['status'] == 'won' && deals['trend'] == 'put' }.compact
+     @parses.map { |deals| call << deals if deals['status'] == 'lost' && deals['trend'] == 'call' }.compact
+
+     @put = put[0]
+     @call = call[0]
   end
 
   context "param create deal" do
@@ -94,42 +101,42 @@ RSpec.describe "join session" do
   end
 
   context "params close CALL deal" do
-    it { expect(@closed_won_deal_data['id']).to be_a Integer }
-    it { expect(@closed_won_deal_data['asset']).to eq "GOL/OTC" }
-    it { expect(@closed_won_deal_data['name']).to eq "FOR/HEIGHT" }
-    it { expect(@closed_won_deal_data['trend']).to eq "call" }
+    it { expect(@put['id']).to be_a Integer }
+    it { expect(@put['asset']).to eq "GOL/OTC" }
+    it { expect(@put['name']).to eq "FOR/HEIGHT" }
+    it { expect(@put['trend']).to eq "put" }
 
-    it { expect(@closed_won_deal_data['entrie_rate']).to be_a Float }
-    it { expect(@closed_won_deal_data['bet']).to eq 100 }
-    it { expect(@closed_won_deal_data['payment']).to be_a Float }
-    it { expect(@closed_won_deal_data['payment']).to eq "#{ 100 + Assets.new.get('web', 'ru')[1][0] }.0".to_f - 1 }
-    it { expect(@closed_won_deal_data['status']).to eq "lost"  }
-    it { expect(@closed_won_deal_data['option_type']).to eq "turbo" }
-    it { expect(@closed_won_deal_data['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f - 1 }
-    it { expect(@closed_won_deal_data['demo']).to eq false }
-    it { expect(@closed_won_deal_data['deal_type']).to eq "tournament" }
-    it { expect(@closed_won_deal_data['tournament_id']).to eq @id_max }
-    it { expect(@closed_won_deal_data['end_rate']).to be_a Float }
-    it { expect(@closed_won_deal_data['win']).to eq 0 }
+    it { expect(@put['entrie_rate']).to be_a Float }
+    it { expect(@put['bet']).to eq 100 }
+    it { expect(@put['payment']).to be_a Float }
+    it { expect(@put['payment']).to eq "#{ 100 + Assets.new.get('web', 'ru')[1][0] }.0".to_f - 1 }
+    it { expect(@put['status']).to eq "won"  }
+    it { expect(@put['option_type']).to eq "turbo" }
+    it { expect(@put['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f - 1 }
+    it { expect(@put['demo']).to eq false }
+    it { expect(@put['deal_type']).to eq "tournament" }
+    it { expect(@put['tournament_id']).to eq @id_max }
+    it { expect(@put['end_rate']).to be_a Float }
+    it { expect(@put['win']).to eq 100 + Assets.new.get('web', 'ru')[1][0] - 1 }
   end
 
   context "params close PUT deal" do
-    it { expect( @closed_lose_deal_data['id']).to be_a Integer }
-    it { expect( @closed_lose_deal_data['asset']).to eq "GOL/OTC" }
-    it { expect( @closed_lose_deal_data['name']).to eq "FOR/HEIGHT" }
-    it { expect( @closed_lose_deal_data['trend']).to eq "put" }
+    it { expect( @call['id']).to be_a Integer }
+    it { expect( @call['asset']).to eq "GOL/OTC" }
+    it { expect( @call['name']).to eq "FOR/HEIGHT" }
+    it { expect( @call['trend']).to eq "call" }
 
-    it { expect( @closed_lose_deal_data['entrie_rate']).to be_a Float }
-    it { expect( @closed_lose_deal_data['bet']).to eq 100 }
-    it { expect( @closed_lose_deal_data['payment']).to be_a Float }
-    it { expect( @closed_lose_deal_data['payment']).to eq "#{ 100 + Assets.new.get('web', 'ru')[1][0] }.0".to_f - 1 }
-    it { expect( @closed_lose_deal_data['status']).to eq "won"  }
-    it { expect( @closed_lose_deal_data['option_type']).to eq "turbo"  }
-    it { expect( @closed_lose_deal_data['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0] }.0}".to_f - 1 }
-    it { expect( @closed_lose_deal_data['demo']).to eq false }
-    it { expect( @closed_lose_deal_data['deal_type']).to eq "tournament" }
-    it { expect( @closed_lose_deal_data['tournament_id']).to eq @id_max }
-    it { expect( @closed_lose_deal_data['end_rate']).to be_a Float }
-    it { expect( @closed_lose_deal_data['win']).to eq 100 + Assets.new.get('web', 'ru')[1][0] - 1 }
+    it { expect( @call['entrie_rate']).to be_a Float }
+    it { expect( @call['bet']).to eq 100 }
+    it { expect( @call['payment']).to be_a Float }
+    it { expect( @call['payment']).to eq "#{ 100 + Assets.new.get('web', 'ru')[1][0] }.0".to_f - 1 }
+    it { expect( @call['status']).to eq "lost"  }
+    it { expect( @call['option_type']).to eq "turbo"  }
+    it { expect( @call['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0] }.0}".to_f - 1 }
+    it { expect( @call['demo']).to eq false }
+    it { expect( @call['deal_type']).to eq "tournament" }
+    it { expect( @call['tournament_id']).to eq @id_max }
+    it { expect( @call['end_rate']).to be_a Float }
+    it { expect( @call['win']).to eq 0 }
   end
 end
