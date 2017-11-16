@@ -8,6 +8,7 @@ RSpec.describe "join session" do
      @id_max = ids[0].compact.max
      print "#{@id_max} ".yellow
 
+####
      ws          = RequestWS.new
      stage       = ENV['stage']
 
@@ -15,25 +16,51 @@ RSpec.describe "join session" do
      expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
 
      @won =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "put", 1, @id_max, stage, "2"
-     sleep 0.2
      @lose =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "call", 1, @id_max, stage, "3"
-     sleep 0.2
-     @deals_lose = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0] #lose
-     sleep 0.2
-     @deals_won = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1] #won
-     sleep 0.2
+####
 
-     # print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
-     # sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
+      won = []
+      lost = []
+      deals_list_tournamnet = Tournaments.new.deals_list("web", "tournament", @id_max)['data']
 
+      JSON.parse(deals_list_tournamnet.to_json).each_with_index do |value, num|
+        @deal = JSON.parse(value[num].to_json)
+      end
+
+      @deal.map { |deals| won << deals if deals['status'] == 'open' && deals['trend'] == 'put' }.compact
+      @deal.map { |deals| lost << deals if deals['status'] == 'open' && deals['trend'] == 'call' }.compact
+
+      @deals_won = won[0]
+      @deals_lost = lost[0]
+####
+     print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
+     sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
+####
      null = ""
      @msg_ws_deal = JSON.parse(eval($msg_deals).to_json)
-
+####
      put = []
      call = []
 
-     $deal_list_tour['data'].each_with_index { |value, num| @parses = JSON.parse(value[num].to_json) }
-     sleep 0.5
+     api_deals_create = "https://#{ENV['stage']}binomo.com/api/deals/list"
+     deals_real_list = RestClient::Request.execute(
+     method: :get,
+     url: api_deals_create,
+     headers: {
+       cookies: Cookies.where(stage: ENV['stage']).last.cookies_traider,
+       params: {
+         locale: 'ru',
+         device: 'web',
+         deal_type: "tournament",
+         tournament_id: @id_max,
+         geo: "RU"
+       }
+     }) { |response, request, result, &block|  response }
+
+     JSON.parse(deals_real_list.body)['data'].each_with_index do |value, num|
+       @parses = JSON.parse(value[num].to_json)
+     end
+
      @parses.map { |deals| put << deals if deals['status'] == 'won' && deals['trend'] == 'put' }.compact
      @parses.map { |deals| call << deals if deals['status'] == 'lost' && deals['trend'] == 'call' }.compact
 
@@ -81,25 +108,25 @@ RSpec.describe "join session" do
     it { expect(@deals_won['end_rate']).to eq 0.0}
     it { expect(@deals_won['win']).to eq 0 }
   end
-
+  #
   context "params open CALL deal" do
-    it { expect(@deals_lose['id']).to be_a Integer }
-    it { expect(@deals_lose['asset']).to eq "GOL/OTC" }
-    it { expect(@deals_lose['name']).to eq "FOR/HEIGHT" }
-    it { expect(@deals_lose['trend']).to eq "call" }
+    it { expect(@deals_lost['id']).to be_a Integer }
+    it { expect(@deals_lost['asset']).to eq "GOL/OTC" }
+    it { expect(@deals_lost['name']).to eq "FOR/HEIGHT" }
+    it { expect(@deals_lost['trend']).to eq "call" }
 
-    it { expect(@deals_lose['entrie_rate']).to be_a Float }
-    it { expect(@deals_lose['bet']).to eq 100 }
-    it { expect(@deals_lose['payment']).to be_a Float }
-    it { expect(@deals_lose['payment']).to eq "#{ 100 + Assets.new.get('web', 'ru')[1][0] }.0".to_f - 1 }
-    it { expect(@deals_lose['status']).to eq "open"  }
-    it { expect(@deals_lose['option_type']).to eq "turbo" }
-    it { expect(@deals_lose['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f - 1 }
-    it { expect(@deals_lose['demo']).to eq false }
-    it { expect(@deals_lose['deal_type']).to eq "tournament" }
-    it { expect(@deals_lose['tournament_id']).to eq @id_max }
-    it { expect(@deals_lose['end_rate']).to eq 0.0 }
-    it { expect(@deals_lose['win']).to eq 0 }
+    it { expect(@deals_lost['entrie_rate']).to be_a Float }
+    it { expect(@deals_lost['bet']).to eq 100 }
+    it { expect(@deals_lost['payment']).to be_a Float }
+    it { expect(@deals_lost['payment']).to eq "#{ 100 + Assets.new.get('web', 'ru')[1][0] }.0".to_f - 1 }
+    it { expect(@deals_lost['status']).to eq "open"  }
+    it { expect(@deals_lost['option_type']).to eq "turbo" }
+    it { expect(@deals_lost['payment_rate']).to eq "#{Assets.new.get('web', 'ru')[1][0]}.0}".to_f - 1 }
+    it { expect(@deals_lost['demo']).to eq false }
+    it { expect(@deals_lost['deal_type']).to eq "tournament" }
+    it { expect(@deals_lost['tournament_id']).to eq @id_max }
+    it { expect(@deals_lost['end_rate']).to eq 0.0 }
+    it { expect(@deals_lost['win']).to eq 0 }
   end
 
   context "params close CALL deal" do

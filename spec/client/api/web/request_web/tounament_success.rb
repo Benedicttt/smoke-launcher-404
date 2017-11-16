@@ -95,7 +95,7 @@ class RequestWS
         }) { |response, request, result, &block|  response }
 
         sleep 0.5
-        $deal_list_tour = JSON.parse(deals_real_list.body)
+        # $deal_list_tour = JSON.parse(deals_real_list.body)
         $msg_deals = msg.data if JSON.parse(msg.data)["payload"]["status"] == "open"
 
         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'put'

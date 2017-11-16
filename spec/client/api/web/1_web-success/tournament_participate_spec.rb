@@ -11,8 +11,7 @@ include RSpec
     let! :id do
       ids = []
       ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
-      # id = ids[0].compact.max
-      id = 319
+      id = ids[0].compact.max
     end
 
     let! :expire_at do
