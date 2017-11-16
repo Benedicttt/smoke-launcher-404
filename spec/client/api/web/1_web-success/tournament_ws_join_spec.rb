@@ -5,8 +5,7 @@ RSpec.describe "join session" do
      tournaments = Tournaments.new.api("ru", "web")
      ids = []
      ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
-     @id_max = 319
-     # @id_max = ids[0].compact.max
+     @id_max = ids[0].compact.max
      print "#{@id_max} ".yellow
 
      ws          = RequestWS.new
@@ -16,23 +15,25 @@ RSpec.describe "join session" do
      expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
 
      @won =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "put", 1, @id_max, stage, "2"
-     sleep 1
+     sleep 0.2
      @lose =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "call", 1, @id_max, stage, "3"
-     sleep 1
+     sleep 0.2
      @deals_lose = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0] #lose
+     sleep 0.2
      @deals_won = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1] #won
-     sleep 1
+     sleep 0.2
 
-     print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
-     sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
+     # print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
+     # sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
 
-     null = "l"
+     null = ""
      @msg_ws_deal = JSON.parse(eval($msg_deals).to_json)
-
 
      put = []
      call = []
-     $deal_list_tour['data'].each_with_index { |value, num| @parses = JSON.parse(value[num].to_json);  }
+
+     $deal_list_tour['data'].each_with_index { |value, num| @parses = JSON.parse(value[num].to_json) }
+     sleep 0.5
      @parses.map { |deals| put << deals if deals['status'] == 'won' && deals['trend'] == 'put' }.compact
      @parses.map { |deals| call << deals if deals['status'] == 'lost' && deals['trend'] == 'call' }.compact
 

@@ -18,7 +18,6 @@ class Tournaments
           params: {
            locale: locale, device: device
           }}) { |response, request, result, &block| response}
-
     return JSON.parse(api.body)
   end
 

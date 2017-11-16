@@ -84,7 +84,7 @@ class RequestWS
         method: :get,
         url: api_deals_create,
         headers: {
-          cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
+          cookies: @response_auth.cookies,
           params: {
             locale: 'ru',
             device: device,
@@ -94,13 +94,15 @@ class RequestWS
         }
         }) { |response, request, result, &block|  response }
 
-        # puts msg.data
+        sleep 0.5
         $deal_list_tour = JSON.parse(deals_real_list.body)
         $msg_deals = msg.data if JSON.parse(msg.data)["payload"]["status"] == "open"
 
-        return puts msg.data if JSON.parse(msg.data)["payload"]["status"] == "error"
         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'put'
         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'call'
+
+        return msg.data if JSON.parse(msg.data)["payload"]["status"] == "open"
+        return puts msg.data if JSON.parse(msg.data)["payload"]["status"] == "error"
       end
     }
   end
