@@ -1,3 +1,5 @@
+activate all templates: "\tGiven Activate all templates\n"
+
 settings:
   payments:          "\tGiven Include provider Eccompay\n"
   contries:          "\tGiven Set country RU curency USD, EUR, RUB - default USD\n"
@@ -45,4 +47,9 @@ content:
   ticket-categories:  "\tGiven Add ticket category\n"
   widget:             "\tGiven Update windgets\n"
   advices:            "\tGiven Update all advises\n"
-  
+
+sandbox:
+  mailer:             "\tGiven Create new mailer\n"
+
+offers:
+  static:             "\tGiven Create new static\n"
