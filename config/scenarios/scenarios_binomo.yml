@@ -265,7 +265,3 @@ phone confirmed: "
   \tGiven Phone verified find \n
 \t\tThen Phone verifed\n
 "
-
-add widget cashier: "
-  \tGiven Add widget\n
-"

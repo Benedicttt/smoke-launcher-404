@@ -11,15 +11,17 @@ html
 
           .content_prod.fields.actions-btns
             = render "shared/controls_buttons", id: "smoke-content-pages"
-          = f.input :global_link, label:" Smoke test email marketing", input_html: { class: 'global_link' }, required: false
+
+          = f.input :global_link, label:" Set and update all contents pages", input_html: { class: 'global_link' }, required: false
 
           .ws
             = f.label "Connecting WS ...", required: false
         = render "shared/headers", f: f
 
         .form-part.text-form.content-page
-          = f.input :global_ckeckbox , label: false , collection: ["check"], as: :check_boxes, required: false
-
+          .col-xs-12
+            = f.input :global_ckeckbox , label: false , collection: ["check"], as: :check_boxes, required: false
+          =f.input :table, required: false, label: false
 
             .col-xs-2
               table
@@ -27,17 +29,17 @@ html
                   h3 Settings
                   .row
                     tr
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'payments'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'contries'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'common'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'demo_deals'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'webinar'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'daily assets'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'sales_manage'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'users'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'preset'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'assets'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'currency'
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'payments', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'contries', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'common', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'demo_deals', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'webinar', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'daily assets', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'sales_manage', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'users', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'preset', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'assets', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'currency', checkboxes_prop: false
 
             .col-xs-2
               table
@@ -45,18 +47,18 @@ html
                   h3 Contents
                   .row
                     tr
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'static page'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'articles'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'title'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'knowledge base'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'strategies'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'technical analysis'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'invest idea'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'video'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'press articles'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'ticket-categories'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'widget'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'advices'
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'static page', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'articles', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'title', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'knowledge base', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'strategies', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'technical analysis', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'invest idea', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'video', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'press articles', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'ticket-categories', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'widget', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'advices', checkboxes_prop: false
 
 
             .col-xs-2
@@ -65,8 +67,8 @@ html
                   h3 Faq(Content)
                   .row
                     tr
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'groups'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'questions-answer'
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'groups', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'questions-answer', checkboxes_prop: false
 
             .col-xs-2
               table
@@ -74,8 +76,8 @@ html
                   h3 Sandbox
                   .row
                     tr
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'mailer'
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'static'
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'mailer', checkboxes_prop: false
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'static', checkboxes_prop: false
 
             .col-xs-3
               table
@@ -83,4 +85,8 @@ html
                   h3 Templates lettres
                   .row
                     tr
-                      = render "shared/crm.binomo/contents", f: f,  name_content: 'activate all templates'
+                      = render "shared/crm.binomo/contents", f: f,  name_content: 'activate all templates', checkboxes_prop: true
+
+      .col-xs-12
+        br
+        = render "shared/reports-iframe", path_reports: "/reports/binomo/smoke-content-pages.html"

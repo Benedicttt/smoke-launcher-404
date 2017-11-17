@@ -17,12 +17,12 @@ class Binomo::ContentPageController < ApplicationController
     end
 
     File.open("./features/content-page.feature", 'a') do |f|
-      f.puts(scenarios.join("\n"))
-      f.puts(settings.join("\n"))
-      f.puts(content.join("\n"))
-      f.puts(faq.join("\n"))
-      f.puts(sandbox.join("\n"))
-      f.puts(offers.join("\n"))
+      f.puts(scenarios.join(""))
+      f.puts(settings.join(""))
+      f.puts(content.join(""))
+      f.puts(faq.join(""))
+      f.puts(sandbox.join(""))
+      f.puts(offers.join(""))
     end
     p params["generator"]
 
