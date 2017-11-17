@@ -21,10 +21,10 @@ namespace :server do
         puts "Run xvfb server".yellow
         puts "#{system " ps ax | grep Xvfb"}"
       end
-
-      thr << Thread.new do
-        system "driver=chrome cucumber ./features/ws.feature"
-      end
+      #
+      # thr << Thread.new do
+      #   system "driver=chrome cucumber ./features/ws.feature"
+      # end
       thr.each { |thread| thread.join }
     end
 

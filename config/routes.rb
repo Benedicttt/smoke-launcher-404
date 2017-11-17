@@ -1,7 +1,7 @@
 require "que/web"
 
 Rails.application.routes.draw do
-  mount ActionCable.server, at: '*'
+  mount ActionCable.server, at: '/cable'
   mount Que::Web => "/que"
 
   root to: redirect("/homepage")
