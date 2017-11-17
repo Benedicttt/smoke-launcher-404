@@ -1,11 +1,11 @@
-Feature: SMoke test generate 2017-11-17 16:23:12 +0300
+Feature: SMoke test generate 2017-11-17 17:36:57 +0300
  Scenario: Run step
  Given Pid process
   
 
 	Given Last select provider to crm(Eccompay)
 
-	Given Set country RU curency USD, EUR, RUB - default USD
+	Given Set country RU curency USD, EUR, RUB - default RUB
 
  	Given Set sales manage all
  	Given Set Assets: break: true, dynamic: -300, win rate: 70

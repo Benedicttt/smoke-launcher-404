@@ -1,9 +1,6 @@
 class Binomo::ContentPageController < ApplicationController
   before_action :set_params
 
-  def index
-  end
-
   def create
     scenarios = params["generator"]["scenario"]&.map {|f| @config[f]}.reject{ |x| x.nil?}
     settings = params["generator"]["scenario"]&.map {|f| @settings[f]}.reject{ |x| x.nil?}
