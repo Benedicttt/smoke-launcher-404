@@ -63,53 +63,74 @@ end
 
 Given /^Set Server webinar time$/ do
   authorization_by_crm(DRIVER)
-  ##!!!!!!!!!!
   DRIVER.get CommonSetting[:url_page_crm] + "/settings"
+  date_now = Time.now
+  date_to = Time.now.strftime("#{date_now.day + 1}.%m.%Y %H:%M:%S")
+  DRIVER.find_element(:id, "settings_webinar_time").send_keys(date_to)
 end
 
 Given /^Set URL webinar$/ do
-  ##!!!!!!!!!!
-  DRIVER.find_elements(:css, ".btn-primary")[0].click
+  DRIVER.find_element(:id, "settings_webinar_url").send_keys("https://youtu.be/jNMJQ5RqMQ8")
   sleep 1
   DRIVER.find_elements(:css, ".btn-primary")[0].click
 end
 
 Given /^Set daily asset ric GOL\/OTC, percents (\d+)$/ do |arg1|
   authorization_by_crm(DRIVER)
-  DRIVER.get CommonSetting[:url_page_crm] + ""
+  DRIVER.get CommonSetting[:url_page_crm] + "/daily_assets"
+  (0..6).each do |i|
+    DRIVER.execute_script("$('#daily_assets_#{i}_random').prop('checked', true)"
+    DRIVER.find_element(:id, "daily_assets_#{i}_percent").clear
+    DRIVER.find_element(:id, "daily_assets_#{i}_percent").send_keys(arg1)
+  end
   sleep 1
   DRIVER.find_elements(:css, ".btn-primary")[0].click
-
 end
 
 Given /^Update one user admin$/ do
   authorization_by_crm(DRIVER)
-  DRIVER.get CommonSetting[:url_page_crm] + ""
+  DRIVER.get CommonSetting[:url_page_crm] + "/admin_users"
+  sleep 1
+  DRIVER.find_element(:css, "#tab-content-active > table > tbody > tr:nth-child(2) > td:nth-child(1) > a").click
+  DRIVER.find_elements(:css, ".btn-primary")[0].click
   sleep 1
   DRIVER.find_elements(:css, ".btn-primary")[0].click
-
 end
 
 Given /^Create one preset$/ do
+  refcode = Partner.last.refcode
   authorization_by_crm(DRIVER)
-  DRIVER.get CommonSetting[:url_page_crm] + ""
+  DRIVER.get CommonSetting[:url_page_crm] + "/presets/new"
   sleep 1
+  DRIVER.find_element(:id, "preset_title").send_keys("test_preset")
+  DRIVER.find_element(:id, "preset_refcodes").send(refcode)
   DRIVER.find_elements(:css, ".btn-primary")[0].click
-
+  sleep 1
+  DRIVER.find_element(:xpath, "//*[@id='main-content']/div/table/tbody/tr[2]/td[1]") == refcode
 end
 
 Given /^Set percet rate and time$/ do
   authorization_by_crm(DRIVER)
-  DRIVER.get CommonSetting[:url_page_crm] + ""
+  DRIVER.get CommonSetting[:url_page_crm] + "/stock_assets"
   sleep 1
-  DRIVER.find_elements(:css, ".btn-primary")[0].click
+  DRIVER.find_element(:id, "assets_reduce_rates_time_from").clear
+  DRIVER.find_element(:id, "assets_reduce_rates_time_from").send_keys("11:00")
+  DRIVER.find_element(:id, "assets_reduce_rates_time_to").clear
+  DRIVER.find_element(:id, "assets_reduce_rates_time_to").send_keys("11:15")
+  DRIVER.find_element(:id, "assets_reduce_rates_value").clear
+  DRIVER.find_element(:id, "assets_reduce_rates_value").send_keys("15")
 
+  DRIVER.find_elements(:css, ".btn-small")[0].click
 end
 
+
+#######
 Given /^Set ric GOL\/OTC all defaults params$/ do
   authorization_by_crm(DRIVER)
-  DRIVER.get CommonSetting[:url_page_crm] + ""
+  DRIVER.get CommonSetting[:url_page_crm] + "/stock_assets"
   sleep 1
+  DRIVER.find_element(:xpath, ('//*[@class="sortable-row"]//td[text() = "FOR/HEIGHT"]//../td[10]').click
+  sleep 
   DRIVER.find_elements(:css, ".btn-primary")[0].click
 
 end
