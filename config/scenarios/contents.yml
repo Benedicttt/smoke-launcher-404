@@ -1,7 +1,7 @@
 activate all templates: "\tGiven Activate all templates\n"
 
 settings:
-  payments:          "\tGiven Include provider Eccompay\n\n"
+  payments:          "\tGiven Last select provider to crm(Eccompay)\n\n"
   contries:          "\tGiven Set country RU curency USD, EUR, RUB - default USD\n\n"
   common:            "
                       \tGiven Set sales manage all\n

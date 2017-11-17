@@ -1,5 +1,3 @@
-Given /^Include provider Eccompay$/ do
-end
 Given /^Set country RU curency USD, EUR, RUB \- default USD$/ do
 end
 Given /^Set sales manage all$/ do

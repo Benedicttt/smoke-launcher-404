@@ -1,9 +1,9 @@
-Feature: SMoke test generate 2017-11-17 16:14:46 +0300
+Feature: SMoke test generate 2017-11-17 16:23:12 +0300
  Scenario: Run step
  Given Pid process
   
 
-	Given Include provider Eccompay
+	Given Last select provider to crm(Eccompay)
 
 	Given Set country RU curency USD, EUR, RUB - default USD
 
