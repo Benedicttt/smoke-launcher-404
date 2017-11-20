@@ -3,7 +3,7 @@ Given /^Update page privacy$/ do
 
   DRIVER.get CommonSetting[:url_page_crm] + "/static_pages"
   sleep 1
-  DRIVER.find_element(:xpath, "//*[@class='table payment-group-table']//tbody/tr/td[text() = 'Privacy statement']//../td[4]/a").click
+  DRIVER.find_element(:xpath, "//*[@class='table payment-group-table']//tbody/tr/td[text() = 'privacy']//../td[4]/a").click
   sleep 1
   DRIVER.find_element(:id, "static_page_url").clear
   DRIVER.find_element(:id, "static_page_url").send_keys("privacy")
@@ -15,7 +15,7 @@ end
 Given /^Update page agreement$/ do
   DRIVER.get CommonSetting[:url_page_crm] + "/static_pages"
   sleep 1
-  DRIVER.find_element(:xpath, "//*[@class='table payment-group-table']//tbody/tr/td[text() = 'Client Agreement']//../td[4]/a").click
+  DRIVER.find_element(:xpath, "//*[@class='table payment-group-table']//tbody/tr/td[text() = 'agreement']//../td[4]/a").click
   sleep 1
   DRIVER.find_element(:id, "static_page_url").clear
   DRIVER.find_element(:id, "static_page_url").send_keys("agreement")

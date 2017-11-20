@@ -16,7 +16,12 @@ Given /^Set ric GOL\/OTC all defaults params$/ do
   authorization_by_crm(DRIVER)
   DRIVER.get CommonSetting[:url_page_crm] + "/stock_assets"
   sleep 1
-  DRIVER.find_element(:xpath, '//*[@class="sortable-row"]//td[text() = "FOR/HEIGHT"]//../td[10]').click
+  begin
+    DRIVER.find_element(:xpath, '//*[@class="sortable-row"]//td[text() = "GOL ЗА-РОСТ"]//../td[10]').click
+  rescue Selenium::WebDriver::Error::NoSuchElementError
+    DRIVER.find_element(:xpath, '//*[@class="sortable-row"]//td[text() = "FOR/HEIGHT"]//../td[10]').click
+  end
+
   sleep 1
   DRIVER.find_element(:id, "asset_name").clear
   DRIVER.find_element(:id, "asset_name").send_keys("FOR/HEIGHT")
