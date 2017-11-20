@@ -204,33 +204,42 @@ Given /^Set USD currency defaults params$/ do
   DRIVER.find_element(:id, "currency_cfd_max_deal").send_keys("1000")
 
   add_deal_cfd = DRIVER.find_elements(:css, ".add-deal-sum")[2]
-  5.times { add_deal_cfd.click } if DRIVER.find_elements(:css, "input[name='currency[cfd_deal_sums][]']")[4].nil? == true
+  add_deal_widget = DRIVER.find_elements(:css, ".add-deal-sum")[1]
+  add_deal_deal = DRIVER.find_elements(:css, ".add-deal-sum")[0]
 
+  7.times do
+    add_deal_deal.click
+    add_deal_cfd.click
+    add_deal_widget.click
+  end
 
   %w[5 10 50 500 1000].each_with_index do |sum, num|
     DRIVER.find_elements(:css, "input[name='currency[cfd_deal_sums][]']")[num].clear
+    sleep 0.2
     DRIVER.find_elements(:css, "input[name='currency[cfd_deal_sums][]']")[num].send_keys("#{sum}")
   end
 
   %w[1 10 20 50 100 200 1000].each_with_index do |sum, num|
-    begin
-      DRIVER.find_elements(:id, "currency_deal_sums_")[num].clear
-      DRIVER.find_elements(:id, "currency_deal_sums_")[num].send_keys("#{sum}")
-    rescue
+      DRIVER.find_elements(:css, "input[name='currency[deal_sums][]']")[num].clear
+      sleep 0.2
+      DRIVER.find_elements(:css, "input[name='currency[deal_sums][]']")[num].send_keys("#{sum}")
   end
 
-  add_deal_widget = DRIVER.find_elements(:css, ".add-deal-sum")[2]
-  3.times { add_deal_widget.click } if DRIVER.find_elements(:id, "currency_dummy_deal_sums_")[2].nil? == true
-
   %w[100 200 1000].each_with_index do |sum, num|
+      DRIVER.find_elements(:css, "input[name='currency[dummy_deal_sums][]']")[num].clear
+      sleep 0.2
+      DRIVER.find_elements(:css, "input[name='currency[dummy_deal_sums][]']")[num].send_keys("#{sum}")
+  end
+
+  30.times do |num|
     begin
-      DRIVER.find_elements(:id, "currency_dummy_deal_sums_")[num].clear
-      DRIVER.find_elements(:id, "currency_dummy_deal_sums_")[num].send_keys("#{sum}")
+      DRIVER.find_element(:xpath, "//input[@value='0']//../a").click
     rescue
+    end
   end
 
   DRIVER.find_elements(:css, ".btn-success")[0].click
-  sleep 5
+  sleep 1
 end
 
 Given /^Update page privacy$/ do
@@ -238,7 +247,6 @@ Given /^Update page privacy$/ do
   DRIVER.get CommonSetting[:url_page_crm] + ""
   sleep 1
   DRIVER.find_elements(:css, ".btn-primary")[0].click
-
 end
 
 Given /^Update page agreement$/ do
