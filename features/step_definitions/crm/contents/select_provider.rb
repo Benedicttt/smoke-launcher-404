@@ -5,14 +5,10 @@ Given /^Last select provider to crm\(Eccompay\)$/ do
   sleep 1
   DRIVER.get(CommonSetting[:url_page_crm] + "payment_groups")
   sleep 2
-
-  sleep 3
   DRIVER.find_elements(:css, 'a.btn')[1].click
-
   sleep 5
   DRIVER.find_elements(:css, 'a.btn')[0].click
   sleep 1
-
   DRIVER.execute_script("$(\"span:contains('Ecommpay')\").click()")
   sleep 0.5
   DRIVER.find_element(:css, '.button.btn.btn-primary').send_keys:return

@@ -2,7 +2,7 @@ activate all templates: "\tGiven Activate all templates\n"
 
 settings:
   payments:          "\tGiven Last select provider to crm(Eccompay)\n\n"
-  contries:          "\tGiven Set country RU curency USD, EUR, RUB - default RUB\n\n"
+  countries:          "\tGiven Set country RU curency USD, EUR, RUB - default RUB\n\n"
   common:            "
                       \tGiven Set sales manage all\n
                       \tGiven Set Assets: break: true, dynamic: -300, win rate: 70\n
