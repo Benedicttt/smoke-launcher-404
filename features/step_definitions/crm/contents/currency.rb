@@ -4,6 +4,18 @@ Given /^Set USD currency defaults params$/ do
   sleep 1
   DRIVER.find_element(:xpath, "//*[@class='success']//td[text() = 'USD']//../td[14]/a").click
   sleep 1
+
+  DRIVER.execute_script("$('.remove-deal-sum').click()")
+  sleep 1
+
+  add_deal_cfd = DRIVER.find_elements(:css, ".add-deal-sum")[2]
+  add_deal_widget = DRIVER.find_elements(:css, ".add-deal-sum")[1]
+  add_deal_deal = DRIVER.find_elements(:css, ".add-deal-sum")[0]
+
+  7.times { add_deal_deal.click }
+  5.times { add_deal_cfd.click }
+  3.times { add_deal_widget.click }
+
   DRIVER.execute_script("$('#currency_active').prop('checked', true)")
   DRIVER.find_element(:id, "currency_unit").clear
   DRIVER.find_element(:id, "currency_unit").send_keys("$")
@@ -26,39 +38,26 @@ Given /^Set USD currency defaults params$/ do
   DRIVER.find_element(:id, "currency_cfd_max_deal").clear
   DRIVER.find_element(:id, "currency_cfd_max_deal").send_keys("1000")
 
-  add_deal_cfd = DRIVER.find_elements(:css, ".add-deal-sum")[2]
-  add_deal_widget = DRIVER.find_elements(:css, ".add-deal-sum")[1]
-  add_deal_deal = DRIVER.find_elements(:css, ".add-deal-sum")[0]
-
-  7.times do
-    add_deal_deal.click
-    add_deal_cfd.click
-    add_deal_widget.click
-  end
 
   %w[5 10 50 500 1000].each_with_index do |sum, num|
+    sleep 0.1
     DRIVER.find_elements(:css, "input[name='currency[cfd_deal_sums][]']")[num].clear
-    sleep 0.2
+    sleep 0.4
     DRIVER.find_elements(:css, "input[name='currency[cfd_deal_sums][]']")[num].send_keys("#{sum}")
   end
 
   %w[1 10 20 50 100 200 1000].each_with_index do |sum, num|
-      DRIVER.find_elements(:css, "input[name='currency[deal_sums][]']")[num].clear
-      sleep 0.2
-      DRIVER.find_elements(:css, "input[name='currency[deal_sums][]']")[num].send_keys("#{sum}")
+    sleep 0.1
+    DRIVER.find_elements(:css, "input[name='currency[deal_sums][]']")[num].clear
+    sleep 0.4
+    DRIVER.find_elements(:css, "input[name='currency[deal_sums][]']")[num].send_keys("#{sum}")
   end
 
   %w[100 200 1000].each_with_index do |sum, num|
-      DRIVER.find_elements(:css, "input[name='currency[dummy_deal_sums][]']")[num].clear
-      sleep 0.2
-      DRIVER.find_elements(:css, "input[name='currency[dummy_deal_sums][]']")[num].send_keys("#{sum}")
-  end
-
-  14.times do |num|
-    begin
-      DRIVER.find_element(:xpath, "//input[@value='0']//../a").click
-    rescue
-    end
+    sleep 0.1
+    DRIVER.find_elements(:css, "input[name='currency[dummy_deal_sums][]']")[num].clear
+    sleep 0.4
+    DRIVER.find_elements(:css, "input[name='currency[dummy_deal_sums][]']")[num].send_keys("#{sum}")
   end
 
   DRIVER.find_elements(:css, ".btn-success")[0].click
