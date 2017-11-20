@@ -1,4 +1,4 @@
-Given /^Last select provider to crm(Eccompay)$/ do
+Given /^Last select provider to crm\(Eccompay\)$/ do
   DRIVER.get(CommonSetting[:url_page_crm])
   sleep 3
   if DRIVER.current_url === CommonSetting[:url_page_crm] + "login"
