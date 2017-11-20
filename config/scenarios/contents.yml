@@ -27,7 +27,7 @@ settings:
                        \tGiven Set percet rate and time\n
                        \tGiven Set ric GOL/OTC all defaults params\n\n
                       "
-  currency:           "\tGiven Set USD curency defaults params\n\n"
+  currency:           "\tGiven Set USD currency defaults params\n\n"
 
 content:
   static page:        "\tGiven Update page privacy\n
