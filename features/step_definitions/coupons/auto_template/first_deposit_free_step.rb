@@ -1,5 +1,5 @@
 Given(/^Template First Deposit Free Deals$/) do
-  DRIVER.get CommonSetting[:url_page_crm] + "/coupons/auto?handler=first_deposit_free_deals"
+  DRIVER.get CommonSetting[:url_page_crm] + "/coupons/auto/edit?handler=first_deposit_free_deals"
   sleep 1
 
   DRIVER.find_element(:id, "coupon_name").clear

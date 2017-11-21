@@ -7,7 +7,7 @@ Given /^Update title by home page$/ do
     DRIVER.find_elements(:xpath, '//*[@class="table table-striped"]//tbody/tr/td/p[text()= "https://binomo.com/ru/"]//../../../tr/td[4]/a[2]').click
   rescue
   end
-  
+
   begin
     DRIVER.find_elements(:xpath, '//*[@class="table table-striped"]//tbody/tr/td/p[text()= "https://binomo.com/ru/RU"]//../../../tr/td[4]/a[2]').click
   rescue

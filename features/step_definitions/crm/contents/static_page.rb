@@ -19,6 +19,7 @@ Given /^Update page privacy$/ do
     DRIVER.find_element(:id, "static_page_title").clear
     DRIVER.find_element(:id, "static_page_title").send_keys("Privacy statement")
     DRIVER.find_elements(:css, ".btn-primary")[0].click
+  end
 end
 
 Given /^Update page agreement$/ do
