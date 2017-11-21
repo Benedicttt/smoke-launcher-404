@@ -4,7 +4,7 @@ Given /^Update first group$/ do
     DRIVER.get CommonSetting[:url_page_crm] + "/faq_groups"
     sleep 3
     DRIVER.find_element(:xpath, '//*[@class="table table-striped"]//tbody/tr/td[text() = "faq_group_name_RU/faq_group_name_EN"]').nil? == false
-    puts_info "Content invest idea displayed"
+    puts_info "Content faq group displayed"
   rescue
     DRIVER.get CommonSetting[:url_page_crm] + "/faq_groups/new"
     sleep 1
@@ -23,8 +23,9 @@ Given /^Update and set first group by question$/ do
     DRIVER.get CommonSetting[:url_page_crm] + "/faq_questions"
     sleep 3
     DRIVER.execute_script("$('span:contains(\"faq_group_name_EN\")').click()")
-
-    DRIVER.find_element(:xpath, '//*[@class="table table-striped"]//tbody/tr/td[text() = "faq_group_name_EN"]').nil? == false
+    DRIVER.find_elements(:css, ".btn-primary")[0].click
+    sleep 1
+    DRIVER.find_element(:xpath, '//*[@class="table table-striped"]//tbody/tr/td[text() = "faq_group_name_RU"]').nil? == false
     puts_info "Content invest idea displayed"
   rescue
     DRIVER.get CommonSetting[:url_page_crm] + "/faq_questions/new"
