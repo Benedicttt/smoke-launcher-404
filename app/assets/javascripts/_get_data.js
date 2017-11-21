@@ -37,6 +37,10 @@ function get_data(checkbox){
      $(".global_link").val(str += "-f html > ./public/reports/binomo/smoke-binomo.html ./features/smoke-binomo.feature")
    };
 
+   if ($('#smoke-content-pages').prop('click')) {
+     $(".global_link").val(str += "-f html > ./public/reports/binomo/smoke-content-pages.html ./features/content-page.feature")
+   };
+
    if ($('#smoke-email-marketing').prop('click')) {
      $(".global_link").val(str += "-f html > ./public/reports/binomo/smoke-email-marketing.html ./features/email-marketing.feature")
    };

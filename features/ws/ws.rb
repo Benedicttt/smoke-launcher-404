@@ -16,6 +16,7 @@ class WS
         ::SmokeBinpartner.enqueue msg_json, priority: 10, run_at:  Time.now
         ::SmokeBinpartnerTraider.enqueue msg_json, priority: 10, run_at:  Time.now
         ::SmokeTournaments.enqueue msg_json, priority: 10, run_at:  Time.now
+        ::SmokeContentPages.enqueue msg_json, priority: 10, run_at:  Time.now
 
         ::SmokeStatusCode.enqueue msg_json, priority: 10, run_at:  Time.now
 

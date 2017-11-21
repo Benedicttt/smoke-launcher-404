@@ -1,4 +1,4 @@
-Given /^Add widget$/ do
+Given /^Update windgets$/ do
   DRIVER.get(CommonSetting[:url_page_crm])
   sleep 2
   if DRIVER.current_url === CommonSetting[:url_page_crm] + "login"

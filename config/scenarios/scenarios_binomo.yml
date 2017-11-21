@@ -7,9 +7,6 @@ check rate for closed deal(win): "
   \tThen Rate by RIC equal percent sum win deal\n
 "
 
-activate all templates: "
-  \tGiven Activate all templates\n
-"
 social google: "
   \tGiven Visit homepage and click soc-reg google(not ref)\n
   \tWhen Click my email google\n
@@ -267,8 +264,4 @@ status treder: "
 phone confirmed: "
   \tGiven Phone verified find \n
 \t\tThen Phone verifed\n
-"
-
-add widget cashier: "
-  \tGiven Add widget\n
 "

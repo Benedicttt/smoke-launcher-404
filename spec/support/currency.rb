@@ -15,7 +15,7 @@ def list_currency(cur, authtoken = nil)
 end
 
 def currency_usd_auth
-   {"iso"=>"USD", "unit"=>"$", "limits"=>{"min"=>100, "max"=>100000}, "summs"=>[100, 500, 1000, 2000, 5000, 10000, 20000, 100000]} 
+   {"iso"=>"USD", "unit"=>"$", "limits"=>{"min"=>100, "max"=>100000}, "summs"=>[100, 1000, 2000, 5000, 10000, 20000, 100000]} 
 end
 
 def currency_eur_auth
