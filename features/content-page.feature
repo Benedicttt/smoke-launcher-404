@@ -1,10 +1,10 @@
-Feature: SMoke test generate 2017-11-20 18:42:15 +0300
+Feature: SMoke test generate 2017-11-21 12:17:04 +0300
  Scenario: Run step
  Given Pid process
   
 
 
-	Given Add and update new link
+	Given Create new technical article
 
 
 
