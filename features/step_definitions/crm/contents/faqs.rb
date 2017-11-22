@@ -17,7 +17,7 @@ Given /^Update first group$/ do
   end
 end
 
-Given /^Update and set first group by question$/ do
+  Given /^Update and set first group by question$/ do
   authorization_by_crm(DRIVER)
   begin
     DRIVER.get CommonSetting[:url_page_crm] + "/faq_questions"
