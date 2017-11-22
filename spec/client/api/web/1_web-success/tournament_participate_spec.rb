@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'rails_helper'
 include RSpec
-
+  
   shared_context "variable_configure" do
     let! :ws { RequestWsError.new }
     let! :stage { ENV['stage'] }
