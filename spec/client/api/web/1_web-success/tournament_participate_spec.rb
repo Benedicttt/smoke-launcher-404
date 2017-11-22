@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'rails_helper'
 include RSpec
-  
+
   shared_context "variable_configure" do
     let! :ws { RequestWsError.new }
     let! :stage { ENV['stage'] }
@@ -163,8 +163,15 @@ RSpec.describe "Api tournaments success" do
     email = Cookies.where(stage: "#{ENV['stage']}").last.email
     password = "12345q"
     @partcitipate = Tournaments.new.participate("ru", "web", password, email, @id_max)
-    @partcitipants = Tournaments.new.participants("ru", "web", @id_max)
+    @partcitipants = Tournaments.new.participants("ru", "web", @id_max, password, email)
     @show = Tournaments.new.show("ru", "web", @id_max)
+
+    puts "part1"
+    puts @participate
+    puts "part2"
+    puts @participants
+    puts "part3"
+    puts @show
 
   end
 
@@ -186,7 +193,7 @@ RSpec.describe "Api tournaments success" do
     it { expect(@tournaments['data'][0]['user_involved']).to eq false }
     it { expect(@tournaments['data'][0]['users_count']).to be_a Integer  }
     it { expect(@tournaments['data'][0]['initial_balance']).to be_a Integer  }
-    it { expect(@tournaments['data'][0]['participation_fee']).to be_a Integer }
+    it { expect(@tournaments['data'][0]['participation_fees']).to be_a Hash }
     it { expect(@tournaments['data'][0]['prize_fund']).to be_a Integer  }
     it { expect(@tournaments['data'][0]['timeline_status']).to eq "actual" }
     it { expect(@tournaments['data'][0]['currency_iso']).to eq nil }

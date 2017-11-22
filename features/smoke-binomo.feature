@@ -1,9 +1,10 @@
-Feature: SMoke test generate 2017-11-22 15:19:57 +0300
+Feature: SMoke test generate 2017-11-22 16:29:39 +0300
  Scenario: Run step
  Given Pid process
- When Use demo type
-  	When Make a deals asset GOL/OTC and lose bet
- 	Then Transactions committed
+ 	Given Visit to page /account
+ 	When input all data to page account
+ 	Then Update params to data page account
+ 	Given Assert to change params in page account
  
 
 

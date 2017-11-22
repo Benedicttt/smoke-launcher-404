@@ -22,11 +22,30 @@ class Tournaments
   end
 
 
-  def participants(locale, device, id)
-    participants = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/participants"
+  def participants(locale, device, id, password, email)
+    api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
+    response = RestClient::Request.execute(
+      method: :post,
+      url: api_sign_in,
+      headers: {
+        cookies: Config.new.get_config("web", "ru"),
+        referer: "https://#{ENV['stage']}binomo.com",
+        params:{
+            locale: locale,
+            device: device,
+            password: password,
+            email: email,
+            geo: "RU"
+          }
+        }
+       ) { |response, request, result, &block| response}
+
+    participants = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/tournament_users"
+    # participants = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/participants"
     participants = RestClient::Request.execute(
       method: :get,
       url: participants,
+      cookies: response.cookies,
       headers: {
         referer: "https://#{ENV['stage']}binomo.com",
         params:{
@@ -58,7 +77,8 @@ class Tournaments
         }
        ) { |response, request, result, &block| response}
 
-    api_participate = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/participate"
+    api_participate = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/tournament_users"
+    # api_participate = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/participate"
     api_participate = RestClient::Request.execute(
       method: :post,
       url: api_participate,
