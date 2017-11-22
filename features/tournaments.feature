@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-11-22 15:12:35 +0300
+Feature: SMoke test generate 2017-11-22 17:05:14 +0300
  Scenario: Run step
  Given Pid process
   
