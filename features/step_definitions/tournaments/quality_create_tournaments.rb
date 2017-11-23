@@ -25,8 +25,13 @@ When /^Quality create tournaments$/ do
 
   ENV['count_tournaments'].to_i.times do
     DRIVER.get CommonSetting[:url_page_crm] + "tournaments"
-    sleep 1
-    DRIVER.find_element(:xpath, "//*[@class='table']/tbody/tr/td[text() = '#{id}']//../td[text() = 'pending']/../td/a[text()='Copy']").click
+    sleep 3
+
+    begin
+      DRIVER.find_element(:xpath, "//*[@class=\"table\"]/tbody/tr/td[text() = \"#{id}\"]/../td[text() = \"pending\"]/../td/a[text() = \"Copy\"]").click
+    rescue
+      DRIVER.find_element(:xpath, "//*[@class=\"table\"]/tbody/tr/td[text() = \"#{id}\"]/../td[text() = \"open\"]/../td/a[text() = \"Copy\"]").click
+    end
     sleep 1
     DRIVER.execute_script("$('.text:contains(\"Activated\")').click()")
     DRIVER.execute_script("$('.text:contains(\"None\")').click()")
@@ -35,15 +40,16 @@ When /^Quality create tournaments$/ do
 
     DRIVER.find_element(:id, 'tournament_date_from').clear
     sleep 0.5
-    DRIVER.find_element(:id, 'tournament_date_from').send_keys(Time.parse(ENV['data_from']) + 10.seconds)
+    DRIVER.find_element(:id, 'tournament_date_from').send_keys(ENV['data_from'])
+    sleep 0.5
     DRIVER.find_element(:id, 'tournament_date_to').clear
+    DRIVER.find_element(:id, 'tournament_date_to').send_keys(ENV['data_to'])
     sleep 0.5
 
     banner = File.join(Rails.root, './app/assets/images/bg.jpeg')
     DRIVER.find_element(:id, "tournament_banner_content").send_keys(banner)
     DRIVER.find_element(:id, "tournament_banner_preview").send_keys(banner)
 
-    DRIVER.find_element(:id, 'tournament_date_to').send_keys(ENV['data_to'])
     sleep 0.5
     DRIVER.find_element(:css, '.button').click
     sleep 1
