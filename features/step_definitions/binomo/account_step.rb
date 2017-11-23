@@ -6,8 +6,8 @@ end
 When /^input all data to page account$/ do
   DRIVER.execute_script("angular.element(document.querySelector('.first_name')).scope().vm.first_name = 'Selenium'")
   DRIVER.execute_script("angular.element(document.querySelector('.last_name')).scope().vm.last_name = 'Selenium'")
-  DRIVER.execute_script("angular.element(document.querySelector('.nickname')).scope().vm.nickname = 'Selenium'")
-  DRIVER.execute_script("angular.element(document.querySelector('.form-control')).scope().vm.phone = '7981654848'")
+  DRIVER.execute_script("angular.element(document.querySelector('.nickname')).scope().vm.nickname = 'Selenium_#{SecureRandom.hex(12)}'")
+  DRIVER.execute_script("angular.element(document.querySelector('.form-control')).scope().vm.phone = '+79816548448'")
   DRIVER.execute_script("document.getElementById('receive_news').checked = true")
   sleep 2
 
