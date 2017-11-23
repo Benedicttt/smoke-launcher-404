@@ -1,6 +1,6 @@
 Given /^Visit to page \/account$/ do
   DRIVER.get CommonSetting[:app_host] + "/account"
-  sleep 1
+  sleep 5
 end
 
 When /^input all data to page account$/ do
