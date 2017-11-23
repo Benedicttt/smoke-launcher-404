@@ -19,9 +19,10 @@ Then /^Update params to data page account$/ do
 end
 
 Given /^Assert to change params in page account$/ do
-    puts_info "Set name == #{find_angular_text(DRIVER, ".#{name}", "vm." + name)}"
-    puts_info "Email #{find_angular_text(DRIVER, ".email", "vm.email")}"
-    puts_info "Phone #{find_angular_text(DRIVER, ".email", "vm.phone")}"
-    puts_info "Receive news #{DRIVER.execute_script("return document.getElementById('receive_news').checked")}"
-  end
+  puts_info "Set first name == #{find_angular_text(DRIVER, ".first_name", "vm.first_name" )}"
+  puts_info "Set last name == #{find_angular_text(DRIVER, ".last_name", "vm.last_name" )}"
+  puts_info "Set nickname == #{find_angular_text(DRIVER, ".nickname", "vm.nickname" )}"
+  puts_info "Email #{find_angular_text(DRIVER, ".email", "vm.email")}"
+  puts_info "Phone #{find_angular_text(DRIVER, ".email", "vm.phone")}"
+  puts_info "Receive news #{DRIVER.execute_script("return document.getElementById('receive_news').checked")}"
 end
