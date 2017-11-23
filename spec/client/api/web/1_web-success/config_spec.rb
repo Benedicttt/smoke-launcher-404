@@ -2,7 +2,7 @@ require 'rails_helper'
 
   RSpec.describe "Config success" do
     before(:context) do
-      @config = RestClient.get("#{ENV['api_host']}/config", {params: {locale: 'ru', device: 'web', geo: "AF"}})
+      @config = RestClient.get("#{ENV['api_host']}/config", {params: {locale: 'ru', device: 'web', geo: "RU"}})
     end
 
 
@@ -26,7 +26,7 @@ require 'rails_helper'
       it { expect(data(@config, 'data')['currencies']['default']).to eq 'RUB'}
       it { expect(data(@config, 'data')['show_tutorial']).to eq false}
       it { expect(data(@config, 'data')['ga_tid']).to eq "UA-60335261-1"}
-      it { expect(data(@config, 'data')['geo']).to eq 'AF'}
+      it { expect(data(@config, 'data')['geo']).to eq 'RU'}
       it { expect(data(@config, 'data')['ga_uid']).to eq nil }
       it { expect(data(@config, 'data')['moengage_sign']).to eq nil }
       it { expect(data(@config, 'data')['captcha_sign_up']).to eq false }

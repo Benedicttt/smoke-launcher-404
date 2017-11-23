@@ -12,7 +12,7 @@ class Tournaments
 
   def participate(locale, device, password, email, id)
     api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
-    response = RestClient::Request.execute(
+    auth = RestClient::Request.execute(
       method: :post,
       url: api_sign_in,
       headers: {
@@ -34,7 +34,7 @@ class Tournaments
       method: :post,
       url: api_participate,
       headers: {
-        cookies: response.cookies,
+        cookies: auth.cookies,
         referer: "https://#{ENV['stage']}binomo.com",
         params:{
             locale: locale,
@@ -44,6 +44,8 @@ class Tournaments
         }
        ) { |response, request, result, &block| response}
 
+
+       puts JSON.parse(api_participate.body)
        return JSON.parse(api_participate.body)
   end
 
@@ -102,10 +104,27 @@ class Tournaments
     return JSON.parse(deals_tournament_list)
   end
 
-  def show(locale, device, id)
+  def show(locale, device, id, password, email)
+    api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
+    @response = RestClient::Request.execute(
+      method: :post,
+      url: api_sign_in,
+      headers: {
+        cookies: Config.new.get_config("web", "ru"),
+        referer: "https://#{ENV['stage']}binomo.com",
+        params:{
+            locale: locale,
+            device: device,
+            password: password,
+            email: email,
+            geo: "RU"
+          }
+        }
+       ) { |response, request, result, &block| response}
+
      api = RestClient::Request.execute(
        method: :get,
-       url: "https://#{ENV['stage']}binomo.com/api/v2/tournaments/stats",
+       url: "https://#{ENV['stage']}binomo.com/api/v2/tournaments/",
         headers: {
           cookies: @response.cookies,
           params: {

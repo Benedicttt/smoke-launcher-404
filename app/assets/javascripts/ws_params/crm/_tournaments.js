@@ -31,7 +31,7 @@ $(function(){
       data_to: '"' + $('#generator_data_tournaments_to').val() + '"',
       ip_address: App.config.ip,
       param_headless: $('#generator_param_headless').val(),
-      
+      count_tournaments: $("#generator_count").val()
     }));
 
     notify_status_testing();

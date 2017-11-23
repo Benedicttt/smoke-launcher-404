@@ -11,9 +11,9 @@ Given /^Set Assets: break: true, dynamic: \-(\d+), win rate: (\d+)$/ do |arg1, a
   sleep 0.2
   DRIVER.find_element(:id, "settings_break_dynamic").clear
   sleep 1
-  DRIVER.find_element(:id, "settings_break_win_rate").clear
-  sleep 1
   DRIVER.find_element(:id, "settings_break_dynamic").send_keys("-300")
+  sleep 1
+  DRIVER.find_element(:id, "settings_break_win_rate").clear
   sleep 0.5
   DRIVER.find_element(:id, "settings_break_win_rate").send_keys(arg2)
 end

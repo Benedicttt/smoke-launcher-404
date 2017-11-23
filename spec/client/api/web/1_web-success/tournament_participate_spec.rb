@@ -165,9 +165,11 @@ RSpec.describe "Api tournaments success" do
     @partcitipate = Tournaments.new.participate("ru", "web", password, email, @id_max)
     @partcitipants = Tournaments.new.participants("ru", "web", @id_max, password, email)
 
-    # @partcitipate = Tournaments.new.participate("ru", "web", password, email, @id_max)
-    # @partcitipants = Tournaments.new.participants("ru", "web", @id_max, password, email)
-    # @show = Tournaments.new.show("ru", "web", @id_max)
+    list_tournament = Tournaments.new.show("ru", "web", @id_max, password, email)['data']
+    list_tournament.map do |key, value|
+      @show = key if key['content'] == "Tournaments RU for rspec" && key['id'] == @id_max.to_i
+    end.compact.last
+
   end
 
   context "params list tournament" do
@@ -231,33 +233,24 @@ RSpec.describe "Api tournaments success" do
      it { expect(@partcitipants['data']['rebuy_amount']).to eq 1000 }
      it { expect(@partcitipants['data']['rebuy_max_balance']).to eq 10000 }
      it { expect(@partcitipants['data']['rebuy_fee']).to eq 10000 }
-     it { expect(@partcitipants['data']['rebuys_count']).to eq 0 }
+     it { expect(@partcitipants['data']['rebuys_count']).to be_a Integer }
   end
 
-#   context "param parcitpants" do
-#     it { expect(@show['success']).to eq true }
-#     it { expect(@show['errors']).to eq [] }
-#     it { expect(@show['data']['id']).to eq @id_max }
-#     it { expect(@show['data']['id']).to be_a Integer }
-#     it { expect(@show['data']['name']).to be_a String }
-#     it { expect(@show['data']['content']).to be_a String }
-#     it { expect(@show['data']['banner_content']).to be_a String }
-#     it { expect(@show['data']['count_winners']).to be_a Integer }
-#     it { expect(@show['data']['initial_balance']).to be_a Integer }
-#     it { expect(@show['data']['participation_fees']).to be_a Hash }
-#     it { expect(@show['data']['user_involved']).to eq false }
-#     it { expect(@show['data']['users_count']).to be_a Integer }
-#     it { expect(@show['data']['prize_fund']).to be_a Hash }
-#     it { expect(@show['data']['tournament_type']).to be_a String }
-#     it { expect(@show['data']['tournament_type_key']).to be_a String }
-#     it { expect(@show['data']['timeline_status']).to eq "actual" }
-#     it { expect(@show['data']['prizes'][0]['position']).to eq 1 }
-#     it { expect(@show['data']['prizes'][0]['amount']).to be_a Integer }
-#     it { expect(@show['data']['currency_iso']).to eq nil }
-#     it { expect(@show['data']['trading_account_type']).to be_a String }
-#     it { expect(@show['data']['rebuy']).to be_in [ true, false ] }
-#     it { expect(@show['data']['rebuy_amount']).to be_a Integer }
-#     it { expect(@show['data']['rebuy_max_balance']).to be_a Integer }
-#     it { expect(@show['data']['rebuy_fee']).to be_a Integer }
-  # end
+  context "param parcitpants" do
+    it { puts @show }
+    it { expect(@show['id']).to eq @id_max }
+    it { expect(@show['id']).to be_a Integer }
+    it { expect(@show['name']).to be_a String }
+    it { expect(@show['content']).to be_a String }
+    it { expect(@show['banner_preview']).to be_a String }
+    it { expect(@show['count_winners']).to be_a Integer }
+    it { expect(@show['date_to']).to be_a String }
+    it { expect(@show['date_from']).to be_a String }
+    it { expect(@show['user_involved']).to eq true }
+    it { expect(@show['users_count']).to be_a Integer }
+
+    it { expect(@show['initial_balance']).to eq 10000 }
+    it { expect(@show['participation_fees']).to eq participation_fees }
+    it { expect(@show['timeline_status']).to eq "actual" }
+  end
 end
