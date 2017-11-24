@@ -31,7 +31,7 @@ Given /^Assert to change params in page account$/ do
   puts_info "Change nickname #{find_angular_text(DRIVER, ".nickname", "vm.nickname") == $nn}"
   puts_info "Email #{find_angular_text(DRIVER, ".email", "vm.email") == User.where(stage_number: ENV['stage']).last.email}"
   puts_info "Phone #{find_angular_text(DRIVER, "input", "vm.phone") == '79816548444'}"
-  puts_info "Gender #{find_angular_text(DRIVER, "input", "vm.gender") == 'famele'}"
+  puts_info "Gender #{DRIVER.execute_script("return angular.element(document.querySelector('.last_name')).scope().vm.gender == 'female'")}"
 
   puts_info "Day #{find_angular_text(DRIVER, ".ui-select-container", "vm.day") == '02'}"
   puts_info "Month #{find_angular_text(DRIVER, ".ui-select-container", "vm.month") == '02'}"
