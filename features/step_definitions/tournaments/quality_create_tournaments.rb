@@ -23,7 +23,7 @@ When /^Quality create tournaments$/ do
    ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
    id = ids[0].compact.max
 
-  ENV['count_tournaments'].to_i.times do
+  ENV['count_tournaments'].to_i.times do |i|
     DRIVER.get CommonSetting[:url_page_crm] + "tournaments"
     sleep 3
 
@@ -32,6 +32,7 @@ When /^Quality create tournaments$/ do
     rescue
       DRIVER.find_element(:xpath, "//*[@class=\"table\"]/tbody/tr/td[text() = \"#{id}\"]/../td[text() = \"open\"]/../td/a[text() = \"Copy\"]").click
     end
+
     sleep 1
     DRIVER.execute_script("$('.text:contains(\"Activated\")').click()")
     DRIVER.execute_script("$('.text:contains(\"None\")').click()")
@@ -40,7 +41,9 @@ When /^Quality create tournaments$/ do
 
     DRIVER.find_element(:id, 'tournament_date_from').clear
     sleep 0.5
-    DRIVER.find_element(:id, 'tournament_date_from').send_keys(ENV['data_from'])
+    date_now = Time.now + 60 + ENV['count_tournaments'].to_i - 10800
+    date_to = date_now.strftime("%d.%m.%Y %H:%M:%S")
+    DRIVER.find_element(:id, 'tournament_date_from').send_keys(date_to)
     sleep 0.5
     DRIVER.find_element(:id, 'tournament_date_to').clear
     DRIVER.find_element(:id, 'tournament_date_to').send_keys(ENV['data_to'])
@@ -53,6 +56,6 @@ When /^Quality create tournaments$/ do
     sleep 0.5
     DRIVER.find_element(:css, '.button').click
     sleep 1
-    puts_info DRIVER.current_url
+    puts_info DRIVER.current_url + " #{i}"
   end
 end

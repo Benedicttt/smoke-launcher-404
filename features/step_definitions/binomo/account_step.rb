@@ -18,9 +18,9 @@ When /^input all data to page account$/ do
 end
 
 Then /^Update params to data page account$/ do
-  sleep 2
-  DRIVER.find_element(:css, "button[type=submit]").click
-  sleep 5
+  sleep 3
+  2.times { DRIVER.find_element(:css, "button[type=submit]").click }
+  sleep 1
 end
 
 Given /^Assert to change params in page account$/ do
@@ -35,6 +35,10 @@ Given /^Assert to change params in page account$/ do
             Year --> #{find_angular_text(DRIVER, ".ui-select-container", "vm.year") == '1986'},
             Receive news --> #{DRIVER.execute_script("return document.getElementById('receive_news').checked")}"
 
+  sleep 1
   DRIVER.execute_script("angular.element(document.querySelector('.form-control')).scope().vm.phone = ''")
   DRIVER.execute_script("angular.element(document.querySelector('.last_name')).scope().vm.gender = 'male'")
+  DRIVER.find_element(:css, "button[type=submit]").click
+  sleep 2
+  first_last_name
 end
