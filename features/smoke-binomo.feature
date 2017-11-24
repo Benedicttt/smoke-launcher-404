@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-11-23 19:58:50 +0300
+Feature: SMoke test generate 2017-11-24 11:10:55 +0300
  Scenario: Run step
  Given Pid process
  Given Visit page auth_platform
