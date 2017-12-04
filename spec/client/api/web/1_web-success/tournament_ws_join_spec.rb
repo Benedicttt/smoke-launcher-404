@@ -3,9 +3,11 @@ require 'rails_helper'
 RSpec.describe "join session" do
   before(:context) do
      tournaments = Tournaments.new.api("ru", "web")
-     ids = []
-     ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
-     @id_max = ids[0].compact.max
+     # ids = []
+     # ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['tournament_type'] == "sum_deals" }
+     # @id_max = ids[0].compact.max
+     @id_max = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
+
      print "#{@id_max} ".yellow
 
 ####

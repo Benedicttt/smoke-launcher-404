@@ -8,9 +8,10 @@ include RSpec
     let! :tournaments { Tournaments.new.api("ru", "web") }
 
     let! :id do
-      ids = []
-      ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
-      id = ids[0].compact.max
+      # ids = []
+      # ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['tournament_type'] == "sum_deals" }
+      # id = ids[0].compact.max
+      id = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
     end
 
     let! :expire_at do

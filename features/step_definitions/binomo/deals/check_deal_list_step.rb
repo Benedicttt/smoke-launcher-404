@@ -1,11 +1,11 @@
 When(/^Open list deals$/) do
   sleep 3
   begin
-    $deals.find_elements(:css, ".dropdown-caret")[2].click
+    $deals.find_element(:css, "div.b-unit-dropdown-balance").click
     sleep 3
     find_and_click_selectors('span', 'FOR/HEIGHT', $deals)
     sleep 2
-    $deals.find_elements(:css, ".dropdown-caret")[2].click
+    $deals.find_element(:css, "div.b-unit-dropdown-balance").click
     sleep 5
     @ratio = $deals.find_elements(:css, "span.ng-binding")[5].text
     @ratio.sub(/%/, "").to_s

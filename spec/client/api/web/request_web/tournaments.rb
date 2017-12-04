@@ -1,13 +1,15 @@
 class Tournaments
   def api(locale, device)
-     api = RestClient::Request.execute(
-       method: :get,
-       url: "https://#{ENV['stage']}binomo.com/api/v2/tournaments",
-        headers: {
-          params: {
-            locale: locale, device: device
-            }}) { |response, request, result, &block| response}
-    return JSON.parse(api.body)
+      api = RestClient::Request.execute(
+      method: :get,
+      url: "https://#{ENV['stage']}binomo.com/api/v2/tournaments",
+      headers: {
+        params: {
+          locale: locale,
+          device: device,
+          }}) { |response, request, result, &block| response}
+
+      return JSON.parse(api.body)
   end
 
   def participate(locale, device, password, email, id)
@@ -29,7 +31,6 @@ class Tournaments
        ) { |response, request, result, &block| response}
 
     api_participate = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/tournament_users"
-    # api_participate = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/participate"
     api_participate = RestClient::Request.execute(
       method: :post,
       url: api_participate,
@@ -68,7 +69,6 @@ class Tournaments
        ) { |response, request, result, &block| response}
 
     participants = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}"
-    # participants = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/participants"
     participants = RestClient::Request.execute(
       method: :get,
       url: participants,

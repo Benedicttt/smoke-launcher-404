@@ -15,7 +15,10 @@ Given /^Pid process$/ do
 
   elsif ENV['driver'] == "chrome"
    options =  Selenium::WebDriver::Chrome::Options.new(args: [
-      "#{ENV['param_headless']}", "--no-sandbox", "--disable-backing-store-limit", "--max-unused-resource-memory-usage-percentage",
+      "#{ENV['param_headless']}",
+      "--no-sandbox",
+      "--disable-backing-store-limit",
+      "--max-unused-resource-memory-usage-percentage",
       "--window-size=1600, 768",
       "--disable-gpu",
       "--disable-notifications" ,

@@ -8,9 +8,11 @@ include RSpec
     let! :tournaments { Tournaments.new.api("ru", "web") }
 
     let! :id do
-      ids = []
-      ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
-      id = ids[0].compact.max
+      id = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
+
+      # ids = []
+      # ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['tournament_type'] == "sum_deals" }
+      # id = ids[0].compact.max
     end
 
     let! :expire_at do
@@ -154,9 +156,12 @@ include RSpec
 RSpec.describe "Api tournaments success" do
   before(:context) do
     @tournaments = Tournaments.new.api("ru", "web")
-    ids = []
-    ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru"  }
-    @id_max = ids[0].compact.max
+    # ids = []
+    # # ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru"  }
+    # ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['tournament_type'] == "sum_deals" }
+    # @id_max = ids[0].compact.max
+    @id_max = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
+
     print "#{@id_max} ".yellow
 
     email = Cookies.where(stage: "#{ENV['stage']}").last.email

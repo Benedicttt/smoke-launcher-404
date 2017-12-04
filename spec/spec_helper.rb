@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require './features/helpers/decor'
+require './features/helpers/runner'
 require 'rack/test'
 require 'capybara'
 require "capybara/rspec"
