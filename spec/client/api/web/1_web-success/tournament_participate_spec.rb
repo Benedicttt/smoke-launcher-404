@@ -241,7 +241,6 @@ RSpec.describe "Api tournaments success" do
   end
 
   context "param parcitpants" do
-    it { puts @show }
     it { expect(@show['id']).to eq @id_max }
     it { expect(@show['id']).to be_a Integer }
     it { expect(@show['name']).to be_a String }
