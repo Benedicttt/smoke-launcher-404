@@ -26,7 +26,7 @@ Given /^Update and set first group by question$/ do
     DRIVER.find_elements(:css, ".btn-primary")[0].click
     sleep 1
     DRIVER.find_element(:xpath, '//*[@class="table table-striped"]//tbody/tr/td[text() = "faq_group_name_RU"]').nil? == false
-    puts_info "Content invest idea displayed"
+    puts_info "Content faq-questions displayed"
   rescue
     DRIVER.get CommonSetting[:url_page_crm] + "/faq_questions/new"
     sleep 1

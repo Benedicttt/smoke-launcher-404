@@ -132,15 +132,15 @@
 # #
 # # RequestWS.send_ws "web", false, "GOL/OTC", 100, "real", "call", 1
 #
-#
-#
+# #
+# #
 # require 'rubygems'
 # require 'eventmachine'
 # require 'faye/websocket'
 # require 'json'
 #
 # class RequestWS
-#   def send_ws(device, demo, asset, expire_at, amount, option_type, deal_type, trend, count, tournament_id, stage, ref)
+#   def send_ws(device, demo, asset, expire_at, amount, option_type, deal_type, trend, count,  stage, ref)
 #
 #     api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
 #     @response_auth = RestClient::Request.execute(
@@ -150,8 +150,8 @@
 #         referer: "https://#{ENV['stage']}binomo.com",
 #         content_type: 'text/plain',
 #         params:{
-#           email: Cookies.where(stage: "#{ENV['stage']}").last.email,
-#           password: "12345q",
+#           email: "stage2.e41764948f6ddd@yopmail.com",
+#           password: "Jemetr!@#()11Capybara123",
 #           locale: "ru",
 #           device: "web",
 #           geo: "RU"
@@ -205,83 +205,24 @@
 #                     "option_type":option_type,
 #                     "deal_type":deal_type,
 #                     "trend":trend,
-#                     "tournament_id":tournament_id
-#
+#                     "tournamend_id":"null"
 #                   },
 #                 "ref":ref,
 #                 "join_ref":"1"
 #               }
-#
-#         demo_request = JSON.dump(params)
-#         count.times { ws.send demo_request; sleep 0.01 }
-#
-#         api_deals_create = "https://#{ENV['stage']}binomo.com/api/deals/list"
-#         deals_real_list = RestClient::Request.execute(
-#         method: :get,
-#         url: api_deals_create,
-#         headers: {
-#           cookies: Cookies.where(stage: "#{ENV['stage']}").last.cookies_traider,
-#           params: {
-#             locale: 'ru',
-#             device: device,
-#             deal_type: deal_type,
-#             tournament_id: tournament_id,
-#             geo: "RU"
-#         }
-#         }) { |response, request, result, &block|  response }
-#
 #         puts msg.data
-#         $msg_deals = msg.data if JSON.parse(msg.data)["payload"]["status"] == "open"
-#         return puts msg.data if JSON.parse(msg.data)["payload"]["status"] == "error"
-#
-#         # return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'put'
-#         # return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'call'
-#         $deal_list_tour = JSON.parse(deals_real_list.body.to_json)
-#         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['status'] == 'open'
+#         count.times { sleep 0.5; ws.send(JSON.dump(params)) }
+#         return JSON.parse(msg.data) if JSON.parse(msg.data)['payload']['status'] == 'open'
 #       end
 #     }
 #   end
 # end
 #
 #
-# require 'rails_helper'
+# ws          = RequestWS.new
+# stage       = ENV['stage']
+# expire_at  = (Time.now.to_i / 60).to_i * 60
+# expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
 #
-# RSpec.describe "join session" do
-#   before(:context) do
-#      tournaments = Tournaments.new.api("ru", "web")
-#      ids = []
-#      ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru" }
-#      @id_max = ids[0].compact.max
-#      print "#{@id_max} ".yellow
-#
-#      ws          = RequestWS.new
-#      stage       = ENV['stage']
-#
-#      expire_at  = (Time.now.to_i / 60).to_i * 60
-#      expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
-#      #
-#      @won =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "put", 1, @id_max, stage, "2"
-#      sleep 1
-#      @lose =  ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "tournament", "call", 1, @id_max, stage, "3"
-#
-#      @deals_won = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1] #won
-#      sleep 0.5
-#      @deals_lose = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0] #lose
-#      #
-#      # print "#{(Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i}".green
-#      # sleep (Time.parse(@deals_won['finished_at']) - Time.parse(@deals_won['created_at'])).to_i + 5
-#
-#      @call = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][1]
-#      @put = Tournaments.new.deals_list("web", "tournament", @id_max)['data']['deals'][0]
-#      sleep 1
-#      null = "l"
-#      @msg_ws_deal = JSON.parse(eval($msg_deals).to_json)
-#
-#      puts $deal_list_tour['data']['deals'].each { |i| puts i if i['trend'] == "put" }[0]
-#      puts $deal_list_tour['data']['deals'].each { |i| puts i if i['trend'] == "call" }[0]
-#   end
-#
-#   context "param create deal" do
-#     it {  $deal_list_tour }
-#   end
-# end
+# ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "real", "put", 50, stage, "3"
+# ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "real", "call", 50, stage, "4"

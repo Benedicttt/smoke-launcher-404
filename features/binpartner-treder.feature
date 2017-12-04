@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-11-01 15:31:20 +0300
+Feature: SMoke test generate 2017-11-24 18:59:12 +0300
  Scenario: Run step partner
  Given Pid process
  
@@ -16,11 +16,31 @@ Feature: SMoke test generate 2017-11-01 15:31:20 +0300
  	Then Redirect pages tutorial and agree risk
  	Then Profile last and first name
  
+ Given Mailers yopmail
+ 	When Input email and find link yopmail 
+ 	Then Visit to link yopmail
+ 
 
- Given Connect to the CRM provider "Credit card"
- 	When Visit cashier CreditCard
- 	When Make deposit CreditCard
- 	Then Deposit CreditCard created
+ Given Connect to the CRM provider "WireCapital"
+ When Visit cashier WireCapital
+ 	When Make deposit WireCapital
+ 	Then Deposit WireCapital created
+ 
+ 	Given Doc protected to
+ 		Then Protected set done
+ 
+ 	When The creation of an application for withdrawal for WireCapital
+ 	Then Applications created WireCapital
+ 
+ 	Given Find status treder
+ 	Then Status treder
+ 
+ Given Visit page CRM
+ 	When Authorization crm
+ 	Then Success
+ 
+ Given Visit the page for payments confirmation
+ 	When At the request of the payments and Payment committed
  
 
 Scenario:	Then Pool ranning?

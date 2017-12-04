@@ -19,7 +19,7 @@ Given(/^Template common \- bonus deposit$/) do
   DRIVER.find_element(:id, "coupon_lifetime").clear
   DRIVER.find_element(:id, "coupon_lifetime").send_keys("100")
 
-  count = list_currency.size - 1
+  count = list_currency.size
   count.times do |i, num|
     begin
       i +=11

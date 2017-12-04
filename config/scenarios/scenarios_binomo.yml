@@ -1,5 +1,11 @@
+change and update account: "
+  \tGiven Visit to page /account\n
+  \tWhen input all data to page account\n
+  \tThen Update params to data page account\n
+  \tGiven Assert to change params in page account\n
+"
 last select provider to crm(Eccompay): "
-  Given Last select provider to crm(Eccompay)\n
+  \tGiven Last select provider to crm(Eccompay)\n
 "
 check rate for closed deal(win): "
   \tGiven Visit page trading\n

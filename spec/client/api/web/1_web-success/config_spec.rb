@@ -2,7 +2,7 @@ require 'rails_helper'
 
   RSpec.describe "Config success" do
     before(:context) do
-      @config = RestClient.get("#{ENV['api_host']}/config", {params: {locale: 'ru', device: 'web', geo: "AF"}})
+      @config = RestClient.get("#{ENV['api_host']}/config", {params: {locale: 'ru', device: 'web', geo: "RU"}})
     end
 
 
@@ -26,7 +26,7 @@ require 'rails_helper'
       it { expect(data(@config, 'data')['currencies']['default']).to eq 'RUB'}
       it { expect(data(@config, 'data')['show_tutorial']).to eq false}
       it { expect(data(@config, 'data')['ga_tid']).to eq "UA-60335261-1"}
-      it { expect(data(@config, 'data')['geo']).to eq 'AF'}
+      it { expect(data(@config, 'data')['geo']).to eq 'RU'}
       it { expect(data(@config, 'data')['ga_uid']).to eq nil }
       it { expect(data(@config, 'data')['moengage_sign']).to eq nil }
       it { expect(data(@config, 'data')['captcha_sign_up']).to eq false }
@@ -69,49 +69,49 @@ require 'rails_helper'
     end
   end
 
-  # RSpec.describe "Config authorized success v2" do
-  #   before(:context) do
-  #     @config_v2 = Config.new.get_config_v2("web", "ru")
-  #   end
-  #
-  #   context "params" do
-  #     it { expect(@config_v2['success']).to eq true }
-  #     it { expect(@config_v2['error']).to eq nil }
-  #     it { expect(@config_v2['data']['authorized']).to eq true }
-  #     it { expect(@config_v2['data']['device_id'].length).to eq 32}
-  #     it { expect(@config_v2['data']['device_type']).to eq 'web' }
-  #     it { expect(@config_v2['data']['currencies']['default']).to eq 'RUB'}
-  #     it { expect(@config_v2['data']['currencies']['current']).to eq 'USD'}
-  #     it { expect(@config_v2['data']['show_tutorial']).to eq false}
-  #     it { expect(@config_v2['data']['ga_tid']).to eq "UA-60335261-1"}
-  #     it { expect(@config_v2['data']['geo']).to eq 'RU'}
-  #     it { expect(@config_v2['data']['captcha_sign_up']).to eq false }
-  #     it { expect(@config_v2['data']['captcha_sign_in']).to eq false }
-  #     it { expect(@config_v2['data']['currencies']['list'][0]['limits']['cfd'].empty?).to eq false }
-  #   end
-  # end
-  #
-  #
-  # RSpec.describe "Config success v2 not auth" do
-  #     before(:context) do
-  #       @config_v2 = Config.new.get_web_v2("web", "ru", "RU")
-  #     end
-  #
-  #
-  #   context "params" do
-  #     it { expect(@config_v2['success']).to eq true }
-  #     it { expect(@config_v2['errors']).to eq [] }
-  #     it { expect(@config_v2['data']['authorized']).to eq false }
-  #     it { expect(@config_v2['data']['device_id']).to eq nil}
-  #     it { expect(@config_v2['data']['device_type']).to eq 'web' }
-  #
-  #     it { expect(@config_v2['data']['currencies']['default']).to eq 'RUB'}
-  #     it { expect(@config_v2['data']['show_tutorial']).to eq false}
-  #     it { expect(@config_v2['data']['ga_tid']).to eq "UA-60335261-1"}
-  #     it { expect(@config_v2['data']['geo']).to eq 'RU'}
-  #     it { expect(@config_v2['data']['ga_uid']).to eq nil }
-  #     it { expect(@config_v2['data']['moengage_sign']).to eq nil }
-  #     it { expect(@config_v2['data']['captcha_sign_up']).to eq false }
-  #     it { expect(@config_v2['data']['captcha_sign_in']).to eq false }
-  #   end
-  # end
+  RSpec.describe "Config authorized success v2" do
+    before(:context) do
+      @config_v2 = Config.new.get_config_v2("web", "ru")
+    end
+
+    context "params" do
+      it { expect(@config_v2['success']).to eq true }
+      it { expect(@config_v2['error']).to eq nil }
+      it { expect(@config_v2['data']['authorized']).to eq true }
+      it { expect(@config_v2['data']['device_id'].length).to eq 32}
+      it { expect(@config_v2['data']['device_type']).to eq 'web' }
+      it { expect(@config_v2['data']['currencies']['default']).to eq 'RUB'}
+      it { expect(@config_v2['data']['currencies']['current']).to eq 'USD'}
+      it { expect(@config_v2['data']['show_tutorial']).to eq false}
+      it { expect(@config_v2['data']['ga_tid']).to eq "UA-60335261-1"}
+      it { expect(@config_v2['data']['geo']).to eq 'RU'}
+      it { expect(@config_v2['data']['captcha_sign_up']).to eq false }
+      it { expect(@config_v2['data']['captcha_sign_in']).to eq false }
+      it { expect(@config_v2['data']['currencies']['list'][0]['limits']['cfd'].empty?).to eq false }
+    end
+  end
+
+
+  RSpec.describe "Config success v2 not auth" do
+      before(:context) do
+        @config_v2 = Config.new.get_web_v2("web", "ru", "RU")
+      end
+
+
+    context "params" do
+      it { expect(@config_v2['success']).to eq true }
+      it { expect(@config_v2['errors']).to eq [] }
+      it { expect(@config_v2['data']['authorized']).to eq false }
+      it { expect(@config_v2['data']['device_id']).to eq nil}
+      it { expect(@config_v2['data']['device_type']).to eq 'web' }
+
+      it { expect(@config_v2['data']['currencies']['default']).to eq 'RUB'}
+      it { expect(@config_v2['data']['show_tutorial']).to eq false}
+      it { expect(@config_v2['data']['ga_tid']).to eq "UA-60335261-1"}
+      it { expect(@config_v2['data']['geo']).to eq 'RU'}
+      it { expect(@config_v2['data']['ga_uid']).to eq nil }
+      it { expect(@config_v2['data']['moengage_sign']).to eq nil }
+      it { expect(@config_v2['data']['captcha_sign_up']).to eq false }
+      it { expect(@config_v2['data']['captcha_sign_in']).to eq false }
+    end
+  end

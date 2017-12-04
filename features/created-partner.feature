@@ -1,9 +1,10 @@
-Feature: SMoke test generate 2017-11-01 17:58:42 +0300
+Feature: SMoke test generate 2017-11-28 13:52:29 +0300
  Scenario: Run step partner
  Given Pid process
  
 
 Scenario:	Then Pool ranning?
+ Given Receive a ref-code 
  Given Visit to page partner.com
  	When Partner registration
  	Then Registered partner

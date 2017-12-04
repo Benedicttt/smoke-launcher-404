@@ -3,7 +3,9 @@ Given /^Set percet rate and time$/ do
   DRIVER.get CommonSetting[:url_page_crm] + "/stock_assets"
   sleep 1
   DRIVER.find_element(:id, "assets_reduce_rates_time_from").send_keys("11:00")
+  sleep 0.5
   DRIVER.find_element(:id, "assets_reduce_rates_time_to").send_keys("11:15")
+  sleep 0.5
   DRIVER.find_element(:id, "assets_reduce_rates_value").clear
   DRIVER.find_element(:id, "assets_reduce_rates_value").send_keys("15")
 

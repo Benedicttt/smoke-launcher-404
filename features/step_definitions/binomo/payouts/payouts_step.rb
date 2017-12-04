@@ -41,15 +41,15 @@ class Payouts
           driver.find_element(:css, '.btn-lg.btn-primary').click
           sleep 1
           driver.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/payouts")
-          sleep 0.3
+          sleep 2
         end
 
           driver.find_element(:css, 'input[name=amount]').clear
-          sleep 0.4
+          sleep 0.7
           driver.find_element(:css, 'input[name=amount]').send_keys(ENV['count_payouts_sum'])
           sleep 1
           driver.find_element(:css, '.btn-lg.btn-primary').click
-          sleep 0.3
+          sleep 0.7
       rescue
         puts_danger " No find card #{number_small}"
         driver.quit
