@@ -11,7 +11,7 @@ RSpec.describe "Authorize and Sign_out success" do
         params: {
           locale: "ru",
           device: "ios",
-          app_version: "1.0",
+          app_version: "432",
           device_id: $uuid,
           password: "12345q",
           email: "test197@yopmail.com",
@@ -25,7 +25,7 @@ RSpec.describe "Authorize and Sign_out success" do
         params: {
           locale: 'ru',
           device: 'ios',
-          app_version: "1.0",
+          app_version: "432",
           device_id: $uuid,
           password: "12345q",
           authtoken: JSON.parse(response.body)['data']['authtoken'],

@@ -9,15 +9,20 @@ include RSpec
 
     let! :id do
       id = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
-
-      # ids = []
-      # ids << tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['tournament_type'] == "sum_deals" }
-      # id = ids[0].compact.max
     end
 
     let! :expire_at do
       expire_at  =  (Time.now.to_i / 60).to_i * 60
       expire_at  += Time.now.sec > 10 ? 2.minutes : 1.minutes
+    end
+
+    let! :list_tournaments { Tournaments.new.api("ru", "web")['data'][0]['participation_fees'] }
+
+    let :currency do
+      @currency = []
+      Tournaments.new.api("ru", "web")['data'][0]['participation_fees'].map do |key, value|
+        @currency << key
+      end
     end
 
     let :required { [{"validation"=>"required", "field"=>"tournament_id"}] }
@@ -195,7 +200,7 @@ RSpec.describe "Api tournaments success" do
     it { expect(@tournaments['data'][0]['user_involved']).to eq false }
     it { expect(@tournaments['data'][0]['users_count']).to be_a Integer  }
     it { expect(@tournaments['data'][0]['initial_balance']).to be_a Integer  }
-    it { expect(@tournaments['data'][0]['participation_fees']).to be_a Hash }
+    # it { expect(@tournaments['data'][0]['participation_fees']).to be_a Hash }
     it { expect(@tournaments['data'][0]['prize_fund']).to be_a Hash }
 
     it { expect(@tournaments['data'][0]['timeline_status']).to eq "actual" }
@@ -222,16 +227,16 @@ RSpec.describe "Api tournaments success" do
      it { expect(@partcitipants['data']['users_count']).to be_a Integer }
      it { expect(@partcitipants['data']['initial_balance']).to eq 10000 }
      it { expect(@partcitipants['data']['count_winners']).to eq 5 }
-     it { expect(@partcitipants['data']['participation_fees']).to eq participation_fees }
-     it { expect(@partcitipants['data']['prize_fund']).to eq prize_fund }
-     it { expect(@partcitipants['data']['rebuy_fees']).to eq rebuy_fees }
+     # it { expect(@partcitipants['data']['participation_fees']).to eq participation_fees }
+     # it { expect(@partcitipants['data']['prize_fund']).to eq prize_fund }
+     # it { expect(@partcitipants['data']['rebuy_fees']).to eq rebuy_fees }
      it { expect(@partcitipants['data']['tournament_type']).to eq "sum_deals" }
      it { expect(@partcitipants['data']['tournament_type']).to be_a String }
      it { expect(@partcitipants['data']['tournament_type_key']).to eq "tournaments.page.sum_deals" }
      # it { expect(@partcitipants['data']['trading_account_type']).to eq "tournament_#{@id_max}" }
      it { expect(@partcitipants['data']['timeline_status']).to eq "actual" }
      it { expect(@partcitipants['data']['prizes']).to be_a Array }
-     it { expect(@partcitipants['data']['prizes']).to eq prizes }
+     # it { expect(@partcitipants['data']['prizes']).to eq prizes }
      it { expect(@partcitipants['data']['currency_iso']).to eq "USD" }
      it { expect(@partcitipants['data']['rebuy']).to eq true }
      it { expect(@partcitipants['data']['rebuy_amount']).to eq 1000 }
@@ -253,7 +258,7 @@ RSpec.describe "Api tournaments success" do
     it { expect(@show['users_count']).to be_a Integer }
 
     it { expect(@show['initial_balance']).to eq 10000 }
-    it { expect(@show['participation_fees']).to eq participation_fees }
+    # it { expect(@show['participation_fees']).to eq participation_fees }
     it { expect(@show['timeline_status']).to eq "actual" }
   end
 end

@@ -10,6 +10,7 @@ stage_select:
 project:
   binomo: "binomo"
   binpartner: "binpartner"
+  statistics: "statistics"
 
 frame_work:
   cucumber: "cucumber"

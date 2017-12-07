@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-11-24 18:59:12 +0300
+Feature: SMoke test generate 2017-12-07 17:12:41 +0300
  Scenario: Run step partner
  Given Pid process
  
@@ -25,22 +25,6 @@ Feature: SMoke test generate 2017-11-24 18:59:12 +0300
  When Visit cashier WireCapital
  	When Make deposit WireCapital
  	Then Deposit WireCapital created
- 
- 	Given Doc protected to
- 		Then Protected set done
- 
- 	When The creation of an application for withdrawal for WireCapital
- 	Then Applications created WireCapital
- 
- 	Given Find status treder
- 	Then Status treder
- 
- Given Visit page CRM
- 	When Authorization crm
- 	Then Success
- 
- Given Visit the page for payments confirmation
- 	When At the request of the payments and Payment committed
  
 
 Scenario:	Then Pool ranning?

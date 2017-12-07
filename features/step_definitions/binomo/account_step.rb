@@ -6,7 +6,7 @@ end
 When /^input all data to page account$/ do
   DRIVER.execute_script("angular.element(document.querySelector('.first_name')).scope().vm.first_name = 'Selenium'")
   DRIVER.execute_script("angular.element(document.querySelector('.last_name')).scope().vm.last_name = 'Selenium'")
-  DRIVER.execute_script("angular.element(document.querySelector('.nickname')).scope().vm.nickname = '#{SecureRandom.hex(5)}'")
+  DRIVER.execute_script("angular.element(document.querySelector('.nickname')).scope().vm.nickname = '#{(0..10).map { ('a'..'z').to_a[rand(26)] }.join}'")
   DRIVER.execute_script("angular.element(document.querySelector('.form-control')).scope().vm.phone = '79816548444'")
   DRIVER.execute_script("document.getElementById('receive_news').checked = true")
   DRIVER.execute_script("angular.element(document.querySelector('.last_name')).scope().vm.gender = 'female'")
