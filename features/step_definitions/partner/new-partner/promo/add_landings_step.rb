@@ -10,7 +10,7 @@ Given /^Add landings$/ do
     DRIVER.find_element(:id, "landing_icon_#{locale}").send_keys(banner)
   end
     DRIVER.execute_script("$('.checkbox').click()")
-    DRIVER.find_element(:id, "landing_url").send_keys("/l25")
+    DRIVER.find_element(:id, "landing_url").send_keys("/")
     DRIVER.execute_script("$('.btn-primary').click()")
   print "<br><br>#{link_report_id(DRIVER.current_url, DRIVER.current_url)}<br><br>"
 end

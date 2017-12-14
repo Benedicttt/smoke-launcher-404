@@ -35,7 +35,7 @@ Given /^Testing bonuses$/ do
       add_cookies_to_page(bon)
       bon.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/trading")
       sleep 5
-      bon.execute_script("document.querySelectorAll(\".i-unit > .title > translate\")[1].click()")
+      bon.execute_script("document.querySelectorAll(\".i-unit > .title\")[1].click()")
       # bon.execute_script("$(\"translate:contains('Bonuses')\")[0].click()")
       sleep 2
       bon.execute_script("document.querySelector('button.btn-primary.btn-sm').click()")

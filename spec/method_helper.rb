@@ -1,6 +1,5 @@
 $config_api = YAML.load_file('./config/scenarios/common_setting_api.yml')
 $uuid = "36ff4103-8a37-42ed-84d3-78c9ce96458f"
-# $uuid.upcase
 
 ENV['RAILS_ENV'] ||= 'test'
 ENV['api_host'] = "https://#{ENV['stage']}binomo.com/api"

@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2017-12-04 14:32:15 +0300
+Feature: SMoke test generate 2017-12-14 17:55:05 +0300
  Scenario: Run step
  Given Pid process
  Given Preparation of static data and visit homepage

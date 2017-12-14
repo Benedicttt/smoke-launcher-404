@@ -4,7 +4,7 @@ end
 
 When /^Make deposit WireCapital$/ do
   print_result = -> { puts_danger "Wire Capital not working!!!" }
-  retried_process(1, 1) do
+  retried_process(1, 1, print_result) do
    ENV['count_cashier'].to_i.times do |i|
 
      DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier")

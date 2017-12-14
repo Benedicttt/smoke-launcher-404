@@ -21,7 +21,7 @@ When(/^Open list deals$/) do
     else
       @result = $deals.find_elements(:css, "div.total-count > div.result > span.currency-amount")[0].text
     end
-  rescue NoMethodError
+  rescue Selenium::WebDriver::Error::UnknownError
     puts_info "not found"
     puts raise
   end
