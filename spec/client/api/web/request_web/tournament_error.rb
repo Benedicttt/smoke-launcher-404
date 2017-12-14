@@ -36,17 +36,14 @@ class RequestWsError
 
     # connect ws
     EM.run {
-      ws = Faye::WebSocket::Client.new("wss://#{ENV['stage'].sub(/[.]/, '')}-ws.binomo.com:8080/?vsn=2.0.0")
+      ws = Faye::WebSocket::Client.new("wss://#{ENV['stage'].sub(/[.]/, '')}-ws.binomo.com:8080/?vsn=2.0.0&device=#{device}&device_id=#{device_id}&authtoken=#{authtoken}")
       ws.on :open do |event|
         phx_join = {
                    "topic":"base",
                    "event":"phx_join",
-                   "payload": {
-                     "authtoken":authtoken,
-                     "device":device,
-                     "device_id":device_id },
-                     "ref":"#{ref}",
-                     "join_ref":"1"
+                   "payload": {},
+                   "ref":"#{ref}",
+                   "join_ref":(1 + 1).to_s
                    }
 
         message = JSON.dump(phx_join)
@@ -73,7 +70,7 @@ class RequestWsError
                     "tournament_id":tournament_id
 
                   },
-                "ref":"2",
+                "ref":"#{ref + 1}",
                 "join_ref":"#{ref + 1}"
               }
 
@@ -81,7 +78,7 @@ class RequestWsError
         count.times { ws.send demo_request; sleep 0.01 }
 
 
-        # puts msg.data
+        puts msg.data
         $result = JSON.parse(msg.data)
         return $result if $result['payload']['status'] == 'error'
       end

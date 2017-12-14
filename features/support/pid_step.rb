@@ -26,7 +26,7 @@ Given /^Pid process$/ do
       ])
 
    DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
-   DRIVER.manage.timeouts.implicit_wait = 10
+   DRIVER.manage.timeouts.implicit_wait = 30
    DRIVER.manage.window.resize_to(1900, 768)
 
   elsif ENV['driver'] == "safari"
