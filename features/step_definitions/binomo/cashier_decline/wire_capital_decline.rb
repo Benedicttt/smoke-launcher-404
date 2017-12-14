@@ -4,6 +4,10 @@ When /^Make deposit WireCapital decline$/ do
    ENV['count_cashier'].to_i.times do |i|
      DRIVER.get(CommonSetting[:app_host] + CommonSetting[:locale] + "/cashier")
      sleep 3
+
+     DRIVER.find_element(:css, "li.card").click
+     sleep 3
+     
      begin
        DRIVER.execute_script("document.querySelector('input[name=useNew]').click()")
      rescue
@@ -11,7 +15,6 @@ When /^Make deposit WireCapital decline$/ do
      end
      sleep 3
 
-     DRIVER.find_element(:css, "li.card").click
      sleep 0.5
      DRIVER.execute_script("angular.element(document.querySelectorAll('.form-control'))[0].value = #{ENV['count_cashier_dep']}")
      sleep 0.5

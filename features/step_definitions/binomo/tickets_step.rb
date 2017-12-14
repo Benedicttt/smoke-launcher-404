@@ -21,7 +21,8 @@ When /^Data ticket$/ do
     print_result = -> {puts "Error open form (retried)"; return; puts}
     retried_process(3, 3, print_result) do
       sleep 1
-      $tickets.execute_script("angular.element(document.querySelectorAll('.b-unit-ask-question')[0]).scope().showTicketQuestion()")
+      # $tickets.execute_script("angular.element(document.querySelectorAll('.b-unit-ask-question')[0]).scope().showTicketQuestion()")
+      $tickets.find_element(:css, 'span[t="labels.ask_question"]').click()
       sleep 1
       $tickets.execute_script("document.querySelectorAll('span.unit.ng-binding.ng-scope')[0].click()")
       sleep 1
