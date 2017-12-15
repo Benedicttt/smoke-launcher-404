@@ -47,6 +47,9 @@ Given /^Pid process$/ do
   else
     ENV['staging'] = ENV['stage'].to_s.gsub(/s/, 'staging')
   end
+
+  Runner.call_crm('UserProvider.delete_all')
+  Runner.call_crm("User.find_by(email: 'reg27051987@gmail.com').update(email: SecureRandom.hex(10).to_s + '@yopmail.com')")
 end
 
 Given /^Pid process deploy branch$/ do
