@@ -17,9 +17,15 @@ $(function() {
         $('#first-binomo').val() + " deploy project=" +
         $('#first-project').val() + " branch=" +
         $('#first-branch').val().replace(/ /g, "")
-      )}
-    });
+      )};
 
+      App.deploy_binomo_channel.send(JSON.stringify({
+        clear_releases: $('#__clear_releases').prop('checked'),
+        binomo_deploy: "binomo_deploy",
+        count_deploy: $('#_global_link').val(),
+        write_log : $('#__written_in_the_log').prop('checked')
+      }));
+    });
 
     $('.change_test_date_binomo').click(function(){
       App.deploy_binomo_channel.send(JSON.stringify({
@@ -37,15 +43,13 @@ $(function() {
         $('#first-project').val() + " branch=" +
         $('#first-branch').val().replace(/ /g, "") + " clean=1 debug=1"
       )}
-
-
-      // $(".start").click();
-      //   App.deploy_binomo_channel.send(JSON.stringify({
-      //     clear_releases: $('#__clear_releases').prop('checked'),
-      //     binomo_deploy_clean_debug: "binomo_deploy_clean_debug",
-      //     count_deploy: $('#_global_link').val(),
-      //     write_log : $('#__written_in_the_log').prop('checked')
-      //   }));
+      $(".start").click();
+        App.deploy_binomo_channel.send(JSON.stringify({
+          clear_releases: $('#__clear_releases').prop('checked'),
+          binomo_deploy_clean_debug: "binomo_deploy_clean_debug",
+          count_deploy: $('#_global_link').val(),
+          write_log : $('#__written_in_the_log').prop('checked')
+        }));
     })
 
     $('.ws_sender_binomo_clean').click(function(){
@@ -55,14 +59,13 @@ $(function() {
         $('#first-project').val() + " branch=" +
         $('#first-branch').val().replace(/ /g, "") + " clean=1"
       )}
-
-      // $(".start").click();
-      //   App.deploy_binomo_channel.send(JSON.stringify({
-      //     clear_releases: $('#__clear_releases').prop('checked'),
-      //     binomo_deploy_clean: "binomo_deploy_clean",
-      //     count_deploy: $('#_global_link').val(),
-      //     write_log : $('#__written_in_the_log').prop('checked')
-      //   }));
+      $(".start").click();
+        App.deploy_binomo_channel.send(JSON.stringify({
+          clear_releases: $('#__clear_releases').prop('checked'),
+          binomo_deploy_clean: "binomo_deploy_clean",
+          count_deploy: $('#_global_link').val(),
+          write_log : $('#__written_in_the_log').prop('checked')
+      }));
     })
 
     $('.memcached_flush_first').click(function(){
