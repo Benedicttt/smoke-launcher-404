@@ -17,7 +17,7 @@ module Server
           @stage_deploy = 's1'
         end
         if ENV['staging'] == 'staging2'
-          @stage_deploy = 's2'
+          @stage_deploy = '188.42.243.49'
         end
         if ENV['staging'] == 'staging3'
           @stage_deploy = 's3'
@@ -28,8 +28,8 @@ module Server
 
         if msg_json[:clear_releases] == true
           puts "All eleases clear".red
-          system "ssh binomo@#{@stage_deploy}.binomo.com \"rm -rf /home/binomo/binomo.com/releases/*\""
-          system "ssh binomo@#{@stage_deploy}-crm.binomo.com \"rm -rf /home/binomo/binomo.com/releases/*\" "
+          system "ssh binomo@#{@stage_deploy} \"rm -rf /home/binomo/binomo.com/releases/*\"" if ENV['staging'] == 'staging2'
+          system "ssh binomo@#{@stage_deploy}-crm.binomo.com \"rm -rf /home/binomo/binomo.com/releases/*\" " if ENV['staging'] == 'staging2'
         end
 
         if msg_json[:write_log] == true
