@@ -13,5 +13,6 @@ class SmokeBinomo < Que::Job
     id = User.where(stage_number: ENV['stage']).last.id
 
     report_add_user(id, email, "Binomo", ENV["stage"], report_url)
+    ActionCable.server.broadcast "smoke_binomo", message: "Test completed", data: 200  
   end
 end

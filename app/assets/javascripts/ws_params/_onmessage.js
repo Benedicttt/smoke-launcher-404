@@ -1,5 +1,11 @@
-  function notify_status_testing(params) {
-    App.smoke_binomo.send = function(data) {
+$(function() {
+  if (App.config.ip != "0.0.0.0")
+    $('.ws label').text("IP " + App.config.ip + " WebSocket connect ").css("color", "yellow");
+  })
+
+
+  function notify_status_testing() {
+    w.send = function(data) {
 
       if (data.data == "Test aborting"){
           $('.ws label').text("Test aborting, run next test step")

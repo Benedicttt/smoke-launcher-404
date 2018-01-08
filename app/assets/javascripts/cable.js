@@ -11,5 +11,8 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
-
-var w = new WebSocket("ws://192.168.1.6:3001/cable"); 
+//
+// w = new WebSocket (
+//     <% ip_address = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address %>
+//     'ws://<%= ip_address %>:8081'
+//   )

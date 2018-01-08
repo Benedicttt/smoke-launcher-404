@@ -1,9 +1,8 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binomo") {
     App.smoke_binomo = App.cable.subscriptions.create({
-      channel: "SmokeBinomoChannel",
+      channel: "SmokeBinomoChannel"
     })};
-    $('.ws label').text("IP " + App.config.ip + " WebSocket connect ").css("color", "yellow");
 
     $('#smoke-binomo').click(function(){
       $('.ws label').css('color','yellow').text("Tests runs, expect...")
@@ -40,7 +39,14 @@ $(function() {
         param_headless: $('#generator_param_headless').val(),
       }));
 
-      notify_status_testing(smoke_binomo);
       return false;
   })
+
+      $('.pid_process').click(function(){
+        $('.stop').click()
+        App.smoke_binomo.send(JSON.stringify({
+          pid_cucumber: "pid_cucumber"
+        }))
+      });
+
 });
