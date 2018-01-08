@@ -1,7 +1,10 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binomo") {
     App.smoke_binomo = App.cable.subscriptions.create({
-      channel: "SmokeBinomoChannel"
+
+      channel: "SmokeBinomoChannel",
+      received: console.log(App.smoke_binomo)
+
     });
 
     $('.pid_process').click(function(){

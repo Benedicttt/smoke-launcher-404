@@ -10,6 +10,7 @@ module LauncherBinomo
     config.exceptions_app = self.routes
      config.action_cable.mount_path = '/launcher'
      config.que.worker_count = 1
+     Rails.application.config.action_cable.allowed_request_origins = ['http://rubyonrails.com', /http:\/\/ruby.*/]
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
