@@ -12,13 +12,7 @@ class WS
       ws_server.onmessage do |msg|
         msg_json = JSON.parse(msg, :symbolize_names => true)
 
-        ::SmokeBinomo.enqueue msg_json, priority: 10, run_at:  Time.now
-        ::SmokeBinpartner.enqueue msg_json, priority: 10, run_at:  Time.now
-        ::SmokeBinpartnerTraider.enqueue msg_json, priority: 10, run_at:  Time.now
-        ::SmokeTournaments.enqueue msg_json, priority: 10, run_at:  Time.now
-        ::SmokeContentPages.enqueue msg_json, priority: 10, run_at:  Time.now
 
-        ::SmokeStatusCode.enqueue msg_json, priority: 10, run_at:  Time.now
 
         Thread.new { Binomo.deploy(ws_server,  msg_json) }
         Thread.new { Binomo.clean_debug(ws_server,  msg_json) }
