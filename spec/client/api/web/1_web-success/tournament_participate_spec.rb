@@ -201,7 +201,7 @@ RSpec.describe "Api tournaments success" do
     it { expect(@tournaments['data'][0]['users_count']).to be_a Integer  }
     it { expect(@tournaments['data'][0]['initial_balance']).to be_a Integer  }
     # it { expect(@tournaments['data'][0]['participation_fees'].values[0]).to be_a Hash }
-    it { expect(@tournaments['data'][0]['participation_fees'].values[0]).to be_a 10000 }
+    # it { expect(@tournaments['data'][0]['participation_fees'].values[0]).to be_a 10000 }
     it { expect(@tournaments['data'][0]['prize_fund']).to be_a Hash }
 
     it { expect(@tournaments['data'][0]['timeline_status']).to eq "actual" }
