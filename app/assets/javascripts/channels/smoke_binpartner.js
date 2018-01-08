@@ -2,7 +2,16 @@ $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binpartner") {
     App.smoke_binpartner = App.cable.subscriptions.create({
       channel: "SmokeBinpartnerChannel"
-    })};
+    });
+
+    $('.pid_process').click(function(){
+      $('.stop').click()
+      App.smoke_binpartner.send(JSON.stringify({
+        pid_cucumber: "pid_cucumber"
+      }))
+    });
+
+};
 
     $('#smoke-binpartner').click(function(){
       $('.ws label').css('color','yellow').text("Tests runs, expect...")

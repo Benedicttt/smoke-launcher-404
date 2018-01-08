@@ -2,7 +2,16 @@ $(function() {
   if ($('.ws_sender').attr('id') == "smoke-content-pages") {
     App.content_page = App.cable.subscriptions.create({
       channel: "ContentPageChannel"
-    })};
+    });
+
+      $('.pid_process').click(function(){
+        $('.stop').click()
+        App.content_page.send(JSON.stringify({
+          pid_cucumber: "pid_cucumber"
+        }))
+      });
+
+  };
 
     $('#smoke-content-pages').click(function(){
       $('.ws label').css('color','yellow').text("Tests runs, expect...")
@@ -22,8 +31,7 @@ $(function() {
           param_headless: $('#generator_param_headless').val(),
           count_features: get_data()
       }));
-
-      notify_status_testing();
       return false;
-  })
+    })
+
 });

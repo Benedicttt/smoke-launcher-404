@@ -2,7 +2,16 @@ $(function() {
   if ($('.ws_sender').attr('id') == "smoke-status-code") {
     App.status_code = App.cable.subscriptions.create({
       channel: "StatusCodeChannel"
-    })};
+    });
+
+    $('.pid_process').click(function(){
+      $('.stop').click()
+      App.status_code.send(JSON.stringify({
+        pid_cucumber: "pid_cucumber"
+      }))
+    });
+
+};
 
     $('#smoke-status-code').click(function(){
       $('.ws label').css('color','yellow').text("Tests runs, expect...")

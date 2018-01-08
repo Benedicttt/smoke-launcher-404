@@ -2,7 +2,16 @@ $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binomo") {
     App.smoke_binomo = App.cable.subscriptions.create({
       channel: "SmokeBinomoChannel"
-    })};
+    });
+
+    $('.pid_process').click(function(){
+      $('.stop').click()
+      App.smoke_binomo.send(JSON.stringify({
+        pid_cucumber: "pid_cucumber"
+      }))
+    });
+
+  };
 
     $('#smoke-binomo').click(function(){
       $('.ws label').css('color','yellow').text("Tests runs, expect...")
@@ -41,12 +50,5 @@ $(function() {
 
       return false;
   })
-
-      $('.pid_process').click(function(){
-        $('.stop').click()
-        App.smoke_binomo.send(JSON.stringify({
-          pid_cucumber: "pid_cucumber"
-        }))
-      });
 
 });

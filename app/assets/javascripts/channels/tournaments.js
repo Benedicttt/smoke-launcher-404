@@ -2,7 +2,16 @@ $(function() {
   if ($('.ws_sender').attr('id') == "smoke-tournaments") {
     App.tournaments = App.cable.subscriptions.create({
       channel: "TournamentsChannel"
-    })};
+    });
+
+    $('.pid_process').click(function(){
+      $('.stop').click()
+      App.tournaments.send(JSON.stringify({
+        pid_cucumber: "pid_cucumber"
+      }))
+    });
+
+};
 
     $('#smoke-tournaments').click(function(){
       $('.ws label').css('color','yellow').text("Tests runs, expect...")
