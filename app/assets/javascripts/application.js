@@ -20,8 +20,6 @@
 //= require_self
 //= require_tree ./channels
 
-
-
 "./app/assets/javascripts/"
 "./app/assets/javascripts/ws_params"
 "./app/assets/javascripts/ws_params/deploy"

@@ -1,4 +1,4 @@
-$(function(){
+$(function smoke_binomo_params(){
   $('#smoke-binomo').click(function(){
     $('.ws label').css('color','yellow').text("Tests runs, expect...")
     $(".step_cucumber").click();

@@ -2,6 +2,7 @@ doctype html
 html
   head
     title Cucumber smoke test launcher
+    = tag "#{params[:controller]}"
 
   .container.page_stage_ui
     =simple_form_for :generator, method: :post  do |f|

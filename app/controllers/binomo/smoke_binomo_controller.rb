@@ -27,6 +27,7 @@ class Binomo::SmokeBinomoController < ApplicationController
   def set_params
     @config = YAML.load(File.read("./config/scenarios/scenarios_binomo.yml"))
   end
+  
   def coupons
     @coupons =YAML.load(File.read('./config/scenarios/coupons.yml'))
   end

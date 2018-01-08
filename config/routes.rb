@@ -1,7 +1,7 @@
 require "que/web"
 
 Rails.application.routes.draw do
-  mount ActionCable.server, at: '/cable'
+  mount ActionCable.server => "/cable"
   mount Que::Web => "/que"
 
   root to: redirect("/homepage")
@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   end
 
   namespace :binomo do
+
     get 'assets', to: 'assets#assets'
     post 'assets', to: 'assets#create'
 
