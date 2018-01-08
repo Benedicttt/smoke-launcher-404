@@ -32,7 +32,6 @@ $(function() {
         param_headless: $('#generator_param_headless').val(),
       }));
 
-      notify_status_testing();
       return false;
   })
 });

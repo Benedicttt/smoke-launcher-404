@@ -129,11 +129,4 @@ $(function() {
       }));
     });
 
-    App.deploy_binpartner_channel.send(JSON.stringify({
-      clear_releases: $('#__clear_releases').prop('checked'),
-      binpartner_deploy: "binpartner_deploy",
-      count_deploy: $('#_global_link').val(),
-      write_log : $('#__written_in_the_log').prop('checked')
-    }));
-
   });

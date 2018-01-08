@@ -31,6 +31,7 @@ $(function() {
           param_headless: $('#generator_param_headless').val(),
           count_features: get_data()
       }));
+      
       return false;
     })
 

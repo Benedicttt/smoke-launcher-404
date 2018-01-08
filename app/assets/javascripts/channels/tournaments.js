@@ -47,7 +47,6 @@ $(function() {
         count_tournaments: $("#generator_count").val()
       }));
 
-      notify_status_testing();
       return false;
   })
 });

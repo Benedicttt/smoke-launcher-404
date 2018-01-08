@@ -49,7 +49,6 @@ $(function() {
 
       }));
 
-      notify_status_testing();
       return false;
   })
 });
