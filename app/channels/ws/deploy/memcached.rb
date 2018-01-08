@@ -1,16 +1,15 @@
 module Server
   class Deploy
-    def self.restart_daemons(msg_json)
+    def self.memcached_flush(msg_json)
       count_deploy = msg_json[:count_deploy].to_s
       write_log = msg_json[:write_log].to_s
-      clear_releases = msg_json[:clear_releases].to_s
 
-      if msg_json[:restart] == "daemons"
-        # data.send("Start restart daemons")
+      if msg_json[:memcached] == "memcached"
+        puts ("Start clear memcached")
         puts count_deploy.green
         system "cd qa && #{count_deploy}"
         puts " Finished".red
-        # data.send("Restart daemons done")
+        puts ("Done clear memcached")
       end
     end
   end

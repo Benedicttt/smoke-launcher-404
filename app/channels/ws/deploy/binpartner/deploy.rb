@@ -1,11 +1,11 @@
 module Server
   class Binpartner
-    def self.deploy(data, msg_json)
-      count_deploy = msg_json[:count_deploy].to_s
-      write_log = msg_json[:write_log].to_s
-      clear_releases = msg_json[:clear_releases].to_s
-
+    def self.deploy(msg_json)
       if msg_json[:binpartner_deploy] == "binpartner_deploy"
+        count_deploy = msg_json[:count_deploy].to_s
+        write_log = msg_json[:write_log].to_s
+        clear_releases = msg_json[:clear_releases].to_s
+
 
         ENV['staging'] = count_deploy.split[1]
         ENV['project'] = count_deploy.split[3]
@@ -37,13 +37,9 @@ module Server
           puts "All releases clear".red
         end
 
-        data.send("Start deploy Binpartner staging, #{ENV['branch'].to_s}")
-        data.send("Start deploy Binpartner staging, #{ENV['branch'].to_s} #{ENV['debug'].to_s}")
-        data.send("Start deploy Binpartner staging, #{ENV['branch'].to_s} #{ENV['clean'].to_s}")
-        data.send("Start deploy Binpartner staging, #{ENV['branch'].to_s} #{ENV['clean'].to_s} #{ENV['debug'].to_s}")
         system "cucumber ./features/deploy.feature"
         puts " Finished deploy partner".red
-        data.send("Deploy Binpartner staging done, #{ENV['branch']}")
+        ActionCable.server.broadcast "deploy_binomo_channel", message: "Deploy Binpartner staging done, #{ENV['branch']}", status: 200
         ENV['log'] = ""
       end
 

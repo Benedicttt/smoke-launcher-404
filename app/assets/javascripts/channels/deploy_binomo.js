@@ -136,29 +136,4 @@ $(function() {
       count_deploy: $('#_global_link').val(),
       write_log : $('#__written_in_the_log').prop('checked')
     }));
-
-    // function deploy_binomo() {
-    //   App.deploy_binomo_channel.onmessage = function(data) {
-    //     if ($('#first-branch').val() == null || $('#first-branch').val() == '') { }
-    //     else {
-    //
-    //       if (data.data == "Start deploy Binomo staging, branch=" + $('#first-branch').val().replace(/ /g, "")) {
-    //         $('.ws label').text("Start deploy Binomo staging, branch=" +
-    //         $('#first-branch').val().replace(/ /g, "") + " ") .css("color", "yellow")
-    //
-    //       }
-    //
-    //       if (data.data == "Deploy Binomo staging done, branch=" + $('#first-branch').val().replace(/ /g, "")){
-    //         $('.ws label').text("Deploy Binomo staging done, branch=" +
-    //         $('#first-branch').val().replace(/ /g, "")).css("color", "green")
-    //       }
-    //     };
-    //   }
-    //
-    //   $('#__written_in_the_log').prop('checked', false)
-    //   $('#__clear_releases').prop('checked', false)
-    // };
-    //
   });
-
-// });
