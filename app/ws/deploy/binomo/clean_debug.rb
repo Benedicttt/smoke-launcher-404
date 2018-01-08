@@ -1,10 +1,6 @@
 module Server
   class Binomo
-    def self.clean_debug(data, msg_json)
-      count_deploy = msg_json[:count_deploy].to_s
-      write_log = msg_json[:write_log].to_s
-      clear_releases = msg_json[:clear_releases].to_s
-
+    def self.clean_debug(msg_json)
       if msg_json[:binomo_deploy_clean_debug] == "binomo_deploy_clean_debug"
         count_deploy = msg_json[:count_deploy].to_s
         write_log = msg_json[:write_log].to_s
@@ -41,13 +37,9 @@ module Server
         puts
         print count_deploy.green + " #{ENV['log'].to_s}".green
 
-        data.send("Start deploy Binomo staging, #{ENV['branch'].to_s}")
-        data.send("Start deploy Binomo staging, #{ENV['branch'].to_s} #{ENV['clean'].to_s}")
-        data.send("Start deploy Binomo staging, #{ENV['branch'].to_s} #{ENV['clean'].to_s} #{ENV['debug'].to_s}")
-        data.send("Start deploy Binomo staging, #{ENV['branch'].to_s} #{ENV['log']}")
         system "cucumber ./features/deploy.feature"
         puts " Finished deploy binomo".red
-        data.send("Deploy Binomo staging done, #{ENV['branch']}")
+        ActionCable.server.broadcast "deploy_binomo_channel", message: "Deploy Binomo staging done, #{ENV['branch']}", status: 200
         ENV['log'] = ""
       end
     end

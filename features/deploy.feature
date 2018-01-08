@@ -1,4 +1,4 @@
-Feature: Deploy 2017-12-27 18:53:38 +0200
+Feature: Deploy 2018-01-08 21:10:11 +0300
 Scenario: Deploy branch 
  Given Pid process deploy branch 
  Given Process deploy branch 
