@@ -40,11 +40,11 @@ html
       .col-xs-2
         .fields
           = f.input :work,
-              label: "Select framework",
+              label: "Select Project",
                 collection: @params['project'].values,
                   selected: @params['project'].values[0],
                     required: false,
-                      input_html: { id: "first-project", disabled: true }
+                      input_html: { id: "first-project", disabled: false }
 
 
       .col-xs-3
@@ -109,7 +109,7 @@ html
       .col-xs-2
         .fields
           = f.input :work,
-              label: "Select framework",
+              label: "Select Project",
                collection: @params['project'].values,
                 readonly: true ,
                   selected: @params['project'].values[1],

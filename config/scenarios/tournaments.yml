@@ -34,3 +34,6 @@ repeat type loopead: "
 repeat type periodical: "
   \t\t When Repeat type periodical
 "
+quality create tournaments: "
+  \t\tWhen Quality create tournaments
+"

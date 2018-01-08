@@ -42,11 +42,12 @@ class RequestWsError
                    "topic":"base",
                    "event":"phx_join",
                    "payload": {
-                     "authtoken":authtoken,
                      "device":device,
-                     "device_id":device_id },
-                     "ref":"#{ref}",
-                     "join_ref":"1"
+                     "device_id":device_id,
+                     "authtoken":authtoken
+                   },
+                   "ref":"#{ref}",
+                   "join_ref":(1 + 1).to_s
                    }
 
         message = JSON.dump(phx_join)
@@ -73,13 +74,12 @@ class RequestWsError
                     "tournament_id":tournament_id
 
                   },
-                "ref":"2",
+                "ref":"1",
                 "join_ref":"#{ref + 1}"
               }
 
         demo_request = JSON.dump(params)
         count.times { ws.send demo_request; sleep 0.01 }
-
 
         # puts msg.data
         $result = JSON.parse(msg.data)

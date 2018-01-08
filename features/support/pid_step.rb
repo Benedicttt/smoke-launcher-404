@@ -15,7 +15,10 @@ Given /^Pid process$/ do
 
   elsif ENV['driver'] == "chrome"
    options =  Selenium::WebDriver::Chrome::Options.new(args: [
-      "#{ENV['param_headless']}", "--no-sandbox", "--disable-backing-store-limit", "--max-unused-resource-memory-usage-percentage",
+      "#{ENV['param_headless']}",
+      "--no-sandbox",
+      "--disable-backing-store-limit",
+      "--max-unused-resource-memory-usage-percentage",
       "--window-size=1600, 768",
       "--disable-gpu",
       "--disable-notifications" ,
@@ -23,7 +26,7 @@ Given /^Pid process$/ do
       ])
 
    DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
-   DRIVER.manage.timeouts.implicit_wait = 5
+   DRIVER.manage.timeouts.implicit_wait = 20
    DRIVER.manage.window.resize_to(1900, 768)
 
   elsif ENV['driver'] == "safari"
@@ -44,6 +47,9 @@ Given /^Pid process$/ do
   else
     ENV['staging'] = ENV['stage'].to_s.gsub(/s/, 'staging')
   end
+
+  Runner.call_crm('UserProvider.delete_all')
+  Runner.call_crm("User.find_by(email: 'reg27051987@gmail.com').update(email: SecureRandom.hex(10).to_s + '@yopmail.com')")
 end
 
 Given /^Pid process deploy branch$/ do

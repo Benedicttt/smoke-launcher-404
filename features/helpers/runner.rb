@@ -1,8 +1,9 @@
 class Runner
-
   def self.call(command)
+
     Net::SSH.start("#{ENV['stage'].sub(/[.]/, '')}.binomo.com", "binomo") do |ssh|
       if ENV['stage'] == "s1."
+        puts_info "Runner! binomo"
         ssh.exec! "cd ~/binomo.com/current/binomo.com/ && RAILS_ENV=staging ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rails r -e staging \"#{command}\""
       else
         ssh.exec! "cd ~/binomo.com/current/binomo.com/ && RAILS_ENV=staging#{ENV['stage'].sub(/s/, '').sub(/[.]/, '')} ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rails r -e staging#{ENV['stage'].sub(/s/, '').sub(/[.]/, '')} \"#{command}\""
@@ -13,6 +14,8 @@ class Runner
   def self.call_crm(command)
     Net::SSH.start("#{ENV['stage'].sub(/[.]/, '')}-crm.binomo.com", "binomo") do |ssh|
       if ENV['stage'] == "s1."
+        puts_info "Runner! binomo crm"
+
         ssh.exec! "cd ~/binomo.com/current/crm.binomo.com/ && RAILS_ENV=staging ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rails r -e staging \"#{command}\""
       else
         ssh.exec! "cd ~/binomo.com/current/crm.binomo.com/ && RAILS_ENV=staging#{ENV['stage'].sub(/s/, '').sub(/[.]/, '')} ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rails r -e staging#{ENV['stage'].sub(/s/, '').sub(/[.]/, '')} \"#{command}\""
@@ -21,7 +24,7 @@ class Runner
   end
 
   def self.current_branch_binomo
-    Net::SSH.start("#{ENV['stage']}.binomo.com", 'binomo') do |ssh|
+    Net::SSH.start("#{ENV['stage']}-crm.binomo.com", 'binomo') do |ssh|
       return ssh.exec!("cd binomo.com && tail -1 revisions.log").split[1]
     end
   end

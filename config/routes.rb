@@ -42,6 +42,9 @@ Rails.application.routes.draw do
     get 'assets', to: 'assets#assets'
     post 'assets', to: 'assets#create'
 
+    get 'content_page', to: 'content_page#content_page'
+    post 'content_page', to: 'content_page#create'
+
     get 'screen_shots', to: 'screen_shots#screen_shots'
     post 'screen_shots', to: 'screen_shots#create'
 

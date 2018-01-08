@@ -9,7 +9,9 @@ Then /^Result$/ do
     end
     print "<br><br>"
     $url_tournaments = DRIVER.current_url.sub(/#{ENV['stage']}-crm/, "#{ENV['stage']}").sub(/edit/, '')
+    id_tournament = URI.parse(DRIVER.current_url).path.gsub(/[a-zA-Z\/]/, '')
 
+    TournamentsIds.create(stage: ENV['stage'] + ".", tournament_id: id_tournament)
 end
 
 When /^Participate$/ do

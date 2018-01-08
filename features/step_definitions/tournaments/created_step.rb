@@ -32,7 +32,7 @@ When /^Add data$/ do
     DRIVER.find_element(:id, "tournament_url").send_keys("url-tournament")
 
     DRIVER.find_element(:id, "tournament_registration_interval").clear
-    DRIVER.find_element(:id, "tournament_registration_interval").send_keys("1500")
+    DRIVER.find_element(:id, "tournament_registration_interval").send_keys("150000")
     DRIVER.find_element(:id, "tournament_initial_balance").clear
     DRIVER.find_element(:id, "tournament_initial_balance").send_keys("100")
     DRIVER.find_element(:id, "tournament_min_users_count").clear
@@ -47,6 +47,7 @@ When /^Add data$/ do
     DRIVER.execute_script("$(\"span:contains('activated')\").click()")
 
 
+  # %i[en ru].each_with_index do |locale, num|
   %i[en ru id ms es th vn cn pt tr pl ro me kr in ua].each_with_index do |locale, num|
     num += 1
     DRIVER.execute_script("$('#new_tournament > div:nth-child(4) > div:nth-child(1) > ul > li:nth-child(#{num.to_i}) > a').click()") #en

@@ -18,6 +18,6 @@ Then(/^Delete all providers stage and rename email account$/) do
        referer: "https://#{ENV['stage']}.binomo.com",
        params:{ locale: "ru", device: "web", geo: "RU", email: "#{SecureRandom.hex(14)}@yopmail.com", country: "AF" } } )
 
-  Runner.call('UserProvider.delete_all')
+  Runner.call_crm('UserProvider.delete_all')
   DRIVER.manage.delete_all_cookies
 end

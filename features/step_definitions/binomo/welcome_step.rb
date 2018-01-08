@@ -37,6 +37,5 @@ Then /^Profile last and first name$/ do
   id = User.where(stage_number: ENV['stage']).last.id
   DRIVER.execute_script("localStorage.setItem(\"#{id}.real.welcome_bonus\", \"1\")" )
   DRIVER.execute_script("localStorage.setItem(\"#{id}.demo.welcome_bonus\", \"1\")")
-  first_last_name
   sleep 1
 end

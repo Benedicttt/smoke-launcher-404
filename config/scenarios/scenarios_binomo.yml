@@ -1,5 +1,11 @@
+change and update account: "
+  \tGiven Visit to page /account\n
+  \tWhen input all data to page account\n
+  \tThen Update params to data page account\n
+  \tGiven Assert to change params in page account\n
+"
 last select provider to crm(Eccompay): "
-  Given Last select provider to crm(Eccompay)\n
+  \tGiven Last select provider to crm(Eccompay)\n
 "
 check rate for closed deal(win): "
   \tGiven Visit page trading\n
@@ -7,9 +13,6 @@ check rate for closed deal(win): "
   \tThen Rate by RIC equal percent sum win deal\n
 "
 
-activate all templates: "
-  \tGiven Activate all templates\n
-"
 social google: "
   \tGiven Visit homepage and click soc-reg google(not ref)\n
   \tWhen Click my email google\n
@@ -267,8 +270,4 @@ status treder: "
 phone confirmed: "
   \tGiven Phone verified find \n
 \t\tThen Phone verifed\n
-"
-
-add widget cashier: "
-  \tGiven Add widget\n
 "

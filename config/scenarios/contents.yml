@@ -1,0 +1,57 @@
+activate all templates: "\tGiven Activate all templates\n"
+
+settings:
+  payments:          "\tGiven Last select provider to crm(Eccompay)\n\n"
+  countries:          "\tGiven Set country RU curency USD, EUR, RUB - default RUB\n\n"
+  common:            "
+                      \tGiven Set sales manage all\n
+                      \tGiven Set Assets: break: true, dynamic: -300, win rate: 70\n
+                      \tGiven Set SMTP server default\n
+                      \tGiven Set Mail provider SendGrid\n
+                      \tGiven Set Captcha sign_in false\n
+                      \tGiven Set Captcha sign_up false\n
+                      \tGiven Set Tutorial false\n
+                      \tGiven CFD enabled true\n\n
+                      "
+  demo_deals:         "\tGiven Set max demo deals at once 20\n\n"
+  webinar:            "
+                       \tGiven Set Server webinar time\n
+                       \tGiven Set URL webinar\n\n
+                      "
+
+  daily assets:       "\tGiven Set daily asset ric GOL/OTC, percents 60\n"
+  sales manage:       "\tGiven Checking all manager true\n"
+  users:              "\tGiven Update one user admin\n"
+  preset:             "\tGiven Create one preset\n\n"
+  assets:             "
+                       \tGiven Set percet rate and time\n
+                       \tGiven Set ric GOL/OTC all defaults params\n\n
+                      "
+  currency:           "\tGiven Set USD currency defaults params\n\n"
+
+content:
+  static page:        "\tGiven Update page privacy\n
+                       \tGiven Update page agreement\n\n
+                      "
+  articles:           "\tGiven Create new article\n"
+  title:              "\tGiven Update title by home page\n"
+  knowledge base:     "\tGiven Add and update new link\n"
+  strategies:         "\tGiven Create new strategies\n"
+  technical analysis: "\tGiven Create new technical article\n"
+  invest idea:        "\tGiven Create new invest idea\n"
+  video:              "\tGiven Add new video\n"
+  press articles:     "\tGiven Add new press articles\n\n"
+
+  faq:
+    groups:           "\tGiven Update first group\n"
+    questions-answer: "\tGiven Update and set first group by question\n\n"
+
+  ticket-categories:  "\tGiven Add ticket category\n"
+  widget:             "\tGiven Update windgets\n"
+  advices:            "\tGiven Update all advises\n\n"
+
+sandbox:
+  mailer:             "\tGiven Create new mailer\n\n"
+
+offers:
+  static:             "\tGiven Create new static\n\n"
