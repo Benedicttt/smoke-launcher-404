@@ -1,7 +1,7 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-status-code") {
-    App.smoke_binpartner = App.cable.subscriptions.create({
-      channel: "SmokeBinpartnerChannel"
+    App.status_code = App.cable.subscriptions.create({
+      channel: "StatusCodeChannel"
     })};
 
     $('#smoke-status-code').click(function(){
@@ -10,7 +10,7 @@ $(function() {
       $(".start").click();
       window.scrollTo(0, 999999);
 
-      App.smoke_binpartner.send(JSON.stringify({
+      App.status_code.send(JSON.stringify({
         smoke_status_code: true,  //!!!!!
         count_features: get_data(),
         thread: $('#generator_thread').val(),

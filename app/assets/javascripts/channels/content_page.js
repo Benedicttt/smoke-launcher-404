@@ -1,7 +1,7 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-content-pages") {
-    App.smoke_binpartner = App.cable.subscriptions.create({
-      channel: "SmokeBinpartnerChannel"
+    App.content_page = App.cable.subscriptions.create({
+      channel: "ContentPageChannel"
     })};
 
     $('#smoke-content-pages').click(function(){
@@ -10,7 +10,7 @@ $(function() {
       $(".start").click();
       window.scrollTo(0, 999999);
 
-      App.smoke_binpartner.send(JSON.stringify({
+      App.content_page.send(JSON.stringify({
           smoke_content_pages: true,  //!!!!!
           sleep_retried: $('#generator_sleep_retried').val(),
           thread: $('#generator_thread').val(),

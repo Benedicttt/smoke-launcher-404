@@ -1,7 +1,7 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-tournaments") {
-    App.smoke_binpartner = App.cable.subscriptions.create({
-      channel: "SmokeBinpartnerChannel"
+    App.tournaments = App.cable.subscriptions.create({
+      channel: "TournamentsChannel"
     })};
 
     $('#smoke-tournaments').click(function(){
@@ -10,7 +10,7 @@ $(function() {
       $(".start").click();
       window.scrollTo(0, 999999);
 
-      App.smoke_binpartner.send(JSON.stringify({
+      App.tournaments.send(JSON.stringify({
         smoke_tournaments: true,  //!!!!!
         sleep_retried: $('#generator_sleep_retried').val(),
         between: $('.count_between').val(),

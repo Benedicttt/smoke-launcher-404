@@ -1,6 +1,6 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binpartner-trader") {
-    App.smoke_binpartner = App.cable.subscriptions.create({
+    App.smoke_binpartner_traider = App.cable.subscriptions.create({
       channel: "SmokeBinpartnerTraiderChannel"
     })};
 
@@ -10,7 +10,7 @@ $(function() {
       $(".start").click();
       window.scrollTo(0, 999999);
 
-      App.smoke_binpartner.send(JSON.stringify({
+      App.smoke_binpartner_traider.send(JSON.stringify({
         smoke_binpartner_traider: true, //!!!!!
 
         sleep_retried: $('#generator_sleep_retried').val(),
@@ -37,7 +37,7 @@ $(function() {
         proxy_http: "--proxy-server=" + $('#generator_proxy_http').val(),
         ip_address: App.config.ip,
         param_headless: $('#generator_param_headless').val(),
-        
+
       }));
 
       notify_status_testing();

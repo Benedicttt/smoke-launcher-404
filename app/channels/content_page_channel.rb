@@ -4,8 +4,8 @@ class ContentPageChannel < ApplicationCable::Channel
   end
 
   def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
   end
+  
   def perform_action(message)
     puts "#{params}".red
     puts "#{message}".red
