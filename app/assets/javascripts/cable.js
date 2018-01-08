@@ -11,3 +11,5 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+
+var w = new WebSocket("ws://192.168.1.6:3001/cable"); 

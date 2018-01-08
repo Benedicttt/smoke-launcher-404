@@ -1,5 +1,5 @@
-  function notify_status_testing() {
-    w.onmessage = function(data) {
+  function notify_status_testing(params) {
+    App.smoke_binomo.send = function(data) {
 
       if (data.data == "Test aborting"){
           $('.ws label').text("Test aborting, run next test step")
