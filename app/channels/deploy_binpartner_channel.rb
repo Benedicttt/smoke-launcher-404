@@ -23,4 +23,9 @@ class DeployBinpartnerChannel < ApplicationCable::Channel
     Thread.new { Server::Deploy.restart_unicorn(msg_json) }
     Thread.new { Server::Deploy.restart_daemons(msg_json) }
   end
+
+  def speak(data)
+    data = { message: message }
+    ActionCable.server.brodcast "deploy_binpartner_channel", message: data['message']
+  end
 end

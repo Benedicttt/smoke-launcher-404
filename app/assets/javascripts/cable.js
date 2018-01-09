@@ -11,8 +11,3 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
-//
-// w = new WebSocket (
-//     <% ip_address = Socket.ip_address_list.find { |ai| ai.ipv4? && !ai.ipv4_loopback? }.ip_address %>
-//     'ws://<%= ip_address %>:8081'
-//   )

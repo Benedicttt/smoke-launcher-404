@@ -39,7 +39,7 @@ module Server
 
         system "cucumber ./features/deploy.feature"
         puts " Finished deploy partner".red
-        ActionCable.server.broadcast "deploy_binomo_channel", message: "Deploy Binpartner staging done, #{ENV['branch']}", status: 200
+        ActionCable.server.broadcast "deploy_binomo_channel", identifier: { message: "Deploy Binpartner staging done, #{ENV['branch']}", status: 200 }
         ENV['log'] = ""
       end
 

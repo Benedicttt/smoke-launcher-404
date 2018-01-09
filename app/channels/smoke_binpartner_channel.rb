@@ -11,7 +11,7 @@ class SmokeBinpartnerChannel < ApplicationCable::Channel
     puts "#{message}".red
     msg_json = JSON.parse(message, :symbolize_names => true)
 
-    if msg_json[:smoke_binomo] == true     
+    if msg_json[:smoke_binpartner] == true
       puts "#{msg_json}".yellow
       ::SmokeBinpartner.enqueue msg_json, priority: 10, run_at: Time.now
     end
