@@ -1,16 +1,21 @@
 $(function() {
   if ($('.ws_sender_binpartner').attr('id') == "deploy-project-binpartner") {
-    App.deploy_binpartner_channel = App.cable.subscriptions.create({
+    App.deploy_binpartner_channel = App.cable.subscriptions.create( "DeployBinpartnerChannel" ,
+    {
+      connected: function() {},
+      disconnected: function() {},
 
-       channel: "DeployBinpartnerChannel",
-    });
+      received: function(data) {
+         console.log(data['message']);
+         return this.perform('Complete')
+      }
+    })
 
-    $('.pid_process_deploy').click(function(){
+    $('.pid_process_deploy').click(function() {
       App.deploy_binpartner_channel.send(JSON.stringify({
         pid_deploy: "pid_deploy"
       }))
-    });
-  }
+  })};
 
     $('.ws_sender_binpartner').click(function(){
       if (str= '', $('#deploy-project-binpartner').prop('click')) {
