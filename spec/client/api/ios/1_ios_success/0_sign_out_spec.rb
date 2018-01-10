@@ -13,8 +13,8 @@ RSpec.describe "Authorize and Sign_out success" do
           device: "ios",
           app_version: "432",
           device_id: $uuid,
-          password: "12345q",
-          email: "test197@yopmail.com",
+          password: "123456q",
+          email: Cookies.where(stage: ENV['stage']).last.email,
         }
       })
 
@@ -27,9 +27,9 @@ RSpec.describe "Authorize and Sign_out success" do
           device: 'ios',
           app_version: "432",
           device_id: $uuid,
-          password: "12345q",
+          password: "123456q",
           authtoken: JSON.parse(response.body)['data']['authtoken'],
-          email: "test197@yopmail.com"
+          email: Cookies.where(stage: ENV['stage']).last.email
         },
         cookies: response.cookies
       })

@@ -2,14 +2,23 @@ $(function() {
   if ($('.ws_sender_binpartner').attr('id') == "deploy-project-binpartner") {
     App.deploy_binpartner_channel = App.cable.subscriptions.create( "DeployBinpartnerChannel" ,
     {
+
       connected: function() {},
       disconnected: function() {},
 
-      received: function(data) {
-         console.log(data['message']);
-         return this.perform('Complete')
+      received: function() {
+        if ($.parseJSON(event.data)['message'] == "Start") {
+          $('.ws label').text("Start deploy Binpartner " + $("#last-binpartner").val() + ", branch=" +
+          $('#last-branch').val().replace(/ /g, "") + " ") .css("color", "yellow")
+        }
+
+        if ($.parseJSON(event.data)['message'] == "Complete") {
+          $('.ws label').text("Deploy Binpartner " + $("#last-binpartner").val() + " done, branch=" +
+          $('#last-branch').val().replace(/ /g, "")).css("color", "green")
+        }
       }
     })
+
 
     $('.pid_process_deploy').click(function() {
       App.deploy_binpartner_channel.send(JSON.stringify({

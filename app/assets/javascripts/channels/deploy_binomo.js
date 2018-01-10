@@ -1,8 +1,23 @@
 $(function() {
   if ($('.ws_sender_binomo').attr('id') == "deploy-project-binomo") {
-    App.deploy_binomo_channel = App.cable.subscriptions.create({
-      channel: "DeployBinomoChannel"
-    });
+    App.deploy_binomo_channel = App.cable.subscriptions.create( "DeployBinomoChannel",
+    {
+
+      connected: function() {},
+      disconnected: function() {},
+
+      received: function() {
+        if ($.parseJSON(event.data)['message'] == "Start") {
+          $('.ws label').text("Start deploy Binomo " + $("#first-binomo").val() + ", branch=" +
+          $('#last-branch').val().replace(/ /g, "") + " ") .css("color", "yellow")
+        }
+
+        if ($.parseJSON(event.data)['message'] == "Complete") {
+          $('.ws label').text("Deploy Binomo " + $("#first-binomo").val() + " done, branch=" +
+          $('#last-branch').val().replace(/ /g, "")).css("color", "green")
+        }
+      }
+    })
 
     $('.pid_process_deploy').click(function(){
       App.deploy_binomo_channel.send(JSON.stringify({

@@ -1,12 +1,12 @@
-# # require 'rubygems'
-# # require 'eventmachine'
-# # require 'faye/websocket'
-# # require 'json'
-# # require 'active_support'
-# # require 'active_support/time'
-# # require 'rest_client'
-# # require 'rails'
-# # require 'rails/all'
+require 'rubygems'
+require 'eventmachine'
+require 'faye/websocket'
+require 'json'
+require 'active_support'
+require 'active_support/time'
+require 'rest_client'
+require 'rails'
+require 'rails/all'
 # #
 # # class RequestWS
 # #   def self.send_ws(device, demo, asset, amount, deal_type, trend, count)
@@ -239,37 +239,21 @@
 
 
 
-
-  def get_config(device, locale)
-
-    api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
-    response = RestClient::Request.execute(
-      method: :post,
-      url: api_sign_in,
-      headers: {
-        cookies: Config.new.get_config("web", "ru"),
-        referer: "https://#{ENV['stage']}binomo.com",
-        params:{
-            locale: locale,
-            device: device,
-            password: "12345q",
-            email: 'test197@yopmail.com',
-            geo: "RU"
-          }
-        }
-       ) { |response, request, result, &block| response}
-
-    api_conf_up = "https://#{ENV['stage']}binomo.com/api/v2/config"
-    response = RestClient.get(
-      api_conf_up,
-       cookies: response.cookies,
-       params: {
-         locale: locale,
-         device: device,
-         geo: "RU"
-     }){ |response, request, result, &block| response}
-
-     puts response.cookies
-  end
-
-get_config("web", "ru")
+api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
+response = RestClient::Request.execute(
+  method: :post,
+  url: api_sign_in,
+  headers: {
+    referer: "https://#{ENV['stage']}binomo.com",
+    params:{
+        locale: "ru",
+        device: "web",
+        password: "123456q",
+        email: "sign_up.f604b9e1f9ec1a7b@yopmail.com",
+        geo: "RU",
+        device_id: $uuid,
+        app_version: 2.0
+      }
+    }
+   ) { |response, request, result, &block| response }
+   puts response.body
