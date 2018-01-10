@@ -16,6 +16,17 @@ $(function() {
           $('.ws label').text("Deploy Binpartner " + $("#last-binpartner").val() + " done, branch=" +
           $('#last-branch').val().replace(/ /g, "")).css("color", "green")
         }
+
+        if ($.parseJSON(event.data)['message'] == "Start change date") {
+          $('.ws label').text("Start change date " + $("#last-binpartner").val() + ", branch=" +
+          $('#last-branch').val().replace(/ /g, "") + " ") .css("color", "yellow")
+        }
+
+        if ($.parseJSON(event.data)['message'] == "Done change date") {
+          $('.ws label').text("Done change date " + $("#last-binpartner").val() + " done, branch=" +
+          $('#last-branch').val().replace(/ /g, "")).css("color", "green")
+        }
+
       }
     })
 
@@ -58,6 +69,7 @@ $(function() {
         $('#last-project').val() + " branch=" +
         $('#last-branch').val().replace(/ /g, "") + " clean=1 debug=1"
       )}
+
       $(".start").click();
         App.deploy_binpartner_channel.send(JSON.stringify({
           clear_releases: $('#__clear_releases').prop('checked'),

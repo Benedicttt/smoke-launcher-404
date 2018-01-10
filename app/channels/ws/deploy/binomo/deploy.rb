@@ -40,10 +40,9 @@ module Server
 
         send_broadcast "deploy_binomo_channel", "Start"
         system "cucumber ./features/deploy.feature"
+        puts " Finished deploy binomo".red
         send_broadcast "deploy_binomo_channel", "Complete"
 
-        puts " Finished deploy binomo".red
-        ActionCable.server.broadcast "deploy_binomo_channel", message: "Deploy Binomo staging done, #{ENV['branch']}", status: 200
         ENV['log'] = ""
       end
 

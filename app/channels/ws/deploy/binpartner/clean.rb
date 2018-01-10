@@ -16,12 +16,20 @@ module Server
         if msg_json[:write_log] == true
           ENV['log'] = "> ../deploy/logs/binpartner/#{ENV['staging']}-#{count_deploy.split[4].gsub(/branch=/, '').gsub(/\//, '-')}-#{Time.now.strftime('%Y-%m-%d_%H-%M-%S')}.log 2>&1"
         end
+        
+        if msg_json[:clear_releases] == true
+          system "ssh binpartner@#{@stage_deploy}.binpartner.com \"rm -rf /home/binpartner/binpartner.com/releases/*\""
+          puts "All releases clear".red
+        end
+
         puts
         print count_deploy.green + " #{ENV['log'].to_s}".green
 
+        send_broadcast "deploy_binpartner_channel", "Start"
         system "cucumber ./features/deploy.feature"
         puts " Finished deploy partner".red
-        ActionCable.server.broadcast "deploy_binomo_channel", message: "Deploy Binpartner staging done, #{ENV['branch']}", status: 200
+        send_broadcast "deploy_binpartner_channel", "Complete"
+
         ENV['log'] = ""
       end
     end

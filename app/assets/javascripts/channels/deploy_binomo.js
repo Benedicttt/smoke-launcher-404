@@ -7,16 +7,26 @@ $(function() {
       disconnected: function() {},
 
       received: function() {
-        if ($.parseJSON(event.data)['message'] == "Start") {
-          $('.ws label').text("Start deploy Binomo " + $("#first-binomo").val() + ", branch=" +
-          $('#last-branch').val().replace(/ /g, "") + " ") .css("color", "yellow")
-        }
+        branch_handler_binomo_start("Start")
+        branch_handler_binomo_done("Complete")
 
-        if ($.parseJSON(event.data)['message'] == "Complete") {
-          $('.ws label').text("Deploy Binomo " + $("#first-binomo").val() + " done, branch=" +
-          $('#last-branch').val().replace(/ /g, "")).css("color", "green")
-        }
+        branch_handler_binomo_start("Start change date")
+        branch_handler_binomo_done("Done change date")
+
+        function_handler_start("Start command memcached:flush")
+        function_handler_done("Done command memcached:flush")
+
+        function_handler_start("Start daemons:restart")
+        function_handler_done("Done daemons:restart")
+
+        function_handler_start("Start assets:precompile")
+        function_handler_done("Done assets:precompile")
+
+        function_handler_start("Start unicorn:restart")
+        function_handler_done("Done unicorn:restart")
+
       }
+
     })
 
     $('.pid_process_deploy').click(function(){

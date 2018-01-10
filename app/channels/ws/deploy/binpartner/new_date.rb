@@ -8,14 +8,19 @@ module Server
         clear_releases = msg_json[:clear_releases].to_s
 
             puts " Delete last date from  binpartner .env".red
-            system  "ssh binpartner@s2.binpartner.com \"cd binpartner.com/current && echo \"TEST_DATE=123\" >> .env\""
+            # system  "ssh binpartner@s2.binpartner.com \"cd binpartner.com/current && echo \"TEST_DATE=123\" >> .env\""
             puts "New global date => #{count_date_new_binpartner}".green
 
           puts ("Start change new date binpartner #{count_date_new_binpartner}")
-          system  "ssh binpartner@s2.binpartner.com \"cd binpartner.com/current && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binpartner}/\" .env\""
 
+          send_broadcast "deploy_binpartner_channel", "Start change date"
+
+          # system  "ssh binpartner@s2.binpartner.com \"cd binpartner.com/current && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binpartner}/\" .env\""
           puts ("Binpartner change done #{count_date_new_binpartner}")
           puts "Date Binpartner=> #{count_date_new_binpartner} change".green
+
+          send_broadcast "deploy_binpartner_channel", "Done change date"
+
       end
     end
   end

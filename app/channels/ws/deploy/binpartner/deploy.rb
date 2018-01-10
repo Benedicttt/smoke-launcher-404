@@ -36,6 +36,7 @@ module Server
           system "ssh binpartner@#{@stage_deploy}.binpartner.com \"rm -rf /home/binpartner/binpartner.com/releases/*\""
           puts "All releases clear".red
         end
+
         send_broadcast "deploy_binpartner_channel", "Start"
         system "cucumber ./features/deploy.feature"
         puts " Finished deploy partner".red

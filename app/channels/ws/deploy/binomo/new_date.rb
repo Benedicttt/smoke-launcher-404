@@ -8,20 +8,22 @@ module Server
         write_log = msg_json[:write_log].to_s
         clear_releases = msg_json[:clear_releases].to_s
 
-          system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && sed -i.env \"/TEST_DATE=.*/d\" .env\""
-          system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && sed -i.env \"/TEST_DATE=.*/d\" .env\""
+        send_broadcast "deploy_binomo_channel", "Start change date"
+
+          # system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && sed -i.env \"/TEST_DATE=.*/d\" .env\""
+          # system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && sed -i.env \"/TEST_DATE=.*/d\" .env\""
 
           puts " Delete last date from binomo .env".red
           puts "New global date => #{count_date_new_binomo}".green
 
-        ActionCable.server.broadcast "deploy_binomo_channel", message: "Start change new date binomo #{count_date_new_binomo}", status: 200
 
-          system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && echo \"TEST_DATE=123\" >> .env\""
-          system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binomo}/\" .env\""
+          # system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && echo \"TEST_DATE=123\" >> .env\""
+          # system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binomo}/\" .env\""
+          #
+          # system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && echo \"TEST_DATE=123\" >> .env\""
+          # system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binomo}/\" .env\""
 
-          system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && echo \"TEST_DATE=123\" >> .env\""
-          system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binomo}/\" .env\""
-        ActionCable.server.broadcast "deploy_binomo_channel", message: "Binomo change done #{count_date_new_binomo}", status: 200
+        send_broadcast "deploy_binomo_channel", "Done change date"
         puts "Date Binomo=> #{count_date_new_binomo} change".green
       end
     end

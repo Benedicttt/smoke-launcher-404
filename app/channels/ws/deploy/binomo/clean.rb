@@ -27,7 +27,7 @@ module Server
         end
 
         if msg_json[:clear_releases] == true
-          puts "All eleases clear".red
+          puts "All releases clear".red
           system "ssh binomo@#{@stage_deploy} \"rm -rf /home/binomo/binomo.com/releases/*\"" if ENV['staging'] == 'staging2'
           system "ssh binomo@#{@stage_deploy}-crm.binomo.com \"rm -rf /home/binomo/binomo.com/releases/*\" " if ENV['staging'] == 'staging2'
         end
@@ -38,9 +38,11 @@ module Server
         puts
         print count_deploy.green + " #{ENV['log'].to_s}".green
 
+        send_broadcast "deploy_binomo_channel", "Start"
         system "cucumber ./features/deploy.feature"
         puts " Finished deploy binomo".red
-        ActionCable.server.broadcast "deploy_binomo_channel", message: "Deploy Binomo staging done, #{ENV['branch']}", status: 200
+        send_broadcast "deploy_binomo_channel", "Complete"
+
         ENV['log'] = ""
       end
     end
