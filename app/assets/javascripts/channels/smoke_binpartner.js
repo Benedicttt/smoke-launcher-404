@@ -1,12 +1,20 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binpartner") {
     App.smoke_binpartner = App.cable.subscriptions.create("SmokeBinpartnerChannel", {
+      connected: function() {
+        $('.ws label').text("WebSocket connect").css("color", "yellow");
+      },
+
+      disconnected: function() {
+        $('.ws label').text("WebSocket disconnected").css("color", "red");
+      },
+
       received: function() {
         function_handler_start("Run Smoke test Binpartner")
         function_handler_done("Done Smoke test Binpartner")
 
         function_stop_stop("KILL PROCCESS TEST")
-        
+
       }
     });
 

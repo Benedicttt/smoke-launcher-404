@@ -1,12 +1,20 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-status-code") {
     App.status_code = App.cable.subscriptions.create("StatusCodeChannel", {
+      connected: function() {
+        $('.ws label').text("WebSocket connect").css("color", "yellow");
+      },
+
+      disconnected: function() {
+        $('.ws label').text("WebSocket disconnected").css("color", "red");
+      },
+
       received: function() {
         function_handler_start("Run Smoke test Status code page")
         function_handler_done("Done Smoke test Status code page")
 
         function_stop_stop("KILL PROCCESS TEST")
-        
+
     }
   });
 

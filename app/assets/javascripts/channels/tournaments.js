@@ -1,6 +1,14 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-tournaments") {
     App.tournaments = App.cable.subscriptions.create("TournamentsChannel", {
+      connected: function() {
+        $('.ws label').text("WebSocket connect").css("color", "yellow");
+      },
+
+      disconnected: function() {
+        $('.ws label').text("WebSocket disconnected").css("color", "red");
+      },
+
       received: function() {
         function_handler_start("Run Smoke test Tournament")
         function_handler_done("Done Smoke test Tournament")

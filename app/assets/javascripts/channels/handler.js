@@ -35,6 +35,7 @@
   function function_handler_done(data) {
       if ($.parseJSON(event.data)['message'] == data) {
         $('.ws label').text(data).css("color", "green")
+        $('.stop').click()
       }
   }
 

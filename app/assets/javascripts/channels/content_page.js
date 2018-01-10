@@ -6,18 +6,15 @@ $(function() {
         function_handler_done("Test data contents DONE")
 
         function_stop_stop("KILL PROCCESS TEST")
-        
-    }
-    });
 
-      $('.pid_process').click(function(){
-        $('.stop').click()
-        App.content_page.send(JSON.stringify({
-          pid_cucumber: "pid_cucumber"
-        }))
-      });
+    }});
 
-  };
+    $('.pid_process').click(function(){
+      $('.stop').click()
+      App.content_page.send(JSON.stringify({
+        pid_cucumber: "pid_cucumber"
+      }))
+    })};
 
     $('#smoke-content-pages').click(function(){
       $(".step_cucumber").click();

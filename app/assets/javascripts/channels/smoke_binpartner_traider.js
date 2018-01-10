@@ -1,23 +1,27 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binpartner-trader") {
     App.smoke_binpartner_traider = App.cable.subscriptions.create("SmokeBinpartnerTraiderChannel", {
+      connected: function() {
+        $('.ws label').text("WebSocket connect").css("color", "yellow");
+      },
+
+      disconnected: function() {
+        $('.ws label').text("WebSocket disconnected").css("color", "red");
+      },
+
       received: function() {
         function_handler_start("Run Smoke test Binpartner-traider")
         function_handler_done("Done Smoke test Binpartner-traider")
 
         function_stop_stop("KILL PROCCESS TEST")
-
-      }
-    });
+      }});
 
     $('.pid_process').click(function(){
       $('.stop').click()
       App.smoke_binpartner_traider.send(JSON.stringify({
         pid_cucumber: "pid_cucumber"
       }))
-    });
-
-};
+    })};
 
     $('#smoke-binpartner-trader').click(function(){
 

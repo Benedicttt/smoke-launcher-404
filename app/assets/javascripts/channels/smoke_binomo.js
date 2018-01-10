@@ -1,14 +1,22 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binomo") {
     App.smoke_binomo = App.cable.subscriptions.create("SmokeBinomoChannel", {
+
+      connected: function() {
+        $('.ws label').text("WebSocket connect").css("color", "yellow");
+        $('.reload-page').click(function(){window.location.reload(true);})
+      },
+
+      disconnected: function() {
+        $('.ws label').text("WebSocket disconnected").css("color", "red");
+      },
+
       received: function() {
         function_handler_start("Run Smoke test for Binomo")
         function_handler_done("Done Smoke test")
 
         function_stop_stop("KILL PROCCESS TEST")
-        
-      }
-    });
+     }});
 
     $('.pid_process').click(function(){
       $('.stop').click()
