@@ -34,5 +34,5 @@ $(function(){
 
         $('#generator_scenario_reg_traider_refcode').click()
     }
-  toggleInputVisibility()
+    toggleInputVisibility()
 })
