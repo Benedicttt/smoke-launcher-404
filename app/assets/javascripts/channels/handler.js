@@ -40,7 +40,7 @@
 
   function function_start_stop(data) {
       if ($.parseJSON(event.data)['message'] == data) {
-        $('.ws label').text(data).css("color", "red")
+        $('.ws label').text(data).css("color", "yellow")
       }
   }
 

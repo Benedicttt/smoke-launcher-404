@@ -1,9 +1,12 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binpartner-trader") {
-    App.smoke_binpartner_traider = App.cable.subscriptions.create("SmokeBinpartnerTraiderChannel"{
+    App.smoke_binpartner_traider = App.cable.subscriptions.create("SmokeBinpartnerTraiderChannel", {
       received: function() {
         function_handler_start("Run Smoke test Binpartner-traider")
         function_handler_done("Done Smoke test Binpartner-traider")
+
+        function_stop_stop("KILL PROCCESS TEST")
+
       }
     });
 

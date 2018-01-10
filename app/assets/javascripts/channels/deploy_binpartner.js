@@ -1,7 +1,6 @@
 $(function() {
   if ($('.ws_sender_binpartner').attr('id') == "deploy-project-binpartner") {
-    App.deploy_binpartner_channel = App.cable.subscriptions.create( "DeployBinpartnerChannel" ,
-    {
+    App.deploy_binpartner_channel = App.cable.subscriptions.create( "DeployBinpartnerChannel", {
 
       connected: function() {},
       disconnected: function() {},

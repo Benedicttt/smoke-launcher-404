@@ -23,6 +23,7 @@ class SmokeBinomoChannel < ApplicationCable::Channel
       system "for pid in $(ps -ef | grep rspec | grep -v grep | awk '{print $2}'); do kill $pid; done"
       pid = File.open("./features/temporary/pids/pid_cucumber", 'w'){ |f| f.puts("")}
       system "killall chrome && killall chromedriver"
+      send_broadcast "smoke_binomo", "KILL PROCCESS TEST"
     end
   end
 end

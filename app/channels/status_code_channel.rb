@@ -15,7 +15,7 @@ class StatusCodeChannel < ApplicationCable::Channel
       puts "#{msg_json}".yellow
       ::SmokeStatusCode.enqueue msg_json, priority: 10, run_at:  Time.now
     end
-    
+
     if msg_json[:pid_cucumber] == "pid_cucumber"
       pid = File.read("./features/temporary/pids/pid_cucumber").split[0..1000]
       puts "#{pid}".red; puts
@@ -23,7 +23,7 @@ class StatusCodeChannel < ApplicationCable::Channel
       system "for pid in $(ps -ef | grep rspec | grep -v grep | awk '{print $2}'); do kill $pid; done"
       pid = File.open("./features/temporary/pids/pid_cucumber", 'w'){ |f| f.puts("")}
       system "killall chrome && killall chromedriver"
-      ActionCable.server.broadcast "smoke_binomo", message: "Test aborting", status: 200
+      send_broadcast "status_code_channel", "KILL PROCCESS TEST"
     end
   end
 end

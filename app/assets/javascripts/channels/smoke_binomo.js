@@ -1,9 +1,12 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binomo") {
-    App.smoke_binomo = App.cable.subscriptions.create("SmokeBinomoChannel",{
+    App.smoke_binomo = App.cable.subscriptions.create("SmokeBinomoChannel", {
       received: function() {
         function_handler_start("Run Smoke test for Binomo")
         function_handler_done("Done Smoke test")
+
+        function_stop_stop("KILL PROCCESS TEST")
+        
       }
     });
 

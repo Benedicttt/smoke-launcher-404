@@ -1,9 +1,12 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-status-code") {
-    App.status_code = App.cable.subscriptions.create("StatusCodeChannel",
-    received: function() {
-      function_handler_start("Run Smoke test Status code page")
-      function_handler_done("Done Smoke test Status code page")
+    App.status_code = App.cable.subscriptions.create("StatusCodeChannel", {
+      received: function() {
+        function_handler_start("Run Smoke test Status code page")
+        function_handler_done("Done Smoke test Status code page")
+
+        function_stop_stop("KILL PROCCESS TEST")
+        
     }
   });
 

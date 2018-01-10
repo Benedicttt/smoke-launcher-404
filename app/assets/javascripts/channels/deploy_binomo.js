@@ -1,7 +1,6 @@
 $(function() {
   if ($('.ws_sender_binomo').attr('id') == "deploy-project-binomo") {
-    App.deploy_binomo_channel = App.cable.subscriptions.create( "DeployBinomoChannel",
-    {
+    App.deploy_binomo_channel = App.cable.subscriptions.create( "DeployBinomoChannel", {
 
       connected: function() {},
       disconnected: function() {},

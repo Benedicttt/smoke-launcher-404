@@ -1,11 +1,13 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-tournaments") {
-    App.tournaments = App.cable.subscriptions.create("TournamentsChannel",
-    received: function() {
-      function_handler_start("Run Smoke test Tournament")
-      function_handler_done("Done Smoke test Tournament")
-    }
-    });
+    App.tournaments = App.cable.subscriptions.create("TournamentsChannel", {
+      received: function() {
+        function_handler_start("Run Smoke test Tournament")
+        function_handler_done("Done Smoke test Tournament")
+
+        function_stop_stop("KILL PROCCESS TEST")
+      }
+   });
 
     $('.pid_process').click(function(){
       $('.stop').click()

@@ -4,6 +4,9 @@ $(function() {
       received: function() {
         function_handler_start("Test data contents RUN, expected...")
         function_handler_done("Test data contents DONE")
+
+        function_stop_stop("KILL PROCCESS TEST")
+        
     }
     });
 
