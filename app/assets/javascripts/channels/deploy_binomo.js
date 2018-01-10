@@ -10,8 +10,8 @@ $(function() {
         branch_handler_binomo_start("Start")
         branch_handler_binomo_done("Complete")
 
-        branch_handler_binomo_start("Start change date")
-        branch_handler_binomo_done("Done change date")
+        function_handler_start("Start change date")
+        function_handler_done("Done change date")
 
         function_handler_start("Start command memcached:flush")
         function_handler_done("Done command memcached:flush")
@@ -24,6 +24,12 @@ $(function() {
 
         function_handler_start("Start unicorn:restart")
         function_handler_done("Done unicorn:restart")
+
+        function_handler_start("Start unicorn:restart")
+        function_handler_done("Done unicorn:restart")
+
+        function_start_stop("Start KILL ALL PROCCESS")
+        function_stop_stop("Done KILL ALL PROCCESS")
 
       }
 

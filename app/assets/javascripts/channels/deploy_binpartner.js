@@ -7,28 +7,32 @@ $(function() {
       disconnected: function() {},
 
       received: function() {
-        if ($.parseJSON(event.data)['message'] == "Start") {
-          $('.ws label').text("Start deploy Binpartner " + $("#last-binpartner").val() + ", branch=" +
-          $('#last-branch').val().replace(/ /g, "") + " ") .css("color", "yellow")
-        }
+        branch_handler_binpartner_start("Start")
+        branch_handler_binpartner_done("Complete")
 
-        if ($.parseJSON(event.data)['message'] == "Complete") {
-          $('.ws label').text("Deploy Binpartner " + $("#last-binpartner").val() + " done, branch=" +
-          $('#last-branch').val().replace(/ /g, "")).css("color", "green")
-        }
+        function_handler_start("Start change date")
+        function_handler_done("Done change date")
 
-        if ($.parseJSON(event.data)['message'] == "Start change date") {
-          $('.ws label').text("Start change date " + $("#last-binpartner").val() + ", branch=" +
-          $('#last-branch').val().replace(/ /g, "") + " ") .css("color", "yellow")
-        }
+        function_handler_start("Start command memcached:flush")
+        function_handler_done("Done command memcached:flush")
 
-        if ($.parseJSON(event.data)['message'] == "Done change date") {
-          $('.ws label').text("Done change date " + $("#last-binpartner").val() + " done, branch=" +
-          $('#last-branch').val().replace(/ /g, "")).css("color", "green")
-        }
+        function_handler_start("Start daemons:restart")
+        function_handler_done("Done daemons:restart")
 
-      }
-    })
+        function_handler_start("Start assets:precompile")
+        function_handler_done("Done assets:precompile")
+
+        function_handler_start("Start unicorn:restart")
+        function_handler_done("Done unicorn:restart")
+
+        function_handler_start("Start unicorn:restart")
+        function_handler_done("Done unicorn:restart")
+
+        function_start_stop("Start KILL ALL PROCCESS")
+        function_stop_stop("Done KILL ALL PROCCESS")
+
+    }
+  })
 
 
     $('.pid_process_deploy').click(function() {
