@@ -27,6 +27,6 @@ RSpec.describe "Assets success" do
   it { expect(@assets['active']).to eq true}
   it { expect(@assets['enabled_for_demo']).to eq true}
   it { expect(@assets['daily']).to eq false}
-  it { expect(URI.parse(@assets['icon']['url']).host).to eq "#{ENV['stage'].gsub(/[.]/, '')}-a.binomo.com"}
+  it { expect(URI.parse(@assets['icon']['url']).host).to eq "#{ENV['stage'].gsub(/[.]/, '')}-as.binomo.com"}
   end
 end

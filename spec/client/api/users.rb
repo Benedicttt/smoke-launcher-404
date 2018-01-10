@@ -1,12 +1,12 @@
-# # require 'rubygems'
-# # require 'eventmachine'
-# # require 'faye/websocket'
-# # require 'json'
-# # require 'active_support'
-# # require 'active_support/time'
-# # require 'rest_client'
-# # require 'rails'
-# # require 'rails/all'
+require 'rubygems'
+require 'eventmachine'
+require 'faye/websocket'
+require 'json'
+require 'active_support'
+require 'active_support/time'
+require 'rest_client'
+require 'rails'
+require 'rails/all'
 # #
 # # class RequestWS
 # #   def self.send_ws(device, demo, asset, amount, deal_type, trend, count)
@@ -134,99 +134,126 @@
 #
 # #
 # #
-require 'rubygems'
-require 'eventmachine'
-require 'faye/websocket'
-require 'json'
-require "time"
-require 'active_support/time'
-require 'rest_client'
 
-class RequestWS
-  def send_ws(device, demo, asset, expire_at, amount, option_type, deal_type, trend, count,  stage, ref)
 
-    api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
-    @response_auth = RestClient::Request.execute(
-      method: :post,
-      url: api_sign_in,
-      headers: {
-        referer: "https://#{ENV['stage']}binomo.com",
-        content_type: 'text/plain',
-        params:{
-          # email: "na111taly2a.bogdanova@binomo.com",
-          # password: "023001qq",
-          email: "stage1.39e7439758cd6829@yopmail.com",
-          password: "Jemetr!@#()11Capybara123",
-          locale: "ru",
-          device: "web",
-          geo: "RU"
-        }
-      })
 
-      api_conf_up = "https://#{ENV['stage']}binomo.com/api/config"
-      @response = RestClient.get(
-        api_conf_up,
-        cookies: @response_auth.cookies,
-         params: {
-           locale: 'ru',
-           device: 'web'
-       }) { |response, request, result, &block| response }
 
-     authtoken = JSON.parse(@response_auth)['data']['authtoken']
-     device_id = JSON.parse(@response)['data']['device_id']
+#
+# require 'rubygems'
+# require 'eventmachine'
+# require 'faye/websocket'
+# require 'json'
+# require "time"
+# require 'active_support/time'
+# require 'rest_client'
+#
+# class RequestWS
+#   def send_ws(device, demo, asset, expire_at, amount, option_type, deal_type, trend, count,  stage, ref)
+#
+#     api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
+#     @response_auth = RestClient::Request.execute(
+#       method: :post,
+#       url: api_sign_in,
+#       headers: {
+#         referer: "https://#{ENV['stage']}binomo.com",
+#         content_type: 'text/plain',
+#         params:{
+#           # email: "na111taly2a.bogdanova@binomo.com",
+#           # password: "023001qq",
+#           email: "stage1.39e7439758cd6829@yopmail.com",
+#           password: "Jemetr!@#()11Capybara123",
+#           locale: "ru",
+#           device: "web",
+#           geo: "RU"
+#         }
+#       })
+#
+#       api_conf_up = "https://#{ENV['stage']}binomo.com/api/config"
+#       @response = RestClient.get(
+#         api_conf_up,
+#         cookies: @response_auth.cookies,
+#          params: {
+#            locale: 'ru',
+#            device: 'web'
+#        }) { |response, request, result, &block| response }
+#
+#      authtoken = JSON.parse(@response_auth)['data']['authtoken']
+#      device_id = JSON.parse(@response)['data']['device_id']
+#
+#     # connect ws
+#     EM.run {
+#       ws = Faye::WebSocket::Client.new("wss://#{ENV['stage'].sub(/[.]/, '')}-ws.binomo.com:8080/?vsn=2.0.0")
+#       ws.on :open do |event|
+#         phx_join = {
+#                      "topic":"base",
+#                      "event":"phx_join",
+#                      "ref":"1",
+#                      "join_ref":"1",
+#                      "payload": {
+#                        "device":device,
+#                        "device_id":device_id,
+#                        "authtoken":authtoken
+#                      },
+#                    }
+#
+#         message = JSON.dump(phx_join)
+#         ws.send(message)
+#       end
+#
+#       ws.on :message do |msg|
+#         params = {
+#                  "topic":"base",
+#                  "event":"create_deal",
+#                  "payload": {
+#                     "demo":demo,
+#                     "asset":asset,
+#                     "expire_at":expire_at,
+#                     "amount":amount,
+#                     "source":"mouse",
+#                     "trusted":false,
+#                     "created_at":Time.now.to_i,
+#                     "option_type":option_type,
+#                     "deal_type":deal_type,
+#                     "trend":trend,
+#                     "tournamend_id":"null"
+#                   },
+#                 "ref":ref,
+#                 "join_ref":"1"
+#               }
+#           count.times { sleep 1; ws.send(JSON.dump(params)) }
+#           puts msg.data
+#         # return JSON.parse(msg.data) if JSON.parse(msg.data)['payload']['status'] == 'open'
+#       end
+#     }
+#   end
+# end
+#
+#
+# ws          = RequestWS.new
+# stage       = ENV['stage']
+# expire_at  = (Time.now.to_i / 60).to_i * 60
+# expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
+#
+# ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "real", "put", 50, stage, "3"
 
-    # connect ws
-    EM.run {
-      ws = Faye::WebSocket::Client.new("wss://#{ENV['stage'].sub(/[.]/, '')}-ws.binomo.com:8080/?vsn=2.0.0")
-      ws.on :open do |event|
-        phx_join = {
-                     "topic":"base",
-                     "event":"phx_join",
-                     "ref":"1",
-                     "join_ref":"1",
-                     "payload": {
-                       "device":device,
-                       "device_id":device_id,
-                       "authtoken":authtoken
-                     },
-                   }
 
-        message = JSON.dump(phx_join)
-        ws.send(message)
-      end
 
-      ws.on :message do |msg|
-        params = {
-                 "topic":"base",
-                 "event":"create_deal",
-                 "payload": {
-                    "demo":demo,
-                    "asset":asset,
-                    "expire_at":expire_at,
-                    "amount":amount,
-                    "source":"mouse",
-                    "trusted":false,
-                    "created_at":Time.now.to_i,
-                    "option_type":option_type,
-                    "deal_type":deal_type,
-                    "trend":trend,
-                    "tournamend_id":"null"
-                  },
-                "ref":ref,
-                "join_ref":"1"
-              }
-          count.times { sleep 1; ws.send(JSON.dump(params)) }
-          puts msg.data
-        # return JSON.parse(msg.data) if JSON.parse(msg.data)['payload']['status'] == 'open'
-      end
+
+api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
+response = RestClient::Request.execute(
+  method: :post,
+  url: api_sign_in,
+  headers: {
+    referer: "https://#{ENV['stage']}binomo.com",
+    params:{
+        locale: "ru",
+        device: "web",
+        password: "123456q",
+        email: "sign_up.f604b9e1f9ec1a7b@yopmail.com",
+        geo: "RU",
+        device_id: $uuid,
+        app_version: 2.0
+      }
     }
-  end
-end
-
-
-ws          = RequestWS.new
-stage       = ENV['stage']
-expire_at  = (Time.now.to_i / 60).to_i * 60
-expire_at += Time.now.sec > 10 ? 2.minutes : 1.minutes
-
-ws.send_ws "web", false, "GOL/OTC", expire_at, 100,  "turbo", "real", "put", 50, stage, "3"
+   ) { |response, request, result, &block| response }
+   puts response.body
