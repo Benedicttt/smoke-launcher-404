@@ -1,8 +1,11 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-status-code") {
-    App.status_code = App.cable.subscriptions.create({
-      channel: "StatusCodeChannel"
-    });
+    App.status_code = App.cable.subscriptions.create("StatusCodeChannel",
+    received: function() {
+      function_handler_start("Run Smoke test Status code page")
+      function_handler_done("Done Smoke test Status code page")
+    }
+  });
 
     $('.pid_process').click(function(){
       $('.stop').click()
@@ -14,7 +17,7 @@ $(function() {
 };
 
     $('#smoke-status-code').click(function(){
-      $('.ws label').css('color','yellow').text("Tests runs, expect...")
+
       $(".step_cucumber").click();
       $(".start").click();
       window.scrollTo(0, 999999);

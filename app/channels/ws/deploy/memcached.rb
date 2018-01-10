@@ -10,7 +10,7 @@ module Server
 
         puts ("Start clear memcached")
         puts count_deploy.green
-        # system "cd qa && #{count_deploy}"
+        system "cd qa && #{count_deploy}"
         sleep 1
         puts " Finished".red
         puts ("Done clear memcached")

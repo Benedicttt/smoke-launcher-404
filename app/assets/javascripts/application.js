@@ -21,8 +21,4 @@
 //= require_tree ./channels
 
 "./app/assets/javascripts/"
-"./app/assets/javascripts/ws_params"
-"./app/assets/javascripts/ws_params/deploy"
-"./app/assets/javascripts/ws_params/deploy/binomo"
-"./app/assets/javascripts/ws_params/deploy/binpartner"
 "./app/assets/javascripts/homepage"

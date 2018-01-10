@@ -1,7 +1,10 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-tournaments") {
-    App.tournaments = App.cable.subscriptions.create({
-      channel: "TournamentsChannel"
+    App.tournaments = App.cable.subscriptions.create("TournamentsChannel",
+    received: function() {
+      function_handler_start("Run Smoke test Tournament")
+      function_handler_done("Done Smoke test Tournament")
+    }
     });
 
     $('.pid_process').click(function(){
@@ -14,7 +17,7 @@ $(function() {
 };
 
     $('#smoke-tournaments').click(function(){
-      $('.ws label').css('color','yellow').text("Tests runs, expect...")
+
       $(".step_cucumber").click();
       $(".start").click();
       window.scrollTo(0, 999999);

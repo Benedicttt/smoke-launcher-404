@@ -26,7 +26,10 @@ module Server
         end
 
         puts get_link.yellow
-        puts; system get_link
+        puts;
+        send_broadcast "smoke_binomo", "Run Smoke test Status code page"
+        system get_link
+        send_broadcast "smoke_binomo", "Done Smoke test Status code page"
       end
 
     end

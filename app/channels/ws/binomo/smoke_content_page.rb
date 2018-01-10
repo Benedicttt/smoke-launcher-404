@@ -26,8 +26,9 @@ module Server
       puts
       puts get_link.yellow
       puts
+      send_broadcast "content_page_channel", "Test data contents RUN, expected..."
       system get_link
-
+      send_broadcast "content_page_channel", "Test data contents DONE"
     end
   end
 end

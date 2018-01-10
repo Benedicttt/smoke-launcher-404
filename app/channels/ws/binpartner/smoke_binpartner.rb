@@ -2,7 +2,7 @@ require "./features/helpers/decor"
 
 module Server
   class SmokeBinpartner
-    attr_accessor :smoke_binpartner, :count_features, :thread, :clear_cache, :proxy_http, :proxy_server, :ip_address, :param_headless 
+    attr_accessor :smoke_binpartner, :count_features, :thread, :clear_cache, :proxy_http, :proxy_server, :ip_address, :param_headless
 
     def initialize(params)
       @params = params
@@ -25,7 +25,9 @@ module Server
         puts
         puts get_link.yellow
         puts
+        send_broadcast "smoke_binomo", "Run Smoke test Binpartner"
         system get_link
+        send_broadcast "smoke_binomo", "Done Smoke test Binpartner"
       end
     end
 

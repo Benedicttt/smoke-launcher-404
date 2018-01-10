@@ -1,7 +1,10 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-content-pages") {
-    App.content_page = App.cable.subscriptions.create({
-      channel: "ContentPageChannel"
+    App.content_page = App.cable.subscriptions.create("ContentPageChannel", {
+      received: function() {
+        function_handler_start("Test data contents RUN, expected...")
+        function_handler_done("Test data contents DONE")
+    }
     });
 
       $('.pid_process').click(function(){
@@ -14,7 +17,6 @@ $(function() {
   };
 
     $('#smoke-content-pages').click(function(){
-      $('.ws label').css('color','yellow').text("Tests runs, expect...")
       $(".step_cucumber").click();
       $(".start").click();
       window.scrollTo(0, 999999);
@@ -31,7 +33,7 @@ $(function() {
           param_headless: $('#generator_param_headless').val(),
           count_features: get_data()
       }));
-      
+
       return false;
     })
 

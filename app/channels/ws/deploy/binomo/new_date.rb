@@ -10,18 +10,18 @@ module Server
 
         send_broadcast "deploy_binomo_channel", "Start change date"
 
-          # system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && sed -i.env \"/TEST_DATE=.*/d\" .env\""
-          # system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && sed -i.env \"/TEST_DATE=.*/d\" .env\""
+          system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && sed -i.env \"/TEST_DATE=.*/d\" .env\""
+          system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && sed -i.env \"/TEST_DATE=.*/d\" .env\""
 
           puts " Delete last date from binomo .env".red
           puts "New global date => #{count_date_new_binomo}".green
 
 
-          # system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && echo \"TEST_DATE=123\" >> .env\""
-          # system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binomo}/\" .env\""
-          #
-          # system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && echo \"TEST_DATE=123\" >> .env\""
-          # system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binomo}/\" .env\""
+          system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && echo \"TEST_DATE=123\" >> .env\""
+          system  "ssh binomo@s2.binomo.com \"cd binomo.com/current/binomo.com && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binomo}/\" .env\""
+
+          system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && echo \"TEST_DATE=123\" >> .env\""
+          system  "ssh binomo@s2-crm.binomo.com \"cd binomo.com/current/crm.binomo.com && cat .env |  sed -i.env \"s/TEST_DATE=.*/TEST_DATE=#{count_date_new_binomo}/\" .env\""
 
         send_broadcast "deploy_binomo_channel", "Done change date"
         puts "Date Binomo=> #{count_date_new_binomo} change".green

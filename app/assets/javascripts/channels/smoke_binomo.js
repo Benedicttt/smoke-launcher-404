@@ -1,10 +1,10 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binomo") {
-    App.smoke_binomo = App.cable.subscriptions.create({
-
-      channel: "SmokeBinomoChannel",
-      received: console.log(App.smoke_binomo)
-
+    App.smoke_binomo = App.cable.subscriptions.create("SmokeBinomoChannel",{
+      received: function() {
+        function_handler_start("Run Smoke test for Binomo")
+        function_handler_done("Done Smoke test")
+      }
     });
 
     $('.pid_process').click(function(){
@@ -17,7 +17,7 @@ $(function() {
   };
 
     $('#smoke-binomo').click(function(){
-      $('.ws label').css('color','yellow').text("Tests runs, expect...")
+
       $(".step_cucumber").click();
       $(".start").click();
       window.scrollTo(0, 999999);

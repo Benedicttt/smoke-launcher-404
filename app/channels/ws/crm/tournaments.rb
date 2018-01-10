@@ -11,7 +11,7 @@ module Server
                   :count_pay_approve, :data_from, :data_to,
 
                   :thread, :geo, :clear_cache, :proxy_http,
-                  :proxy_server, :ip_address, :param_headless, :count_tournaments 
+                  :proxy_server, :ip_address, :param_headless, :count_tournaments
 
     def initialize(params)
       @params = params
@@ -36,8 +36,10 @@ module Server
         end
         puts
         puts get_link.yellow
-        puts; system get_link
-
+        puts;
+        send_broadcast "smoke_binomo", "Run Smoke test Tournament"
+        system get_link
+        send_broadcast "smoke_binomo", "Done Smoke test Tournament"
       end
     end
 

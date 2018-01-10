@@ -1,7 +1,10 @@
 $(function() {
   if ($('.ws_sender').attr('id') == "smoke-binpartner") {
-    App.smoke_binpartner = App.cable.subscriptions.create({
-      channel: "SmokeBinpartnerChannel"
+    App.smoke_binpartner = App.cable.subscriptions.create("SmokeBinpartnerChannel",
+    received: function() {
+      function_handler_start("Run Smoke test Binpartner")
+      function_handler_done("Done Smoke test Binpartner")
+    }
     });
 
     $('.pid_process').click(function(){
@@ -14,7 +17,7 @@ $(function() {
 };
 
     $('#smoke-binpartner').click(function(){
-      $('.ws label').css('color','yellow').text("Tests runs, expect...")
+
       $(".step_cucumber").click();
       $(".start").click();
       window.scrollTo(0, 999999);

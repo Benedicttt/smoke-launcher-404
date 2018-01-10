@@ -12,7 +12,7 @@ module Server
                   :count_comments, :count_tickets,
 
                   :thread, :geo, :clear_cache, :proxy_http,
-                  :proxy_server, :plus_rspec, :clear_cache, :ip_address, :param_headless 
+                  :proxy_server, :plus_rspec, :clear_cache, :ip_address, :param_headless
 
     def initialize(params)
       @params = params
@@ -34,8 +34,10 @@ module Server
       puts
       puts get_link.yellow
       puts
-      system get_link
 
+      send_broadcast "smoke_binomo", "Run Smoke test for Binomo"
+      system get_link
+      send_broadcast "smoke_binomo", "Done Smoke test"
     end
   end
 end
