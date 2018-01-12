@@ -9,6 +9,10 @@ require 'cucumber'
 require 'cucumber/rails'
 
 Given /^Pid process$/ do
+  def implicit_wait_set(time, driver)
+    driver.manage.timeouts.implicit_wait = time.to_i
+  end
+
   ENV['param_headless'] = "--verbose" if ENV['param_headless'] != "--headless"
   if ENV['driver'] == "firefox"
     DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym
@@ -26,8 +30,8 @@ Given /^Pid process$/ do
       ])
 
    DRIVER = Selenium::WebDriver.for ENV['driver'].to_sym, options: options
-   DRIVER.manage.timeouts.implicit_wait = 20
    DRIVER.manage.window.resize_to(1900, 768)
+   implicit_wait_set(60, DRIVER)
 
   elsif ENV['driver'] == "safari"
     client = Selenium::WebDriver::Remote::Http::Default.new
@@ -47,9 +51,6 @@ Given /^Pid process$/ do
   else
     ENV['staging'] = ENV['stage'].to_s.gsub(/s/, 'staging')
   end
-
-  Runner.call_crm('UserProvider.delete_all')
-  Runner.call_crm("User.find_by(email: 'reg27051987@gmail.com').update(email: SecureRandom.hex(10).to_s + '@yopmail.com')")
 end
 
 Given /^Pid process deploy branch$/ do
@@ -59,6 +60,8 @@ Given /^Pid process deploy branch$/ do
 end
 
 Given /^Pool ranning\?$/ do
+  Runner.call_crm('UserProvider.delete_all')
+  Runner.call_crm("User.find_by(email: 'reg27051987@gmail.com').update(email: SecureRandom.hex(10).to_s + '@yopmail.com')")
   $pool.shutdown && $pool.wait_for_termination
   DRIVER.quit
   puts_danger "Last threads? #{$pool.running?}"

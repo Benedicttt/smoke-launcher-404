@@ -12,7 +12,7 @@ RSpec.describe "Authorize and Sign_out success" do
             locale: "ru",
             device: "web",
             password: "12345q",
-            email: "test197@yopmail.com",
+            email: Cookies.where(stage: ENV['stage']).last.email,
           }
         })
     @sign_out = RestClient.get("https://#{ENV['stage']}binomo.com/api/sign_out", { params: { locale: 'ru', device: 'web' }, cookies: response.cookies })

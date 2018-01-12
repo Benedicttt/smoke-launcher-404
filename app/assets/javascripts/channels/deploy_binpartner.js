@@ -2,8 +2,15 @@ $(function() {
   if ($('.ws_sender_binpartner').attr('id') == "deploy-project-binpartner") {
     App.deploy_binpartner_channel = App.cable.subscriptions.create( "DeployBinpartnerChannel", {
 
-      connected: function() {},
-      disconnected: function() {},
+      connected: function() {
+        $('.ws label').text("WebSocket connect").css("color", "yellow");
+        $('.reload-page').click(function(){window.location.reload(true);})
+      },
+
+      disconnected: function() {
+        $('.ws label').text("WebSocket disconnected").css("color", "red");
+      },
+
 
       received: function() {
         branch_handler_binpartner_start("Start")

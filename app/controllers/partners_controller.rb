@@ -2,7 +2,7 @@ class PartnersController < ApplicationController
   before_action :set_post, only: [ :show, :edit, :update, :destroy]
 
   def index
-    @stat_part = Partner.paginate(:page => params[:page], :per_page => 16).order(created_at: :desc)
+    @stat_part = Partner.paginate(:page => params[:page], :per_page => 16).order(vreated_at: :desc)
   end
 
   def show

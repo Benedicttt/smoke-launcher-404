@@ -100,9 +100,8 @@ class RequestWS
 
         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'put'
         return JSON.parse(deals_real_list.body) if JSON.parse(msg.data)["payload"]['trend'] == 'call'
-
         return msg.data if JSON.parse(msg.data)["payload"]["status"] == "open"
-        # return puts msg.data if JSON.parse(msg.data)["payload"]["status"] == "error"
+        return puts msg.data if JSON.parse(msg.data)["payload"]["status"] == "error"
       end
     }
   end

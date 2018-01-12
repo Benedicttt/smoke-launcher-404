@@ -1,7 +1,10 @@
 When /^Make a deals asset GOL\/OTC and win bet$/ do
-    sleep 3
+    sleep 5
     # $deals.find_elements(:css, ".dropdown-caret")[2].click
+    implicit_wait_set(30, $deals)
+
     $deals.find_element(:css, "div.b-unit-dropdown-balance").click
+
     sleep 1
     find_and_click_selectors('span', 'FOR/HEIGHT', $deals)
     sleep 5

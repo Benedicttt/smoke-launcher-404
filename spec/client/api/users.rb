@@ -7,6 +7,7 @@ require 'active_support/time'
 require 'rest_client'
 require 'rails'
 require 'rails/all'
+require "net/ssh"
 # #
 # # class RequestWS
 # #   def self.send_ws(device, demo, asset, amount, deal_type, trend, count)
@@ -238,22 +239,119 @@ require 'rails/all'
 
 
 
+def self.crm_for_rspec(command)
+  Net::SSH.start("#{ENV['stage'].sub(/[.]/, '')}-crm.binomo.com", "binomo") do |ssh|
+    if ENV['stage'] == "s1."
+      ssh.exec! "cd ~/binomo.com/current/crm.binomo.com/ && RAILS_ENV=staging ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rails r -e staging \"#{command}\""
+    else
+      ssh.exec! "cd ~/binomo.com/current/crm.binomo.com/ && RAILS_ENV=staging#{ENV['stage'].sub(/[a-z]/, '').sub(/[.]/, '')} ~/.rvm/bin/rvm ruby-2.4.0@binomo do bundle exec rails r -e staging#{ENV['stage'].sub(/[a-z]/, '').sub(/[.]/, '')} \"#{command}\""
+    end
+  end
+end
 
-api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
-response = RestClient::Request.execute(
-  method: :post,
-  url: api_sign_in,
-  headers: {
-    referer: "https://#{ENV['stage']}binomo.com",
-    params:{
-        locale: "ru",
-        device: "web",
-        password: "123456q",
-        email: "sign_up.f604b9e1f9ec1a7b@yopmail.com",
+
+def participate(locale, device, password, email, id)
+  api_sign_up = "https://#{ENV['stage']}binomo.com/api/sign_up"
+  reg = RestClient::Request.execute(
+    method: :post,
+    url: api_sign_up,
+    headers: {
+      referer: "https://#{ENV['stage']}binomo.com",
+      params: {
+        locale: locale,
+        device: device,
+        password: password,
+        i_agree: true,
+        email: email,
+        currency: "USD",
         geo: "RU",
-        device_id: $uuid,
-        app_version: 2.0
+        country: "RU"
       }
     }
-   ) { |response, request, result, &block| response }
-   puts response.body
+     ) { |response, request, result, &block| response }
+
+  user_id = JSON.parse(reg.body)['data']['id']
+
+   api_agree_risk = "https://#{ENV['stage']}binomo.com/api/profile/agree_risk"
+   activate = RestClient::Request.execute(
+     method: :get,
+     url: api_agree_risk,
+     headers: reg.cookies,
+       params: {
+         locale: locale,
+         device: device,
+         demo: false,
+         geo: "RU"
+     }) { |response, request, result, &block|  response }
+
+  api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
+  auth = RestClient::Request.execute(
+    method: :post,
+    url: api_sign_in,
+    headers: {
+      cookies: Config.new.get_config("web", "ru"),
+      referer: "https://#{ENV['stage']}binomo.com",
+      params:{
+          locale: locale,
+          device: device,
+          password: password,
+          email: email,
+          geo: "RU"
+        }
+      }
+     ) { |response, request, result, &block| response}
+
+     puts auth.body
+     puts
+     puts
+
+
+     api_conf_up = "https://#{ENV['stage']}binomo.com/api/config"
+     @response = RestClient.get(
+       api_conf_up,
+       cookies: auth.cookies,
+        params: {
+          locale: 'ru',
+          device: 'web'
+      }) { |response, request, result, &block| response }
+
+      device_id = JSON.parse(@response)['data']['device_id']
+
+      puts @response.body
+      puts
+      puts
+
+  Runner.crm_for_rspec("User.find(#{user_id.to_s}).update(balance: \"30000\", email_verified: true)")
+
+
+
+  api_participate = "https://#{ENV['stage']}binomo.com/api/v2/tournaments/#{id}/tournament_users"
+  api_participate = RestClient::Request.execute(
+    method: :post,
+    url: api_participate,
+    headers: {
+      cookies: auth.cookies,
+      referer: "https://#{ENV['stage']}binomo.com",
+      params:{
+          locale: locale,
+          device: device,
+          device_id: device_id,
+          geo: "RU"
+        }
+      }
+     ) { |response, request, result, &block| response }
+
+     puts api_participate.body
+end
+
+
+
+
+
+email = "#{SecureRandom.hex(20)}@yopmail.com"
+password = "12345q"
+device = "web"
+locale = "ru"
+id = 1377
+
+participate(locale, device, password, email, id)
