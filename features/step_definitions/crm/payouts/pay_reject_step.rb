@@ -4,5 +4,7 @@ Given /^Visit the page for payments application rejection$/ do
 end
 
 When /^Rejection of an application and Application is rejected$/ do
+  implicit_wait_set(5, DRIVER)
   PaymentReject.run
+  implicit_wait_set(60, DRIVER)
 end
