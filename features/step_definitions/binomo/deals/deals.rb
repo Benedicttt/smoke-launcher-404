@@ -20,10 +20,11 @@ When /^Use demo type$/ do
   $deals.find_element(:css, "div.b-unit-dropdown-balance").click
   sleep 1
   $deals.find_elements(:css, ".i-unit-account-type")[1].click
-  sleep 0.5
-
+  sleep 2
   begin
-    $deals.find_element(:css, ".w-unit-account-mode-changed > button.btn-primary").click
+    implicit_wait_set(10, DRIVER)
+    $deals.find_elements(:css, ".w-unit-account-mode-changed > button.btn-primary")[0].click
+    implicit_wait_set(60, DRIVER)
   rescue Selenium::WebDriver::Error::NoSuchElementError
     puts_info "No found modal"
   end
@@ -34,10 +35,12 @@ When /^Use real type$/ do
   $deals.find_element(:css, "div.b-unit-dropdown-balance").click
   sleep 1
   $deals.find_elements(:css, ".i-unit-account-type")[0].click
-  sleep 0.5
+  sleep 2
 
   begin
-    $deals.find_element(:css, ".w-unit-account-mode-changed > button.btn-primary").click
+    implicit_wait_set(10, DRIVER)
+    $deals.find_elements(:css, ".w-unit-account-mode-changed > button.btn-primary")[0].click
+    implicit_wait_set(60, DRIVER)
   rescue Selenium::WebDriver::Error::NoSuchElementError
     puts_info "No found modal"
   end
