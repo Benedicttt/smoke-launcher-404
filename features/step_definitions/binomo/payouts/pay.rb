@@ -15,7 +15,7 @@ end
 
 When /^The creation of an application for withdrawal for CardPay/ do
   $pool.post do
-    Payouts.new.include(:pay, "Credit card : 400000...0002", "4000000000000002") if ENV['stage'] == "s1"
-    Payouts.new.include(:pay, "Credit card TR : 400000...0002", "4000000000000002") if ENV['stage'] == "s2"
+    Payouts.new.include(:card_pay, "Credit card : 400000...0002", "4000000000000002") if ENV['stage'] == "s1"
+    Payouts.new.include(:card_pay, "Credit card TR : 400000...0002", "4000000000000002") if ENV['stage'] == "s2"
   end
 end
