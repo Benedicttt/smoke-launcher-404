@@ -20,9 +20,9 @@ class Payouts
     sleep 2
 
     ENV['count_payouts'].to_i.times do |i|
-      sleep 0.5
+      sleep 2
       driver.find_element(:css, "i.caret").click
-      sleep 1
+      sleep 2
 
       begin
         (0..2).map do |elem|
