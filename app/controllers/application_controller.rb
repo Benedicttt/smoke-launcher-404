@@ -33,4 +33,5 @@ class ApplicationController < ActionController::Base
   def currency
     @currency = @common_setting["currency"].values.map { |i| i[1] }
   end
+
 end

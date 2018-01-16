@@ -1,4 +1,5 @@
 function get_data(checkbox){
+  
     var str = "";
 
     if ($(".chk option").is('option:selected') == true){

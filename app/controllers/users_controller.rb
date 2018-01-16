@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   before_action :set_post, only: [ :show, :edit, :update, :destroy]
 
   def index
-    @stat = User.paginate(:page => params[:page], :per_page => 16).order(created_at: :desc)
+    @stat = User.where(stage_number: params['stage_number'])
+                .paginate(:page => params[:page], :per_page => 16)
+                .order(created_at: :desc)
   end
 
   def show
