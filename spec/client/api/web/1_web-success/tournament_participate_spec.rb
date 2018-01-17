@@ -1,6 +1,6 @@
 require 'rails_helper'
 include RSpec
-  #
+  # #
   # shared_context "variable_configure" do
   #   let! :ws { RequestWsError.new }
   #   let! :stage { ENV['stage'] }
@@ -8,7 +8,7 @@ include RSpec
   #   let! :tournaments { Tournaments.new.api("ru", "web") }
   #
   #   let! :id do
-  #     id = TournamentsIds.where(stage: ENV['stage']).last.tournament_id - 1
+  #     id = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
   #   end
   #
   #   let! :expire_at do
@@ -35,7 +35,7 @@ include RSpec
   #   let :deal_type_trend { [{"validation"=>"inclusion", "field"=>"deal_type"}, {"validation"=>"inclusion", "field"=>"trend"}] }
   #   let :finished { [{"validation"=>"finished", "field"=>"tournament"}] }
   # end
-  #
+
   # describe "Api tournaments error" do
   #   include_context "variable_configure"
   #   before do
@@ -58,7 +58,7 @@ include RSpec
   #     it { expect($result['payload']['response']['reasons']).to eq deal_type_trend }
   #   end
   # end
-  #
+
   # describe "Api tournaments error" do
   #   include_context "variable_configure"
   #   before do
@@ -157,14 +157,10 @@ include RSpec
   #     it { expect($result['payload']['response']['reasons']).to eq expire_at_error }
   #   end
   # end
-
+#
 RSpec.describe "Api tournaments success" do
   before(:context) do
     @tournaments = Tournaments.new.api("ru", "web")
-    # ids = []
-    # # ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru"  }
-    # ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['tournament_type'] == "sum_deals" }
-    # @id_max = ids[0].compact.max
     @id_max = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
 
     print "#{@id_max} ".yellow
@@ -183,77 +179,77 @@ RSpec.describe "Api tournaments success" do
   end
 
   context "params list tournament" do
-    # it { expect(@tournaments['success']).to eq true }
-    # it { expect(@tournaments['errors']).to eq [] }
-    # it { expect(@tournaments['data'].class).to eq Array }
-    # it { expect(@tournaments['data'][0]['id']).to be_a Integer  }
-    # it { expect(@tournaments['data'][0]['name']).to be_a String  }
-    # it { expect(@tournaments['data'][0]['content']).to be_a(String) }
-    # it { expect(@tournaments['data'][0]['name'].nil?).to eq false }
-    # it { expect(@tournaments['data'][0]['content'].nil?).to eq false }
-    # it { expect(@tournaments['data'][0]['banner_preview']).to be_a String }
-    # it { expect(@tournaments['data'][0]['banner_preview'].nil?).to eq false }
-    # it { expect(@tournaments['data'][0]['count_winners']).to be_a Integer }
-    #
-    # it { expect(@tournaments['data'][0]['count_winners'].to_i > 0).to eq true }
-    # it { expect(@tournaments['data'][0]['count_winners'].to_i).to eq 5 }
-    # it { expect(@tournaments['data'][0]['user_involved']).to eq false }
-    # it { expect(@tournaments['data'][0]['users_count']).to be_a Integer  }
-    # it { expect(@tournaments['data'][0]['initial_balance']).to be_a Integer  }
-    # # it { expect(@tournaments['data'][0]['participation_fees'].values[0]).to be_a Hash }
-    # # it { expect(@tournaments['data'][0]['participation_fees'].values[0]).to be_a 10000 }
-    # it { expect(@tournaments['data'][0]['prize_fund']).to be_a Hash }
-    #
-    # it { expect(@tournaments['data'][0]['timeline_status']).to eq "actual" }
-    # it { expect(@tournaments['data'][0]['currency_iso']).to eq nil }
+    it { expect(@tournaments['success']).to eq true }
+    it { expect(@tournaments['errors']).to eq [] }
+    it { expect(@tournaments['data'].class).to eq Array }
+    it { expect(@tournaments['data'][0]['id']).to be_a Integer  }
+    it { expect(@tournaments['data'][0]['name']).to be_a String  }
+    it { expect(@tournaments['data'][0]['content']).to be_a(String) }
+    it { expect(@tournaments['data'][0]['name'].nil?).to eq false }
+    it { expect(@tournaments['data'][0]['content'].nil?).to eq false }
+    it { expect(@tournaments['data'][0]['banner_preview']).to be_a String }
+    it { expect(@tournaments['data'][0]['banner_preview'].nil?).to eq false }
+    it { expect(@tournaments['data'][0]['count_winners']).to be_a Integer }
+
+    it { expect(@tournaments['data'][0]['count_winners'].to_i > 0).to eq true }
+    it { expect(@tournaments['data'][0]['count_winners'].to_i).to eq 5 }
+    it { expect(@tournaments['data'][0]['user_involved']).to eq false }
+    it { expect(@tournaments['data'][0]['users_count']).to be_a Integer  }
+    it { expect(@tournaments['data'][0]['initial_balance']).to be_a Integer  }
+    # it { expect(@tournaments['data'][0]['participation_fees'].values[0]).to be_a Hash }
+    # it { expect(@tournaments['data'][0]['participation_fees'].values[0]).to be_a 10000 }
+    it { expect(@tournaments['data'][0]['prize_fund']).to be_a Hash }
+
+    it { expect(@tournaments['data'][0]['timeline_status']).to eq "actual" }
+    it { expect(@tournaments['data'][0]['currency_iso']).to eq nil }
   end
 
 # participate user in tournaments id
   context "param parcitpation" do
-    # it { expect(@partcitipate['success']).to eq true }
-    # it { expect(@partcitipate['errors']).to eq [] }
+    it { expect(@partcitipate['success']).to eq true }
+    it { expect(@partcitipate['errors']).to eq [] }
   end
 
 # # show list tournamnent id
   context "param parcitpants" do
-    # # it { puts; puts @partcitipants; puts }
-    # it { expect(@partcitipants['success']).to eq true }
-    # it { expect(@partcitipants['errors']).to eq [] }
-    #
-    #  it { expect(@partcitipants['data']['content']).to eq "Tournaments RU for rspec" }
-    #  it { expect(@partcitipants['data']['banner_content']).to be_a String }
-    #  it { expect(@partcitipants['data']['date_to']).to be_a String }
-    #  it { expect(@partcitipants['data']['date_from']).to be_a String }
-    #  it { expect(@partcitipants['data']['user_involved']).to eq true }
-    #  it { expect(@partcitipants['data']['user_position']).to be_a Integer }
-    #  it { expect(@partcitipants['data']['users_count']).to be_a Integer }
-    #  it { expect(@partcitipants['data']['initial_balance']).to eq 10000 }
-    #  it { expect(@partcitipants['data']['count_winners']).to eq 5 }
-    #  it { expect(@partcitipants['data']['tournament_type']).to eq "sum_deals" }
-    #  it { expect(@partcitipants['data']['tournament_type']).to be_a String }
-    #  it { expect(@partcitipants['data']['tournament_type_key']).to eq "tournaments.page.sum_deals" }
-    #  it { expect(@partcitipants['data']['timeline_status']).to eq "actual" }
-    #  it { expect(@partcitipants['data']['prizes']).to be_a Array }
-    #  it { expect(@partcitipants['data']['currency_iso']).to eq "USD" }
-    #  it { expect(@partcitipants['data']['rebuy']).to eq true }
-    #  it { expect(@partcitipants['data']['rebuy_amount']).to eq 1000 }
-    #  it { expect(@partcitipants['data']['rebuy_max_balance']).to eq 10000 }
-    #  it { expect(@partcitipants['data']['rebuy_fees'].values[0]).to eq 10000 }
+    # it { puts; puts @partcitipants; puts }
+    it { expect(@partcitipants['success']).to eq true }
+    it { expect(@partcitipants['errors']).to eq [] }
+
+     it { expect(@partcitipants['data']['content']).to eq "Tournaments RU for rspec" }
+     it { expect(@partcitipants['data']['banner_content']).to be_a String }
+     it { expect(@partcitipants['data']['date_to']).to be_a String }
+     it { expect(@partcitipants['data']['date_from']).to be_a String }
+     it { expect(@partcitipants['data']['user_involved']).to eq true }
+     it { expect(@partcitipants['data']['user_position']).to be_a Integer }
+     it { expect(@partcitipants['data']['users_count']).to be_a Integer }
+     it { expect(@partcitipants['data']['initial_balance']).to eq 10000 }
+     it { expect(@partcitipants['data']['count_winners']).to eq 5 }
+     it { expect(@partcitipants['data']['tournament_type']).to eq "sum_deals" }
+     it { expect(@partcitipants['data']['tournament_type']).to be_a String }
+     it { expect(@partcitipants['data']['tournament_type_key']).to eq "tournaments.page.sum_deals" }
+     it { expect(@partcitipants['data']['timeline_status']).to eq "actual" }
+     it { expect(@partcitipants['data']['prizes']).to be_a Array }
+     it { expect(@partcitipants['data']['currency_iso']).to eq "USD" }
+     it { expect(@partcitipants['data']['rebuy']).to eq true }
+     it { expect(@partcitipants['data']['rebuy_amount']).to eq 1000 }
+     it { expect(@partcitipants['data']['rebuy_max_balance']).to eq 10000 }
+     it { expect(@partcitipants['data']['rebuy_fees'].values[0]).to eq 10000 }
   end
 
   context "param parcitpants" do
     it { expect(@show['id']).to eq @id_max }
-    # it { expect(@show['id']).to be_a Integer }
-    # it { expect(@show['name']).to be_a String }
-    # it { expect(@show['content']).to be_a String }
-    # it { expect(@show['banner_preview']).to be_a String }
-    # it { expect(@show['count_winners']).to be_a Integer }
-    # it { expect(@show['date_to']).to be_a String }
-    # it { expect(@show['date_from']).to be_a String }
-    # it { expect(@show['user_involved']).to eq true }
-    # it { expect(@show['users_count']).to be_a Integer }
-    #
-    # it { expect(@show['initial_balance']).to eq 10000 }
+    it { expect(@show['id']).to be_a Integer }
+    it { expect(@show['name']).to be_a String }
+    it { expect(@show['content']).to be_a String }
+    it { expect(@show['banner_preview']).to be_a String }
+    it { expect(@show['count_winners']).to be_a Integer }
+    it { expect(@show['date_to']).to be_a String }
+    it { expect(@show['date_from']).to be_a String }
+    it { expect(@show['user_involved']).to eq true }
+    it { expect(@show['users_count']).to be_a Integer }
+
+    it { expect(@show['initial_balance']).to eq 10000 }
     it { expect(@show['timeline_status']).to eq "actual" }
   end
 end

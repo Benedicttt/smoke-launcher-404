@@ -31,7 +31,7 @@ class Payouts
         end
 
       rescue
-        puts_danger "1 No find type card #{number_full}" if i == 0
+        puts_danger "No find type card #{number_full}" if i == 0
         driver.quit
       end
 
@@ -58,7 +58,7 @@ class Payouts
           driver.find_element(:css, '.btn-lg.btn-primary').click
           sleep 0.7
       rescue
-        puts_danger " No find card #{number_small}"
+        puts_danger "No find card #{number_small}"
         driver.quit
       end
     end

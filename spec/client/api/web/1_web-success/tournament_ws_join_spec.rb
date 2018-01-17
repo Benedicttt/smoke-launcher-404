@@ -62,12 +62,14 @@ RSpec.describe "join session" do
      JSON.parse(deals_real_list.body)['data'].each_with_index do |value, num|
        @parses = JSON.parse(value[num].to_json)
      end
-
+     sleep 2
      @parses.map { |deals| put << deals if deals['status'] == 'won' && deals['trend'] == 'put' }.compact
      @parses.map { |deals| call << deals if deals['status'] == 'lost' && deals['trend'] == 'call' }.compact
 
      @put = put[0]
      @call = call[0]
+
+
   end
 
   context "param create deal" do

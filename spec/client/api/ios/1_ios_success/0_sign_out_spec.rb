@@ -27,10 +27,14 @@ RSpec.describe "Authorize and Sign_out success" do
      password_two = "123456q"
 
      @result = sign_in_ios(email, password)
-     if @result['errors'][0]['field'] == "sign_in"
-       @result = sign_in_ios(email, password_two)
+     begin
+       if @result['errors'][0]['field'] == "sign_in"
+         @result = sign_in_ios(email, password_two)
+       end
+     rescue
      end
 
+     
     @sign_out = RestClient::Request.execute(
       method: :get,
       url: "https://#{ENV['stage']}binomo.com/api/sign_out",

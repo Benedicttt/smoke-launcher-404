@@ -45,7 +45,6 @@ class Tournaments
         }
        ) { |response, request, result, &block| response}
 
-       puts JSON.parse(api_participate.body)
        return JSON.parse(api_participate.body)
   end
 
