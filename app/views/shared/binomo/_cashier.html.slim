@@ -1,10 +1,10 @@
 .row
   .col-xs-4
-    = f.input :scenario, label:false , as: :check_boxes, collection: ['cashier' ], required: false
+    = f.input :scenario, label:false , as: :check_boxes, collection: [ 'cashier' ], required: false
     = f.input :scenario, label:false , as: :check_boxes, collection: [ 'wire capital decline', 'wire capital success' ].reverse, required: false
     = f.input :scenario, label:false , as: :check_boxes, collection: [ 'credit card decline', 'credit card success' ].reverse, required: false
     = f.input :scenario, label:false , as: :check_boxes, collection: [ 'card pay decline', 'card pay success' ].reverse, required: false
-    = f.input :scenario, label:false , as: :check_boxes, collection: ['cancel bonus' ], required: false
+    = f.input :scenario, label:false , as: :check_boxes, collection: [ 'cancel bonus' ], required: false
 
     .col-xs-4
       .row

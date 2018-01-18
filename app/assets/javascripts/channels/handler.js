@@ -50,3 +50,34 @@
         $('.ws label').text(data).css("color", "red")
       }
   }
+
+  function branch_stages(number) {
+   $("#" + number).click(function() {
+     $("#_" + number + "-binomo, #_" + number + "-binpartner").val("Expected").css("color", "red").css("font-size", 16)
+
+      App.branch_binomo.send(JSON.stringify({
+        stage: $("#" + number).text()
+      }))
+     })
+   }
+
+   function received_param(stage) {
+     stage_number = $.parseJSON(event.data)['message']['stage']
+     branch = $.parseJSON(event.data)['message']['data']
+     platform = $.parseJSON(event.data)['message']['title']
+
+     if (stage_number == stage && platform == "binomo") {
+       $("#_" + stage + "-binomo").val(branch).css("color", "green").css("font-size", 16)
+    }
+
+    if (stage_number == stage && platform == "binpartner") {
+      $("#_" + stage + "-binpartner").val(branch).css("color", "green").css("font-size", 16)
+    }
+  }
+
+  function branch_stages_all(number) {
+     $("#_" + number + "-binomo, #_" + number + "-binpartner").val("Expected").css("color", "red").css("font-size", 16)
+      App.branch_binomo.send(JSON.stringify({
+        stage: $("#" + number).text()
+      }))
+   }
