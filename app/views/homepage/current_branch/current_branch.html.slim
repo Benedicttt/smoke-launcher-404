@@ -28,14 +28,35 @@ html
                   style: "font-size:18px; bottom:6px"
 
             th.col-xs-4
-                =f.input "#{num}-binomo",
-                       label: false,
-                    required: false
+                /=f.input "#{num}-binomo",
+                /       label: false,
+                /    required: false
+
+                =f.button :button, "",
+                 required: false,
+                     type: :button,
+                    class: "copy btn-sucess", "data-clipboard-target" => "#{num}-binomo", id: "#{num}-binomo"
+
+                  javascript:
+                    $(document).ready(function() {
+                      new ZeroClipboard($("##{num}-binomo"))
+                    });
 
             th.col-xs-4
-                =f.input "#{num}-binpartner",
-                      label: false,
-                   required: false
+                /=f.input "#{num}-binpartner",
+                /      label: false,
+                /   required: false
+
+                =f.button :button, "",
+                 required: false,
+                     type: :button,
+                    class: "copy btn-sucess", "data-clipboard-target" => "#{num}-binpartner", id: "#{num}-binpartner"
+
+                  javascript:
+                    $(document).ready(function() {
+                      new ZeroClipboard($("##{num}-binpartner"))
+                    });
+
 
     =button_tag "Check all",
        type: :button,

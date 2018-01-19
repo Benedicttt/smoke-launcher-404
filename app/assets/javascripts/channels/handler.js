@@ -53,7 +53,7 @@
 
   function branch_stages(number) {
    $("#" + number).click(function() {
-     $("#_" + number + "-binomo, #_" + number + "-binpartner").val("Expected").css("color", "red").css("font-size", 16)
+     $("#" + number + "-binomo, #" + number + "-binpartner").text("Expected").css("color", "red").css("font-size", 16)
 
       App.branch_binomo.send(JSON.stringify({
         stage: $("#" + number).text()
@@ -67,17 +67,22 @@
      platform = $.parseJSON(event.data)['message']['title']
 
      if (stage_number == stage && platform == "binomo") {
-       $("#_" + stage + "-binomo").val(branch).css("color", "green").css("font-size", 16)
+       $("#" + stage + "-binomo").text(branch).css("color", "green").css("font-size", 16)
     }
 
     if (stage_number == stage && platform == "binpartner") {
-      $("#_" + stage + "-binpartner").val(branch).css("color", "green").css("font-size", 16)
+      $("#" + stage + "-binpartner").text(branch).css("color", "green").css("font-size", 16)
     }
   }
 
   function branch_stages_all(number) {
-     $("#_" + number + "-binomo, #_" + number + "-binpartner").val("Expected").css("color", "red").css("font-size", 16)
+     $("#" + number + "-binomo, #" + number + "-binpartner").text("Expected").css("color", "red").css("font-size", 16)
       App.branch_binomo.send(JSON.stringify({
         stage: $("#" + number).text()
       }))
+   }
+
+   function small_click_all() { $.each(["s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+      function(index, value) { branch_stages_all(value)
+     })
    }
