@@ -1,19 +1,22 @@
 $(function() {
-    App.branch_binomo = App.cable.subscriptions.create( "BranchBinomoChannel", {
+    if ($('.panel-top').attr('id') == "current-branch") {
+      App.branch_binomo = App.cable.subscriptions.create( "BranchBinomoChannel", {
 
-      connected: function() {
-        small_click_all()
-      },
+        connected: function() {
+          small_click_all()
+        },
 
-      disconnected: function() {
-      },
+        disconnected: function() {
+        },
 
-      received: function() {
-        $.each(["s1", "s2", "s3", "s4", "s5", "s6", "s7"],
-          function(index, value) { received_param(value)
-        })
-      }
-})
+        received: function() {
+          $.each(["s1", "s2", "s3", "s4", "s5", "s6", "s7"],
+            function(index, value) { received_param(value)
+          })
+         }
+      })
+      console.log("sadsdsaa")
+    }
 
     $.each(["s1", "s2", "s3", "s4", "s5", "s6", "s7"],
       function(index, value) { branch_stages(value)

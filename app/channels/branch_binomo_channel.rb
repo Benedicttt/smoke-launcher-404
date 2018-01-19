@@ -10,24 +10,24 @@ class BranchBinomoChannel < ApplicationCable::Channel
 
     message = JSON.parse(message, :symbolize_names => true)
     stage = message[:stage]
+    if message[:page] == true
+      branch = runner_binomo(message[:stage].to_s)
+      send_broadcast "branch_binomo_channel", {
+          stage: stage,
+           data: branch.split[1],
+         author: branch.split.last,
+          title: "binomo"
+         }
 
-    branch = runner_binomo(message[:stage].to_s)
-    send_broadcast "branch_binomo_channel", {
-        stage: stage,
-         data: branch.split[1],
-       author: branch.split.last,
-        title: "binomo"
-       }
 
-
-    branch = runner_binpartner(message[:stage].to_s)
-    send_broadcast "branch_binomo_channel", {
-        stage: stage,
-         data: branch.split[1],
-       author: branch.split.last,
-        title: "binpartner"
-      } if branch.split[0] != "bash:"
-
+      branch = runner_binpartner(message[:stage].to_s)
+      send_broadcast "branch_binomo_channel", {
+          stage: stage,
+           data: branch.split[1],
+         author: branch.split.last,
+          title: "binpartner"
+        } if branch.split[0] != "bash:"
+    end
   end
 
   private
