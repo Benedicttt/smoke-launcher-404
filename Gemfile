@@ -63,6 +63,7 @@
 
     gem 'shoulda-matchers', require: false
     gem 'shoulda'
+    gem "swf_fu", "~> 2.0"
   end
 
   group :development do

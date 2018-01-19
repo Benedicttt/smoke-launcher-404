@@ -19,6 +19,7 @@
 //= require action_cable
 //= require_self
 //= require_tree ./channels
+//= require swf_fu
 
 "./app/assets/javascripts/"
 "./app/assets/javascripts/homepage"

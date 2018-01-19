@@ -7,7 +7,6 @@ class BranchBinomoChannel < ApplicationCable::Channel
   end
 
   def perform_action(message)
-
     message = JSON.parse(message, :symbolize_names => true)
     stage = message[:stage]
       branch = runner_binomo(message[:stage].to_s)
