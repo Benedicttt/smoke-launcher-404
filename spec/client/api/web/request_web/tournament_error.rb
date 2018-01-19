@@ -81,7 +81,6 @@ class RequestWsError
         demo_request = JSON.dump(params)
         count.times { ws.send demo_request; sleep 0.01 }
 
-        # puts msg.data
         $result = JSON.parse(msg.data)
         return $result if $result['payload']['status'] == 'error'
       end

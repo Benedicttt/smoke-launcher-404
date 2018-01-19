@@ -2,23 +2,39 @@ require 'rails_helper'
 
 RSpec.describe "Authorize and Sign_out success" do
   before(:context) do
-    api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
-    response = RestClient::Request.execute(
-      method: :post,
-      url: api_sign_in,
-      headers: {
-        referer: "https://#{ENV['stage']}binomo.com",
-        params: {
-          locale: "ru",
-          device: "ios",
-          app_version: "432",
-          device_id: $uuid,
-          password: "12345q",
-          email: Cookies.where(stage: ENV['stage']).last.email,
+    def sign_in_ios(email, password)
+      api_sign_in = "https://#{ENV['stage']}binomo.com/api/sign_in"
+      response = RestClient::Request.execute(
+        method: :post,
+        url: api_sign_in,
+        headers: {
+          referer: "https://#{ENV['stage']}binomo.com",
+          params: {
+            locale: "ru",
+            device: "ios",
+            app_version: "432",
+            device_id: $uuid,
+            email: email,
+            password: password
+          }
+        }) { |response| response }
 
-        }
-      })
+        return JSON.parse(response.body)
+     end
 
+     email = Cookies.where(stage: ENV['stage']).last.email
+     password = "12345q"
+     password_two = "123456q"
+
+     @result = sign_in_ios(email, password)
+     begin
+       if @result['errors'][0]['field'] == "sign_in"
+         @result = sign_in_ios(email, password_two)
+       end
+     rescue
+     end
+
+     
     @sign_out = RestClient::Request.execute(
       method: :get,
       url: "https://#{ENV['stage']}binomo.com/api/sign_out",
@@ -28,11 +44,8 @@ RSpec.describe "Authorize and Sign_out success" do
           device: 'ios',
           app_version: "432",
           device_id: $uuid,
-          password: "12345q",
-          authtoken: JSON.parse(response.body)['data']['authtoken'],
-          email: Cookies.where(stage: ENV['stage']).last.email
+          authtoken: @result['data']['authtoken'],
         },
-        cookies: response.cookies
       })
   end
 

@@ -1,6 +1,6 @@
 Then /^Result$/ do
   DRIVER.find_element(:css, '.button').click
-  sleep 1
+  sleep 1 
 
   uri = URI "#{DRIVER.current_url}"
   puts_info "#{link_report_id(DRIVER.current_url.to_s, "CRM")}"

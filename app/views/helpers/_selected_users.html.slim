@@ -1,0 +1,9 @@
+
+div.dropdown
+  button.btn.btn-xs.btn-sm.btn-primary type="button" data-toggle="dropdown"
+    | Stage
+  ul.dropdown-menu
+    - @stage_select.keys.each do |stage|
+      li
+        a href = "/users?stage_number=#{stage}"
+          = stage

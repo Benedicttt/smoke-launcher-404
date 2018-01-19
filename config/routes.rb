@@ -28,6 +28,10 @@ Rails.application.routes.draw do
 
     get 'deploy/branch', to: 'branch#branch'
     post 'deploy/branch', to: 'branch#create'
+
+    get 'deploy/branch/current', to: "current_branch#current_branch"
+    post 'deploy/branch/current', to: "current_branch#current_branch"
+
   end
 
   namespace :binpartner do

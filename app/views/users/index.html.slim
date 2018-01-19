@@ -17,7 +17,7 @@ p
           th.col-xs-1 Branch
           th Driver
           th ID
-          th Stage
+          th = render "helpers/selected_users"
           th For platform
           th Refcode
           th Tariff
@@ -140,7 +140,7 @@ p
 
 
 .digg_pagination
-  = will_paginate @stat , :page_links => true
+  = will_paginate @stat, :page_links => true
 
 .paginates
   = page_entries_info @stat

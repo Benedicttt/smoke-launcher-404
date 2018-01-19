@@ -19,7 +19,7 @@ p
         th Driver
         th ID
         th Email
-        th Stage
+        th = render "helpers/selected_partners"
         th Refcode
         th Phone
         th Nickname
@@ -34,7 +34,6 @@ p
         th IDS traiders
         th Report
     tbody
-
       - @stat_part.each do |post|
         tr
           th = post.created_at.to_s.gsub(/UTC/, "")

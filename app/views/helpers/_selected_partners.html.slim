@@ -1,0 +1,9 @@
+
+div.dropdown.selectpicker
+  button.btn.btn-xs.btn-sm.btn-primary type="button" data-toggle="dropdown"
+    | Stage
+  ul.dropdown-menu.inner.selectpicker
+    - @stage_select.keys.each do |stage|
+      li
+        a href = "/partners?stage_number=#{stage}"
+          = stage

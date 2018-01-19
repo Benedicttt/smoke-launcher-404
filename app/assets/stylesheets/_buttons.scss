@@ -37,3 +37,8 @@
   left: 335px;
   width: 40px;
 }
+
+.branch-page {
+  @extend %button;
+  left: 385px;
+}

@@ -9,7 +9,7 @@ RSpec.describe "Assets success" do
 
   it { expect(@assets['name']).to eq "FOR/HEIGHT"}
   it { expect(@assets['ric']).to eq "GOL/OTC"}
-  it { expect(@assets['type']).to eq 1}
+  # it { expect(@assets['type']).to eq 1}
   it { expect(@assets['payment_rate_turbo']).to be_in [ 83, 84 ] }
   it { expect(@assets['payment_rate_binary']).to be_in [ 84, 85 ] }
 
@@ -27,6 +27,6 @@ RSpec.describe "Assets success" do
   it { expect(@assets['active']).to eq true}
   it { expect(@assets['enabled_for_demo']).to eq true}
   it { expect(@assets['daily']).to eq false}
-  it { expect(URI.parse(@assets['icon']['url']).host).to eq "#{ENV['stage'].gsub(/[.]/, '')}-as.binomo.com"}
+  # it { expect(URI.parse(@assets['icon']['url']).host).to eq "#{ENV['stage'].gsub(/[.]/, '')}-as.binomo.com"}
   end
 end

@@ -1,0 +1,68 @@
+doctype html
+html
+  head
+
+.container.page_stage_ui style="font-size:18px; width:1450px"
+  =simple_form_for "" do |f|
+    br
+      .panel.panel-top
+        = render "shared/buttons"
+
+    br
+    br
+
+    table style="font-size:18px; width:1200px"
+      thead
+        tr
+          th style="font-size:22px; color:yellow" Stage
+          th style="font-size:22px; color:yellow" Author
+          th style="font-size:22px; color:yellow" Binomo
+          th style="font-size:22px; color:yellow" Binparter
+      tbody
+        - @stage_select.keys.each do |num|
+          tr
+            th.col-xs-1
+              =button_tag "#{num}",
+                   type: :button,
+                  class: "col-xs-12 btn btn-success",
+                     id: "#{num}",
+                  style: "font-size:18px; width:100px"
+
+            th.col-xs-1
+                =f.button :button, "",
+                     type: :button,
+                       id: "author-re-deploy-#{num}",
+                    style: "font-size:18px; bottom:6px; width:125px",
+                    class: "btn btn-primary"
+                 required: false
+
+
+            th.col-xs-4
+                =f.button :button, "",
+                 required: false,
+                     type: :button,
+                    style: "font-size:18px width:500px",
+                    class: "copy btn btn-danger", "data-clipboard-target" => "#{num}-binomo", id: "#{num}-binomo"
+
+
+            th.col-xs-4
+                =f.button :button, "",
+                 required: false,
+                     type: :button,
+                    style: "font-size:18px width:500px",
+                    class: "copy btn btn-danger", "data-clipboard-target" => "#{num}-binpartner", id: "#{num}-binpartner"
+
+                  javascript:
+                    $(document).ready(function() {
+                      new ZeroClipboard(
+                          $("##{num}-binpartner, ##{num}-binomo")
+                        )
+                    });
+
+    br
+    br
+    =button_tag "Check all",
+       type: :button,
+      class: "col-xs-1 btn btn-success",
+         id: "check-all",
+      style: "font-size:18px; left:100px"

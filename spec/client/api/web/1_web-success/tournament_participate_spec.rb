@@ -1,6 +1,6 @@
 require 'rails_helper'
 include RSpec
-  #
+  # #
   # shared_context "variable_configure" do
   #   let! :ws { RequestWsError.new }
   #   let! :stage { ENV['stage'] }
@@ -8,7 +8,7 @@ include RSpec
   #   let! :tournaments { Tournaments.new.api("ru", "web") }
   #
   #   let! :id do
-  #     id = TournamentsIds.where(stage: ENV['stage']).last.tournament_id - 1
+  #     id = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
   #   end
   #
   #   let! :expire_at do
@@ -35,7 +35,7 @@ include RSpec
   #   let :deal_type_trend { [{"validation"=>"inclusion", "field"=>"deal_type"}, {"validation"=>"inclusion", "field"=>"trend"}] }
   #   let :finished { [{"validation"=>"finished", "field"=>"tournament"}] }
   # end
-  #
+
   # describe "Api tournaments error" do
   #   include_context "variable_configure"
   #   before do
@@ -58,7 +58,7 @@ include RSpec
   #     it { expect($result['payload']['response']['reasons']).to eq deal_type_trend }
   #   end
   # end
-  #
+
   # describe "Api tournaments error" do
   #   include_context "variable_configure"
   #   before do
@@ -157,14 +157,10 @@ include RSpec
   #     it { expect($result['payload']['response']['reasons']).to eq expire_at_error }
   #   end
   # end
-
+#
 RSpec.describe "Api tournaments success" do
   before(:context) do
     @tournaments = Tournaments.new.api("ru", "web")
-    # ids = []
-    # # ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['name'].split[0] == "ru"  }
-    # ids << @tournaments['data'].map { |key, value| key['id'] if key['timeline_status'] ==  "actual" && key['tournament_type'] == "sum_deals" }
-    # @id_max = ids[0].compact.max
     @id_max = TournamentsIds.where(stage: ENV['stage']).last.tournament_id
 
     print "#{@id_max} ".yellow

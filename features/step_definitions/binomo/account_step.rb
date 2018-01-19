@@ -4,17 +4,16 @@ Given /^Visit to page \/account$/ do
 end
 
 When /^input all data to page account$/ do
-  DRIVER.execute_script("angular.element(document.querySelector('.first_name')).scope().vm.first_name = 'Selenium'")
-  DRIVER.execute_script("angular.element(document.querySelector('.last_name')).scope().vm.last_name = 'Selenium'")
-  DRIVER.execute_script("angular.element(document.querySelector('.nickname')).scope().vm.nickname = '#{(0..10).map { ('a'..'z').to_a[rand(26)] }.join}'")
-  # DRIVER.execute_script("angular.element(document.querySelector('.form-control')).scope().vm.phone = '79816548444'")
-  DRIVER.execute_script("document.getElementById('receive_news').checked = true")
-  DRIVER.execute_script("angular.element(document.querySelector('.last_name')).scope().vm.gender = 'female'")
+    DRIVER.execute_script("angular.element(document.querySelector('input[name=first_name]')).scope().vm.model = 'Selenium'")
+    DRIVER.execute_script("angular.element(document.querySelector('input[name=last_name]')).scope().vm.model = 'Selenium'")
+    DRIVER.execute_script("angular.element(document.querySelector('input[name=nickname]')).scope().vm.model = '#{(0..10).map { ('a'..'z').to_a[rand(26)] }.join}'")
+    DRIVER.execute_script("document.getElementById('receive_news').checked = true")
+    DRIVER.execute_script("angular.element(document.querySelectorAll('.item')).scope().vm.onChange = 'Female'")
 
-  DRIVER.execute_script("angular.element(document.querySelectorAll('.ui-select-container')).scope().vm.day = '02'")
-  DRIVER.execute_script("angular.element(document.querySelectorAll('.ui-select-container')).scope().vm.month = '02'")
-  DRIVER.execute_script("angular.element(document.querySelectorAll('.ui-select-container')).scope().vm.year = '1986'")
-  $nn = find_angular_text(DRIVER, ".nickname", "vm.nickname")
+    DRIVER.execute_script("angular.element(document.querySelectorAll('ui-n-select')).scope().vm.day = '02'")
+    DRIVER.execute_script("angular.element(document.querySelectorAll('ui-n-select')).scope().vm.month = '02'")
+    DRIVER.execute_script("angular.element(document.querySelectorAll('ui-n-select')).scope().vm.year = '1986'")
+    $nn = find_angular_text(DRIVER, "input[name=nickname]", "vm.model")
 end
 
 Then /^Update params to data page account$/ do
@@ -24,20 +23,21 @@ Then /^Update params to data page account$/ do
 end
 
 Given /^Assert to change params in page account$/ do
-  puts_info "Change first name --> #{find_angular_text(DRIVER, ".first_name", "vm.first_name") == "Selenium"},
-            Change last name --> #{find_angular_text(DRIVER, ".last_name", "vm.last_name") == "Selenium"},
-            Change nickname --> #{find_angular_text(DRIVER, ".nickname", "vm.nickname") == $nn},
-            Email --> #{find_angular_text(DRIVER, ".email", "vm.email") == User.where(stage_number: ENV['stage']).last.email},
-            Phone --> #{find_angular_text(DRIVER, "input", "vm.phone") == '79816548444'},
-            Gender --> #{DRIVER.execute_script("return angular.element(document.querySelector('.last_name')).scope().vm.gender == 'female'")},
-            Day --> #{find_angular_text(DRIVER, ".ui-select-container", "vm.day") == '02'},
-            Month --> #{find_angular_text(DRIVER, ".ui-select-container", "vm.month") == '02'},
-            Year --> #{find_angular_text(DRIVER, ".ui-select-container", "vm.year") == '1986'},
-            Receive news --> #{DRIVER.execute_script("return document.getElementById('receive_news').checked")}"
+  puts_info "Change first name --> #{find_angular_text(DRIVER, "input[name=first_name]", "vm.model") == "Selenium"},
+             Change last name --> #{find_angular_text(DRIVER, "input[name=last_name]", "vm.model") == "Selenium"},
+             Change nickname --> #{find_angular_text(DRIVER, "input[name=nickname]", "vm.model") == $nn},
+             Email --> #{find_angular_text(DRIVER, "input[name=email]", "vm.model") == User.where(stage_number: ENV['stage']).last.email},
+             Phone --> #{find_angular_text(DRIVER, "input[name=phone]", "vm.model") == '79816548444'},
+             Gender --> #{DRIVER.execute_script("return angular.element(document.querySelectorAll('.item')).scope().vm.onChange == 'Female'")},
+
+             Day --> #{find_angular_text(DRIVER, "ui-n-select", "vm.day") == '02'}
+             Month --> #{find_angular_text(DRIVER, "ui-n-select", "vm.month") == '02'},
+             Year --> #{find_angular_text(DRIVER, "ui-n-select", "vm.year") == '1986'},
+             Receive news --> #{DRIVER.execute_script("return document.getElementById('receive_news').checked")}"
 
   sleep 1
-  DRIVER.execute_script("angular.element(document.querySelector('.form-control')).scope().vm.phone = ''")
-  DRIVER.execute_script("angular.element(document.querySelector('.last_name')).scope().vm.gender = 'male'")
+  DRIVER.execute_script("angular.element(document.querySelector('input[name=phone]')).scope().vm.model = ''")
+  DRIVER.execute_script("angular.element(document.querySelectorAll('.item')).scope().vm.onChange = 'Male'")
   DRIVER.find_element(:css, "button[type=submit]").click
   sleep 2
   first_last_name

@@ -8,7 +8,7 @@ RSpec.describe "Assets types success" do
   context "params" do
     it {expect(@type['success']).to eq true}
     it {expect(@type['data']['types'][0]['id']).to be_a Integer }
-    it {expect(@type['data']['types'][0]['title']).to eq "not assets"}
+    # it {expect(@type['data']['types'][0]['title']).to eq "not assets"}
     it {expect(@type['data']['errors']).to eq nil}
   end
 end
@@ -21,7 +21,7 @@ RSpec.describe "Assets types success" do
   context "params" do
     it {expect(@type['success']).to eq true}
     it {expect(@type['data']['types'][0]['id']).to be_a Integer }
-    it {expect(@type['data']['types'][0]['title']).to eq "not assets"}
+    # it {expect(@type['data']['types'][0]['title']).to eq "not assets"}
     it {expect(@type['data']['errors']).to eq nil}
   end
 end
