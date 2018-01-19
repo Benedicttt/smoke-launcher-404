@@ -64,6 +64,7 @@
     gem 'shoulda-matchers', require: false
     gem 'shoulda'
     gem "swf_fu", "~> 2.0"
+    gem 'flashplayer', '~> 9.115'
   end
 
   group :development do
