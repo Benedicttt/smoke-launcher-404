@@ -2,7 +2,7 @@ doctype html
 html
   head
 
-.container.page_stage_ui
+.container.page_stage_ui style="font-size:18px; width:1450px"
   =simple_form_for "" do |f|
     br
       .panel.panel-top
@@ -11,10 +11,11 @@ html
     br
     br
 
-    table.col-xs-12
+    table style="font-size:18px; width:1200px"
       thead
         tr
           th style="font-size:22px; color:yellow" Stage
+          th style="font-size:22px; color:yellow" Author
           th style="font-size:22px; color:yellow" Binomo
           th style="font-size:22px; color:yellow" Binparter
       tbody
@@ -25,41 +26,42 @@ html
                    type: :button,
                   class: "col-xs-12 btn btn-success",
                      id: "#{num}",
-                  style: "font-size:18px; bottom:6px"
+                  style: "font-size:18px; width:100px"
+
+            th.col-xs-1
+                =f.button :button, "",
+                       id: "author-re-deploy-#{num}",
+                    style: "font-size:18px; bottom:6px; width:125px",
+                    class: "btn btn-primary"
+                 required: false
+
 
             th.col-xs-4
-                /=f.input "#{num}-binomo",
-                /       label: false,
-                /    required: false
-
                 =f.button :button, "",
                  required: false,
                      type: :button,
-                    class: "copy btn-sucess", "data-clipboard-target" => "#{num}-binomo", id: "#{num}-binomo"
+                    style: "font-size:18px width:500px",
+                    class: "copy btn btn-danger", "data-clipboard-target" => "#{num}-binomo", id: "#{num}-binomo"
 
-                  javascript:
-                    $(document).ready(function() {
-                      new ZeroClipboard($("##{num}-binomo"))
-                    });
 
             th.col-xs-4
-                /=f.input "#{num}-binpartner",
-                /      label: false,
-                /   required: false
-
                 =f.button :button, "",
                  required: false,
                      type: :button,
-                    class: "copy btn-sucess", "data-clipboard-target" => "#{num}-binpartner", id: "#{num}-binpartner"
+                    style: "font-size:18px width:500px",
+                    class: "copy btn btn-danger", "data-clipboard-target" => "#{num}-binpartner", id: "#{num}-binpartner"
 
                   javascript:
                     $(document).ready(function() {
-                      new ZeroClipboard($("##{num}-binpartner"))
+                      new ZeroClipboard(
+                          $("##{num}-binpartner, ##{num}-binomo")
+                        )
                     });
 
-
+    br
+    br
     =button_tag "Check all",
        type: :button,
       class: "col-xs-1 btn btn-success",
          id: "check-all",
-      style: "font-size:18px; left:16px"
+      style: "font-size:18px; left:100px"
