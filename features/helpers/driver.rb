@@ -28,7 +28,6 @@ module Driver
   end
 end
 
-
 $pool = Concurrent::RubyThreadPoolExecutor.new(
      min_threads: 2,
      max_threads: 2,

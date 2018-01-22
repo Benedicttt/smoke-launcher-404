@@ -14,6 +14,7 @@ class ApiResponse
     if JSON.parse(@profile.body)['data'].nil?
       puts_danger "Not authorized"
     else
+
       id = JSON.parse(@profile.body)['data']['id']
       email_verified = JSON.parse(@profile.body)['data']['email_verified']
       val = JSON.parse(@profile.body)['data']['currency']
@@ -27,7 +28,7 @@ class ApiResponse
                 email_confirmed, id, platform, email, locale, currency, password,
                 stage_number, geo_locale, created_at, phone_verifed, document_verifed, driver, ip_address)
                values(
-                  '#{email_verified}',
+                 '#{email_verified}',
                  '#{id}',
                  'binomo',
                  '#{email}',

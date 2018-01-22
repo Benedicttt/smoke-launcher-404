@@ -37,7 +37,7 @@ class Payouts
 
 
       begin
-        if i == 0
+        if i == 0 
           sleep 1
           ENV['count_payouts_sum'].to_i.times { driver.find_elements(:css, 'button.btn-control.btn-control-sm')[0].click }
           sleep 0.7
@@ -61,6 +61,7 @@ class Payouts
         puts_danger "No find card #{number_small}"
         driver.quit
       end
+
     end
 
     # driver.quit

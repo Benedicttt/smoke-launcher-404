@@ -30,11 +30,12 @@ html
 
             th.col-xs-1
                 =f.button :button, "",
+                 required: false,
                      type: :button,
-                       id: "author-re-deploy-#{num}",
                     style: "font-size:18px; bottom:6px; width:125px",
-                    class: "btn btn-primary"
-                 required: false
+                    class: "copy btn btn-info",
+                           "data-clipboard-target" => "author-re-deploy-#{num}",
+                       id: "author-re-deploy-#{num}"
 
 
             th.col-xs-4
@@ -42,7 +43,9 @@ html
                  required: false,
                      type: :button,
                     style: "font-size:18px width:500px",
-                    class: "copy btn btn-danger", "data-clipboard-target" => "#{num}-binomo", id: "#{num}-binomo"
+                    class: "copy btn btn-danger",
+                           "data-clipboard-target" => "#{num}-binomo",
+                       id: "#{num}-binomo"
 
 
             th.col-xs-4
@@ -50,12 +53,14 @@ html
                  required: false,
                      type: :button,
                     style: "font-size:18px width:500px",
-                    class: "copy btn btn-danger", "data-clipboard-target" => "#{num}-binpartner", id: "#{num}-binpartner"
+                    class: "copy btn btn-danger",
+                           "data-clipboard-target" => "#{num}-binpartner",
+                       id: "#{num}-binpartner"
 
                   javascript:
                     $(document).ready(function() {
                       new ZeroClipboard(
-                          $("##{num}-binpartner, ##{num}-binomo")
+                          $("##{num}-binpartner, ##{num}-binomo, #author-re-deploy-#{num}")
                         )
                     });
 
