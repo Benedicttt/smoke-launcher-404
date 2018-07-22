@@ -2,9 +2,10 @@ development:
   adapter: postgresql
   encoding: utf8
   database: binomo
-  host: 127.0.0.1
+  host: 172.20.0.2
   port: 5432
   username: binomo
+  password: binomo
   pool: 5
   timeout: 5000
 
@@ -12,8 +13,9 @@ test:
   adapter: postgresql
   encoding: utf8
   database: binomo
-  host: 127.0.0.1
+  host: 172.20.0.2
   port: 5432
   username: binomo
+  password: binomo
   pool: 5
   timeout: 5000

@@ -1,4 +1,4 @@
-Feature: SMoke test generate 2018-01-19 16:11:20 +0300
+Feature: SMoke test generate 2018-06-22 08:35:13 +0000
  Scenario: Run step
  Given Pid process
  When Use demo type

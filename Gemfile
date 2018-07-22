@@ -52,6 +52,7 @@
     gem 'selenium-proxy'
     gem 'selenium'
     gem 'headless'
+    gem 'rake'
 
     gem 'em-websocket'
     gem 'websocket-client-simple'

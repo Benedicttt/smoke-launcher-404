@@ -2,30 +2,33 @@ version: "3.4"
 
 services:
   postgresql:
-    image: postgres:9.6-alpine
+    image: postgres:9.6
     container_name: postgresql
     hostname: postgresql
     restart: always
     ports:
       - '5432:5432'
+    environment:
+      - LEVEL=dev
+      - POSTGRES_USER:'binomo'
+      - POSTGRES_PASSWORD:'binomo'
+      - POSTGRES_DB:'binomo'
     volumes:
       - postgresql_data:/var/lib/postgresql/data
 
   binomo:
-    image: binomo
+    image: benedicttt/binomo:latest
     container_name: binomo
     hostname: binomo
     command: tail -f /dev/null
     restart: always
     ports:
-      - '3000:3000'
+      - '3001:3001'
       - '8080:8080'
     volumes:
-    volumes:
-      - ./smoke-binomo:/app
-      - postgresql_data:/var/lib/postgresql/data
+      - ./:/app
     depends_on:
-    - postgresql
+      - postgresql
 
 volumes:
   postgresql_data:

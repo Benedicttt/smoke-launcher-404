@@ -154,7 +154,7 @@ stage_select:
 
 frame_work:
   cucumber: "cucumber"
-  cucumber xvfb: "xvfb-run cucumber"
+  cucumber xvfb: "xvfb-run -a cucumber"
 
 tariff:
   FTD 1: "0"
