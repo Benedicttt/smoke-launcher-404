@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a2bd0e3-9e0f-4fd2-bada-c9085076933e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
-      <change beforePath="$PROJECT_DIR$/config/puma.rb" afterPath="$PROJECT_DIR$/config/puma.rb" />
-    </list>
+    <list default="true" id="7a2bd0e3-9e0f-4fd2-bada-c9085076933e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -345,12 +342,12 @@
       <workItem from="1532247602702" duration="525000" />
       <workItem from="1532274790937" duration="1054000" />
       <workItem from="1532456925216" duration="21000" />
-      <workItem from="1534154352327" duration="4459000" />
+      <workItem from="1534154352327" duration="4611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6059000" />
+    <option name="totallyTimeSpent" value="6211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
