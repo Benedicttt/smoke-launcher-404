@@ -22,7 +22,7 @@
 
   .col-xs-2
     .framework.fields
-      = f.input :work, label: "framework" , as: :select, collection: @framework, required: false, selected: "Cucumber"
+      = f.input :work, label: "framework" , as: :select, collection: @framework, required: false, selected: @framework['cucumber xvfb']
 
   .col-xs-2
     .sleep_retried.fields
@@ -45,7 +45,7 @@
       = f.input :proxy_http, label: "Protocol", as: :select, collection: %w[http:// https://], required: false
 
   .col-xs-2.fields
-    = f.input :param_headless , label: "params Chrome", as: :select, collection: %w[--headless], required: false
+    = f.input :param_headless , label: "params Chrome", as: :select, collection: %w[--headless], required: false, selected: '--headless'
 
   .col-xs-2
     br

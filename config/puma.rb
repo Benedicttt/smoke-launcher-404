@@ -45,4 +45,5 @@ on_worker_boot do
   Que::Worker.workers.push
 end
 # Allow puma to be restarted by `rails restart` command.
+reload!
 plugin :tmp_restart

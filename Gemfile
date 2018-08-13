@@ -59,7 +59,7 @@
     gem 'faye-websocket'
     gem 'websocket-eventmachine-client'
     gem 'chromedriver-helper'
-    gem "watir"
+    gem 'watir'
     gem 'bootstrap-sass'
 
     gem 'shoulda-matchers', require: false
