@@ -40,7 +40,7 @@ currency:
   UAH: ["document.querySelectorAll('label[ng-repeat=\"currency in vm.currencies\"] > input[value=UAH]')[0].click()", "UAH"]
 
 email:
-  # prod: ""
+  prod: ""
   s4: ""
   s3: ""
   s2: ""
@@ -102,6 +102,7 @@ app_host:
   s3: "https://s3.binomo.com/"
   s2: "https://s2.binomo.com/"
   s1: "https://s1.binomo.com/"
+  prod: "https://binomo.com/"
 
 url_partner:
   s7: "https://s7.binpartner.com/"
@@ -151,6 +152,17 @@ stage_select:
   s5: "Stage5"
   s6: "Stage6"
   s7: "Stage7"
+  prod: "Prod"
+
+stage:
+  s1: "s1"
+  s2: "s2"
+  s3: "s3"
+  s4: "s4"
+  s5: "s5"
+  s6: "s6"
+  s7: "s7"
+  prod: "prod"
 
 frame_work:
   cucumber: "cucumber"

@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   encoding: utf8
   database: binomo
-  host: 172.20.0.2
+  host: postgresql
   port: 5432
   username: binomo
   password: binomo
@@ -13,7 +13,7 @@ test:
   adapter: postgresql
   encoding: utf8
   database: binomo
-  host: 172.20.0.2
+  host: postgresql
   port: 5432
   username: binomo
   password: binomo

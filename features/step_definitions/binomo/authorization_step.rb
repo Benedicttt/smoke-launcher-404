@@ -3,7 +3,7 @@ Given /^Visit page auth_platform$/ do
   sleep 1
   DRIVER.manage.delete_all_cookies
   DRIVER.manage.delete_cookie("agreed");
-  DRIVER.manage.add_cookie(name: "agreedBeforeReg", value: "true")
+  # DRIVER.manage.add_cookie(name: "agreedBeforeReg", value: "true")
 
   DRIVER.get CommonSetting[:app_host] + CommonSetting[:locale]
   sleep 5

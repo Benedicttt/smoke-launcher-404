@@ -17,10 +17,11 @@ services:
       - postgresql_data:/var/lib/postgresql/data
 
   binomo:
-    image: benedicttt/binomo:latest
+    build:
+      context: ./
     container_name: binomo
     hostname: binomo
-    command: tail -f /dev/null
+    command: rails s
     restart: always
     ports:
       - '3001:3001'

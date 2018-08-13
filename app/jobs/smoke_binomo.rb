@@ -8,8 +8,8 @@ class SmokeBinomo < Que::Job
 
     ENV['stage'] = JSON.parse(msg_json.to_json)['count_features'].scan(/stage=(\w+\d+)/).first.first #=> "s2
     report_url = IO.read("./public/reports/binomo/smoke-binomo.html")
-    email = User.where(stage_number: ENV['stage']).last.email
-    id = User.where(stage_number: ENV['stage']).last.id
+    email = "test197@yopmail.com"
+    id =  1
     report_add_user(id, email, "Binomo", ENV["stage"], report_url)
   end
 end
