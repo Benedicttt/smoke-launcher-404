@@ -1,23 +1,23 @@
   source 'https://rubygems.org'
 
   gem 'zip'
-  gem 'rails', '~> 5.0.2'
+  gem 'rails'
   gem 'sqlite3'
-  gem 'puma', '~> 3.0'
-  gem 'sass-rails', '~> 5.0'
-  gem 'uglifier', '>= 1.3.0'
-  gem 'coffee-rails', '~> 4.2'
+  gem 'puma'
+  gem 'sass-rails'
+  gem 'uglifier'
+  gem 'coffee-rails'
   gem 'jquery-rails'
-  gem 'turbolinks', '~> 5'
-  gem 'jbuilder', '~> 2.5'
+  gem 'turbolinks'
+  gem 'jbuilder'
 
   group :development, :test do
-    gem "pry"
-    gem "pry-byebug"
-    gem "pry-doc"
-    gem "pry-git"
-    gem "pry-rails"
-    gem "pry-remote"
+    gem 'pry'
+    gem 'pry-byebug'
+    gem 'pry-doc'
+    gem 'pry-git'
+    gem 'pry-rails'
+    gem 'pry-remote'
 
     gem 'byebug', platform: :mri
     gem 'slim'
@@ -48,7 +48,7 @@
     gem 'rest-client'
     gem 'cucumber'
     gem 'cucumber-rails' , require: false
-    gem 'selenium-webdriver', '~> 3.6.0'
+    gem 'selenium-webdriver'
     gem 'selenium-proxy'
     gem 'selenium'
     gem 'headless'
@@ -64,15 +64,15 @@
 
     gem 'shoulda-matchers', require: false
     gem 'shoulda'
-    gem "swf_fu", "~> 2.0"
-    gem 'flashplayer', '~> 9.115'
+    gem 'swf_fu'
+    gem 'flashplayer'
   end
 
   group :development do
-    gem 'web-console', '>= 3.3.0'
-    gem 'listen', '~> 3.0.5'
+    gem 'web-console'
+    gem 'listen'
     gem 'spring'
-    gem 'spring-watcher-listen', '~> 2.0.0'
+    gem 'spring-watcher-listen'
   end
 
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

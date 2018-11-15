@@ -463,7 +463,7 @@ DEPENDENCIES
   capistrano-default_stage
   capistrano-rails-console
   chromedriver-helper
-  coffee-rails (~> 4.2)
+  coffee-rails
   concurrent-ruby
   cucumber
   cucumber-rails
@@ -471,12 +471,12 @@ DEPENDENCIES
   factory_girl
   factory_girl_rails
   faye-websocket
-  flashplayer (~> 9.115)
+  flashplayer
   headless
   highline
-  jbuilder (~> 2.5)
+  jbuilder
   jquery-rails
-  listen (~> 3.0.5)
+  listen
   net-ssh
   pg
   pry
@@ -485,18 +485,18 @@ DEPENDENCIES
   pry-git
   pry-rails
   pry-remote
-  puma (~> 3.0)
+  puma
   que
   que-web
-  rails (~> 5.0.2)
+  rails
   rake
   rest-client
   rspec
   rspec-rails
-  sass-rails (~> 5.0)
+  sass-rails
   selenium
   selenium-proxy
-  selenium-webdriver (~> 3.6.0)
+  selenium-webdriver
   shoulda
   shoulda-matchers
   simple_form
@@ -504,15 +504,15 @@ DEPENDENCIES
   slim
   spring
   spring-commands-rubocop
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen
   sqlite3
-  swf_fu (~> 2.0)
+  swf_fu
   syntax
-  turbolinks (~> 5)
+  turbolinks
   tzinfo-data
-  uglifier (>= 1.3.0)
+  uglifier
   watir
-  web-console (>= 3.3.0)
+  web-console
   websocket-client-simple
   websocket-eventmachine-client
   will_paginate
@@ -520,4 +520,4 @@ DEPENDENCIES
   zip
 
 BUNDLED WITH
-   1.16.1
+   1.16.3

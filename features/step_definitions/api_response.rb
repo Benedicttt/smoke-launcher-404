@@ -7,7 +7,7 @@ class ApiResponse
     @profile = RestClient.get("https://#{ENV['stage']}.binomo.com/api/profile", {params: { locale: 'ru', device: 'web' }, cookies: @authorized.cookies}) if ENV['stage'] != "prod"
 
     @config = RestClient.get("https://binomo.com/api/config", {params: {locale: 'ru', device: 'web'}}) if ENV['stage'] == "prod"
-    @authorized = RestClient.post("https://binomo.com/api/sign_in?email=#{EMAIL}", $config_api['web_auth'], cookies: @config.cookies) if ENV['stage'] == "prod"
+    @authorized = RestClient.post("https://binomo.com/api/sign_in?email=#{EMAIL}&password=#{CommonSetting[:user_test]['pass_platform']}", $config_api['web_auth'], cookies: @config.cookies) if ENV['stage'] == "prod"
     @profile = RestClient.get("https://binomo.com/api/profile", {params: { locale: 'ru', device: 'web' }, cookies: @authorized.cookies}) if ENV['stage'] == "prod"
 
 

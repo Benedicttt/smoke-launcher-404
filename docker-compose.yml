@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   postgresql:
-    image: postgres:9.6
+    image: postgres:10.4
     container_name: postgresql
     hostname: postgresql
     restart: always
@@ -13,24 +13,18 @@ services:
       - POSTGRES_USER:'binomo'
       - POSTGRES_PASSWORD:'binomo'
       - POSTGRES_DB:'binomo'
-    volumes:
-      - postgresql_data:/var/lib/postgresql/data
 
   binomo:
     build:
       context: ./
     container_name: binomo
     hostname: binomo
-    command: rails s
-    restart: always
+    command: tail -f /dev/null
+  
     ports:
-      - '3001:3001'
+      - '3001:3000'
       - '8080:8080'
     volumes:
       - ./:/app
     depends_on:
       - postgresql
-
-volumes:
-  postgresql_data:
-    driver: local

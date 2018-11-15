@@ -19,3 +19,6 @@ test:
   password: binomo
   pool: 5
   timeout: 5000
+
+  # CREATE ROLE binomo WITH LOGIN ENCRYPTED PASSWORD 'binomo';
+  # CREATE DATABASE binomo WITH OWNER binomo;

@@ -67,4 +67,5 @@ Given /^Pool ranning\?$/ do
   puts_danger "Last threads? #{$pool.running?}"
   system "killall chrome"
   system "killall chromedriver"
+  system 'docker exec -ti binomo rails r "Que.clear!"'
 end
