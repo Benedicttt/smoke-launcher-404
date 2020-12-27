@@ -2,8 +2,8 @@ development:
   adapter: postgresql
   encoding: utf8
   database: binomo
-  host: postgresql
-  port: 5432
+  host: postgresql1
+  port: 5433
   username: binomo
   password: binomo
   pool: 5
@@ -13,8 +13,8 @@ test:
   adapter: postgresql
   encoding: utf8
   database: binomo
-  host: postgresql
-  port: 5432
+  host: postgresql1
+  port: 5433
   username: binomo
   password: binomo
   pool: 5

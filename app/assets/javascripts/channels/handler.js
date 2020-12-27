@@ -77,7 +77,7 @@
   }
 
   function function_stop_stop(data) {
-    if ($.parseJSON(event.data)['message'] == data) {
+    if ($.parseJSON(event.data)['message']['client'] == data) {
       $('.ws label')
         .text(data)
         .css("color", "red")
